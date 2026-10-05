@@ -18057,27 +18057,27 @@ d16[
 ;-----
 
 _80F8D9: d16[
-    .F9B1, .F9B2, .thunk_icy_penguigo, .thunk_thunder_slimer, .thunk_flammingle, .F9C6, .thunk_planty, .F9D0,
-    .F9D5, .F9DA, .F9DF, .F9E4, .F9E9, .thunk_rush_roader, .F9F3, .thunk_crusher,
-    .F9FD, .FA02, .FA07, .FA0C, .thunk_armor_armarge, .thunk_spiky, .FA1B, .thunk_turn_cannon,
-    .FA25, .thunk_bomb_been, .FA2F, .FA34, .FA39, .FA3E, .FA43, .FA48,
-    .thunk_amenhopper, .FA52, .thunk_bee_blader, .FA5C, .FA61, .FA66, .FA6B, .thunk_ball_de_voux,
+    .F9B1, .thunk_hoganmer, .thunk_icy_penguigo, .thunk_thunder_slimer, .thunk_flammingle, .thunk_boomer_kuwanger, .thunk_planty, .thunk_launcher_octopuld,
+    .F9D5, .thunk_rt_55j, .thunk_sting_chameleao, .F9E4, .F9E9, .thunk_rush_roader, .F9F3, .thunk_crusher,
+    .F9FD, .FA02, .FA07, .thunk_dodge_blaster, .thunk_armor_armarge, .thunk_spiky, .FA1B, .thunk_turn_cannon,
+    .FA25, .thunk_bomb_been, .FA2F, .FA34, .thunk_sea_attacker, .thunk_gulpfer, .thunk_mad_pecker, .thunk_creeper,
+    .thunk_amenhopper, .thunk_anglerge, .thunk_bee_blader, .thunk_utuboros_head, .thunk_utuboros_body, .thunk_utuboros_tail, .FA6B, .thunk_ball_de_voux,
     .FA75, .thunk_gun_volt, .FA7F, .thunk_mine_cart, .thunk_mole_borer, .thunk_batton_bone, .thunk_mettool_c_15, .thunk_ride_armor,
-    .thunk_dig_labour, .thunk_spark_mandriller, .FAA7, .FAAC, .FAB1, .thunk_metal_wing, .thunk_jamminger, .thunk_hotarion,
-    .FAC5, .FACA, .FACF, .FAD4, .FAD9, .FADE, .FAE3, .FAE8,
+    .thunk_dig_labour, .thunk_spark_mandriller, .FAA7, .FAAC, .thunk_crag_man, .thunk_metal_wing, .thunk_jamminger, .thunk_hotarion,
+    .thunk_flamer, .FACA, .FACF, .FAD4, .FAD9, .FADE, .FAE3, .FAE8,
     .FAED, .FAF2, .FAF7, .FAFC, .FB01, .FB06, .FB0B, .FB10,
-    .FB15, .FB1A, .FB1F, .FB24, .FB29, .thunk_capsule, .FB33, .FB38,
-    .FB3D, .thunk_ray_bit, .FB47, .FB4C, .FB51, .FB56, .FB5B, .FB60,
+    .FB15, .thunk_sky_claw, .FB1F, .FB24, .FB29, .thunk_capsule, .FB33, .FB38,
+    .FB3D, .thunk_ray_bit, .thunk_storm_eagleed, .FB4C, .FB51, .FB56, .FB5B, .FB60,
     .FB65, .FB6A, .FB6F, .thunk_mega_tortoise, .FB79, .FB7E, .FB83, .FB88,
-    .FB8D, .FB92, .FB97, .FB9C, .FBA1, .FBA6, .FBAB, .FBB0,
+    .FB8D, .FB92, .FB97, .thunk_bospider, .FBA1, .FBA6, .FBAB, .FBB0,
     .FBB5, .FBBA, .FBBF, .FBC4,
 ]
 
 .F9B1:
     rts
 
-.F9B2:
-    jsl _83AE81
+.thunk_hoganmer:
+    jsl hoganmer
     rts
 
 .thunk_icy_penguigo:
@@ -18092,28 +18092,28 @@ _80F8D9: d16[
     jsl flammingle
     rts
 
-.F9C6:
-    jsl 0x878A7E
+.thunk_boomer_kuwanger:
+    jsl boomer_kuwanger
     rts
 
 .thunk_planty:
     jsl planty
     rts
 
-.F9D0:
-    jsl _81C429
+.thunk_launcher_octopuld:
+    jsl launcher_octopuld
     rts
 
 .F9D5:
     jsl _81CAF6
     rts
 
-.F9DA:
-    jsl _81CC03
+.thunk_rt_55j:
+    jsl rt_55j
     rts
 
-.F9DF:
-    jsl 0x88853E
+.thunk_sting_chameleao:
+    jsl sting_chameleao
     rts
 
 .F9E4:
@@ -18148,8 +18148,8 @@ _80F8D9: d16[
     jsl _81DCBD
     rts
 
-.FA0C:
-    jsl _82999F
+.thunk_dodge_blaster:
+    jsl dodge_blaster
     rts
 
 .thunk_armor_armarge:
@@ -18184,44 +18184,44 @@ _80F8D9: d16[
     jsl _82A0DE
     rts
 
-.FA39:
-    jsl _82A189
+.thunk_sea_attacker:
+    jsl sea_attacker
     rts
 
-.FA3E:
-    jsl _82A33A
+.thunk_gulpfer:
+    jsl gulpfer
     rts
 
-.FA43:
-    jsl _82A7D4
+.thunk_mad_pecker:
+    jsl mad_pecker
     rts
 
-.FA48:
-    jsl _82A989
+.thunk_creeper:
+    jsl creeper
     rts
 
 .thunk_amenhopper:
     jsl amenhopper
     rts
 
-.FA52:
-    jsl _82AE11
+.thunk_anglerge:
+    jsl anglerge
     rts
 
 .thunk_bee_blader:
     jsl bee_blader
     rts
 
-.FA5C:
-    jsl _82BD64
+.thunk_utuboros_head:
+    jsl utuboros_head
     rts
 
-.FA61:
-    jsl _82C38C
+.thunk_utuboros_body:
+    jsl utuboros_body
     rts
 
-.FA66:
-    jsl _82C72D
+.thunk_utuboros_tail:
+    jsl utuboros_tail
     rts
 
 .FA6B:
@@ -18261,7 +18261,7 @@ _80F8D9: d16[
     rts
 
 .thunk_ride_armor:
-    jsl ride_armor
+    jsl ride_armor ;todo: also armor soldier?
     rts
 
 .thunk_dig_labour:
@@ -18280,8 +18280,8 @@ _80F8D9: d16[
     jsl 0x88A382
     rts
 
-.FAB1:
-    jsl _83D859
+.thunk_crag_man:
+    jsl crag_man
     rts
 
 .thunk_metal_wing:
@@ -18296,8 +18296,8 @@ _80F8D9: d16[
     jsl hotarion
     rts
 
-.FAC5:
-    jsl _83DF7C
+.thunk_flamer:
+    jsl flamer
     rts
 
 .FACA:
@@ -18364,8 +18364,8 @@ _80F8D9: d16[
     jsl 0x87C07A
     rts
 
-.FB1A:
-    jsl 0x87C387
+.thunk_sky_claw:
+    jsl sky_claw
     rts
 
 .FB1F:
@@ -18400,8 +18400,8 @@ _80F8D9: d16[
     jsl ray_bit
     rts
 
-.FB47:
-    jsl 0x87D85C
+.thunk_storm_eagleed:
+    jsl storm_eagleed
     rts
 
 .FB4C:
@@ -18468,8 +18468,8 @@ _80F8D9: d16[
     jsl 0x88BF48
     rts
 
-.FB9C:
-    jsl _82DB76
+.thunk_bospider:
+    jsl bospider
     rts
 
 .FBA1:
