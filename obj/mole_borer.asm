@@ -66,7 +66,7 @@ mole_borer:
     adc.b #0x04
     sta.b 0x01
     lda.b #0x21
-    jsl 0x80888B
+    jsl _80888B
     lda.b #0xB4
     sta.b 0x33
 .BFC1:
@@ -139,7 +139,7 @@ mole_borer:
     bne .C04A
 
     lda.b #0x42
-    jsl 0x80888B
+    jsl _80888B
 .C04A:
     jsl 0x82823E
     jsl 0x8491BE
@@ -533,7 +533,7 @@ mole_borer:
     sta.w 0x0002
     sep #0x20
     jsl 0x849111
-    jsl 0x80B8D5
+    jsl _80B8D5
     rts
 
 ;-----

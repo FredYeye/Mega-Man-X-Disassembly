@@ -22,7 +22,7 @@ icy_penguigo:
     beq .B53C
 
     lda.b #0x2E
-    jsl 0x80878B
+    jsl _80878B
 .B53C:
     dec.b 0x34
     beq .B541
@@ -122,7 +122,7 @@ icy_penguigo:
     bcc .B613
 
     lda.b #0x0C
-    jsl 0x8088B6
+    jsl _80888B.88B6
     lda.b 0x27
     inc
     ora.b #0x80
@@ -139,7 +139,7 @@ icy_penguigo:
     beq .B613
 
     lda.b #0x1E
-    jsl 0x80878B
+    jsl _80878B
 .B613:
     rts
 
@@ -215,12 +215,12 @@ icy_penguigo:
     lda.b #0x02
     sta.b 0x03
     lda.b #0x4A
-    jsl 0x80888B
+    jsl _80888B
     bra .B69A
 
 .B694:
     lda.b #0x13
-    jsl 0x80888B
+    jsl _80888B
 .B69A:
     lda.b 0x27
     and.b #0x7F
@@ -544,7 +544,7 @@ icy_penguigo:
     lda.b #0x04
     sta.b 0x03
     lda.b #0x49
-    jsl 0x80888B
+    jsl _80888B
 .B8D6:
     rts
 
@@ -768,7 +768,7 @@ icy_penguigo:
     lda.b #0x3C
     sta.b 0x34
     lda.b #0x72
-    jsl 0x80888B
+    jsl _80888B
 .BA60:
     rts
 
@@ -911,10 +911,10 @@ icy_penguigo:
     bcc .BB68
 
     lda.b #0x1B
-    jsl 0x80878B
+    jsl _80878B
     lda.b #0xF5
     ldy.b #0x03
-    jsl 0x808868
+    jsl _808850.8868
 .BB68:
     jml 0x828398
 

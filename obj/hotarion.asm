@@ -299,7 +299,7 @@ hotarion:
 
 .A6A1:
     lda.b #0x33
-    jsl 0x80888B
+    jsl _80888B
     rep #0x20
     lda.b 0x05
     clc

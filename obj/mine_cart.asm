@@ -147,7 +147,7 @@ mine_cart:
     bne .98DB
 
     lda.b #0x37
-    jsl 0x80888B
+    jsl _80888B
 .98DB:
     lda.b 0x34
     beq .9917
@@ -465,7 +465,7 @@ mine_cart:
     sta.w 0x0002
     stz.w 0x0008
     jsl 0x849111
-    jsl 0x80B8D5
+    jsl _80B8D5
     lda.b 0x39
     clc
     adc.w #0xFFF0

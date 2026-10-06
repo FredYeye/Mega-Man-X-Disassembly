@@ -12202,7 +12202,7 @@ _80D342:
     lda.b 0x0A
     asl
     tax
-    jmp (0x80F31C,X)
+    jmp (_80F31C,X)
 
 ;-----
 
@@ -12385,7 +12385,7 @@ _80D437:
     lda.b 0x0A
     asl
     tax
-    jmp (0x80F68B,X)
+    jmp (_80F68B,X)
 
 ;-----
 
@@ -12448,7 +12448,7 @@ _80D494:
     lda.b 0x0A
     asl
     tax
-    jmp (0x80F75D,X)
+    jmp (_80F75D,X)
 
 ;-----
 
@@ -12518,7 +12518,7 @@ _80D4E7:
     lda.b 0x0A
     asl
     tax
-    jmp (0x80F779,X)
+    jmp (_80F779,X)
 
 ;-----
 
@@ -12588,7 +12588,7 @@ _80D544:
     lda.b 0x0A
     asl
     tax
-    jmp (0x80F8D9,X)
+    jmp (_80F8D9,X)
 
 ;-----
 
@@ -13041,11 +13041,11 @@ _80D7E2:
     lda.b #0x80
     tsb.w 0x0BCF
     lda.b #0xAA
-    sta.w ram.oam.high
-    sta.w 0x0901
-    sta.w 0x0902
+    sta.w ram.oam.high+0
+    sta.w ram.oam.high+1
+    sta.w ram.oam.high+2
     lda.b #0xAA
-    sta.w 0x0903
+    sta.w ram.oam.high+3
     ldx.w #0x0000
 .D819:
     lda.b #0x08
@@ -17135,9 +17135,7 @@ _80F30A:
 
 ;-----
 
-_80F31C:
-
-d16[
+_80F31C: d16[
     .F34A, .F34B, .F350, .F355, .F35A, .F35F, .F364, .F365,
     .F36A, .F36F, .F374, .F379, .F37E, .F383, .F388, .F38D,
     .F392, .F397, .F39C, .F3A1, .F3A6, .F3AB, .F3B0,
@@ -17235,9 +17233,7 @@ d16[
 
 ;-----
 
-_80F3B5:
-
-d16[
+_80F3B5: d16[
     .F441, .F442, .F447, .F44C, .F451, .F456, .F45B, .F460,
     .F465, .F46A, .F46F, .F474, .F479, .F47E, .F483, .F488,
     .F48D, .F492, .F497, .F49C, .F4A1, .F4A2, .F4A3, .F4A8,
@@ -17527,9 +17523,7 @@ d16[
 
 ;-----
 
-_80F58F:
-
-d16[.F591]
+_80F58F: d16[.F591]
 
 .F591:
     jsl _81A133
@@ -17537,9 +17531,7 @@ d16[.F591]
 
 ;-----
 
-_80F596:
-
-d16[
+_80F596: d16[
     .F5DC, .F5E1, .F5E6, .F5EB, .F5F0, .F5F5, .F5FA, .F5FF,
     .F604, .F609, .F60E, .F613, .F618, .F61D, .F622, .F627,
     .F62C, .F631, .F636, .F63B, .F640, .F645, .F64A, .F64F,
@@ -17689,17 +17681,15 @@ d16[
 
 ;-----
 
-_80F68B:
-
-d16[
-    .F6C7, .F6CC, .F6D1, .F6D6, .F6DB, .F6E0, .F6E5, .F6EA,
+_80F68B: d16[
+    .thunk_x_buster, .F6CC, .F6D1, .F6D6, .F6DB, .F6E0, .F6E5, .F6EA,
     .F6EF, .F6F4, .F6F9, .F6FE, .F703, .F708, .F70D, .F712,
     .F717, .F71C, .F721, .F726, .F72B, .F730, .F735, .F73A,
     .F73F, .F744, .F749, .F74E, .F753, .F758,
 ]
 
-.F6C7:
-    jsl _81A21E
+.thunk_x_buster:
+    jsl x_buster
     rts
 
 .F6CC:
@@ -17820,9 +17810,7 @@ d16[
 
 ;-----
 
-_80F75D:
-
-d16[.F765, .F76A, .F76F, .F774]
+_80F75D: d16[.F765, .F76A, .F76F, .F774]
 
 .F765:
     jsl _81A163
@@ -17842,9 +17830,7 @@ d16[.F765, .F76A, .F76F, .F774]
 
 ;-----
 
-_80F779:
-
-d16[
+_80F779: d16[
     .F7DF, .F7DF, .F7E4, .F7E9, .F7EE, .F7F3, .F7F8, .F7FD,
     .F802, .F807, .F80C, .F811, .F816, .F81B, .F820, .F825,
     .F82A, .F82F, .F834, .F839, .F83E, .F843, .F848, .F84D,
@@ -18061,16 +18047,16 @@ _80F8D9: d16[
     .F9D5, .thunk_rt_55j, .thunk_sting_chameleao, .F9E4, .F9E9, .thunk_rush_roader, .F9F3, .thunk_crusher,
     .F9FD, .FA02, .FA07, .thunk_dodge_blaster, .thunk_armor_armarge, .thunk_spiky, .FA1B, .thunk_turn_cannon,
     .FA25, .thunk_bomb_been, .FA2F, .FA34, .thunk_sea_attacker, .thunk_gulpfer, .thunk_mad_pecker, .thunk_creeper,
-    .thunk_amenhopper, .thunk_anglerge, .thunk_bee_blader, .thunk_utuboros_head, .thunk_utuboros_body, .thunk_utuboros_tail, .FA6B, .thunk_ball_de_voux,
+    .thunk_amenhopper, .thunk_anglerge, .thunk_bee_blader, .thunk_utuboros_head, .thunk_utuboros_body, .thunk_utuboros_tail, .thunk_velguader, .thunk_ball_de_voux,
     .FA75, .thunk_gun_volt, .FA7F, .thunk_mine_cart, .thunk_mole_borer, .thunk_batton_bone, .thunk_mettool_c_15, .thunk_ride_armor,
     .thunk_dig_labour, .thunk_spark_mandriller, .FAA7, .FAAC, .thunk_crag_man, .thunk_metal_wing, .thunk_jamminger, .thunk_hotarion,
     .thunk_flamer, .FACA, .FACF, .FAD4, .FAD9, .FADE, .FAE3, .FAE8,
     .FAED, .FAF2, .FAF7, .FAFC, .FB01, .FB06, .FB0B, .FB10,
     .FB15, .thunk_sky_claw, .FB1F, .FB24, .FB29, .thunk_capsule, .FB33, .FB38,
     .FB3D, .thunk_ray_bit, .thunk_storm_eagleed, .FB4C, .FB51, .FB56, .FB5B, .FB60,
-    .FB65, .FB6A, .FB6F, .thunk_mega_tortoise, .FB79, .FB7E, .FB83, .FB88,
-    .FB8D, .FB92, .FB97, .thunk_bospider, .FBA1, .FBA6, .FBAB, .FBB0,
-    .FBB5, .FBBA, .FBBF, .FBC4,
+    .FB65, .FB6A, .FB6F, .thunk_mega_tortoise, .FB79, .FB7E, .thunk_rangda_bangda_eye, .thunk_rangda_bangda_nose,
+    .FB8D, .thunk_d_rex_upper, .thunk_d_rex_lower, .thunk_bospider, .FBA1, .thunk_sigma, .FBAB, .FBB0,
+    .FBB5, .FBBA, .FBBF, .thunk_wolf_sigma_claw,
 ]
 
 .F9B1:
@@ -18121,7 +18107,7 @@ _80F8D9: d16[
     rts
 
 .F9E9:
-    jsl 0x8791A7
+    jsl _8791A7
     rts
 
 .thunk_rush_roader:
@@ -18161,7 +18147,7 @@ _80F8D9: d16[
     rts
 
 .FA1B:
-    jsl 0x879794
+    jsl _879794
     rts
 
 .thunk_turn_cannon:
@@ -18177,7 +18163,7 @@ _80F8D9: d16[
     rts
 
 .FA2F:
-    jsl 0x8893A4
+    jsl _8893A4
     rts
 
 .FA34:
@@ -18224,8 +18210,8 @@ _80F8D9: d16[
     jsl utuboros_tail
     rts
 
-.FA6B:
-    jsl _82C833
+.thunk_velguader:
+    jsl velguader
     rts
 
 .thunk_ball_de_voux:
@@ -18277,7 +18263,7 @@ _80F8D9: d16[
     rts
 
 .FAAC:
-    jsl 0x88A382
+    jsl _88A382
     rts
 
 .thunk_crag_man:
@@ -18309,47 +18295,47 @@ _80F8D9: d16[
     rts
 
 .FAD4:
-    jsl 0x87A9DF
+    jsl _87A9DF
     rts
 
 .FAD9:
-    jsl 0x87ABA3
+    jsl _87ABA3
     rts
 
 .FADE:
-    jsl 0x87ADD8
+    jsl _87ADD8
     rts
 
 .FAE3:
-    jsl 0x87AF5D
+    jsl _87AF5D
     rts
 
 .FAE8:
-    jsl 0x87B216
+    jsl _87B216
     rts
 
 .FAED:
-    jsl 0x87B443
+    jsl _87B443
     rts
 
 .FAF2:
-    jsl 0x87B542
+    jsl _87B542
     rts
 
 .FAF7:
-    jsl 0x87B808
+    jsl _87B808
     rts
 
 .FAFC:
-    jsl 0x87B91C
+    jsl _87B91C
     rts
 
 .FB01:
-    jsl 0x87BA72
+    jsl _87BA72
     rts
 
 .FB06:
-    jsl 0x87BBBE
+    jsl _87BBBE
     rts
 
 .FB0B:
@@ -18444,28 +18430,28 @@ _80F8D9: d16[
     jsl 0x88A793
     rts
 
-.FB7E:
+.FB7E: ;rangda bangda handler?
     jsl 0x88A985
     rts
 
-.FB83:
-    jsl 0x88AE0B
+.thunk_rangda_bangda_eye:
+    jsl rangda_bangda_eye
     rts
 
-.FB88:
-    jsl 0x88B216
+.thunk_rangda_bangda_nose:
+    jsl rangda_bangda_nose
     rts
 
-.FB8D:
+.FB8D: ;rangda bangda walls?
     jsl 0x88B452
     rts
 
-.FB92:
-    jsl 0x88B689
+.thunk_d_rex_upper:
+    jsl d_rex_upper
     rts
 
-.FB97:
-    jsl 0x88BF48
+.thunk_d_rex_lower:
+    jsl d_rex_lower
     rts
 
 .thunk_bospider:
@@ -18476,8 +18462,8 @@ _80F8D9: d16[
     jsl 0x87ED8D
     rts
 
-.FBA6:
-    jsl 0x88C3B2
+.thunk_sigma:
+    jsl sigma
     rts
 
 .FBAB:
@@ -18500,8 +18486,8 @@ _80F8D9: d16[
     jsl 0x88D93B
     rts
 
-.FBC4:
-    jsl 0x88E53F
+.thunk_wolf_sigma_claw:
+    jsl wolf_sigma_claw
     rts
 
 ;-----

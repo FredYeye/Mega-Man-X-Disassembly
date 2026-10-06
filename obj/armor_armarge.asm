@@ -24,7 +24,7 @@ armor_armarge:
     beq .B177
 
     lda.b #0x2E
-    jsl 0x80878B
+    jsl _80878B
 .B177:
     dec.b 0x34
     beq .B17C
@@ -179,7 +179,7 @@ armor_armarge:
     beq .B2C2
 
     lda.b #0x0C
-    jsl 0x8088B6
+    jsl _80888B.88B6
     inc.b 0x27
     lda.b #0x80
     ora.b 0x27
@@ -213,7 +213,7 @@ armor_armarge:
     beq .B2E4
 
     lda.b #0x1E
-    jsl 0x80878B
+    jsl _80878B
 .B2E4:
     rts
 
@@ -343,7 +343,7 @@ armor_armarge:
     sta.b 0x38
 .B397:
     lda.b #0x13
-    jsl 0x80888B
+    jsl _80888B
     lda.b 0x27
     and.b #0x7F
     bne .B3C4
@@ -472,7 +472,7 @@ armor_armarge:
     beq .B4FA
 
     lda.b #0x48
-    jsl 0x80888B
+    jsl _80888B
     lda.b 0x11
     asl
     asl
@@ -555,12 +555,12 @@ armor_armarge:
     jsr _83BB35
     sep #0x20
     lda.b #0x48
-    jsl 0x80888B
+    jsl _80888B
     jmp _83B9FB
 
 .B545:
     lda.b #0x48
-    jsl 0x80888B
+    jsl _80888B
     lda.b 0x2B
     bit.b #0x0C
     rep #0x20
@@ -843,7 +843,7 @@ armor_armarge:
 .B726:
     sep #0x30
     lda.b #0x33
-    jsl 0x80888B
+    jsl _80888B
     bra .B73E
 
 .B730:
@@ -911,7 +911,7 @@ armor_armarge:
     lda.b #0x80
     sta.b 0x37
     lda.b #0x4E
-    jsl 0x80888B
+    jsl _80888B
     rts
 
 .B7A2:
@@ -970,7 +970,7 @@ armor_armarge:
     sta.b 0x34
     stz.b 0x37
     lda.b #0x02
-    jsl 0x80888B
+    jsl _80888B
 .B812:
     rts
 
@@ -1104,7 +1104,7 @@ armor_armarge:
     bpl .B8F6
 
     lda.b #0x47
-    jsl 0x80888B
+    jsl _80888B
 .B8F6:
     lda.b 0x3A
     bne .B902
@@ -1126,10 +1126,10 @@ armor_armarge:
     bcc .B920
 
     lda.b #0x1C
-    jsl 0x80878B
+    jsl _80878B
     lda.b #0xF5
     ldy.b #0x03
-    jsl 0x808868
+    jsl _808850.8868
 .B920:
     jml 0x828398
 

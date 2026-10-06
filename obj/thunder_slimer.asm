@@ -184,7 +184,7 @@ thunder_slimer:
     lda.b #0x5B
     sta.b 0x18
     lda.b #0x46
-    jsl 0x80888B
+    jsl _80888B
 .AF9F:
     lda.b 0x18
     cmp.b #0x40
@@ -601,7 +601,7 @@ thunder_slimer:
 
     stz.b 0x30
     lda.b #0x20
-    jsl 0x8088B6
+    jsl _80888B.88B6
     jsl _849FFE
     lda.b #0x06
     jmp .B769
@@ -723,7 +723,7 @@ thunder_slimer:
     sta.b 0x27
     inc.b 0x30
     lda.b #0x21
-    jsl 0x80888B
+    jsl _80888B
     lda.b #0x01
     sta.b 0x18
 .B31D:
@@ -887,7 +887,7 @@ thunder_slimer:
     lda.b #0x01
     sta.b 0x16
     lda.b #0x45
-    jsl 0x80888B
+    jsl _80888B
 .B453:
     dec.b 0x16
     bne .B46A

@@ -593,6 +593,6 @@ batton_bone: ;also batton m-501
     bne .A45E
 
     lda.b #0x43
-    jsl 0x80888B
+    jsl _80888B
 .A45E:
     rts

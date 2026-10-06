@@ -22,7 +22,7 @@ launcher_octopuld:
     beq .C459
 
     lda.b #0x2E
-    jsl 0x80878B
+    jsl _80878B
 .C459:
     dec.b 0x34
     beq .C45E
@@ -112,7 +112,7 @@ launcher_octopuld:
     bcc .C50B
 
     lda.b #0x0C
-    jsl 0x8088B6
+    jsl _80888B.88B6
     lda.b 0x27
     and.b #0x7F
     inc
@@ -141,7 +141,7 @@ launcher_octopuld:
     beq .C52F
 
     lda.b #0x1E
-    jsl 0x80878B
+    jsl _80878B
 .C52F:
     rts
 
@@ -189,7 +189,7 @@ launcher_octopuld:
     lda.b #0x04
     jsr .CA35
     lda.b #0x13
-    jsl 0x80888B
+    jsl _80888B
     lda.w 0x1F1D
     cmp.b #0x0D
     beq .C58B
@@ -238,7 +238,7 @@ launcher_octopuld:
     lda.b #0x04
     jsr .CA35
     lda.b #0x13
-    jsl 0x80888B
+    jsl _80888B
     jml 0x8280B4
 
 .C5D7: d16[.C5E3, .C694, .C8B6, .C92E, .C976, .C997]
@@ -366,7 +366,7 @@ launcher_octopuld:
 .C6C0:
     xba
     and.w #0xFF00
-    sta.w 0x4204
+    sta.w snes_regs.wrdivl
     lda.w #0x002A
     sta.w 0x4206
     lda.w #0x0720
@@ -540,7 +540,7 @@ launcher_octopuld:
     ora.b #0x80
     sta.b 0x27
     lda.b #0x4F
-    jsl 0x8088B6
+    jsl _80888B.88B6
     lda.b #0x20
     sta.b 0x3B
 .C818:
@@ -650,7 +650,7 @@ launcher_octopuld:
     lda.b #0x04
     sta.b 0x03
     lda.b #0x1E
-    jsl 0x80888B
+    jsl _80888B
 .C8E6:
     jsl 0x828321
     bne .C91F
@@ -798,10 +798,10 @@ launcher_octopuld:
     bcc .C9DF
 
     lda.b #0x1C
-    jsl 0x80878B
+    jsl _80878B
     lda.b #0xF5
     ldy.b #0x03
-    jsl 0x808868
+    jsl _808850.8868
 .C9DF:
     jml 0x828398
 
@@ -927,7 +927,7 @@ launcher_octopuld:
     beq .CAA6
 
     lda.b #0x1E
-    jsl 0x80888B
+    jsl _80888B
 .CAA6:
     rts
 

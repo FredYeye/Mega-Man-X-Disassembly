@@ -5,7 +5,7 @@ struct ram {
     rng_state:    d16,
     unk0BA8_0E67: d08[0xBA8->0xE68],
     obj1:         obj[15],  ;0E68
-    obj2:         obj[8],   ;1228
+    weapon_list:  obj[8],   ;1228
     obj3:         obj[8],   ;1428
     obj4:         obj2[16], ;1628
     obj5:         obj3[15], ;1928
@@ -22,10 +22,13 @@ struct obj {
     unk1: d08[0x00->0x04],
     pos_x: d24,
     pos_y: d24,
-    unk2: d08[0x0A->0x1A],
+    type: d08,
+    unk2: d08[0x0B->0x1A],
     speed_x: d16,
     speed_y: d16,
-    unk3: d08[0x1E->0x40]
+    unk3: d08[0x1E->0x27],
+    hp: d08,
+    unk4: d08[0x28->0x40],
 }
 
 struct obj2 {

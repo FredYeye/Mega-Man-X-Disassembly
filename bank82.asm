@@ -1604,7 +1604,7 @@ _8289B2:
     lda.w 0x86C0ED,X
     sta.w 0x0008
     jsl 0x849111
-    jsl 0x80B8D5
+    jsl _80B8D5
     sep #0x20
 .8A2A:
     lda.b #0x18
@@ -1662,7 +1662,7 @@ _8289B2:
     lda.w 0x86C0ED,X
     sta.w 0x0008
     jsl 0x849111
-    jsl 0x80B8D5
+    jsl _80B8D5
     sep #0x20
 .8AA2:
     stz.b 0x1F
@@ -1673,7 +1673,7 @@ _8289B2:
 _828AA5:
     rep #0x10
     lda.b #0x26
-    jsl 0x80888B
+    jsl _80888B
     ldy.w #0x0005
 .8AB0:
     jsl 0x8282D3
@@ -1870,7 +1870,7 @@ _828B5B:
     lda.w 0x86C0ED,X
     sta.w 0x0008
     jsl 0x849111
-    jsl 0x80B8D5
+    jsl _80B8D5
     sep #0x20
     stz.b 0x19
     rts
@@ -2094,7 +2094,7 @@ _828C4C:
 
 _828D6B:
     lda.b #0x23
-    jsl 0x80888B
+    jsl _80888B
     lda.b #0x08
     sta.b 0x01
     lda.l 0x7F8222
@@ -4281,7 +4281,7 @@ utuboros_head:
     lda.b #0x08
     sta.b 0x3D
     lda.b #0x36
-    jsl 0x80888B
+    jsl _80888B
     lda.b #0x08
     jsl 0x848F07
 .C083:
@@ -4761,7 +4761,7 @@ _82C37E:
     bne .C38B
 
     lda.b #0x35
-    jsl 0x80888B
+    jsl _80888B
 .C38B:
     rts
 
@@ -5450,7 +5450,7 @@ utuboros_tail:
 
 ;-----
 
-_82C833:
+velguader:
     ldx.b 0x01
     jmp (.C838,X)
 
@@ -5518,7 +5518,7 @@ _82C833:
     lda.b #0x05
     jsl 0x848F07
     lda.b #0x7E
-    jsl 0x80888B
+    jsl _80888B
 .C8B3:
     rts
 
@@ -5556,7 +5556,7 @@ _82C833:
     ora.b #0x80
     sta.b 0x27
     lda.b #0x0C
-    jsl 0x8088B6
+    jsl _80888B.88B6
     jmp .C907
 
 .C8F0:
@@ -5567,7 +5567,7 @@ _82C833:
     stz.b 0x38
     stz.w 0x1F1D
     lda.b #0x1E
-    jsl 0x80878B
+    jsl _80878B
     jsl 0x849FFE
 .C907:
     jsl 0x848EEA
@@ -6164,7 +6164,7 @@ _82C833:
     lda.b #0x20
     sta.b 0x3E
     lda.b #0x77
-    jsl 0x8088B6
+    jsl _80888B.88B6
 .CCF7:
     lda.b 0x0F
     bpl .CD02
@@ -7092,7 +7092,7 @@ _82D519:
     lda.b #0x08
     sta.b 0x1E
     lda.b #0x21
-    jsl 0x80888B
+    jsl _80888B
     lda.b #0x14
     sta.b 0x33
     rep #0x20
@@ -7162,14 +7162,14 @@ _82D519:
     lda.b #0x78
     jsl 0x84A33C
     lda.b #0x25
-    jsl 0x80888B
+    jsl _80888B
     rts
 
 .D6E6:
     jsl 0x848000
     inc.b 0x33
     lda.b #0x25
-    jsl 0x80888B
+    jsl _80888B
     stz.b 0x1C
     stz.b 0x1D
     jsl 0x84A333
@@ -7188,7 +7188,7 @@ _82D519:
     lda.b #0x06
     sta.b 0x02
     lda.b #0x25
-    jsl 0x80888B
+    jsl _80888B
     lda.b #0x00
     sta.b 0x1C
     lda.b #0x02
@@ -7212,7 +7212,7 @@ _82D519:
 
 .D738:
     lda.b #0x25
-    jsl 0x80888B
+    jsl _80888B
     rep #0x21
     lda.b 0x05
     adc.w #0xFF98
@@ -7995,7 +7995,7 @@ _82E33B:
 
     pha
     lda.b #0x0D
-    jsl 0x8088B6
+    jsl _80888B.88B6
     pla
     inc
     sta.w 0x1F83,X
@@ -8028,7 +8028,7 @@ _82E33B:
 
 .E527:
     lda.b #0x2B
-    jsl 0x8088B6
+    jsl _80888B.88B6
     bra .E522
 
 .E52F:
@@ -8081,7 +8081,7 @@ _82E33B:
     ora.b #0x80
     sta.w 0x0BCF
     lda.b #0x0C
-    jsl 0x8088B6
+    jsl _80888B.88B6
     dec.b 0x27
     bne .E59A
 
@@ -8111,7 +8111,7 @@ _82E33B:
     bne .E5C9
 
     lda.b #0x0D
-    jsl 0x8088B6
+    jsl _80888B.88B6
     bra .E5CA
 
 .E5C9:
@@ -8235,7 +8235,7 @@ _82E5CF:
     stz.w 0x0000
     jsl 0x83FE72
     lda.b #0x25
-    jsl 0x8088B6
+    jsl _80888B.88B6
     ldy.b #0x00
     jsr _82E6CD
     ldy.b #0x40
@@ -8716,7 +8716,7 @@ _82E9E6:
     lda.b #0x1E
     sta.b 0x2F
     lda.b #0x22
-    jsl 0x80888B
+    jsl _80888B
 .EA24:
     sep #0x30
     rts
@@ -9015,7 +9015,7 @@ _82EBC1:
     sta.b 0x03
     inc.w 0x1E88
     stz.w 0x1E9A
-    jsl 0x80E02C
+    jsl _80E02C
     jmp _82ED72
 
 .EC45:
@@ -9029,7 +9029,7 @@ _82EBC1:
     adc.w #0x0100
     sta.w 0x1E8D
     sep #0x20
-    jsl 0x80E02C
+    jsl _80E02C
 .EC5F:
     rts
 
@@ -9076,7 +9076,7 @@ _82EBC1:
     sta.b 0x03
     inc.w 0x1E88
     stz.w 0x1E9A
-    jsl 0x80E02C
+    jsl _80E02C
     jmp _82ED88
 
 .ECB6:
@@ -10262,7 +10262,7 @@ _82F45E:
 
     stz.b 0x0B
     lda.b #0x1C
-    jsl 0x80888B
+    jsl _80888B
 .F474:
     ldx.b 0x01
     jmp (.F479,X)
@@ -11652,7 +11652,7 @@ _82FD4B:
     sec
     sbc.w #0x0040
 .FDA6:
-    sta.w 0x4204
+    sta.w snes_regs.wrdivl
     sep #0x20
     lda.b #0x0C
     sta.w 0x4206

@@ -33,7 +33,7 @@ gulpfer:
     lda.b #0x07
     jsl 0x848F07
     lda.b #0x23
-    jsl 0x80888B
+    jsl _80888B
     lda.b 0x3E
     beq .A384
 
@@ -560,7 +560,7 @@ gulpfer:
     lda.b #0x06
     jsl 0x848F07
     lda.b #0x23
-    jsl 0x80888B
+    jsl _80888B
     lda.b 0x3E
     beq .A70F
 

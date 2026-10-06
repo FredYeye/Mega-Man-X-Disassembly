@@ -21,7 +21,7 @@ storm_eagleed:
     beq .D888
 
     lda.b #0x2E
-    jsl 0x80878B
+    jsl _80878B
 .D888:
     dec.b 0x34
     beq .D88D
@@ -96,7 +96,7 @@ storm_eagleed:
     bpl .D91C
 
     lda.b #0x58
-    jsl 0x80888B
+    jsl _80888B
 .D91C:
     jsl 0x8491BE
     lda.b 0x2B
@@ -133,7 +133,7 @@ storm_eagleed:
     bcc .D98D
 
     lda.b #0x0C
-    jsl 0x8088B6
+    jsl _80888B.88B6
     lda.b 0x27
     and.b #0x7F
     inc
@@ -159,7 +159,7 @@ storm_eagleed:
     beq .D98D
 
     lda.b #0x1E
-    jsl 0x80878B
+    jsl _80878B
 .D98D:
     lda.b #0x80
     tsb.b 0x27
@@ -212,7 +212,7 @@ storm_eagleed:
     lda.b #0x01
     tsb.w 0x1F42
     lda.b #0x13
-    jsl 0x80888B
+    jsl _80888B
     jml 0x8280B4
 
 .D9F2:
@@ -222,7 +222,7 @@ storm_eagleed:
     lda.b #0x3C
     sta.b 0x37
     lda.b #0x13
-    jsl 0x80888B
+    jsl _80888B
 .DA00:
     lda.b 0x37
     beq .DA0F
@@ -491,7 +491,7 @@ storm_eagleed:
     jsl 0x848F07
     jsl 0x848FCA
     lda.b #0x0E
-    jsl 0x80888B
+    jsl _80888B
 .DBE5:
     sep #0x20
     jsl 0x84AC92
@@ -795,10 +795,10 @@ storm_eagleed:
     bcc .DE10
 
     lda.b #0x1B
-    jsl 0x80878B
+    jsl _80878B
     lda.b #0xF5
     ldy.b #0x03
-    jsl 0x808868
+    jsl _808850.8868
     rep #0x20
     lda.w #0x1200
     sta.w 0x1E60
@@ -863,7 +863,7 @@ storm_eagleed:
     bne .DE58
 
     lda.b #0x58
-    jsl 0x80888B
+    jsl _80888B
     rts
 
 .DE58:
@@ -871,7 +871,7 @@ storm_eagleed:
     bne .DE62
 
     lda.b #0x59
-    jsl 0x80888B
+    jsl _80888B
 .DE62:
     rts
 

@@ -134,7 +134,7 @@ capsule:
     bne .CB8B
 
     lda.b #0x20
-    jsl 0x80888B
+    jsl _80888B
 .CB8B:
     lda.b #0x40
     jsl 0x84A311
@@ -176,7 +176,7 @@ capsule:
     beq .CC25
 
     lda.b #0xF1
-    jsl 0x808868
+    jsl _808850.8868
     lda.b #0x04
     sta.b 0x02
     stz.b 0x03
@@ -249,7 +249,7 @@ capsule:
     lda.b #0x04
     sta.b 0x03
     lda.b #0x2A
-    jsl 0x80888B
+    jsl _80888B
     lda.b #0x01
     jsl 0x848F07
 .CC72:
@@ -327,7 +327,7 @@ capsule:
     sep #0x10
     jsl 0x84A2A7
     lda.b #0x4B
-    jsl 0x80888B
+    jsl _80888B
     jsl 0x849FE6
     stz.w 0x0C16
     rts

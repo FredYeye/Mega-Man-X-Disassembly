@@ -37,12 +37,12 @@ sting_chameleao:
 .8588:
     sta.w 0x1E90
     sep #0x20
-    jsl 0x80E02C
+    jsl _80E02C
     lda.w 0x1F26
     beq .859C
 
     lda.b #0x2E
-    jsl 0x80878B
+    jsl _80878B
 .859C:
     dec.b 0x34
     beq .85A1
@@ -120,7 +120,7 @@ sting_chameleao:
     lda.b #0x5A
     sta.b 0x34
     lda.b #0x76
-    jsl 0x80888B
+    jsl _80888B
 .863C:
     rts
 
@@ -201,7 +201,7 @@ sting_chameleao:
     bcc .86D0
 
     lda.b #0x0C
-    jsl 0x8088B6
+    jsl _80888B.88B6
     lda.b 0x27
     and.b #0x7F
     inc
@@ -230,7 +230,7 @@ sting_chameleao:
     beq .86F0
 
     lda.b #0x1E
-    jsl 0x80878B
+    jsl _80878B
 .86F0:
     rts
 
@@ -304,7 +304,7 @@ sting_chameleao:
     ldx.b 0x35
     stz.w 0x0AA1,X
     lda.b #0x13
-    jsl 0x80888B
+    jsl _80888B
     jsl 0x84AC92
     jml 0x8280B4
 
@@ -313,7 +313,7 @@ sting_chameleao:
     bne .879A
 
     lda.b #0x13
-    jsl 0x80888B
+    jsl _80888B
     lda.b #0x3C
     sta.b 0x33
     lda.w 0x1F1D
@@ -545,7 +545,7 @@ sting_chameleao:
     sta.w 0x00C1
     inc.b 0x37
     lda.b #0x76
-    jsl 0x80888B
+    jsl _80888B
     rts
 
 .8925:
@@ -702,7 +702,7 @@ sting_chameleao:
     lda.b #0x20
     sta.b 0x34
     lda.b #0x76
-    jsl 0x80888B
+    jsl _80888B
 .8A43:
     rts
 
@@ -767,7 +767,7 @@ sting_chameleao:
     lda.b #0x20
     sta.b 0x34
     lda.b #0x76
-    jsl 0x80888B
+    jsl _80888B
     rts
 
 .8AAC:
@@ -780,7 +780,7 @@ sting_chameleao:
     lda.b #0x20
     sta.b 0x34
     lda.b #0x76
-    jsl 0x80888B
+    jsl _80888B
 .8ABF:
     rts
 
@@ -975,7 +975,7 @@ sting_chameleao:
     lda.b #0x07
     jsl 0x848F07
     lda.b #0x7C
-    jsl 0x80888B
+    jsl _80888B
     jsl 0x84AC92
     lda.b #0x04
     sta.b 0x03
@@ -987,7 +987,7 @@ sting_chameleao:
     adc.b #0x0B
     jsl 0x848F07
     lda.b #0x7C
-    jsl 0x80888B
+    jsl _80888B
     lda.b #0x02
     sta.b 0x03
     rts
@@ -1012,7 +1012,7 @@ sting_chameleao:
     adc.b #0x0B
     jsl 0x848F07
     lda.b #0x7C
-    jsl 0x80888B
+    jsl _80888B
     rts
 
 .8C2F:
@@ -1062,7 +1062,7 @@ sting_chameleao:
     lda.b #0x07
     jsl 0x848F07
     lda.b #0x7C
-    jsl 0x80888B
+    jsl _80888B
     rts
 
 .8C7C:
@@ -1146,10 +1146,10 @@ sting_chameleao:
     bcc .8D1C
 
     lda.b #0x1C
-    jsl 0x80878B
+    jsl _80878B
     lda.b #0xF5
     ldy.b #0x03
-    jsl 0x808868
+    jsl _808850.8868
     lda.b #0x17
     sta.w 0x00C0
     stz.w 0x00C1
@@ -1464,5 +1464,5 @@ sting_chameleao:
 .8F21:
     sep #0x30
     lda.b #0x79
-    jsl 0x80888B
+    jsl _80888B
     rts

@@ -135,7 +135,7 @@ anglerge:
     lda.b #0x3C
     jsl 0x84A333
     lda.b #0x30
-    jsl 0x80888B
+    jsl _80888B
 .AF3B:
     rtl
 
@@ -399,7 +399,7 @@ anglerge:
 
     lda.b #0x32
 .B0CB:
-    jsl 0x80888B
+    jsl _80888B
 .B0CF:
     dec.b 0x16
     bne .B0E3
@@ -769,7 +769,7 @@ anglerge:
     lda.b #0x78
     sta.b 0x16
     lda.b #0x21
-    jsl 0x80888B
+    jsl _80888B
     lda.b 0x02
     cmp.b #0x02
     bne .B35B

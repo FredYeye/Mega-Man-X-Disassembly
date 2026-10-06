@@ -205,7 +205,7 @@ mega_tortoise:
     sta.w 0x0008,X
     sep #0x30
     lda.b #0x1E
-    jsl 0x80888B
+    jsl _80888B
 .ED6E:
     sep #0x30
     rts

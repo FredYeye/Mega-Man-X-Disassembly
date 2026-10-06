@@ -169,7 +169,7 @@ bee_blader:
     bne .BA0C
 
     lda.b #0x1D
-    jsl 0x80888B
+    jsl _80888B
     jsl 0x828358
     bne .B9FE
 
@@ -209,14 +209,14 @@ bee_blader:
     sta.b 0x34
     jsr .BBF6
     lda.b #0x1E
-    jsl 0x80888B
+    jsl _80888B
 .BA29:
     dec.b 0x34
     bne .BA3E
 
     jsr .BBF6
     lda.b #0x1E
-    jsl 0x80888B
+    jsl _80888B
     lda.b #0x3C
     sta.b 0x34
     lda.b #0x06
@@ -277,7 +277,7 @@ bee_blader:
     lda.b #0x02
     sta.b 0x02
     lda.b #0x21
-    jsl 0x80888B
+    jsl _80888B
     rep #0x20
     lda.w #0xCC25
     sta.b 0x20
@@ -295,7 +295,7 @@ bee_blader:
     beq .BB20
 
     lda.b #0x22
-    jsl 0x8088B6
+    jsl _80888B.88B6
     lda.b #0x20
     ldx.b #0x03
     ldy.b #0x01

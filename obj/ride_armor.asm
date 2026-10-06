@@ -142,7 +142,7 @@ ride_armor:
 .C6A5:
     lda.b #0x09
 .C6A7:
-    jsl 0x80888B
+    jsl _80888B
     lda.b #0x06
     sta.b 0x35
     lda.b #0x05
@@ -416,7 +416,7 @@ ride_armor:
     beq .C88E
 
     ora.b #0x38
-    jsl 0x80888B
+    jsl _80888B
 .C88E:
     rts
 
@@ -446,7 +446,7 @@ ride_armor:
     lda.b #0x05
     sta.b 0x1D
     lda.b #0x38
-    jsl 0x80888B
+    jsl _80888B
     lda.b #0x08
     sta.b 0x2F
     lda.b #0x0C
@@ -538,7 +538,7 @@ ride_armor:
     sep #0x20
     stz.b 0x31
     lda.b #0x3B
-    jsl 0x80888B
+    jsl _80888B
     lda.b #0x40
     sta.b 0x34
     lda.b #0x06
@@ -733,7 +733,7 @@ ride_armor:
     lda.b #0x0A
     jsl 0x84A33C
     lda.b #0x39
-    jsl 0x80888B
+    jsl _80888B
     stz.b 0x2F
     jsr _83CD3E
     jsr _83CD69

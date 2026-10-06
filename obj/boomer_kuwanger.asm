@@ -22,7 +22,7 @@ boomer_kuwanger:
     beq .8AAE
 
     lda.b #0x2E
-    jsl 0x80878B
+    jsl _80878B
 .8AAE:
     dec.b 0x34
     beq .8AB3
@@ -202,7 +202,7 @@ boomer_kuwanger:
     bcc .8BF3
 
     lda.b #0x0C
-    jsl 0x8088B6
+    jsl _80888B.88B6
     lda.b 0x27
     and.b #0x7F
     inc
@@ -235,7 +235,7 @@ boomer_kuwanger:
     beq .8C19
 
     lda.b #0x1E
-    jsl 0x80878B
+    jsl _80878B
 .8C19:
     rts
 
@@ -314,7 +314,7 @@ boomer_kuwanger:
 .8C92:
     jsr .90B1
     lda.b #0x13
-    jsl 0x80888B
+    jsl _80888B
 .8C9B:
     lda.b 0x3D
     beq .8CAA
@@ -384,7 +384,7 @@ boomer_kuwanger:
     lda.b #0x02
     sta.b 0x03
     lda.b #0x53
-    jsl 0x80888B
+    jsl _80888B
     stz.b 0x31
     lda.b #0x01
     jsr .90B1
@@ -605,7 +605,7 @@ boomer_kuwanger:
     lda.b #0x02
     jsr .90B1
     lda.b #0x50
-    jsl 0x80888B
+    jsl _80888B
     rts
 
 .8E8F:
@@ -662,7 +662,7 @@ boomer_kuwanger:
     lda.b #0x06
     sta.b 0x03
     lda.b #0x50
-    jsl 0x80888B
+    jsl _80888B
     lda.b #0x14
     sta.b 0x39
 .8EE9:
@@ -754,7 +754,7 @@ boomer_kuwanger:
     lda.b #0x01
     sta.b 0x3C
     lda.b #0x52
-    jsl 0x8088B6
+    jsl _80888B.88B6
     lda.b #0x14
     sta.b 0x34
     lda.b 0x11
@@ -936,10 +936,10 @@ boomer_kuwanger:
     bcc .9099
 
     lda.b #0x1A
-    jsl 0x80878B
+    jsl _80878B
     lda.b #0xF5
     ldy.b #0x03
-    jsl 0x808868
+    jsl _808850.8868
 .9099:
     jml 0x828398
 

@@ -1264,7 +1264,7 @@ _848822:
     lda.b 0x15
     sta.w 0x0009
     jsl _849111
-    jsl 0x80B8D5
+    jsl _80B8D5
 .88DB:
     lda.b #0x80
     sta.w 0x08FE
@@ -4540,7 +4540,7 @@ _849E10:
 
 .9E63:
     lda.b #0x3C
-    jsl 0x80888B
+    jsl _80888B
 .9E69:
     lda.b 0x27
     and.b #0x7F
@@ -4552,7 +4552,7 @@ _849E10:
 
     sta.b 0x27
     lda.b #0x11
-    jsl 0x80888B
+    jsl _80888B
     lda.b #0x08
     sta.w 0x0001,X
     stz.w 0x0002,X
@@ -4631,7 +4631,7 @@ _849E10:
     stz.w 0x0004
     inc.w 0x0005
     lda.b #0x10
-    jsl 0x80888B
+    jsl _80888B
     rts
 
 .9F0B:
@@ -5558,7 +5558,7 @@ _84A462:
 .A4AB:
     php
     lda.b #0x23
-    jsl 0x80888B
+    jsl _80888B
     rep #0x20
     lda.b 0x05
     sta.w 0x0000
@@ -5581,7 +5581,7 @@ _84A4C6:
     and.b #0x03
     clc
     adc.b #0x93
-    jsl 0x80888B
+    jsl _80888B
     rep #0x20
     jsl get_rng
     and.w 0x0004
@@ -5844,7 +5844,7 @@ _84A66D:
 .A6C0:
     lda.b #0xF6
     ldy.b #0x03
-    jsl 0x808868
+    jsl _808850.8868
     lda.b #0x00
     rtl
 
@@ -5937,7 +5937,7 @@ _84A66D:
     inc.b 0x03
     inc.b 0x03
     lda.b #0x21
-    jsl 0x80888B
+    jsl _80888B
     jsr _84AA7C
     jmp .AA5A
 
@@ -6911,7 +6911,7 @@ _84AD62:
     pla
 .ADA2:
     lda.b 0x02
-    sta.w 0x4204
+    sta.w snes_regs.wrdivl
     ldx.b #0x40
     stx.w 0x4206
     nop

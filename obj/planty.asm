@@ -121,7 +121,7 @@ planty:
     sta.b 0x20
     sep #0x20
     lda.b #0x2F
-    jsl 0x80888B
+    jsl _80888B
     lda.b #0x08
     sta.w 0x0000
     stz.w 0x0001

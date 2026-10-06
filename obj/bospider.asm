@@ -22,7 +22,7 @@ bospider:
     beq .DBA6
 
     lda.b #0x23
-    jsl 0x80878B
+    jsl _80878B
 .DBA6:
     dec.b 0x35
     beq .DBAB
@@ -91,7 +91,7 @@ bospider:
     ora.b #0x80
     sta.b 0x27
     lda.b #0x0C
-    jsl 0x8088B6
+    jsl _80888B.88B6
     jmp .DC40
 
 .DC1F:
@@ -106,7 +106,7 @@ bospider:
     beq .DC40
 
     lda.b #0x24
-    jsl 0x80878B
+    jsl _80878B
     jsl 0x8280B4
 .DC40:
     rts
@@ -160,7 +160,7 @@ bospider:
     beq .DCBB
 
     lda.b #0x13
-    jsl 0x80888B
+    jsl _80888B
     lda.b #0x06
     sta.b 0x01
     stz.b 0x02
@@ -182,7 +182,7 @@ bospider:
     trb.b 0x11
 .DCBB:
     lda.b #0x13
-    jsl 0x80888B
+    jsl _80888B
     lda.b #0x18
     sta.b 0x3F
     lda.b #0x05
@@ -343,7 +343,7 @@ bospider:
     bne .DDC6
 
     lda.b #0x43
-    jsl 0x8088B6
+    jsl _80888B.88B6
     lda.b #0x04
     sta.b 0x2F
 .DDC6:
@@ -380,7 +380,7 @@ bospider:
     bne .DE0C
 
     lda.b #0x43
-    jsl 0x8088B6
+    jsl _80888B.88B6
     lda.b #0x04
     sta.b 0x2F
 .DE0C:
@@ -615,7 +615,7 @@ bospider:
     sta.b 0x02
     ldy.b #0x02
     lda.b #0xF6
-    jsl 0x808868
+    jsl _808850.8868
     jsl 0x849FE6
     lda.b #0x30
     tsb.w 0x0BB9
@@ -693,7 +693,7 @@ bospider:
     bne .E053
 
     lda.b #0x21
-    jsl 0x8088B6
+    jsl _80888B.88B6
 .E053:
     dec.b 0x35
     lda.b 0x35

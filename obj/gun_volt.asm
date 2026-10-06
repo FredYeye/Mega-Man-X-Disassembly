@@ -117,7 +117,7 @@ gun_volt:
 
     jsr .DB19
     lda.b #0x1E
-    jsl 0x80888B
+    jsl _80888B
 .DAC1:
     lda.b 0x0F
     bpl .DAD7
@@ -146,7 +146,7 @@ gun_volt:
     beq .DB06
 
     lda.b #0x44
-    jsl 0x80888B
+    jsl _80888B
     lda.b #0xFF
     sta.w 0x0001
     lda.b #0xEF

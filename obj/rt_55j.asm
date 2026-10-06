@@ -160,7 +160,7 @@ rt_55j:
     lda.b #0x10
     jsl 0x84A333
     lda.b #0x1A
-    jsl 0x80888B
+    jsl _80888B
 .CD48:
     rts
 

@@ -99,7 +99,7 @@ crag_man:
     lda.b #0x06
     sta.b 0x01
     lda.b #0x20
-    jsl 0x80888B
+    jsl _80888B
     rep #0x20
     lda.b 0x1C
     eor.w #0xFFFF
