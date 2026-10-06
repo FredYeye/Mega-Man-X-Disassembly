@@ -50,7 +50,7 @@ icy_penguigo:
     lda.b #0xFF
     sta.b 0x2F
     lda.b #0x07
-    jsl 0x848F07
+    jsl _848EEA.8F07
     lda.b #0x02
     sta.b 0x01
     stz.b 0x02
@@ -73,19 +73,19 @@ icy_penguigo:
     lda.b #0x02
     sta.b 0x02
     lda.b #0x08
-    jsl 0x848F07
+    jsl _848EEA.8F07
 .B5A2:
     rts
 
 .B5A3:
-    jsl 0x848EEA
+    jsl _848EEA
     lda.b 0x0F
     bpl .B5BF
 
     lda.b #0x04
     sta.b 0x02
     lda.b #0x10
-    jsl 0x848F07
+    jsl _848EEA.8F07
     rep #0x20
     tdc
     sta.w 0x1F0E
@@ -95,7 +95,7 @@ icy_penguigo:
     rts
 
 .B5C0:
-    jsl 0x848EEA
+    jsl _848EEA
     lda.b 0x0F
     bpl .B5E4
 
@@ -132,7 +132,7 @@ icy_penguigo:
     bcc .B613
 
     lda.b #0x00
-    jsl 0x848F07
+    jsl _848EEA.8F07
     lda.b #0x08
     sta.b 0x02
     lda.w 0x1F26
@@ -234,7 +234,7 @@ icy_penguigo:
     sta.w 0x0BD8
     sta.w 0x1F0C
     lda.b #0x04
-    jsl 0x848F07
+    jsl _848EEA.8F07
     jml 0x8280B4
 
 .B6BA:
@@ -281,7 +281,7 @@ icy_penguigo:
     lda.b #0x02
     sta.b 0x03
     lda.b #0x01
-    jsl 0x848F07
+    jsl _848EEA.8F07
     lda.b #0x04
     sta.b 0x36
     jsl 0x84AC92
@@ -290,7 +290,7 @@ icy_penguigo:
     rts
 
 .B717:
-    jsl 0x848EEA
+    jsl _848EEA
     lda.b 0x17
     bpl .B761
 
@@ -340,14 +340,14 @@ icy_penguigo:
     lda.b #0x04
     sta.b 0x03
     lda.b #0x00
-    jsl 0x848F07
+    jsl _848EEA.8F07
     lda.b #0x78
     sta.b 0x34
 .B77B:
     rts
 
 .B77C:
-    jsl 0x848EEA
+    jsl _848EEA
     jsl 0x84AC92
     dec.b 0x34
     bne .B78B
@@ -366,7 +366,7 @@ icy_penguigo:
     lda.b #0x02
     sta.b 0x03
     lda.b #0x05
-    jsl 0x848F07
+    jsl _848EEA.8F07
     lda.b #0x40
     sta.b 0x1E
     rep #0x20
@@ -404,7 +404,7 @@ icy_penguigo:
     rts
 
 .B7E1:
-    jsl 0x848EEA
+    jsl _848EEA
     lda.b 0x0F
     beq .B81B
 
@@ -415,7 +415,7 @@ icy_penguigo:
     lda.b #0x04
     sta.b 0x03
     lda.b #0x09
-    jsl 0x848F07
+    jsl _848EEA.8F07
     lda.b 0x11
     asl
     asl
@@ -447,11 +447,11 @@ icy_penguigo:
     lda.b #0x06
     sta.b 0x03
     lda.b #0x07
-    jsl 0x848F07
+    jsl _848EEA.8F07
     rts
 
 .B82F:
-    jsl 0x848EEA
+    jsl _848EEA
     lda.b 0x0F
     bpl .B841
 
@@ -464,7 +464,7 @@ icy_penguigo:
     rts
 
 .B842:
-    jsl 0x848EEA
+    jsl _848EEA
     jsl update_pos_xy.neg_ay
     jsl 0x8491BE
     lda.b 0x2B
@@ -474,27 +474,27 @@ icy_penguigo:
     lda.b #0x08
     sta.b 0x03
     lda.b #0x08
-    jsl 0x848F07
+    jsl _848EEA.8F07
     stz.b 0x2F
 .B860:
     rts
 
 .B861:
-    jsl 0x848EEA
+    jsl _848EEA
     lda.b 0x0F
     bpl .B877
 
     lda.b #0x0A
     sta.b 0x03
     lda.b #0x00
-    jsl 0x848F07
+    jsl _848EEA.8F07
     lda.b #0x1E
     sta.b 0x34
 .B877:
     rts
 
 .B878:
-    jsl 0x848EEA
+    jsl _848EEA
     dec.b 0x34
     bne .B883
 
@@ -514,7 +514,7 @@ icy_penguigo:
     stz.b 0x38
     jsl 0x84AC92
     lda.b #0x02
-    jsl 0x848F07
+    jsl _848EEA.8F07
     stz.b 0x2F
     lda.b #0x10
     sta.b 0x1F
@@ -536,7 +536,7 @@ icy_penguigo:
     rts
 
 .B8C2:
-    jsl 0x848EEA
+    jsl _848EEA
     lda.b 0x0F
     and.b #0x7F
     beq .B8D6
@@ -549,7 +549,7 @@ icy_penguigo:
     rts
 
 .B8D7:
-    jsl 0x848EEA
+    jsl _848EEA
     lda.b 0x11
     asl
     asl
@@ -586,7 +586,7 @@ icy_penguigo:
     lda.b #0x06
     sta.b 0x03
     lda.b #0x00
-    jsl 0x848F07
+    jsl _848EEA.8F07
     lda.b #0x01
     sta.b 0x38
     lda.b #0x1E
@@ -596,7 +596,7 @@ icy_penguigo:
     rts
 
 .B925:
-    jsl 0x848EEA
+    jsl _848EEA
     dec.b 0x34
     beq .B930
 
@@ -631,11 +631,11 @@ icy_penguigo:
     sta.b 0x1C
     sep #0x20
     lda.b #0x05
-    jsl 0x848F07
+    jsl _848EEA.8F07
     rts
 
 .B970:
-    jsl 0x848EEA
+    jsl _848EEA
     lda.b 0x0F
     and.b #0x7F
     beq .B97E
@@ -648,7 +648,7 @@ icy_penguigo:
 .B97F:
     jsl update_pos_xy.neg_ay
     jsl 0x8491BE
-    jsl 0x848EEA
+    jsl _848EEA
     rep #0x20
     lda.b 0x1C
     sep #0x20
@@ -657,14 +657,14 @@ icy_penguigo:
     lda.b #0x06
     sta.b 0x03
     lda.b #0x07
-    jsl 0x848F07
+    jsl _848EEA.8F07
 .B99D:
     rts
 
 .B99E:
     jsl update_pos_xy.neg_ay
     jsl 0x8491BE
-    jsl 0x848EEA
+    jsl _848EEA
     rep #0x20
     lda.b 0x1C
     cmp.w #0xF900
@@ -683,26 +683,26 @@ icy_penguigo:
     lda.b #0x08
     sta.b 0x03
     lda.b #0x08
-    jsl 0x848F07
+    jsl _848EEA.8F07
 .B9CE:
     rts
 
 .B9CF:
-    jsl 0x848EEA
+    jsl _848EEA
     lda.b 0x0F
     bpl .B9E5
 
     lda.b #0x0A
     sta.b 0x03
     lda.b #0x00
-    jsl 0x848F07
+    jsl _848EEA.8F07
     lda.b #0x1E
     sta.b 0x34
 .B9E5:
     rts
 
 .B9E6:
-    jsl 0x848EEA
+    jsl _848EEA
     dec.b 0x34
     bne .B9F1
 
@@ -751,20 +751,20 @@ icy_penguigo:
 
     sep #0x30
     lda.b #0x01
-    jsl 0x848F07
+    jsl _848EEA.8F07
     lda.b #0x02
     sta.b 0x03
     rts
 
 .BA44:
-    jsl 0x848EEA
+    jsl _848EEA
     lda.b 0x0F
     beq .BA60
 
     lda.b #0x04
     sta.b 0x03
     lda.b #0x0E
-    jsl 0x848F07
+    jsl _848EEA.8F07
     lda.b #0x3C
     sta.b 0x34
     lda.b #0x72
@@ -773,7 +773,7 @@ icy_penguigo:
     rts
 
 .BA61:
-    jsl 0x848EEA
+    jsl _848EEA
     jsr _81BF0C
     dec.b 0x34
     bne .BA8A
@@ -794,7 +794,7 @@ icy_penguigo:
     rts
 
 .BA8B:
-    jsl 0x848EEA
+    jsl _848EEA
     jsr _81BF0C
     dec.b 0x34
     bne .BAA8
@@ -804,14 +804,14 @@ icy_penguigo:
     lda.b #0x1E
     sta.b 0x34
     lda.b #0x00
-    jsl 0x848F07
+    jsl _848EEA.8F07
     lda.b #0x01
     sta.b 0x38
 .BAA8:
     rts
 
 .BAA9:
-    jsl 0x848EEA
+    jsl _848EEA
     dec.b 0x34
     bne .BAB4
 
@@ -840,7 +840,7 @@ icy_penguigo:
     sta.b 0x37
     lda.b #0x0D
 .BADC:
-    jsl 0x848F07
+    jsl _848EEA.8F07
     lda.b 0x11
     asl
     asl
@@ -862,7 +862,7 @@ icy_penguigo:
 
 .BB00:
     jsl update_pos_xy.neg_ay
-    jsl 0x848EEA
+    jsl _848EEA
     jsl 0x8491BE
     lda.b 0x2B
     and.b #0x04
@@ -886,7 +886,7 @@ icy_penguigo:
 
 .BB2A:
     jsl update_pos_x
-    jsl 0x848EEA
+    jsl _848EEA
     jsl 0x8491BE
     lda.b 0x37
     bne .BB4A
@@ -894,7 +894,7 @@ icy_penguigo:
     stz.b 0x02
     jsr _81C00F
     lda.b #0x00
-    jsl 0x848F07
+    jsl _848EEA.8F07
     jsl 0x84AC92
     rts
 

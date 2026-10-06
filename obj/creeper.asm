@@ -27,7 +27,7 @@ creeper:
 .A9B5:
     stz.b 0x29
     stz.b 0x2A
-    jsl 0x8490A0
+    jsl _8490A0
     cmp.b #0x34
     bcs .A9AD
 
@@ -55,7 +55,7 @@ creeper:
     lda.b #0xFF
     sta.b 0x2F
     lda.b #0x03
-    jsl 0x848F07
+    jsl _848EEA.8F07
     lda.b 0x11
     and.b #0x40
     rep #0x20
@@ -108,7 +108,7 @@ creeper:
     lda.b #0x06
     sta.b 0x01
     lda.b #0x04
-    jsl 0x848F07
+    jsl _848EEA.8F07
     stz.b 0x2F
     lda.b #0x40
     trb.b 0x11
@@ -134,7 +134,7 @@ creeper:
     rts
 
 .AA7A:
-    jsl 0x848EEA
+    jsl _848EEA
     jsl 0x82806E
     bcc .AA88
 
@@ -168,11 +168,11 @@ creeper:
     lda.b #0x04
     sta.b 0x01
     lda.b #0x03
-    jsl 0x848F07
+    jsl _848EEA.8F07
     lda.b #0xFF
     sta.b 0x2F
 .AAC1:
-    jsl 0x848EEA
+    jsl _848EEA
     jsl 0x82806E
     bcc .AACF
 

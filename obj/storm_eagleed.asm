@@ -65,7 +65,7 @@ storm_eagleed:
     sta.b 0x02
     lda.b #0x05
     sta.b 0x38
-    jsl 0x848F07
+    jsl _848EEA.8F07
     lda.b #0x01
     tsb.b 0x11
     rep #0x20
@@ -86,7 +86,7 @@ storm_eagleed:
 
 .D902:
     jsl update_pos_y
-    jsl 0x848EEA
+    jsl _848EEA
     lda.b 0x17
     bpl .D91C
 
@@ -108,7 +108,7 @@ storm_eagleed:
     stz.b 0x2F
     lda.b #0x0B
     sta.b 0x38
-    jsl 0x848F07
+    jsl _848EEA.8F07
     rep #0x20
     tdc
     sta.w 0x1F0E
@@ -117,7 +117,7 @@ storm_eagleed:
     rts
 
 .D93D:
-    jsl 0x848EEA
+    jsl _848EEA
     lda.b 0x0F
     bpl .D949
 
@@ -207,7 +207,7 @@ storm_eagleed:
     tsb.b 0x11
     lda.b #0x0A
     sta.b 0x38
-    jsl 0x848F07
+    jsl _848EEA.8F07
     jsl 0x84AC92
     lda.b #0x01
     tsb.w 0x1F42
@@ -260,7 +260,7 @@ storm_eagleed:
     sta.b 0x39
     jsl 0x84AC92
     rep #0x20
-    jsl 0x849086
+    jsl get_rng
     lsr
     bcc .DA51
 
@@ -312,11 +312,11 @@ storm_eagleed:
 .DA8F:
     lda.b #0x01
     sta.b 0x38
-    jsl 0x848F07
+    jsl _848EEA.8F07
     rts
 
 .DA98:
-    jsl 0x848EEA
+    jsl _848EEA
     jsl update_pos_y
     jsl 0x84AC92
     jsl 0x8491BE
@@ -326,7 +326,7 @@ storm_eagleed:
 
     lda.b #0x01
     sta.b 0x38
-    jsl 0x848F07
+    jsl _848EEA.8F07
     stz.b 0x2F
     lda.b #0x04
     sta.b 0x03
@@ -334,7 +334,7 @@ storm_eagleed:
     rts
 
 .DABD:
-    jsl 0x848EEA
+    jsl _848EEA
     jsr .DE63
     rep #0x20
     lda.w 0x0BB0
@@ -387,14 +387,14 @@ storm_eagleed:
     sta.b 0x34
     lda.b #0x00
     sta.b 0x38
-    jsl 0x848F07
+    jsl _848EEA.8F07
     lda.b #0x06
     sta.b 0x03
 .DB26:
     rts
 
 .DB27:
-    jsl 0x848EEA
+    jsl _848EEA
     dec.b 0x34
     bne .DB32
 
@@ -416,7 +416,7 @@ storm_eagleed:
 
     lda.b #0x05
     sta.b 0x38
-    jsl 0x848F07
+    jsl _848EEA.8F07
     lda.b #0xFF
     sta.b 0x2F
 .DB58:
@@ -427,12 +427,12 @@ storm_eagleed:
     lda.b 0x36
     bne .DB7A
 
-    jsl 0x849086
+    jsl get_rng
     and.b #0x0F
     cmp.b #0x04
     bcc .DB7C
 
-    jsl 0x849086
+    jsl get_rng
     and.b #0x03
     clc
     adc.b #0x06
@@ -443,7 +443,7 @@ storm_eagleed:
     rts
 
 .DB7D:
-    jsl 0x848EEA
+    jsl _848EEA
     jsl update_pos_y
     rep #0x20
     lda.w 0x1E50
@@ -458,7 +458,7 @@ storm_eagleed:
     sec
     sbc.b 0x08
     sta.w 0x0000
-    jsl 0x849086
+    jsl get_rng
     lsr
     bcc .DBB2
 
@@ -488,7 +488,7 @@ storm_eagleed:
     trb.b 0x11
     lda.b #0x02
     sta.b 0x38
-    jsl 0x848F07
+    jsl _848EEA.8F07
     jsl 0x848FCA
     lda.b #0x0E
     jsl _80888B
@@ -498,7 +498,7 @@ storm_eagleed:
     rts
 
 .DBEC:
-    jsl 0x848EEA
+    jsl _848EEA
     jsl 0x82820A
     rep #0x20
     lda.b 0x08
@@ -534,7 +534,7 @@ storm_eagleed:
     sta.b 0x16
     lda.b #0x05
     sta.b 0x38
-    jsl 0x848F07
+    jsl _848EEA.8F07
     lda.b 0x36
     beq .DC38
 
@@ -553,7 +553,7 @@ storm_eagleed:
 
 .DC46:
     jsl update_pos_y
-    jsl 0x848EEA
+    jsl _848EEA
     jsl 0x84AC92
     rep #0x20
     lda.b 0x08
@@ -573,7 +573,7 @@ storm_eagleed:
     rts
 
 .DC6C:
-    jsl 0x848EEA
+    jsl _848EEA
     jsl 0x84AC92
     dec.b 0x34
     bne .DC7B
@@ -627,11 +627,11 @@ storm_eagleed:
     stz.b 0x2F
     lda.b #0x03
     sta.b 0x38
-    jsl 0x848F07
+    jsl _848EEA.8F07
     rts
 
 .DCCD:
-    jsl 0x848EEA
+    jsl _848EEA
     jsl update_pos_y
     jsl 0x84AC92
     jsl 0x8491BE
@@ -642,7 +642,7 @@ storm_eagleed:
     rts
 
 .DCE4:
-    jsl 0x848EEA
+    jsl _848EEA
     lda.b 0x0F
     beq .DD24
 
@@ -679,7 +679,7 @@ storm_eagleed:
     rts
 
 .DD25:
-    jsl 0x848EEA
+    jsl _848EEA
     lda.b 0x0F
     bpl .DD30
 
@@ -704,7 +704,7 @@ storm_eagleed:
     sep #0x20
     lda.b #0x05
     sta.b 0x38
-    jsl 0x848F07
+    jsl _848EEA.8F07
     lda.b #0x5A
     sta.b 0x34
     lda.b #0xFF
@@ -716,13 +716,13 @@ storm_eagleed:
 .DD64:
     lda.b #0x06
     sta.b 0x38
-    jsl 0x848F07
+    jsl _848EEA.8F07
     lda.b #0x04
     sta.b 0x03
     rts
 
 .DD71:
-    jsl 0x848EEA
+    jsl _848EEA
     jsl update_pos_y
     jsl 0x84AC92
     dec.b 0x34
@@ -731,7 +731,7 @@ storm_eagleed:
     rts
 
 .DD82:
-    jsl 0x848EEA
+    jsl _848EEA
     lda.b 0x0F
     beq .DDCF
 
@@ -741,7 +741,7 @@ storm_eagleed:
     sta.b 0x03
     lda.b #0x05
     sta.b 0x38
-    jsl 0x848F07
+    jsl _848EEA.8F07
     lda.b #0x14
     sta.b 0x34
     rts
@@ -777,7 +777,7 @@ storm_eagleed:
     rts
 
 .DDD0:
-    jsl 0x848EEA
+    jsl _848EEA
     jsl 0x84AC92
     dec.b 0x34
     bne .DDDF
@@ -829,7 +829,7 @@ storm_eagleed:
     adc.b #0x03
     tax
     ldy.b #0x03
-    jsl 0x849086
+    jsl get_rng
     and.b #0x1F
 .DE2E:
     sec

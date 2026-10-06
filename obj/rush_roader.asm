@@ -51,7 +51,7 @@ rush_roader:
     sta.b 0x31
     sep #0x20
     lda.b #0x00
-    jsl 0x848F07
+    jsl _848EEA.8F07
     rts
 
 .8F91:
@@ -150,7 +150,7 @@ rush_roader:
     stz.b 0x1C
     stz.b 0x1D
     lda.b #0x00
-    jsl 0x848F07
+    jsl _848EEA.8F07
     lda.b #0xFF
     sta.b 0x35
     jmp .9383
@@ -223,7 +223,7 @@ rush_roader:
     jmp .92FD
 
 .90AD:
-    jsl 0x848EEA
+    jsl _848EEA
     rts
 
 .90B2:
@@ -273,7 +273,7 @@ rush_roader:
 
 .90F2:
     jsl update_pos_x
-    jsl 0x848EEA
+    jsl _848EEA
     rts
 
 .90FB:
@@ -310,7 +310,7 @@ rush_roader:
     sta.b 0x1F
     stz.b 0x1E
     lda.b #0x01
-    jsl 0x848F07
+    jsl _848EEA.8F07
     rts
 
 .9138:
@@ -355,7 +355,7 @@ rush_roader:
     lda.b 0x0F
     bne .9175
 
-    jsl 0x848EEA
+    jsl _848EEA
 .9175:
     rts
 
@@ -367,11 +367,11 @@ rush_roader:
     eor.b #0x40
     sta.b 0x37
     lda.b #0x00
-    jsl 0x848F07
+    jsl _848EEA.8F07
     jmp .92E3
 
 .9189:
-    jsl 0x848EEA
+    jsl _848EEA
     rts
 
 .918E:
@@ -413,7 +413,7 @@ rush_roader:
 
 .91C7:
     jsl update_pos_xy.neg_ay_ax
-    jsl 0x848EEA
+    jsl _848EEA
     rts
 
 .91D0:
@@ -441,7 +441,7 @@ rush_roader:
 
 .91F2:
     jsl update_pos_xy.neg_ay_ax
-    jsl 0x848EEA
+    jsl _848EEA
     rts
 
 .91FB:
@@ -471,7 +471,7 @@ rush_roader:
     sta.b 0x2F
 .9228:
     lda.b #0x02
-    jsl 0x848F07
+    jsl _848EEA.8F07
     rts
 
 .922F:
@@ -519,7 +519,7 @@ rush_roader:
     sta.b 0x1A
     sep #0x20
     jsl update_pos_x
-    jsl 0x848EEA
+    jsl _848EEA
     rts
 
 .927B:
@@ -574,7 +574,7 @@ rush_roader:
     sep #0x20
 .92CB:
     jsl update_pos_xy.neg_ay_ax
-    jsl 0x848EEA
+    jsl _848EEA
     rts
 
 .92D4:
@@ -631,19 +631,19 @@ rush_roader:
     sta.b 0x29
     lda.b #0x10
     sta.b 0x2A
-    jsl 0x8490A0
+    jsl _8490A0
     cmp.b #0x00
     bne .9337
 
     lda.b #0x20
     sta.b 0x2A
-    jsl 0x8490A0
+    jsl _8490A0
     cmp.b #0x00
     bne .9337
 
     lda.b #0x30
     sta.b 0x2A
-    jsl 0x8490A0
+    jsl _8490A0
     cmp.b #0x00
 .9337:
     rts
@@ -679,7 +679,7 @@ rush_roader:
     sep #0x20
     lda.b #0x03
     sta.b 0x33
-    jsl 0x848F07
+    jsl _848EEA.8F07
     bra .937E
 
 .936E:
@@ -714,7 +714,7 @@ rush_roader:
 
     lda.b #0x03
     sta.b 0x33
-    jsl 0x848F07
+    jsl _848EEA.8F07
 .939F:
     lda.b 0x34
     sta.b 0x35

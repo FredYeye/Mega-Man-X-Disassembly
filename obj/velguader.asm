@@ -44,7 +44,7 @@ velguader:
     stz.b 0x3C
     stz.b 0x3D
     lda.b #0x00
-    jsl 0x848F07
+    jsl _848EEA.8F07
     rtl
 
 .C88B:
@@ -64,7 +64,7 @@ velguader:
     lda.b #0x02
     sta.b 0x02
     lda.b #0x05
-    jsl 0x848F07
+    jsl _848EEA.8F07
     lda.b #0x7E
     jsl _80888B
 .C8B3:
@@ -74,7 +74,7 @@ velguader:
     lda.b 0x0F
     bmi .C8BF
 
-    jsl 0x848EEA
+    jsl _848EEA
     jmp .C8D3
 
 .C8BF:
@@ -86,7 +86,7 @@ velguader:
     lda.b #0x04
     sta.b 0x02
     lda.b #0x00
-    jsl 0x848F07
+    jsl _848EEA.8F07
 .C8D3:
     rts
 
@@ -118,7 +118,7 @@ velguader:
     jsl _80878B
     jsl 0x849FFE
 .C907:
-    jsl 0x848EEA
+    jsl _848EEA
     rts
 
 .C90C:
@@ -191,7 +191,7 @@ velguader:
     bne .C991
 
     lda.b #0x07
-    jsl 0x848F07
+    jsl _848EEA.8F07
     lda.b #0x0C
     sta.b 0x02
     stz.b 0x03
@@ -228,7 +228,7 @@ velguader:
     bne .C9D7
 
     lda.b #0x02
-    jsl 0x848F07
+    jsl _848EEA.8F07
     jmp .CA02
 
 .C9D7:
@@ -255,7 +255,7 @@ velguader:
 .C9FA:
     sep #0x20
     lda.b #0x03
-    jsl 0x848F07
+    jsl _848EEA.8F07
 .CA02:
     lda.b 0x3A
     bne .CA0C
@@ -308,7 +308,7 @@ velguader:
     and.b #0x01
     beq .CA59
 
-    jsl 0x848EEA
+    jsl _848EEA
 .CA59:
     lda.b 0x0F
     and.b #0x02
@@ -333,7 +333,7 @@ velguader:
     lda.b #0x04
     sta.b 0x03
     lda.b #0x09
-    jsl 0x848F07
+    jsl _848EEA.8F07
     jmp .CAAB
 
 .CA86:
@@ -350,14 +350,14 @@ velguader:
     beq .CAAB
 
     lda.b #0x04
-    jsl 0x848F07
+    jsl _848EEA.8F07
     lda.b #0x0E
     sta.b 0x03
     jmp .CAAB
 
 .CAA5:
     lda.b #0x11
-    jsl 0x848F07
+    jsl _848EEA.8F07
 .CAAB:
     sep #0x20
     rts
@@ -366,7 +366,7 @@ velguader:
     lda.b 0x0F
     bmi .CAB9
 
-    jsl 0x848EEA
+    jsl _848EEA
     jmp .CAD3
 
 .CAB9:
@@ -407,7 +407,7 @@ velguader:
 
 .CAEE:
     lda.b #0x0A
-    jsl 0x848F07
+    jsl _848EEA.8F07
     lda.b #0x0A
     sta.b 0x03
     lda.b #0x40
@@ -431,7 +431,7 @@ velguader:
 .CB1A:
     sep #0x20
     lda.b #0x04
-    jsl 0x848F07
+    jsl _848EEA.8F07
     lda.b #0x08
     sta.b 0x03
 .CB26:
@@ -442,7 +442,7 @@ velguader:
     lda.b 0x0F
     bmi .CB34
 
-    jsl 0x848EEA
+    jsl _848EEA
     jmp .CB37
 
 .CB34:
@@ -451,7 +451,7 @@ velguader:
     rts
 
 .CB38:
-    jsl 0x848EEA
+    jsl _848EEA
     jsl update_pos_xy.neg_ay
     rep #0x20
     lda.b 0x1C
@@ -468,7 +468,7 @@ velguader:
     beq .CB64
 
     lda.b #0x0B
-    jsl 0x848F07
+    jsl _848EEA.8F07
     lda.b #0x0C
     sta.b 0x03
 .CB64:
@@ -478,7 +478,7 @@ velguader:
     lda.b 0x0F
     bmi .CB70
 
-    jsl 0x848EEA
+    jsl _848EEA
     jmp .CB73
 
 .CB70:
@@ -493,14 +493,14 @@ velguader:
     lda.b #0x01
     sta.b 0x35
     lda.b #0x00
-    jsl 0x848F07
+    jsl _848EEA.8F07
     lda.b #0x0A
     sta.b 0x02
     stz.b 0x03
     jmp .CB8F
 
 .CB8B:
-    jsl 0x848EEA
+    jsl _848EEA
 .CB8F:
     rts
 
@@ -513,7 +513,7 @@ velguader:
 
 .CB9A:
     lda.b #0x05
-    jsl 0x848F07
+    jsl _848EEA.8F07
     lda.b #0x08
     sta.b 0x35
     lda.b #0x02
@@ -615,7 +615,7 @@ velguader:
     stz.b 0x39
 .CC53:
     sep #0x10
-    jsl 0x848EEA
+    jsl _848EEA
     jmp .CC6E
 
 .CC5C:
@@ -623,7 +623,7 @@ velguader:
     lda.b #0x0F
     sta.b 0x35
     lda.b #0x00
-    jsl 0x848F07
+    jsl _848EEA.8F07
     lda.b #0x0A
     sta.b 0x02
     stz.b 0x03
@@ -642,7 +642,7 @@ velguader:
     lda.b #0x02
     sta.b 0x03
     lda.b #0x06
-    jsl 0x848F07
+    jsl _848EEA.8F07
     lda.b #0x07
     sta.b 0x35
     stz.b 0x39
@@ -691,7 +691,7 @@ velguader:
     lda.w #0xCD28
     sta.b 0x20
     sep #0x20
-    jsl 0x849086
+    jsl get_rng
     and.b #0x07
     lsr
     bne .CCE3
@@ -793,7 +793,7 @@ velguader:
     sta.w 0x001E
 .CD86:
     sep #0x10
-    jsl 0x848EEA
+    jsl _848EEA
     jmp .CDB4
 
 .CD8F:
@@ -805,14 +805,14 @@ velguader:
     lda.b #0x04
     sta.b 0x03
     lda.b #0x00
-    jsl 0x848F07
+    jsl _848EEA.8F07
     jmp .CDB4
 
 .CDA4:
     lda.b #0x0F
     sta.b 0x35
     lda.b #0x00
-    jsl 0x848F07
+    jsl _848EEA.8F07
     lda.b #0x0A
     sta.b 0x02
     stz.b 0x03
@@ -831,11 +831,11 @@ velguader:
     lda.b #0x02
     sta.b 0x03
     lda.b #0x06
-    jsl 0x848F07
+    jsl _848EEA.8F07
     jmp .CDD4
 
 .CDD0:
-    jsl 0x848EEA
+    jsl _848EEA
 .CDD4:
     rts
 
@@ -865,7 +865,7 @@ velguader:
     sta.b 0x20
     sep #0x20
     lda.b #0x01
-    jsl 0x848F07
+    jsl _848EEA.8F07
     lda.b #0x02
     sta.b 0x03
     rts
@@ -874,7 +874,7 @@ velguader:
     lda.b 0x0F
     beq .CE16
 
-    jsl 0x848EEA
+    jsl _848EEA
     jmp .CE1A
 
 .CE16:
@@ -885,7 +885,7 @@ velguader:
 
 .CE1B:
     jsl update_pos_x
-    jsl 0x848EEA
+    jsl _848EEA
     jsl 0x8491BE
     lda.b 0x2B
     and.b #0x01
@@ -938,7 +938,7 @@ velguader:
     sta.b 0x02
     stz.b 0x03
     lda.b #0x00
-    jsl 0x848F07
+    jsl _848EEA.8F07
 .CE81:
     sep #0x20
     rts
@@ -973,7 +973,7 @@ velguader:
     lda.b #0x03
     sta.b 0x39
     lda.b #0x02
-    jsl 0x848F07
+    jsl _848EEA.8F07
     rts
 
 .CEC1:
@@ -1165,7 +1165,7 @@ velguader:
     lda.w #0xCD14
     sta.b 0x20
     sep #0x20
-    jsl 0x848EEA
+    jsl _848EEA
     rts
 
 .CFCB:
@@ -1182,7 +1182,7 @@ velguader:
     rts
 
 .CFDF:
-    jsl 0x848EEA
+    jsl _848EEA
     jsl update_pos_xy.neg_ay
     jsl 0x8491BE
     lda.b 0x2B
@@ -1210,7 +1210,7 @@ velguader:
     beq .D01C
 
     lda.b #0x0B
-    jsl 0x848F07
+    jsl _848EEA.8F07
     lda.b #0x04
     sta.b 0x03
 .D01C:
@@ -1220,7 +1220,7 @@ velguader:
     lda.b 0x0F
     bpl .D025
 
-    jsl 0x848EEA
+    jsl _848EEA
 .D025:
     lda.b #0x01
     sta.b 0x35
@@ -1228,7 +1228,7 @@ velguader:
     sta.b 0x02
     stz.b 0x03
     lda.b #0x00
-    jsl 0x848F07
+    jsl _848EEA.8F07
     rts
 
 .D036:
@@ -1258,7 +1258,7 @@ velguader:
     stz.w 0x1F14
     stz.w 0x1F17
     lda.b #0x07
-    jsl 0x848F07
+    jsl _848EEA.8F07
     jsr .D188
     lda.b #0x02
     sta.b 0x02
@@ -1267,7 +1267,7 @@ velguader:
     rts
 
 .D06D:
-    jsl 0x848EEA
+    jsl _848EEA
     lda.b 0x35
     bne .D0AF
 
@@ -1387,7 +1387,7 @@ velguader:
     lda.b #0x0A
     sta.b 0x02
     lda.b #0x00
-    jsl 0x848F07
+    jsl _848EEA.8F07
     lda.b #0x08
     sta.b 0x35
     rts
@@ -1395,7 +1395,7 @@ velguader:
 ;-----
 
 .D148:
-    jsl 0x849086
+    jsl get_rng
     and.b #0x0F
     sta.b 0x36
     rts

@@ -54,7 +54,7 @@ ball_de_voux:
     lda.b #0x04
     sta.b 0x27
     lda.b #0x02
-    jsl 0x848F07
+    jsl _848EEA.8F07
     lda.b #0xFF
     sta.b 0x2F
     rep #0x20
@@ -79,7 +79,7 @@ ball_de_voux:
     bpl .D28B
 
     lda.b #0x00
-    jsl 0x848F07
+    jsl _848EEA.8F07
     lda.b #0x06
     sta.b 0x01
     stz.b 0x2F
@@ -99,7 +99,7 @@ ball_de_voux:
 .D291: d16[.D295, .D2F1]
 
 .D295:
-    jsl 0x848EEA
+    jsl _848EEA
     jsl update_pos_xy.neg_ay
     rep #0x20
     lda.w #0x001C
@@ -189,11 +189,11 @@ ball_de_voux:
     sta.b 0x01
     stz.b 0x02
     lda.b #0x01
-    jsl 0x848F07
+    jsl _848EEA.8F07
     lda.b #0x80
     trb.b 0x17
 .D33B:
-    jsl 0x848EEA
+    jsl _848EEA
     rts
 
 .D340:
@@ -221,7 +221,7 @@ ball_de_voux:
     sta.b 0x29
     lda.w 0x86CD76
     sta.b 0x2A
-    jsl 0x8490A0
+    jsl _8490A0
     cmp.b #0x34
     bcc .D387
 
@@ -237,7 +237,7 @@ ball_de_voux:
     sta.b 0x29
     lda.w 0x86CD77
     sta.b 0x2A
-    jsl 0x8490A0
+    jsl _8490A0
     cmp.b #0x34
     bcs .D38D
 
@@ -246,7 +246,7 @@ ball_de_voux:
     eor.b #0x40
     sta.b 0x11
 .D38D:
-    jsl 0x848EEA
+    jsl _848EEA
     lda.b 0x17
     bpl .D400
 
@@ -300,7 +300,7 @@ ball_de_voux:
     sta.b 0x20
     sep #0x20
     lda.b #0x00
-    jsl 0x848F07
+    jsl _848EEA.8F07
     lda.b #0x80
     trb.b 0x17
     lda.b #0x01
@@ -323,7 +323,7 @@ ball_de_voux:
     sta.b 0x29
     lda.w 0x86CD76,X
     sta.b 0x2A
-    jsl 0x8490A0
+    jsl _8490A0
     cmp.b #0x00
     beq .D428
 
@@ -344,7 +344,7 @@ ball_de_voux:
     lda.b #0x30
     sta.b 0x1E
     lda.b #0x02
-    jsl 0x848F07
+    jsl _848EEA.8F07
 .D440:
     rts
 
@@ -355,7 +355,7 @@ ball_de_voux:
 .D446: d16[.D44C, .D4E2, .D4ED]
 
 .D44C:
-    jsl 0x848EEA
+    jsl _848EEA
     lda.b 0x17
     bpl .D46D
 
@@ -394,7 +394,7 @@ ball_de_voux:
     lda.b #0xF0
 .D489:
     sta.b 0x29
-    jsl 0x8490A0
+    jsl _8490A0
     cmp.b #0x00
     beq .D498
 
@@ -407,13 +407,13 @@ ball_de_voux:
     stz.b 0x29
     lda.b #0x10
     sta.b 0x2A
-    jsl 0x8490A0
+    jsl _8490A0
     cmp.b #0x34
     bcs .D4B2
 
     lda.b #0x20
     sta.b 0x2A
-    jsl 0x8490A0
+    jsl _8490A0
     cmp.b #0x34
     bcc .D4B7
 
@@ -444,18 +444,18 @@ ball_de_voux:
     lda.b #0xFF
     sta.b 0x2F
     lda.b #0x04
-    jsl 0x848F07
+    jsl _848EEA.8F07
     rts
 
 .D4E2:
     lda.b #0x03
-    jsl 0x848F07
+    jsl _848EEA.8F07
     lda.b #0x04
     sta.b 0x02
     rts
 
 .D4ED:
-    jsl 0x848EEA
+    jsl _848EEA
     lda.b 0x0F
     bpl .D507
 
@@ -464,7 +464,7 @@ ball_de_voux:
     sta.b 0x11
     stz.b 0x02
     lda.b #0x00
-    jsl 0x848F07
+    jsl _848EEA.8F07
     lda.b #0x80
     trb.b 0x17
 .D507:
@@ -475,7 +475,7 @@ ball_de_voux:
 .D508:
     stz.b 0x29
     stz.b 0x2A
-    jsl 0x8490A0
+    jsl _8490A0
     cmp.b #0x34
     bcc .D518
 

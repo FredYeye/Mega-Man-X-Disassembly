@@ -131,7 +131,7 @@ tombot:
     sta.b 0x34
 .E4E6:
     lda.b #0x00
-    jsl 0x848F07
+    jsl _848EEA.8F07
     rts
 
 .E4ED:
@@ -153,7 +153,7 @@ tombot:
     lda.b #0x02
     sta.b 0x34
 .E50C:
-    jsl 0x848EEA
+    jsl _848EEA
     rts
 
 .E511:
@@ -176,7 +176,7 @@ tombot:
     lda.b #0x2C
     sta.b 0x35
     lda.b #0x01
-    jsl 0x848F07
+    jsl _848EEA.8F07
 .E537:
     rts
 
@@ -258,7 +258,7 @@ tombot:
 .E5B6:
     sep #0x20
 .E5B8:
-    jsl 0x848EEA
+    jsl _848EEA
     rts
 
 .E5BD:
@@ -278,7 +278,7 @@ tombot:
 
 .E5D5:
     lda.b #0x03
-    jsl 0x848F07
+    jsl _848EEA.8F07
     lda.b #0x06
     sta.b 0x01
     lda.b #0x00
@@ -304,7 +304,7 @@ tombot:
     lda.b #0x08
     sta.b 0x01
     lda.b #0x02
-    jsl 0x848F07
+    jsl _848EEA.8F07
     stz.b 0x37
     jmp .E62D
 
@@ -322,12 +322,12 @@ tombot:
 .E622:
     jsl 0x82820A
     jsr .E7A1
-    jsl 0x848EEA
+    jsl _848EEA
 .E62D:
     rts
 
 .E62E:
-    jsl 0x848EEA
+    jsl _848EEA
     lda.b 0x0F
     cmp.b #0x81
     bne .E65B
@@ -347,7 +347,7 @@ tombot:
     sta.b 0x11
 .E64D:
     lda.b #0x03
-    jsl 0x848F07
+    jsl _848EEA.8F07
     lda.b #0x06
     sta.b 0x01
     lda.b #0x01
@@ -358,7 +358,7 @@ tombot:
 
 .E660:
     jsl update_pos_y
-    jsl 0x848EEA
+    jsl _848EEA
     rts
 
 ;-----
@@ -408,7 +408,7 @@ tombot:
     beq .E6C0
 
     lda.b #0x02
-    jsl 0x848F07
+    jsl _848EEA.8F07
     lda.b #0x01
     sta.b 0x37
     jmp .E6C0
@@ -419,7 +419,7 @@ tombot:
     bne .E6C0
 
     lda.b #0x02
-    jsl 0x848F07
+    jsl _848EEA.8F07
     lda.b #0x01
     sta.b 0x37
 .E6C0:

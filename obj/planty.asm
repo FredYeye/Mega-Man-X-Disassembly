@@ -30,7 +30,7 @@ planty:
     jsl 0x8280B4
     sep #0x20
     lda.b #0x00
-    jsl 0x848F07
+    jsl _848EEA.8F07
     rts
 
 .C283:
@@ -80,7 +80,7 @@ planty:
     stz.b 0x21
     inc.b 0x30
     lda.b #0x00
-    jsl 0x848F07
+    jsl _848EEA.8F07
     rts
 
 .C2E4:
@@ -100,7 +100,7 @@ planty:
 
     inc.b 0x03
     lda.b #0x00
-    jsl 0x848F07
+    jsl _848EEA.8F07
     rts
 
 .C2FF:
@@ -127,7 +127,7 @@ planty:
     stz.w 0x0001
     jsr .C3C1
 .C328:
-    jsl 0x848EEA
+    jsl _848EEA
     rts
 
 .C32D:
@@ -136,7 +136,7 @@ planty:
 
     inc.b 0x03
     lda.b #0x01
-    jsl 0x848F07
+    jsl _848EEA.8F07
     rts
 
 .C33A:
@@ -166,7 +166,7 @@ planty:
     sta.b 0x02
     stz.b 0x03
 .C363:
-    jsl 0x848EEA
+    jsl _848EEA
     rts
 
 .C368:
@@ -175,7 +175,7 @@ planty:
 
     inc.b 0x03
     lda.b #0x04
-    jsl 0x848F07
+    jsl _848EEA.8F07
     rts
 
 .C375:
@@ -194,7 +194,7 @@ planty:
     stz.w 0x0001
     jsr .C3C1
 .C38B:
-    jsl 0x848EEA
+    jsl _848EEA
     rts
 
 .C390:

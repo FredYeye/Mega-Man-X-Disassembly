@@ -164,13 +164,13 @@ hotarion:
     stz.w 0x2129
 .A590:
     lda.b #0x00
-    jsl 0x848F07
+    jsl _848EEA.8F07
 .A596:
     rts
 
 .A597:
     jsl update_pos_x
-    jsl 0x848EEA
+    jsl _848EEA
     lda.b 0x2F
     dec
     sta.b 0x2F

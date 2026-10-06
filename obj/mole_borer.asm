@@ -86,7 +86,7 @@ mole_borer:
     tsb.b 0x11
     stz.b 0x3E
     lda.b #0x00
-    jsl 0x848F07
+    jsl _848EEA.8F07
     stz.b 0x28
     lda.b #0x3C
     sta.b 0x27
@@ -126,7 +126,7 @@ mole_borer:
     rts
 
 .C02B:
-    jsl 0x848EEA
+    jsl _848EEA
     jsl 0x82808F
     lda.b 0x17
     bpl .C04A
@@ -332,7 +332,7 @@ mole_borer:
     lda.l 0x7FF200,X
     ora.b #0x80
     sta.l 0x7FF200,X
-    jsl 0x8490A0
+    jsl _8490A0
     cmp.b #0x34
     bcc .C1CB
 
@@ -557,7 +557,7 @@ mole_borer:
 
 .C2F4:
     phx
-    jsl 0x8490A0
+    jsl _8490A0
     plx
     cmp.b #0x34
     bcc .C308
@@ -576,7 +576,7 @@ mole_borer:
 .C313:
     lda.b #0x03
     sta.b 0x3B
-    jsl 0x849086
+    jsl get_rng
     and.b #0x3C
     sta.b 0x3C
 .C31F:

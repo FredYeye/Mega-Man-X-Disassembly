@@ -3,6 +3,13 @@ base 0x868000
 
 ;-----
 
+_868000:
+    d08[0x08]
+    d16[snes_regs.inidisp]
+    d08[0x80]
+
+;-----
+
 compressed_data: ;0x86F6FA
     d16[0x0D40] d24[0x9A8000]
     d16[0x2000] d24[0x9A8AF3]

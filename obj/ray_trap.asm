@@ -43,21 +43,21 @@ ray_trap:
     sta.b 0x20
     sep #0x20
     lda.b #0x00
-    jsl 0x848F07
+    jsl _848EEA.8F07
     rts
 
 .BACE:
     lda.b 0x36
     bne .BAD9
 
-    jsl 0x848EEA
+    jsl _848EEA
     jmp .BAE7
 
 .BAD9:
     lda.b #0x04
     sta.b 0x01
     lda.b #0x01
-    jsl 0x848F07
+    jsl _848EEA.8F07
     lda.b #0x20
     sta.b 0x33
 .BAE7:
@@ -74,12 +74,12 @@ ray_trap:
     lda.b 0x33
     beq .BAFE
 
-    jsl 0x848EEA
+    jsl _848EEA
     jmp .BB08
 
 .BAFE:
     lda.b #0x00
-    jsl 0x848F07
+    jsl _848EEA.8F07
     lda.b #0x06
     sta.b 0x01
 .BB08:

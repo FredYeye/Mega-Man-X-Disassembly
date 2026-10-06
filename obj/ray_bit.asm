@@ -71,7 +71,7 @@ ray_bit:
     lda.b #0x01
     sta.b 0x36
     lda.b #0x05
-    jsl 0x848F07
+    jsl _848EEA.8F07
     rts
 
 .D698:
@@ -103,7 +103,7 @@ ray_bit:
     beq .D6CF
 
     lda.b #0x02
-    jsl 0x848F07
+    jsl _848EEA.8F07
     lda.b #0x06
     sta.b 0x01
     jmp .D6F5
@@ -117,7 +117,7 @@ ray_bit:
 
     lda.b #0x00
     sta.b 0x0B
-    jsl 0x848F07
+    jsl _848EEA.8F07
     lda.b #0x01
     sta.b 0x35
     jmp .D6F5
@@ -127,7 +127,7 @@ ray_bit:
     bne .D6EF
 
 .D6E8:
-    jsl 0x848EEA
+    jsl _848EEA
     jmp .D6F5
 
 .D6EF:
@@ -164,7 +164,7 @@ ray_bit:
     lda.b #0x1E
     sta.b 0x33
     lda.b #0x05
-    jsl 0x848F07
+    jsl _848EEA.8F07
     jmp .D747
 
 .D72A:
@@ -178,12 +178,12 @@ ray_bit:
 
     lda.b #0x01
     sta.b 0x0B
-    jsl 0x848F07
+    jsl _848EEA.8F07
     jmp .D747
 
 .D741:
     sep #0x20
-    jsl 0x848EEA
+    jsl _848EEA
 .D747:
     rts
 
@@ -202,7 +202,7 @@ ray_bit:
     lda.b 0x0F
     bmi .D764
 
-    jsl 0x848EEA
+    jsl _848EEA
     jmp .D769
 
 .D764:
@@ -281,7 +281,7 @@ ray_bit:
 ;-----
 
 .D7D3:
-    jsl 0x849086
+    jsl get_rng
     and.b #0x03
     bne .D7E4
 
@@ -351,7 +351,7 @@ ray_bit:
 
 .D849:
     lda.b #0x05
-    jsl 0x848F07
+    jsl _848EEA.8F07
     lda.b #0x1E
     sta.b 0x33
     lda.b #0x02

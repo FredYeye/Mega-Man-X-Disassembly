@@ -139,7 +139,7 @@ capsule:
     lda.b #0x40
     jsl 0x84A311
     lda.b #0x00
-    jsl 0x848F07
+    jsl _848EEA.8F07
 .CB97:
     lda.w 0x1F7A
     cmp.b #0x05
@@ -148,7 +148,7 @@ capsule:
     jsr .CF5D
     jsr .CF90
 .CBA4:
-    jsl 0x8490A0
+    jsl _8490A0
     cmp.b #0x34
     bcs .CBB2
 
@@ -157,7 +157,7 @@ capsule:
     stz.b 0x03
 .CBB2:
     jsl update_pos_y
-    jsl 0x848EEA
+    jsl _848EEA
     rts
 
 .CBBB:
@@ -166,7 +166,7 @@ capsule:
 
     inc.b 0x03
     lda.b #0x00
-    jsl 0x848F07
+    jsl _848EEA.8F07
 .CBC7:
     lda.b #0x39
     sta.b 0x20
@@ -207,7 +207,7 @@ capsule:
 .CC23:
     sep #0x20
 .CC25:
-    jsl 0x848EEA
+    jsl _848EEA
     rts
 
 .CC2A:
@@ -251,7 +251,7 @@ capsule:
     lda.b #0x2A
     jsl _80888B
     lda.b #0x01
-    jsl 0x848F07
+    jsl _848EEA.8F07
 .CC72:
     lda.b 0x0F
     bpl .CC7F
@@ -262,7 +262,7 @@ capsule:
     jmp .CFEA
 
 .CC7F:
-    jsl 0x848EEA
+    jsl _848EEA
     rts
 
 .CC84:
@@ -271,7 +271,7 @@ capsule:
 
     inc.b 0x03
     lda.b #0x02
-    jsl 0x848F07
+    jsl _848EEA.8F07
 .CC90:
     lda.b #0x3D
     sta.b 0x20
@@ -287,7 +287,7 @@ capsule:
     sta.w 0x0BD8
     sta.w 0x1F3B
 .CCAD:
-    jsl 0x848EEA
+    jsl _848EEA
     rts
 
 .CCB2:
@@ -507,7 +507,7 @@ capsule:
     lda.b #0x04
     sta.b 0x01
 .CE4A:
-    jsl 0x848EEA
+    jsl _848EEA
     rts
 
 .CE4F:
@@ -551,7 +551,7 @@ capsule:
     lda.b 0x08
     adc.w #0xFFE8
     sta.w 0x0008,X
-    jsl 0x849086
+    jsl get_rng
     and.w #0x001F
     sta.w 0x0000
     lda.b 0x05
@@ -762,7 +762,7 @@ capsule:
     lda 0x86D343,Y
     adc.w #0xFFD0
     sta.w 0x0008,X
-    jsl 0x849086
+    jsl get_rng
     and.w #0x001F
     sta.w 0x0000
     lda.b 0x05

@@ -31,7 +31,7 @@ gulpfer:
     sta.b 0x01
     stz.b 0x03
     lda.b #0x07
-    jsl 0x848F07
+    jsl _848EEA.8F07
     lda.b #0x23
     jsl _80888B
     lda.b 0x3E
@@ -69,7 +69,7 @@ gulpfer:
     stz.b 0x3D
     stz.b 0x3E
     lda.b #0x00
-    jsl 0x848F07
+    jsl _848EEA.8F07
     lda.b #0xFF
     sta.b 0x2F
     lda.b 0x11
@@ -116,7 +116,7 @@ gulpfer:
     sta.b 0x33
 .A40E:
     jsl update_pos_x
-    jsl 0x848EEA
+    jsl _848EEA
     dec.b 0x33
     bne .A41D
 
@@ -137,7 +137,7 @@ gulpfer:
     lda.b #0xB4
     sta.b 0x33
 .A435:
-    jsl 0x848EEA
+    jsl _848EEA
     dec.b 0x33
     bne .A448
 
@@ -248,7 +248,7 @@ gulpfer:
     stz.w 0x0001
     jsr .A75E
     lda.b #0x01
-    jsl 0x848F07
+    jsl _848EEA.8F07
     inc.b 0x3E
     jsl 0x849F85
     rts
@@ -263,7 +263,7 @@ gulpfer:
     jsl 0x84A07C
     sta.b 0x35
     jsr .A6A1
-    jsl 0x848EEA
+    jsl _848EEA
     lda.b 0x0F
     bpl .A537
 
@@ -294,7 +294,7 @@ gulpfer:
     cmp.b #0x08
     bcc .A54F
 
-    jsl 0x849086
+    jsl get_rng
     lsr
     bcc .A54F
 
@@ -349,7 +349,7 @@ gulpfer:
     lda.b #0xE8
     sta.b 0x2A
     stz.b 0x29
-    jsl 0x8490A0
+    jsl _8490A0
     cmp.b #0x0D
     beq .A5A9
 
@@ -369,12 +369,12 @@ gulpfer:
 .A5B9:
     stz.b 0x02
 .A5BB:
-    jsl 0x848EEA
+    jsl _848EEA
     jsl 0x849B03
     rts
 
 .A5C4:
-    jsl 0x848EEA
+    jsl _848EEA
     jsr .A799
     stz.w 0x0C19
     lda.b 0x11
@@ -434,7 +434,7 @@ gulpfer:
     lda.b #0x04
     sta.b 0x02
     lda.b #0x04
-    jsl 0x848F07
+    jsl _848EEA.8F07
     jsr .A6E4
     rts
 
@@ -446,7 +446,7 @@ gulpfer:
     lda.b #0x02
     sta.b 0x02
     lda.b #0x03
-    jsl 0x848F07
+    jsl _848EEA.8F07
 .A64F:
     rts
 
@@ -460,7 +460,7 @@ gulpfer:
     lda.b #0x04
     sta.b 0x02
     lda.b #0x04
-    jsl 0x848F07
+    jsl _848EEA.8F07
     jsr .A6E4
     rts
 
@@ -474,7 +474,7 @@ gulpfer:
 
     stz.b 0x02
     lda.b #0x02
-    jsl 0x848F07
+    jsl _848EEA.8F07
 .A67D:
     rts
 
@@ -491,7 +491,7 @@ gulpfer:
     rts
 
 .A68B:
-    jsl 0x848EEA
+    jsl _848EEA
     lda.b 0x0F
     bpl .A6A0
 
@@ -558,7 +558,7 @@ gulpfer:
     lda.b #0x0A
     sta.b 0x01
     lda.b #0x06
-    jsl 0x848F07
+    jsl _848EEA.8F07
     lda.b #0x23
     jsl _80888B
     lda.b 0x3E

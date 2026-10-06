@@ -79,7 +79,7 @@ snow_shooter:
     lda.b #0x14
     sta.b 0x33
     lda.b #0x01
-    jsl 0x848F07
+    jsl _848EEA.8F07
     rts
 
 .DF31:
@@ -101,7 +101,7 @@ snow_shooter:
     lda.b #0x30
     sta.b 0x33
     lda.b #0x00
-    jsl 0x848F07
+    jsl _848EEA.8F07
     jmp .DFAF
 
 .DF56:
@@ -170,11 +170,11 @@ snow_shooter:
     sta.b 0x33
     jsr .DFCD
     lda.b #0x01
-    jsl 0x848F07
+    jsl _848EEA.8F07
     jmp .DFCC
 
 .DFC8:
-    jsl 0x848EEA
+    jsl _848EEA
 .DFCC:
     rts
 

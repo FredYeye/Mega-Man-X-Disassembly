@@ -64,7 +64,7 @@ bomb_been:
 .9FC9:
     lda.b #0x00
     sta.b 0x34
-    jsl 0x848F07
+    jsl _848EEA.8F07
     stz.b 0x3A
     lda.w 0x1F7A
     beq .9FDC
@@ -76,7 +76,7 @@ bomb_been:
 
 .9FDD:
     jsl update_pos_x
-    jsl 0x848EEA
+    jsl _848EEA
     dec.b 0x38
     bne .9FF9
 
@@ -99,7 +99,7 @@ bomb_been:
     jmp .A0B5
 
 .A007:
-    jsl 0x848EEA
+    jsl _848EEA
     dec.b 0x35
     bne .A038
 
@@ -124,7 +124,7 @@ bomb_been:
 .A02D:
     inc
     sta.b 0x34
-    jsl 0x848F07
+    jsl _848EEA.8F07
     lda.b #0x08
     sta.b 0x35
 .A038:
@@ -175,7 +175,7 @@ bomb_been:
     lda.b #0x08
     sta.b 0x38
 .A085:
-    jsl 0x848EEA
+    jsl _848EEA
     rts
 
 .A08A:
@@ -185,7 +185,7 @@ bomb_been:
     lda.b 0x34
     dec
     sta.b 0x34
-    jsl 0x848F07
+    jsl _848EEA.8F07
     lda.b #0x08
     sta.b 0x38
     lda.b 0x34
@@ -196,12 +196,12 @@ bomb_been:
     lda.b #0x5A
     sta.b 0x38
 .A0A7:
-    jsl 0x848EEA
+    jsl _848EEA
     rts
 
 .A0AC:
     jsl update_pos_y
-    jsl 0x848EEA
+    jsl _848EEA
     rts
 
 .A0B5:
@@ -226,5 +226,5 @@ bomb_been:
     lda.b #0x0A
     sta.b 0x01
     lda.b #0x00
-    jsl 0x848F07
+    jsl _848EEA.8F07
     rts

@@ -66,7 +66,7 @@ sine_faller:
     sta.b 0x20
     sep #0x20
     lda.b #0x00
-    jsl 0x848F07
+    jsl _848EEA.8F07
     lda.b 0x0B
     beq .D372
 
@@ -79,7 +79,7 @@ sine_faller:
     lda.b #0x13
     sta.b 0x16
     lda.b #0x00
-    jsl 0x848F07
+    jsl _848EEA.8F07
     rts
 
 .D372:
@@ -88,7 +88,7 @@ sine_faller:
     rts
 
 .D377:
-    jsl 0x848EEA
+    jsl _848EEA
     jsl update_pos_xy.no_accel
     rep #0x20
     lda.w 0x1E50
@@ -118,7 +118,7 @@ sine_faller:
     rts
 
 .D3A8:
-    jsl 0x848EEA
+    jsl _848EEA
     ldx.b 0x02
     jsr (.D3B9,X)
     lda.b 0x0B
@@ -230,10 +230,10 @@ sine_faller:
     bne .D463
 
     lda.b #0x01
-    jsl 0x848F07
+    jsl _848EEA.8F07
 .D463:
     jsl update_pos_xy.no_accel
-    jsl 0x848EEA
+    jsl _848EEA
     lda.b 0x0B
     beq .D472
 
@@ -254,7 +254,7 @@ sine_faller:
     lda.b #0x40
     sta.b 0x1E
     lda.b #0x01
-    jsl 0x848F07
+    jsl _848EEA.8F07
 .D48B:
     jsl update_pos_xy.neg_ay
     jsl 0x8491BE
@@ -279,16 +279,16 @@ sine_faller:
     lda.b #0x02
     sta.b 0x02
     lda.b #0x01
-    jsl 0x848F07
+    jsl _848EEA.8F07
 .D4B9:
-    jsl 0x848EEA
+    jsl _848EEA
     lda.b 0x0F
     bpl .D4D8
 
     lda.b #0x04
     sta.b 0x02
     lda.b #0x02
-    jsl 0x848F07
+    jsl _848EEA.8F07
     lda.b #0x30
     sta.b 0x35
     rep #0x20
@@ -299,7 +299,7 @@ sine_faller:
     rts
 
 .D4D9:
-    jsl 0x848EEA
+    jsl _848EEA
     jsl update_pos_y
     dec.b 0x35
     bne .D4EF
@@ -307,12 +307,12 @@ sine_faller:
     lda.b #0x06
     sta.b 0x02
     lda.b #0x03
-    jsl 0x848F07
+    jsl _848EEA.8F07
 .D4EF:
     rts
 
 .D4F0:
-    jsl 0x848EEA
+    jsl _848EEA
     rts
 
 .D4F5:

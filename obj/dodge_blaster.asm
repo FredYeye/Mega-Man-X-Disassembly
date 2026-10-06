@@ -75,7 +75,7 @@ dodge_blaster:
     lda.b #0x02
     sta.b 0x26
     lda.b #0x00
-    jsl 0x848F07
+    jsl _848EEA.8F07
     rts
 
 .9A37:
@@ -123,7 +123,7 @@ dodge_blaster:
     lda.b 0x36
     clc
     adc.b #0x02
-    jsl 0x848F07
+    jsl _848EEA.8F07
     lda.b #0x10
     sta.b 0x35
     lda.b 0x36
@@ -157,7 +157,7 @@ dodge_blaster:
     sta.b 0x01
     stz.b 0x02
     lda.b #0x01
-    jsl 0x848F07
+    jsl _848EEA.8F07
     lda.b #0x30
     sta.b 0x35
 .9ABA:
@@ -180,19 +180,19 @@ dodge_blaster:
 .9AD4:
     jsl update_pos_y
     jsl 0x8491BE
-    jsl 0x848EEA
+    jsl _848EEA
     dec.b 0x35
     bne .9AEC
 
     stz.b 0x02
     lda.b #0x00
-    jsl 0x848F07
+    jsl _848EEA.8F07
 .9AEC:
     rts
 
 .9AED:
     jsr .9B3B
-    jsl 0x848EEA
+    jsl _848EEA
     dec.b 0x35
     bne .9B3A
 
@@ -227,7 +227,7 @@ dodge_blaster:
     lda.b #0x04
     sta.b 0x01
     lda.b #0x00
-    jsl 0x848F07
+    jsl _848EEA.8F07
 .9B3A:
     rts
 
@@ -274,5 +274,5 @@ dodge_blaster:
     lda.b #0xF0
 .9B74:
     sta.b 0x2A
-    jsl 0x8490A0
+    jsl _8490A0
     rts

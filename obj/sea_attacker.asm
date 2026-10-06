@@ -64,7 +64,7 @@ sea_attacker:
     sta.b 0x3C
     sep #0x20
     lda.b #0x00
-    jsl 0x848F07
+    jsl _848EEA.8F07
     rts
 
 .A206:
@@ -112,7 +112,7 @@ sea_attacker:
     sta.b 0x3A
 .A24D:
     sep #0x20
-    jsl 0x848EEA
+    jsl _848EEA
     rts
 
 .A254:
@@ -129,7 +129,7 @@ sea_attacker:
     bne .A281
 
     lda.b #0x01
-    jsl 0x848F07
+    jsl _848EEA.8F07
     lda.b #0x04
     sta.b 0x02
     lda.b 0x11
@@ -156,7 +156,7 @@ sea_attacker:
 .A29A:
     jsl update_pos_x
     jsl update_pos_y
-    jsl 0x848EEA
+    jsl _848EEA
     rts
 
 .A2A7:
@@ -169,7 +169,7 @@ sea_attacker:
     lda.b #0x02
     sta.b 0x02
     lda.b #0x03
-    jsl 0x848F07
+    jsl _848EEA.8F07
     bra .A2CE
 
 .A2BE:
@@ -178,9 +178,9 @@ sea_attacker:
     bne .A2CA
 
     lda.b #0x02
-    jsl 0x848F07
+    jsl _848EEA.8F07
 .A2CA:
-    jsl 0x848EEA
+    jsl _848EEA
 .A2CE:
     rts
 
@@ -248,6 +248,6 @@ sea_attacker:
     lda.w #0xFA00
     sta.b 0x1C
     lda.w #0x0002
-    jsl 0x848F07
+    jsl _848EEA.8F07
     sep #0x20
     rts

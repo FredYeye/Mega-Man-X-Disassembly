@@ -29,7 +29,7 @@ wolf_sigma_claw:
     lda.b #0x3E
     sta.b 0x16
     lda.b #0x04
-    jsl 0x848F07
+    jsl _848EEA.8F07
     lda.b #0x02
     sta.b 0x01
     lda.b #0x04
@@ -88,7 +88,7 @@ wolf_sigma_claw:
     lda.w 0x1F43
     beq .E5F5
 
-    jsl 0x849086
+    jsl get_rng
     cmp.b #0x3A
     beq .E5EF
 
@@ -112,11 +112,11 @@ wolf_sigma_claw:
     lda.b #0x02
     sta.b 0x02
     lda.b #0x04
-    jsl 0x848F07
+    jsl _848EEA.8F07
     jmp .E807
 
 .E618:
-    jsl 0x848EEA
+    jsl _848EEA
     lda.b 0x0F
     bpl .E660
 
@@ -143,7 +143,7 @@ wolf_sigma_claw:
     sta.w 0x0000
     lda.b 0x08
     sta.w 0x0002
-    jsl 0x80CEAE
+    jsl _80CEAE
     lda.w 0x0000
     lsr
     lsr
@@ -217,17 +217,17 @@ wolf_sigma_claw:
     lda.b #0x0A
     sta.b 0x02
     lda.b #0x05
-    jsl 0x848F07
+    jsl _848EEA.8F07
 .E6D7:
     jmp .E807
 
 .E6DA:
-    jsl 0x848EEA
+    jsl _848EEA
     lda.b 0x0F
     bpl .E6EF
 
     lda.b #0x0A
-    jsl 0x848F07
+    jsl _848EEA.8F07
     lda.b #0x0C
     sta.b 0x02
     jsr .E880
@@ -235,7 +235,7 @@ wolf_sigma_claw:
     jmp .E807
 
 .E6F2:
-    jsl 0x848EEA
+    jsl _848EEA
     lda.b 0x0F
     bpl .E713
 
@@ -243,7 +243,7 @@ wolf_sigma_claw:
     sta.b 0x01
     stz.b 0x02
     lda.b #0x04
-    jsl 0x848F07
+    jsl _848EEA.8F07
     lda.b 0x0B
     bpl .E710
 
@@ -265,41 +265,41 @@ wolf_sigma_claw:
     lda.b #0x02
     sta.b 0x02
     lda.b #0x04
-    jsl 0x848F07
+    jsl _848EEA.8F07
     jmp .E807
 
 .E730:
-    jsl 0x848EEA
+    jsl _848EEA
     lda.b 0x0F
     bpl .E742
 
     lda.b #0x04
     sta.b 0x02
     lda.b #0x05
-    jsl 0x848F07
+    jsl _848EEA.8F07
 .E742:
     jmp .E807
 
 .E745:
-    jsl 0x848EEA
+    jsl _848EEA
     lda.b 0x0F
     bpl .E75A
 
     lda.b #0x06
     sta.b 0x02
     lda.b #0x0A
-    jsl 0x848F07
+    jsl _848EEA.8F07
     jsr .E880
 .E75A:
     jmp .E807
 
 .E75D:
-    jsl 0x848EEA
+    jsl _848EEA
     lda.b 0x0F
     bpl .E771
 
     lda.b #0x04
-    jsl 0x848F07
+    jsl _848EEA.8F07
     lda.b #0x04
     sta.b 0x01
     stz.b 0x02
@@ -404,7 +404,7 @@ wolf_sigma_claw:
     stz.b 0x02
     stz.b 0x03
     lda.b #0x04
-    jsl 0x848F07
+    jsl _848EEA.8F07
     jml 0x8280B4
 
 ;-----

@@ -82,7 +82,7 @@ ladder_yadder:
     sta.b 0x1C
     sep #0x20
     lda.b #0x00
-    jsl 0x848F07
+    jsl _848EEA.8F07
 .AA80:
     dec.b 0x37
     bne .AA88
@@ -107,7 +107,7 @@ ladder_yadder:
 .AA9C:
     jsr .AB80
     jsl update_pos_y
-    jsl 0x848EEA
+    jsl _848EEA
     rts
 
 .AAA8:
@@ -116,9 +116,9 @@ ladder_yadder:
 
     inc.b 0x03
     lda.b #0x01
-    jsl 0x848F07
+    jsl _848EEA.8F07
 .AAB4:
-    jsl 0x848EEA
+    jsl _848EEA
     lda.b 0x0F
     bpl .AAC1
 
@@ -162,7 +162,7 @@ ladder_yadder:
     lda.b #0x20
     sta.b 0x37
     lda.b #0x02
-    jsl 0x848F07
+    jsl _848EEA.8F07
 .AB04:
     dec.b 0x37
     bne .AB0C
@@ -194,7 +194,7 @@ ladder_yadder:
 .AB29:
     jsr .AB80
     jsl update_pos_y
-    jsl 0x848EEA
+    jsl _848EEA
     rts
 
 .AB35:
@@ -203,9 +203,9 @@ ladder_yadder:
 
     inc.b 0x03
     lda.b #0x03
-    jsl 0x848F07
+    jsl _848EEA.8F07
 .AB41:
-    jsl 0x848EEA
+    jsl _848EEA
     lda.b 0x0F
     bpl .AB4E
 
@@ -257,7 +257,7 @@ ladder_yadder:
     lda.b #0xF0
 .AB88:
     sta.b 0x2A
-    jsl 0x8490A0
+    jsl _8490A0
     cmp.b #0x12
     beq .ABA2
 

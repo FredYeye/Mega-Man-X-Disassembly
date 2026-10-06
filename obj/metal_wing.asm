@@ -83,14 +83,14 @@ metal_wing:
     ldx.b 0x0B
     bmi .DC3C
 
-    jsl 0x849086
+    jsl get_rng
     and.b #0x7E
     clc
     adc.b #0x3C
 .DC3C:
     sta.b 0x33
     lda.b #0x00
-    jsl 0x848F07
+    jsl _848EEA.8F07
 .DC44:
     dec.b 0x33
     bne .DC4D
@@ -100,7 +100,7 @@ metal_wing:
 
 .DC4D:
     jsl update_pos_x
-    jsl 0x848EEA
+    jsl _848EEA
     rts
 
 .DC56:
@@ -115,7 +115,7 @@ metal_wing:
     lda.b #0x40
     sta.b 0x1F
     lda.b #0x02
-    jsl 0x848F07
+    jsl _848EEA.8F07
 .DC6F:
     lda.b 0x0F
     bpl .DC7D
@@ -123,10 +123,10 @@ metal_wing:
     lda.b #0x04
     sta.b 0x03
     lda.b #0x00
-    jsl 0x848F07
+    jsl _848EEA.8F07
 .DC7D:
     jsl update_pos_xy.neg_ay_pos_ax
-    jsl 0x848EEA
+    jsl _848EEA
     rts
 
 .DC86:
@@ -140,7 +140,7 @@ metal_wing:
     stz.b 0x02
 .DC97:
     sep #0x20
-    jsl 0x848EEA
+    jsl _848EEA
     rts
 
 .DC9E:
@@ -151,7 +151,7 @@ metal_wing:
     lda.b #0x04
     sta.b 0x1F
     lda.b #0x01
-    jsl 0x848F07
+    jsl _848EEA.8F07
 .DCAE:
     jsl update_pos_xy.neg_ay_ax
     rep #0x21
@@ -171,7 +171,7 @@ metal_wing:
 
 .DCCC:
     sep #0x20
-    jsl 0x848EEA
+    jsl _848EEA
     rts
 
 .DCD3:
@@ -200,10 +200,10 @@ metal_wing:
     lda.b #0x10
     sta.b 0x2A
     lda.b #0x03
-    jsl 0x848F07
+    jsl _848EEA.8F07
 .DD07:
     jsr .DD35
-    jsl 0x8490A0
+    jsl _8490A0
     cmp.b #0x34
     bcc .DD16
 
@@ -219,7 +219,7 @@ metal_wing:
     sta.b 0x1A
 .DD25:
     sep #0x20
-    jsl 0x848EEA
+    jsl _848EEA
     rts
 
 .DD2C:
@@ -242,7 +242,7 @@ metal_wing:
     sta.w 0x000A,X
     stz.w 0x000B,X
     rep #0x20
-    jsl 0x849086
+    jsl get_rng
     and.w #0x000F
     clc
     adc.b 0x05

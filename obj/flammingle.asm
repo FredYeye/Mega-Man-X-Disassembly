@@ -23,7 +23,7 @@ flammingle:
     jsl 0x8280B4
     sep #0x20
     lda.b #0x01
-    jsl 0x848F07
+    jsl _848EEA.8F07
     rts
 
 .C063:
@@ -88,7 +88,7 @@ flammingle:
     lda.b #0x78
     sta.b 0x34
     lda.b #0x01
-    jsl 0x848F07
+    jsl _848EEA.8F07
     rts
 
 .C0E1:
@@ -142,7 +142,7 @@ flammingle:
     stx.b 0x20
     sep #0x10
 .C12A:
-    jsl 0x848EEA
+    jsl _848EEA
     rts
 
 .C12F:
@@ -151,7 +151,7 @@ flammingle:
 
     inc.b 0x03
     lda.b #0x02
-    jsl 0x848F07
+    jsl _848EEA.8F07
     rts
 
 .C13C:
@@ -166,7 +166,7 @@ flammingle:
     stz.b 0x02
     stz.b 0x03
 .C14B:
-    jsl 0x848EEA
+    jsl _848EEA
     rts
 
 .C150:
@@ -175,7 +175,7 @@ flammingle:
 
     inc.b 0x03
     lda.b #0x03
-    jsl 0x848F07
+    jsl _848EEA.8F07
     rts
 
 .C15D:
@@ -188,7 +188,7 @@ flammingle:
     stz.b 0x02
     stz.b 0x03
 .C16B:
-    jsl 0x848EEA
+    jsl _848EEA
     rts
 
 .C170:
@@ -200,7 +200,7 @@ flammingle:
 .C17B:
     lda.b #0x02
     sta.b 0x03
-    jsl 0x848F07
+    jsl _848EEA.8F07
     rts
 
 .C184:
@@ -210,9 +210,9 @@ flammingle:
     lda.b #0x04
     sta.b 0x03
     lda.b #0x02
-    jsl 0x848F07
+    jsl _848EEA.8F07
 .C192:
-    jsl 0x848EEA
+    jsl _848EEA
     rts
 
 .C197:
@@ -222,7 +222,7 @@ flammingle:
     stz.b 0x02
     stz.b 0x03
 .C19F:
-    jsl 0x848EEA
+    jsl _848EEA
     rts
 
 .C1A4:

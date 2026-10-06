@@ -90,7 +90,7 @@ sky_claw:
     stx.b 0x1A
     sep #0x30
     lda.b #0x00
-    jsl 0x848F07
+    jsl _848EEA.8F07
     rts
 
 .C435:
@@ -138,7 +138,7 @@ sky_claw:
     lda.b #0x15
     sta.b 0x33
     lda.b #0x01
-    jsl 0x848F07
+    jsl _848EEA.8F07
     rts
 
 .C486:
@@ -148,14 +148,14 @@ sky_claw:
     lda.b #0x04
     sta.b 0x03
     lda.b #0x02
-    jsl 0x848F07
+    jsl _848EEA.8F07
     lda.b #0x1E
     sta.b 0x33
     rts
 
 .C499:
     jsl update_pos_y
-    jsl 0x848EEA
+    jsl _848EEA
     jmp .C608
 
 .C4A4:
@@ -173,7 +173,7 @@ sky_claw:
     rts
 
 .C4B9:
-    jsl 0x848EEA
+    jsl _848EEA
     jmp .C608
 
 .C4C0:
@@ -184,7 +184,7 @@ sky_claw:
     stz.b 0x03
 .C4C8:
     jsl update_pos_y
-    jsl 0x848EEA
+    jsl _848EEA
     rts
 
 .C4D1:
@@ -209,7 +209,7 @@ sky_claw:
     sta.b 0x1D
     stz.b 0x26
     lda.b #0x02
-    jsl 0x848F07
+    jsl _848EEA.8F07
     jmp .C6B1
 
 .C501:
@@ -237,7 +237,7 @@ sky_claw:
     sta.b 0x35
 .C528:
     jsl update_pos_y
-    jsl 0x848EEA
+    jsl _848EEA
     jmp .C6B1
 
 .C533:
@@ -281,7 +281,7 @@ sky_claw:
     lda.b #0x02
     sta.b 0x26
     lda.b #0x01
-    jsl 0x848F07
+    jsl _848EEA.8F07
 .C578:
     lda.w 0x0BD3
     bit.b #0x03
@@ -314,7 +314,7 @@ sky_claw:
     stz.b 0x02
     stz.b 0x03
 .C5AB:
-    jsl 0x848EEA
+    jsl _848EEA
     rts
 
 .C5B0:
@@ -329,7 +329,7 @@ sky_claw:
     lda.b #0x20
     sta.b 0x33
     lda.b #0x00
-    jsl 0x848F07
+    jsl _848EEA.8F07
 .C5C8:
     dec.b 0x33
     bne .C5D0
@@ -338,7 +338,7 @@ sky_claw:
     stz.b 0x03
 .C5D0:
     jsl update_pos_y
-    jsl 0x848EEA
+    jsl _848EEA
     rts
 
 .C5D9:
@@ -368,7 +368,7 @@ sky_claw:
 
 .C5FF:
     jsl update_pos_x
-    jsl 0x848EEA
+    jsl _848EEA
     rts
 
 .C608:
@@ -441,7 +441,7 @@ sky_claw:
     sta.w 0x000A,X
     lda.b #0x30
     sta.w 0x0011,X
-    jsl 0x849086
+    jsl get_rng
     and.b #0x01
     clc
     adc.b #0x39

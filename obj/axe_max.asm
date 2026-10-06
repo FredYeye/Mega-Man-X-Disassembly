@@ -107,7 +107,7 @@ axe_max:
     lda.b #0x1E
     sta.b 0x3B
     lda.b #0x05
-    jsl 0x848F07
+    jsl _848EEA.8F07
     rts
 
 .D103:
@@ -119,14 +119,14 @@ axe_max:
 .D10E: d16[.D114, .D114, .D14E]
 
 .D114:
-    jsl 0x848EEA
+    jsl _848EEA
     lda.b 0x3D
     beq .D12D
 
     lda.b #0x78
     sta.b 0x3B
     lda.b #0x00
-    jsl 0x848F07
+    jsl _848EEA.8F07
     lda.b #0x04
     sta.b 0x02
     stz.b 0x3D
@@ -158,12 +158,12 @@ axe_max:
     rts
 
 .D14E:
-    jsl 0x848EEA
+    jsl _848EEA
     dec.b 0x3B
     bne .D164
 
     lda.b #0x05
-    jsl 0x848F07
+    jsl _848EEA.8F07
     lda.b #0x20
     sta.b 0x3B
     lda.b #0x02
@@ -182,11 +182,11 @@ axe_max:
     inc.b 0x02
     inc.b 0x02
     lda.b #0x01
-    jsl 0x848F07
+    jsl _848EEA.8F07
     lda.b #0x24
     sta.b 0x3B
 .D189:
-    jsl 0x848EEA
+    jsl _848EEA
     dec.b 0x3B
     bne .D1B0
 
@@ -212,7 +212,7 @@ axe_max:
     rts
 
 .D1B1:
-    jsl 0x848EEA
+    jsl _848EEA
     lda.b 0x0F
     bpl .D1C3
 
@@ -226,7 +226,7 @@ axe_max:
     rts
 
 .D1C4:
-    jsl 0x848EEA
+    jsl _848EEA
     lda.b 0x0F
     bpl .D1E6
 
@@ -235,7 +235,7 @@ axe_max:
     bne .D1E6
 
     lda.b #0x05
-    jsl 0x848F07
+    jsl _848EEA.8F07
     lda.b #0x02
     sta.b 0x01
     sta.b 0x02

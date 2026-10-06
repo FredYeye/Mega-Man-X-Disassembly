@@ -142,7 +142,7 @@ crusher:
     lda.b #0x20
     sta.b 0x36
     lda.b #0x01
-    jsl 0x848F07
+    jsl _848EEA.8F07
     rts
 
 .9799:
@@ -210,7 +210,7 @@ crusher:
     lda.b #0x1E
     sta.b 0x36
 .9801:
-    jsl 0x848EEA
+    jsl _848EEA
     jmp .998E
 
 .9808:
@@ -225,7 +225,7 @@ crusher:
     stz.w 0x0003,X
     sep #0x10
     lda.b #0x02
-    jsl 0x848F07
+    jsl _848EEA.8F07
     rts
 
 .9823:
@@ -244,7 +244,7 @@ crusher:
     stx.b 0x37
     sep #0x10
 .9840:
-    jsl 0x848EEA
+    jsl _848EEA
     jmp .998E
 
 .9847:
@@ -263,7 +263,7 @@ crusher:
     lda.b #0x08
     sta.b 0x36
     lda.b #0x0C
-    jsl 0x848F07
+    jsl _848EEA.8F07
     rts
 
 .986F:
@@ -308,7 +308,7 @@ crusher:
     sta.b 0x37
     sep #0x20
 .98BA:
-    jsl 0x848EEA
+    jsl _848EEA
     jmp .998E
 
 .98C1:
@@ -334,7 +334,7 @@ crusher:
     lda.b #0x01
     sta.b 0x1D
 .98E3:
-    jsl 0x848EEA
+    jsl _848EEA
     rts
 
 .98E8:
@@ -348,7 +348,7 @@ crusher:
     lda.b #0x08
     sta.b 0x03
 .98FA:
-    jsl 0x848EEA
+    jsl _848EEA
     rts
 
 .98FF:
@@ -358,7 +358,7 @@ crusher:
     stz.b 0x02
     stz.b 0x03
 .9907:
-    jsl 0x848EEA
+    jsl _848EEA
     rts
 
 .990C:
@@ -371,7 +371,7 @@ crusher:
     sta.b 0x03
     stz.b 0x37
 .991C:
-    jsl 0x848EEA
+    jsl _848EEA
     rts
 
 .9921:
@@ -410,7 +410,7 @@ crusher:
     lda.b 0x08
     sta.b 0x37
 .9952:
-    jsl 0x8490A0
+    jsl _8490A0
     cmp.w #0x000D
     bcs .9962
 

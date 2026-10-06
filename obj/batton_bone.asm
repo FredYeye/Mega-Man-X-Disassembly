@@ -57,7 +57,7 @@ batton_bone: ;also batton m-501
     beq .A0E3
 
     lda.b #0x02
-    jsl 0x848F07
+    jsl _848EEA.8F07
 .A0E3:
     lda.b #0x06
     sta.b 0x01
@@ -141,7 +141,7 @@ batton_bone: ;also batton m-501
 .A180:
     sep #0x20
     lda.b #0x00
-    jsl 0x848F07
+    jsl _848EEA.8F07
     rts
 
 .A189:
@@ -158,11 +158,11 @@ batton_bone: ;also batton m-501
     bne .A1A8
 
     lda.b #0x01
-    jsl 0x848F07
+    jsl _848EEA.8F07
     jmp .A1AC
 
 .A1A8:
-    jsl 0x848EEA
+    jsl _848EEA
 .A1AC:
     rts
 
@@ -186,7 +186,7 @@ batton_bone: ;also batton m-501
 
     lda.b #0x01
     sta.b 0x3B
-    jsl 0x848F07
+    jsl _848EEA.8F07
     jmp .A202
 
 .A1D0:
@@ -213,11 +213,11 @@ batton_bone: ;also batton m-501
     stz.b 0x1C
     sep #0x20
     lda.b #0x02
-    jsl 0x848F07
+    jsl _848EEA.8F07
     jmp .A206
 
 .A202:
-    jsl 0x848EEA
+    jsl _848EEA
 .A206:
     rts
 
@@ -304,7 +304,7 @@ batton_bone: ;also batton m-501
     sep #0x20
 .A28E:
     jsl 0x82820A
-    jsl 0x848EEA
+    jsl _848EEA
     jmp .A2AA
 
 .A299:
@@ -366,26 +366,26 @@ batton_bone: ;also batton m-501
     lda.b #0xF0
     sta.b 0x2A
     stz.b 0x29
-    jsl 0x8490A0
+    jsl _8490A0
     cmp.b #0x00
     bne .A354
 
     lda.b #0x10
     sta.b 0x2A
-    jsl 0x8490A0
+    jsl _8490A0
     cmp.b #0x00
     bne .A354
 
     lda.b #0x10
     sta.b 0x29
     stz.b 0x2A
-    jsl 0x8490A0
+    jsl _8490A0
     cmp.b #0x00
     bne .A354
 
     lda.b #0xF0
     sta.b 0x29
-    jsl 0x8490A0
+    jsl _8490A0
     cmp.b #0x00
     bne .A354
 
@@ -405,18 +405,18 @@ batton_bone: ;also batton m-501
     bne .A349
 
     lda.b #0x03
-    jsl 0x848F07
+    jsl _848EEA.8F07
     stz.b 0x28
     jmp .A358
 
 .A349:
     lda.b #0x01
     sta.b 0x28
-    jsl 0x848F07
+    jsl _848EEA.8F07
     jmp .A358
 
 .A354:
-    jsl 0x848EEA
+    jsl _848EEA
 .A358:
     rts
 
@@ -442,11 +442,11 @@ batton_bone: ;also batton m-501
     sta.b 0x20
     sep #0x20
     lda.b #0x00
-    jsl 0x848F07
+    jsl _848EEA.8F07
 .A384:
     sep #0x20
 .A386:
-    jsl 0x848EEA
+    jsl _848EEA
     rts
 
 .A38B:
@@ -459,14 +459,14 @@ batton_bone: ;also batton m-501
     sta.b 0x01
     stz.b 0x02
     lda.b #0x00
-    jsl 0x848F07
+    jsl _848EEA.8F07
     lda.b #0x01
     sta.b 0x37
     jsr .A3AE
     jmp .A3AD
 
 .A3A9:
-    jsl 0x848EEA
+    jsl _848EEA
 .A3AD:
     rts
 

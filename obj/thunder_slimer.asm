@@ -46,12 +46,12 @@ thunder_slimer:
     sta.b 0x01
     stz.b 0x02
     lda.b #0x30
-    sta.b 0x27
+    sta.b obj.hp
     sta.b 0x36
     lda.w 0x1F9E
     bpl .AE8E
 
-    asl.b 0x27
+    asl.b obj.hp
 .AE8E:
     lda.b #0x01
     sta.b 0x0E

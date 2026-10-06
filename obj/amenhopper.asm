@@ -48,7 +48,7 @@ amenhopper:
     sta.b 0x36
     sep #0x20
     lda.b #0x04
-    jsl 0x848F07
+    jsl _848EEA.8F07
     rts
 
 .AB3F:
@@ -66,11 +66,11 @@ amenhopper:
     lda.b #0xFF
     sta.b 0x2F
     lda.b #0x04
-    jsl 0x848F07
+    jsl _848EEA.8F07
     lda.b #0x02
     sta.b 0x02
 .AB64:
-    jsl 0x848EEA
+    jsl _848EEA
     jsl update_pos_xy.neg_ay
     jsl 0x8491BE
     rep #0x20
@@ -89,7 +89,7 @@ amenhopper:
     lda.b #0x06
     sta.b 0x02
     lda.b #0x05
-    jsl 0x848F07
+    jsl _848EEA.8F07
     rts
 
 .AB91:
@@ -104,7 +104,7 @@ amenhopper:
     lda.b #0x04
     sta.b 0x02
     lda.b #0x05
-    jsl 0x848F07
+    jsl _848EEA.8F07
     rep #0x20
     lda.b 0x08
     clc
@@ -138,7 +138,7 @@ amenhopper:
     rts
 
 .ABE8:
-    jsl 0x848EEA
+    jsl _848EEA
     lda.b 0x0F
     bpl .ABF6
 
@@ -149,7 +149,7 @@ amenhopper:
     rts
 
 .ABF7:
-    jsl 0x848EEA
+    jsl _848EEA
     lda.b 0x0F
     bpl .AC0F
 
@@ -191,7 +191,7 @@ amenhopper:
     lda.b #0x02
     sta.b 0x02
     lda.b #0x01
-    jsl 0x848F07
+    jsl _848EEA.8F07
     stz.b 0x1E
     lda.b #0x1C
     sta.b 0x1F
@@ -211,12 +211,12 @@ amenhopper:
     stz.b 0x1C
     sep #0x20
 .AC66:
-    jsl 0x848EEA
+    jsl _848EEA
     lda.b 0x0F
     bpl .AC80
 
     lda.b #0x02
-    jsl 0x848F07
+    jsl _848EEA.8F07
     lda.b 0x11
     asl
     asl
@@ -230,7 +230,7 @@ amenhopper:
     rts
 
 .AC81:
-    jsl 0x848EEA
+    jsl _848EEA
     jsl update_pos_xy.neg_ay_pos_ax
     jsr .ADE2
     jsl 0x8491BE
@@ -242,7 +242,7 @@ amenhopper:
     sta.b 0x29
     lda.b #0xE0
     sta.b 0x2A
-    jsl 0x8490A0
+    jsl _8490A0
     cmp.b #0x34
     bcc .ACC3
 
@@ -273,7 +273,7 @@ amenhopper:
     rts
 
 .ACCC:
-    jsl 0x848EEA
+    jsl _848EEA
     jsl update_pos_xy.neg_ay_ax
     jsr .ADE2
     jsl 0x8491BE
@@ -285,7 +285,7 @@ amenhopper:
     sta.b 0x29
     lda.b #0xE0
     sta.b 0x2A
-    jsl 0x8490A0
+    jsl _8490A0
     cmp.b #0x34
     bcc .ACC3
 
@@ -309,7 +309,7 @@ amenhopper:
     rts
 
 .AD0E:
-    jsl 0x848EEA
+    jsl _848EEA
     dec.b 0x34
     bne .AD22
 
@@ -354,11 +354,11 @@ amenhopper:
     lda.b #0x40
     sta.b 0x1E
     lda.b #0x03
-    jsl 0x848F07
+    jsl _848EEA.8F07
     bra .AD76
 
 .AD5E:
-    jsl 0x848EEA
+    jsl _848EEA
     lda.b 0x0F
     bpl .AD76
 
@@ -393,7 +393,7 @@ amenhopper:
 
 .AD9B:
     jsl update_pos_xy.neg_ay
-    jsl 0x848EEA
+    jsl _848EEA
     jsl 0x8491BE
     rep #0x20
     lda.b 0x1C
@@ -449,7 +449,7 @@ amenhopper:
     lda.b #0x3C
     sta.b 0x35
 .ADEA:
-    jsl 0x849086
+    jsl get_rng
     and.b #0x1F
     cmp.b #0x0B
     bcs .AE0E

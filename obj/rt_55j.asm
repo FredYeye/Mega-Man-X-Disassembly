@@ -74,7 +74,7 @@ rt_55j:
     sta.b 0x20
     sep #0x20
     lda.b #0x04
-    jsl 0x848F07
+    jsl _848EEA.8F07
     lda.b #0xFF
     sta.b 0x2F
     lda.b #0x04
@@ -104,9 +104,9 @@ rt_55j:
     lda.b #0x30
     sta.b 0x1E
     lda.b #0x02
-    jsl 0x848F07
+    jsl _848EEA.8F07
 .CCD9:
-    jsl 0x848EEA
+    jsl _848EEA
     lda.b 0x0F
     bpl .CCED
 
@@ -139,7 +139,7 @@ rt_55j:
     lda.b #0x02
     sta.b 0x02
     lda.b #0x04
-    jsl 0x848F07
+    jsl _848EEA.8F07
     rep #0x20
     stz.b 0x1C
     sep #0x20
@@ -147,7 +147,7 @@ rt_55j:
     sta.b 0x1E
 .CD20:
     jsl update_pos_xy.neg_ay
-    jsl 0x848EEA
+    jsl _848EEA
     jsl 0x8491BE
     lda.b 0x2B
     and.b #0x04
@@ -156,7 +156,7 @@ rt_55j:
     lda.b #0x04
     sta.b 0x02
     lda.b #0x05
-    jsl 0x848F07
+    jsl _848EEA.8F07
     lda.b #0x10
     jsl 0x84A333
     lda.b #0x1A
@@ -165,7 +165,7 @@ rt_55j:
     rts
 
 .CD49:
-    jsl 0x848EEA
+    jsl _848EEA
     lda.b 0x0F
     bpl .CD5B
 
@@ -183,7 +183,7 @@ rt_55j:
 
     inc.b 0x02
     lda.b #0x00
-    jsl 0x848F07
+    jsl _848EEA.8F07
 .CD68:
     jsl 0x84AC92
     dec.b 0x34
@@ -228,7 +228,7 @@ rt_55j:
 .CDAD:
     sep #0x30
 .CDAF:
-    jsl 0x848EEA
+    jsl _848EEA
     rts
 
 .CDB4:
@@ -242,11 +242,11 @@ rt_55j:
     sta.b 0x02
     jsl 0x84AC92
     lda.b #0x01
-    jsl 0x848F07
+    jsl _848EEA.8F07
     rts
 
 .CDD4:
-    jsl 0x848EEA
+    jsl _848EEA
     lda.b 0x0F
     bne .CE15
 
@@ -282,7 +282,7 @@ rt_55j:
     rts
 
 .CE16:
-    jsl 0x848EEA
+    jsl _848EEA
     lda.b 0x36
     beq .CE32
 
@@ -293,7 +293,7 @@ rt_55j:
     stz.b 0x02
     stz.b 0x39
     lda.b #0x00
-    jsl 0x848F07
+    jsl _848EEA.8F07
     lda.b #0x3C
     sta.b 0x34
 .CE32:
@@ -301,7 +301,7 @@ rt_55j:
 
 .CE33:
     lda.b #0x0B
-    jsl 0x848F07
+    jsl _848EEA.8F07
     lda.b #0x06
     sta.b 0x02
     stz.b 0x39
@@ -311,7 +311,7 @@ rt_55j:
     rts
 
 .CE47:
-    jsl 0x848EEA
+    jsl _848EEA
     lda.b 0x0F
     bne .CE95
 
@@ -356,7 +356,7 @@ rt_55j:
     rts
 
 .CE99:
-    jsl 0x848EEA
+    jsl _848EEA
     lda.b 0x36
     beq .CEB3
 
@@ -365,14 +365,14 @@ rt_55j:
     stz.b 0x02
     stz.b 0x39
     lda.b #0x00
-    jsl 0x848F07
+    jsl _848EEA.8F07
     lda.b #0x3C
     sta.b 0x34
 .CEB3:
     rts
 
 .CEB4:
-    jsl 0x848EEA
+    jsl _848EEA
     lda.b 0x0F
     bpl .CEC2
 
@@ -421,7 +421,7 @@ rt_55j:
     ldx.b #0xEA
 .CF04:
     stx.b 0x29
-    jsl 0x8490A0
+    jsl _8490A0
     cmp.b #0x34
     bcs .CF34
 
@@ -433,7 +433,7 @@ rt_55j:
     ldx.b #0xDA
 .CF18:
     stx.b 0x29
-    jsl 0x8490A0
+    jsl _8490A0
     cmp.b #0x34
     bcs .CF34
 
@@ -445,7 +445,7 @@ rt_55j:
     ldx.b #0xCA
 .CF2C:
     stx.b 0x29
-    jsl 0x8490A0
+    jsl _8490A0
     cmp.b #0x34
 .CF34:
     rts

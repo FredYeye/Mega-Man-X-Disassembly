@@ -289,7 +289,7 @@ anglerge:
     inx
     inx
 .B027:
-    jsl 0x849086
+    jsl get_rng
     and.w #0x0003
     beq .B031
 
@@ -370,7 +370,7 @@ anglerge:
     sta.w 0x0000
 .B09F:
     stz.b 0x3A
-    jsl 0x849086
+    jsl get_rng
     and.w 0x0000
     sta.b 0x1F
     bne .B0B4
@@ -1214,18 +1214,18 @@ anglerge:
     cmp.b #0x06
     beq .B655
 
-    jsl 0x849086
+    jsl get_rng
     and.b #0x1C
     tay
 .B655:
     tya
     sta.w 0x000B,X
     rep #0x21
-    jsl 0x849086
+    jsl get_rng
     and.w #0x000F
     adc.b 0x08
     sta.w 0x0008,X
-    jsl 0x849086
+    jsl get_rng
     and.w #0x0007
     clc
     adc.w #0xFFF4
@@ -1262,7 +1262,7 @@ anglerge:
 ;-----
 
 .B6A5:
-    jsl 0x849086
+    jsl get_rng
     and.b #0x07
     tay
     lda 0x00CBD0,Y

@@ -178,7 +178,7 @@ utuboros_head:
     sep #0x20
     jsr .C35C
     lda.b #0x06
-    jsl 0x848F07
+    jsl _848EEA.8F07
     rts
 
 .BED3:
@@ -198,7 +198,7 @@ utuboros_head:
     sta.b 0x03
 .BEED:
     jsl update_pos_y
-    jsl 0x848EEA
+    jsl _848EEA
     jmp .C37E
 
 .BEF8:
@@ -221,7 +221,7 @@ utuboros_head:
     sep #0x20
 .BF14:
     jsl update_pos_y
-    jsl 0x848EEA
+    jsl _848EEA
     jmp .C37E
 
 .BF1F:
@@ -235,7 +235,7 @@ utuboros_head:
     sta.b 0x03
     rep #0x30
     ldx.w #0x0040
-    jsl 0x849086
+    jsl get_rng
     lsr
     bcc .BF3F
 
@@ -272,11 +272,11 @@ utuboros_head:
     lda.b #0xE0
     sta.b 0x2A
     lda.b #0x00
-    jsl 0x848F07
+    jsl _848EEA.8F07
     rts
 
 .BF85:
-    jsl 0x8490A0
+    jsl _8490A0
     cmp.b #0x0D
     bne .BFA2
 
@@ -331,7 +331,7 @@ utuboros_head:
     stz.b 0x1C
     sep #0x20
     lda.b #0x00
-    jsl 0x848F07
+    jsl _848EEA.8F07
     rts
 
 .BFEC:
@@ -431,7 +431,7 @@ utuboros_head:
     lda.b #0x36
     jsl _80888B
     lda.b #0x08
-    jsl 0x848F07
+    jsl _848EEA.8F07
 .C083:
     lda.b 0x3D
     beq .C091
@@ -440,7 +440,7 @@ utuboros_head:
     bne .C091
 
     lda.b #0x00
-    jsl 0x848F07
+    jsl _848EEA.8F07
 .C091:
     rts
 
@@ -497,7 +497,7 @@ utuboros_head:
     sta.b 0x1C
     sep #0x20
     lda.b #0x00
-    jsl 0x848F07
+    jsl _848EEA.8F07
     rts
 
 .C0E5:
@@ -543,7 +543,7 @@ utuboros_head:
     sta.b 0x1C
     sep #0x20
     lda.b #0x00
-    jsl 0x848F07
+    jsl _848EEA.8F07
     rts
 
 .C125:
@@ -568,12 +568,12 @@ utuboros_head:
     eor.b #0x40
     sta.b 0x33
     lda.b #0x00
-    jsl 0x848F07
+    jsl _848EEA.8F07
     rts
 
 .C14F:
     jsl 0x82820A
-    jsl 0x848EEA
+    jsl _848EEA
     rts
 
 .C158:
@@ -657,7 +657,7 @@ utuboros_head:
     lda.b #0x08
     sta.b 0x36
     lda.b #0x00
-    jsl 0x848F07
+    jsl _848EEA.8F07
     rts
 
 .C1DE:
@@ -679,7 +679,7 @@ utuboros_head:
     rtl
 
 .C1FF:
-    jsl 0x8490A0
+    jsl _8490A0
     cmp.b #0x0E
     bne .C213
 

@@ -80,7 +80,7 @@ launcher_octopuld:
 
 .C4BE:
     jsl update_pos_y
-    jsl 0x848EEA
+    jsl _848EEA
     lda.b 0x34
     beq .C4CE
 
@@ -96,7 +96,7 @@ launcher_octopuld:
     lda.b #0x04
     sta.b 0x02
     lda.b #0x02
-    jsl 0x848F07
+    jsl _848EEA.8F07
     rep #0x20
     tdc
     sta.w 0x1F0E
@@ -105,7 +105,7 @@ launcher_octopuld:
     rts
 
 .C4EB:
-    jsl 0x848EEA
+    jsl _848EEA
     inc.b 0x34
     lda.b 0x34
     lsr
@@ -128,7 +128,7 @@ launcher_octopuld:
     rts
 
 .C510:
-    jsl 0x848EEA
+    jsl _848EEA
     lda.b 0x0F
     bpl .C52F
 
@@ -277,7 +277,7 @@ launcher_octopuld:
 
 .C61F:
     jsl 0x84AC92
-    jsl 0x848EEA
+    jsl _848EEA
     lda.b 0x0F
     beq .C638
 
@@ -294,7 +294,7 @@ launcher_octopuld:
     jsl 0x84AC92
     jsl update_pos_xy.neg_ay
     jsl 0x8491BE
-    jsl 0x848EEA
+    jsl _848EEA
     lda.b 0x17
     bpl .C663
 
@@ -334,7 +334,7 @@ launcher_octopuld:
 
 .C684:
     jsl 0x84AC92
-    jsl 0x848EEA
+    jsl _848EEA
     dec.b 0x34
     bne .C693
 
@@ -388,7 +388,7 @@ launcher_octopuld:
     rts
 
 .C6E9:
-    jsl 0x848EEA
+    jsl _848EEA
     jsl update_pos_xy.neg_ay
     jsl 0x8491BE
     lda.b 0x1D
@@ -397,7 +397,7 @@ launcher_octopuld:
     lda.b #0x04
     sta.b 0x03
     lda.b #0x07
-    jsl 0x848F07
+    jsl _848EEA.8F07
     lda.b #0x48
     sta.b 0x34
     rep #0x20
@@ -430,7 +430,7 @@ launcher_octopuld:
     rts
 
 .C740:
-    jsl 0x848EEA
+    jsl _848EEA
     jsl update_pos_y
     jsl 0x8491BE
     lda.b 0x2B
@@ -444,7 +444,7 @@ launcher_octopuld:
     lda.b #0x08
     sta.b 0x03
     lda.b #0x08
-    jsl 0x848F07
+    jsl _848EEA.8F07
     rts
 
 .C766:
@@ -472,7 +472,7 @@ launcher_octopuld:
     sta.b 0x03
     jsl 0x849F14
     lda.b #0x09
-    jsl 0x848F07
+    jsl _848EEA.8F07
     rep #0x20
     lda.w #0x01E1
     sta.b 0x34
@@ -492,7 +492,7 @@ launcher_octopuld:
     adc.w #0x0020
     sta.w 0x0BB0
     sep #0x20
-    jsl 0x848EEA
+    jsl _848EEA
     lda.w 0x0BE3
     and.b #0xEF
     ora.w 0x0BE2
@@ -572,7 +572,7 @@ launcher_octopuld:
     sep #0x20
 .C847:
     lda.b #0x08
-    jsl 0x848F07
+    jsl _848EEA.8F07
     stz.b 0x3B
     rep #0x20
     lda.w #0x0200
@@ -589,7 +589,7 @@ launcher_octopuld:
 
 .C86B:
     jsl update_pos_y
-    jsl 0x848EEA
+    jsl _848EEA
     jsl 0x8491BE
     lda.b 0x2B
     and.b #0x08
@@ -614,7 +614,7 @@ launcher_octopuld:
 
 .C89C:
     jsl 0x84AC92
-    jsl 0x848EEA
+    jsl _848EEA
     jsl update_pos_xy.neg_ay
     jsl 0x8491BE
     lda.b 0x2B
@@ -636,12 +636,12 @@ launcher_octopuld:
     lda.b #0x02
     sta.b 0x03
     lda.b #0x03
-    jsl 0x848F07
+    jsl _848EEA.8F07
     rts
 
 .C8CC:
     jsl 0x84AC92
-    jsl 0x848EEA
+    jsl _848EEA
     lda.b 0x0F
     beq .C921
 
@@ -686,7 +686,7 @@ launcher_octopuld:
     rts
 
 .C922:
-    jsl 0x848EEA
+    jsl _848EEA
     lda.b 0x0F
     bpl .C92D
 
@@ -710,7 +710,7 @@ launcher_octopuld:
     rts
 
 .C947:
-    jsl 0x848EEA
+    jsl _848EEA
     lda.b 0x17
     bpl .C969
 
@@ -734,7 +734,7 @@ launcher_octopuld:
     rts
 
 .C96A:
-    jsl 0x848EEA
+    jsl _848EEA
     dec.b 0x34
     bne .C975
 
@@ -744,7 +744,7 @@ launcher_octopuld:
     rts
 
 .C976:
-    jsl 0x848EEA
+    jsl _848EEA
     lda.b 0x0F
     bpl .C996
 
@@ -777,7 +777,7 @@ launcher_octopuld:
     sta.b 0x1E
     inc.b 0x03
 .C9AE:
-    jsl 0x848EEA
+    jsl _848EEA
     jsl update_pos_xy.neg_ay
     jsl 0x8491BE
     lda.b 0x2B
@@ -809,7 +809,7 @@ launcher_octopuld:
     lda.w 0x1F15
     bne .C9EC
 
-    jsl 0x848EEA
+    jsl _848EEA
 .C9EC:
     lda.b 0x03
     cmp.b #0x14
@@ -873,7 +873,7 @@ launcher_octopuld:
 .CA3C:
     tax
     lda.w 0xC61E,X
-    jsl 0x848F07
+    jsl _848EEA.8F07
     rts
 
 .CA45:

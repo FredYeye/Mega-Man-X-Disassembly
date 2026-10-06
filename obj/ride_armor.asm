@@ -175,7 +175,7 @@ ride_armor:
     lda.b #0x02
     sta.b 0x03
     lda.b #0x18
-    jsl 0x848F07
+    jsl _848EEA.8F07
 .C701:
     rep #0x20
     lda.w 0x0BAD
@@ -193,7 +193,7 @@ ride_armor:
     sta.b 0x34
 .C71C:
     jsr .C735
-    jsl 0x848EEA
+    jsl _848EEA
     rts
 
 .C724:
@@ -205,7 +205,7 @@ ride_armor:
     jmp _8386F1
 
 .C730:
-    jsl 0x848EEA
+    jsl _848EEA
     rts
 
 .C735:
@@ -244,7 +244,7 @@ ride_armor:
     lda.b #0x04
     trb.b 0x2B
     lda.b #0x1A
-    jsl 0x848F07
+    jsl _848EEA.8F07
 .C774:
     lda.b 0x2B
     bit.b #0x04
@@ -284,7 +284,7 @@ ride_armor:
     eor.b #0x40
     sta.b 0x33
     lda.b #0x09
-    jsl 0x848F07
+    jsl _848EEA.8F07
 .C7BF:
     lda.b 0x0F
     bpl .C7C8
@@ -298,7 +298,7 @@ ride_armor:
 
     jsr _83CD3E
 .C7CE:
-    jsl 0x848EEA
+    jsl _848EEA
     rts
 
 .C7D3:
@@ -312,11 +312,11 @@ ride_armor:
     lda.w #0xCF3E
     sta.b 0x20
     sep #0x20
-    jsl 0x849086
+    jsl get_rng
     and.b #0x3F
     sta.b 0x34
     lda.b #0x00
-    jsl 0x848F07
+    jsl _848EEA.8F07
 .C7F4:
     dec.b 0x34
     bne .C7FD
@@ -343,7 +343,7 @@ ride_armor:
 
     inc.b 0x03
     lda.b #0x02
-    jsl 0x848F07
+    jsl _848EEA.8F07
 .C819:
     lda.b 0x0F
     bpl .C822
@@ -353,7 +353,7 @@ ride_armor:
 
 .C822:
     jsr _83CB69
-    jsl 0x848EEA
+    jsl _848EEA
     rts
 
 .C82A:
@@ -362,7 +362,7 @@ ride_armor:
 
     inc.b 0x03
     lda.b #0x01
-    jsl 0x848F07
+    jsl _848EEA.8F07
 .C836:
     lda.b 0x2B
     bit.b #0x04
@@ -410,7 +410,7 @@ ride_armor:
     jmp _8386F1
 
 .C87E:
-    jsl 0x848EEA
+    jsl _848EEA
     lda.b 0x0F
     and.b #0x03
     beq .C88E
@@ -428,7 +428,7 @@ ride_armor:
     lda.b 0x10
     bmi .C8AD
 
-    jsl 0x849086
+    jsl get_rng
     and.b #0x01
     bne .C8AD
 
@@ -452,7 +452,7 @@ ride_armor:
     lda.b #0x0C
     jsr _83CD15
     lda.b #0x03
-    jsl 0x848F07
+    jsl _848EEA.8F07
 .C8CE:
     lda.b 0x1D
     bmi .C8D8
@@ -485,7 +485,7 @@ ride_armor:
 
     inc.b 0x03
     lda.b #0x05
-    jsl 0x848F07
+    jsl _848EEA.8F07
 .C8FD:
     lda.b 0x2B
     bit.b #0x08
@@ -519,7 +519,7 @@ ride_armor:
 .C921:
     jsr _83CB69
     jsl update_pos_xy.neg_ay_ax
-    jsl 0x848EEA
+    jsl _848EEA
     rts
 
 .C92D:
@@ -542,7 +542,7 @@ ride_armor:
     lda.b #0x40
     sta.b 0x34
     lda.b #0x06
-    jsl 0x848F07
+    jsl _848EEA.8F07
 .C955:
     jsr _83CDB0
     dec.b 0x34
@@ -582,7 +582,7 @@ ride_armor:
 
 .C98C:
     jsl update_pos_x
-    jsl 0x848EEA
+    jsl _848EEA
     rts
 
 .C995:
@@ -591,7 +591,7 @@ ride_armor:
 
     inc.b 0x03
     lda.b #0x08
-    jsl 0x848F07
+    jsl _848EEA.8F07
 .C9A1:
     dec.b 0x34
     beq .C9B8
@@ -616,7 +616,7 @@ ride_armor:
 .C9BD:
     jsr _83CB69
     jsl update_pos_x
-    jsl 0x848EEA
+    jsl _848EEA
     rts
 
 .C9C9:
@@ -625,7 +625,7 @@ ride_armor:
 
     inc.b 0x03
     lda.b #0x07
-    jsl 0x848F07
+    jsl _848EEA.8F07
 .C9D5:
     lda.b 0x0F
     bpl .C9DE
@@ -634,7 +634,7 @@ ride_armor:
     jmp _8386F1
 
 .C9DE:
-    jsl 0x848EEA
+    jsl _848EEA
 .C9E2:
     rts
 
@@ -652,7 +652,7 @@ ride_armor:
     lda.b #0x02
     sta.b 0x03
     lda.b #0x1B
-    jsl 0x848F07
+    jsl _848EEA.8F07
     jsr _83CB02
 .C9FF:
     bit.b 0x0F
@@ -687,11 +687,11 @@ ride_armor:
     lda.b #0x3C
     sta.b 0x34
     lda.b #0x18
-    jsl 0x848F07
+    jsl _848EEA.8F07
     lda.b #0x04
     sta.b 0x03
 .CA44:
-    jsl 0x848EEA
+    jsl _848EEA
     rts
 
 .CA49:
@@ -702,7 +702,7 @@ ride_armor:
     lda.b #0x08
     sta.b 0x2F
     lda.b #0x03
-    jsl 0x848F07
+    jsl _848EEA.8F07
 .CA59:
     lda.b 0x2B
     bit.b #0x04
@@ -738,7 +738,7 @@ ride_armor:
     jsr _83CD3E
     jsr _83CD69
     lda.b #0x04
-    jsl 0x848F07
+    jsl _848EEA.8F07
 .CA9A:
     lda.b 0x0F
     bpl .CAA3
@@ -747,7 +747,7 @@ ride_armor:
     jmp _8386F1
 
 .CAA3:
-    jsl 0x848EEA
+    jsl _848EEA
     rts
 
 .CAA8:

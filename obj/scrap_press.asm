@@ -63,7 +63,7 @@ scrap_press:
     lda.b #0x50
     sta.b 0x1E
     lda.b #0x00
-    jsl 0x848F07
+    jsl _848EEA.8F07
     rts
 
 .E248:
@@ -238,7 +238,7 @@ scrap_press:
     lda.b #0x2C
     sta.b 0x35
     lda.b #0x01
-    jsl 0x848F07
+    jsl _848EEA.8F07
     jsl 0x849B7E
     beq .E38C
 
@@ -262,7 +262,7 @@ scrap_press:
     lda.b 0x36
     sta.b 0x05
     sep #0x20
-    jsl 0x848EEA
+    jsl _848EEA
     rts
 
 .E3A5:
@@ -273,7 +273,7 @@ scrap_press:
     lda.b #0x01
     sta.b 0x35
     lda.b #0x00
-    jsl 0x848F07
+    jsl _848EEA.8F07
     jsl update_pos_y
     rep #0x20
     lda.b 0x08
@@ -292,7 +292,7 @@ scrap_press:
     lda.b 0x36
     sta.b 0x05
     sep #0x20
-    jsl 0x848EEA
+    jsl _848EEA
     rts
 
 ;-----

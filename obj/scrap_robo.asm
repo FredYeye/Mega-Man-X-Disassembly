@@ -139,7 +139,7 @@ scrap_robo:
     lda.b #0x30
     sta.b 0x1E
     lda.b #0x00
-    jsl 0x848F07
+    jsl _848EEA.8F07
     rts
 
 .9C67:
@@ -206,7 +206,7 @@ scrap_robo:
     bne .9CE0
 
     lda.b #0x01
-    jsl 0x848F07
+    jsl _848EEA.8F07
 .9CE0:
     jsr _879F49
     lda.b 0x38
@@ -218,7 +218,7 @@ scrap_robo:
     sep #0x20
     lda.b #0xC0
     sta.b 0x1E
-    jsl 0x849086
+    jsl get_rng
     and.b #0x07
     sta.w 0x0000
     ldy.b #0x03
@@ -226,7 +226,7 @@ scrap_robo:
     jmp .9D09
 
 .9D05:
-    jsl 0x848EEA
+    jsl _848EEA
 .9D09:
     rts
 
@@ -264,7 +264,7 @@ scrap_robo:
     lda.b #0x06
     sta.b 0x01
     lda.b #0x01
-    jsl 0x848F07
+    jsl _848EEA.8F07
     inc.b 0x37
     jmp .9D6A
 
@@ -289,7 +289,7 @@ scrap_robo:
     sep #0x20
     jsl update_pos_x
 .9D66:
-    jsl 0x848EEA
+    jsl _848EEA
 .9D6A:
     lda.b 0x2C
     and.b #0x7F
@@ -349,7 +349,7 @@ scrap_robo:
 .9DB4:
     jsl _879ED4
     lda.b #0x03
-    jsl 0x848F07
+    jsl _848EEA.8F07
     lda.b #0x01
     sta.b 0x36
 .9DC2:
@@ -358,7 +358,7 @@ scrap_robo:
     bne .9E3F
 
     lda.b #0x01
-    jsl 0x848F07
+    jsl _848EEA.8F07
     stz.b 0x36
     lda.b #0x50
     sta.b 0x33
@@ -410,7 +410,7 @@ scrap_robo:
 .9E3D:
     sep #0x30
 .9E3F:
-    jsl 0x848EEA
+    jsl _848EEA
 .9E43:
     lda.b 0x2C
     and.b #0x7F
@@ -441,7 +441,7 @@ scrap_robo:
     bne .9E76
 
     lda.b #0x01
-    jsl 0x848F07
+    jsl _848EEA.8F07
 .9E76:
     jmp .9E95
 
@@ -457,12 +457,12 @@ scrap_robo:
 
 .9E88:
     lda.b #0x02
-    jsl 0x848F07
+    jsl _848EEA.8F07
 .9E8E:
     jmp .9E95
 
 .9E91:
-    jsl 0x848EEA
+    jsl _848EEA
 .9E95:
     rts
 

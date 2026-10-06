@@ -77,7 +77,7 @@ utuboros_body:
     dec.b 0x37
     bne .C428
 
-    jsl 0x849086
+    jsl get_rng
     and.b #0x03
     tax
     lda.w 0x00CD08,X

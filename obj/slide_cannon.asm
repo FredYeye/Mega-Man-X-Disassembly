@@ -4,7 +4,7 @@ slide_cannon:
     lda.b 0x38
     bne .B230
 
-    jsl 0x8490A0
+    jsl _8490A0
     cmp.b #0x00
     bne .B22C
 
@@ -131,7 +131,7 @@ slide_cannon:
     lda.b #0x5A
     sta.b 0x33
     lda.b 0x39
-    jsl 0x848F07
+    jsl _848EEA.8F07
     rts
 
 .B2FD:
@@ -180,7 +180,7 @@ slide_cannon:
     lda.b #0x1E
     sta.b 0x33
     lda.b 0x39
-    jsl 0x848F07
+    jsl _848EEA.8F07
     jmp .B35A
 
 .B34C:
@@ -189,7 +189,7 @@ slide_cannon:
     lda.b #0x03
     sta.b 0x33
     lda.b 0x3A
-    jsl 0x848F07
+    jsl _848EEA.8F07
 .B35A:
     rts
 
@@ -203,12 +203,12 @@ slide_cannon:
     bne .B371
 
     lda.b 0x39
-    jsl 0x848F07
+    jsl _848EEA.8F07
     jmp .B3AF
 
 .B371:
     lda.b 0x3A
-    jsl 0x848F07
+    jsl _848EEA.8F07
     jmp .B3AF
 
 .B37A:
@@ -225,7 +225,7 @@ slide_cannon:
     lda.b #0x08
     sta.b 0x01
     lda.b #0x02
-    jsl 0x848F07
+    jsl _848EEA.8F07
     jsr .B3D7
     jmp .B3AB
 
@@ -239,7 +239,7 @@ slide_cannon:
     sta.b 0x33
 .B3A5:
     lda.b 0x39
-    jsl 0x848F07
+    jsl _848EEA.8F07
 .B3AB:
     lda.b #0x01
     sta.b 0x34
@@ -255,11 +255,11 @@ slide_cannon:
     lda.b #0x02
     sta.b 0x01
     lda.b #0x01
-    jsl 0x848F07
+    jsl _848EEA.8F07
     jmp .B3C9
 
 .B3C5:
-    jsl 0x848EEA
+    jsl _848EEA
 .B3C9:
     rts
 

@@ -96,7 +96,7 @@ bospider:
 
 .DC1F:
     lda.b #0x00
-    jsl 0x848F07
+    jsl _848EEA.8F07
     jsl 0x849FFE
     lda.b #0x04
     sta.b 0x02
@@ -126,7 +126,7 @@ bospider:
 .DC54:
     dec.b 0x35
     jsl update_pos_y
-    jsl 0x848EEA
+    jsl _848EEA
     jsl 0x8280B4
 .DC62:
     rts
@@ -220,7 +220,7 @@ bospider:
     lda.b #0x02
     sta.b 0x3E
 .DD06:
-    jsl 0x849086
+    jsl get_rng
     and.b #0x03
     asl
     tax
@@ -261,7 +261,7 @@ bospider:
     lda.b #0x01
     sta.w 0x0000
 .DD4B:
-    jsl 0x849086
+    jsl get_rng
     and.w 0x0000
     cmp.b #0x03
     bne .DD58
@@ -349,7 +349,7 @@ bospider:
 .DDC6:
     dec.b 0x2F
     jsl update_pos_y
-    jsl 0x848EEA
+    jsl _848EEA
     rep #0x20
     lda.b 0x08
     cmp.w #0x01B0
@@ -359,7 +359,7 @@ bospider:
     lda.b #0x10
     sta.b 0x02
     lda.b #0x09
-    jsl 0x848F07
+    jsl _848EEA.8F07
     lda.b #0x18
     sta.b 0x35
     rep #0x20
@@ -386,7 +386,7 @@ bospider:
 .DE0C:
     dec.b 0x2F
     jsl update_pos_x
-    jsl 0x848EEA
+    jsl _848EEA
     jsr .E0EF
     jsr .E0B2
     rts
@@ -411,7 +411,7 @@ bospider:
     lda.b 0x0D
     bne .DE61
 
-    jsl 0x849086
+    jsl get_rng
     and.b #0x03
     bne .DE63
 
@@ -440,7 +440,7 @@ bospider:
     bne .DE86
 
     lda.b #0x00
-    jsl 0x848F07
+    jsl _848EEA.8F07
     lda.b #0x02
     sta.b 0x02
     stz.b 0x1E
@@ -453,7 +453,7 @@ bospider:
 
 .DE86:
     sep #0x20
-    jsl 0x848EEA
+    jsl _848EEA
 .DE8C:
     rts
 
@@ -465,7 +465,7 @@ bospider:
     lda.b 0x03
     sta.b 0x02
     lda.b #0x00
-    jsl 0x848F07
+    jsl _848EEA.8F07
     jmp .DF2F
 
 .DEA0:
@@ -559,7 +559,7 @@ bospider:
     jsl update_pos_y
 .DF48:
     sep #0x20
-    jsl 0x848EEA
+    jsl _848EEA
     rts
 
 .DF4F:
@@ -567,7 +567,7 @@ bospider:
     bpl .DF59
 
     lda.b #0x01
-    jsl 0x848F07
+    jsl _848EEA.8F07
 .DF59:
     lda.b 0x35
     beq .DF6A
@@ -587,9 +587,9 @@ bospider:
     sta.b 0x02
     stz.b 0x28
     lda.b #0x00
-    jsl 0x848F07
+    jsl _848EEA.8F07
 .DF7A:
-    jsl 0x848EEA
+    jsl _848EEA
     rts
 
 .DF7F:
@@ -813,7 +813,7 @@ bospider:
 .E10D:
     lda.b #0xF0
     sta.b 0x2A
-    jsl 0x8490A0
+    jsl _8490A0
     cmp.b #0x15
     beq .E176
 

@@ -36,7 +36,7 @@ hoganmer:
     lda.b #0x40
     sta.b 0x1E
     lda.b #0x00
-    jsl 0x848F07
+    jsl _848EEA.8F07
     jmp .B0D9
 
 .AED0:
@@ -71,7 +71,7 @@ hoganmer:
     lda.b #0x3C
     sta.b 0x36
     lda.b #0x00
-    jsl 0x848F07
+    jsl _848EEA.8F07
     rts
 
 .AF15:
@@ -147,7 +147,7 @@ hoganmer:
     stz.b 0x1C
     stz.b 0x1D
     lda.b #0x06
-    jsl 0x848F07
+    jsl _848EEA.8F07
     rts
 
 .AF8D:
@@ -173,7 +173,7 @@ hoganmer:
     jsl 0x84A07C
     sta.b 0x39
     lda.b #0x02
-    jsl 0x848F07
+    jsl _848EEA.8F07
     rts
 
 .AFB9:
@@ -198,7 +198,7 @@ hoganmer:
     stx.b 0x20
     sep #0x10
 .AFE0:
-    jsl 0x848EEA
+    jsl _848EEA
     rts
 
 .AFE5:
@@ -208,7 +208,7 @@ hoganmer:
     lda.b #0x06
     sta.b 0x03
     lda.b #0x04
-    jsl 0x848F07
+    jsl _848EEA.8F07
     rts
 
 .AFF4:
@@ -233,7 +233,7 @@ hoganmer:
     sta.b 0x20
     sep #0x20
 .B019:
-    jsl 0x848EEA
+    jsl _848EEA
     rts
 
 .B01E:
@@ -267,7 +267,7 @@ hoganmer:
     sta.b 0x1C
     sep #0x20
     lda.b #0x06
-    jsl 0x848F07
+    jsl _848EEA.8F07
     rts
 
 .B059:
@@ -298,7 +298,7 @@ hoganmer:
     lda.b #0x08
     sta.b 0x36
     lda.b #0x00
-    jsl 0x848F07
+    jsl _848EEA.8F07
     rts
 
 .B086:

@@ -62,14 +62,14 @@ mega_tortoise:
     sta.b 0x20
     sep #0x20
     lda.b #0x00
-    jsl 0x848F07
+    jsl _848EEA.8F07
     lda.b #0x02
     sta.b 0x01
     stz.b 0x02
     rts
 
 .EC81:
-    jsl 0x848EEA
+    jsl _848EEA
     lda.b 0x02
     bne .EC8F
 
@@ -88,7 +88,7 @@ mega_tortoise:
 
 .EC9B:
     lda.b #0x01
-    jsl 0x848F07
+    jsl _848EEA.8F07
     lda.b #0x06
     sta.b 0x01
     stz.b 0x02
@@ -96,7 +96,7 @@ mega_tortoise:
     rts
 
 .ECA8:
-    jsl 0x848EEA
+    jsl _848EEA
     lda.b 0x02
     bne .ECB6
 
@@ -108,7 +108,7 @@ mega_tortoise:
     bpl .ECC8
 
     lda.b #0x00
-    jsl 0x848F07
+    jsl _848EEA.8F07
     lda.b #0x02
     sta.b 0x01
     stz.b 0x02
@@ -119,7 +119,7 @@ mega_tortoise:
     bne .ECD8
 
     lda.b #0x02
-    jsl 0x848F07
+    jsl _848EEA.8F07
     lda.b #0x06
     sta.b 0x01
     stz.b 0x02
@@ -127,7 +127,7 @@ mega_tortoise:
     rts
 
 .ECD9:
-    jsl 0x848EEA
+    jsl _848EEA
     lda.b 0x0F
     bmi .ECE4
 
@@ -137,7 +137,7 @@ mega_tortoise:
 
 .ECE4:
     lda.b #0x01
-    jsl 0x848F07
+    jsl _848EEA.8F07
     lda.b #0x04
     sta.b 0x01
     stz.b 0x02

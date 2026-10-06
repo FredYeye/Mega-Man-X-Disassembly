@@ -26,7 +26,7 @@ mine_cart:
     sta.b 0x20
     sep #0x20
     lda.b #0x00
-    jsl 0x848F07
+    jsl _848EEA.8F07
     rtl
 
 .97F7:
@@ -135,7 +135,7 @@ mine_cart:
     stz.b 0x1E
     stz.b 0x34
     lda.b #0x00
-    jsl 0x848F07
+    jsl _848EEA.8F07
     rts
 
 .98C7:
@@ -242,7 +242,7 @@ mine_cart:
     sta.b 0x1A
 .996D:
     sep #0x20
-    jsl 0x848EEA
+    jsl _848EEA
     lda.b 0x2C
     lsr
     bcc .9989
@@ -278,7 +278,7 @@ mine_cart:
 
 .99A8:
     jsr .9A67
-    jsl 0x848EEA
+    jsl _848EEA
     jsl update_pos_xy.neg_ay_ax
     lda.b 0x1D
     bpl .99BB
@@ -290,7 +290,7 @@ mine_cart:
 
 .99BC:
     jsr .9A67
-    jsl 0x848EEA
+    jsl _848EEA
     lda.b 0x2B
     bit.b #0x04
     beq .99F6
@@ -374,7 +374,7 @@ mine_cart:
     sta.b 0x1E
     sep #0x20
     lda.b #0x03
-    jsl 0x848F07
+    jsl _848EEA.8F07
     rts
 
 .9A52:
@@ -385,7 +385,7 @@ mine_cart:
     lda.b #0x04
     sta.b 0x02
 .9A5D:
-    jsl 0x848EEA
+    jsl _848EEA
     rts
 
 .9A62:
@@ -526,12 +526,12 @@ mine_cart:
     lda.b 0x08
     sta.w 0x0008,X
     phy
-    jsl 0x849086
+    jsl get_rng
     and.w #0x0006
     tay
     lda 0x00CE6C,Y
     sta.w 0x001A,X
-    jsl 0x849086
+    jsl get_rng
     and.w #0x0006
     tay
     lda 0x00CE74,Y
@@ -559,7 +559,7 @@ mine_cart:
     sta.w 0x000A,X
     stz.w 0x000B,X
     rep #0x20
-    jsl 0x849086
+    jsl get_rng
     and.w #0x0007
     sta.w 0x0000
     lda.w #0x0016
@@ -573,7 +573,7 @@ mine_cart:
     clc
     adc.w 0x0000
     sta.w 0x0005,X
-    jsl 0x849086
+    jsl get_rng
     and.w #0x001F
     sta.w 0x0000
     lda.b 0x08

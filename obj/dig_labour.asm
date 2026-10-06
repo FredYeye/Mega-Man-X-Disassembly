@@ -37,7 +37,7 @@ dig_labour:
 
     stz.b 0x0B
     lda.b #0x03
-    jsl 0x848F07
+    jsl _848EEA.8F07
     lda.b #0x02
     sta.b 0x01
     lda.b #0x50
@@ -74,7 +74,7 @@ dig_labour:
     lda.b #0x01
     sta.b 0x33
     lda.b #0x00
-    jsl 0x848F07
+    jsl _848EEA.8F07
     rts
 
 .CE9A:
@@ -84,13 +84,13 @@ dig_labour:
     lda.b #0x04
     sta.b 0x01
     lda.b #0x01
-    jsl 0x848F07
+    jsl _848EEA.8F07
     lda.b #0x40
     sta.b 0x35
     jmp .CEB3
 
 .CEAF:
-    jsl 0x848EEA
+    jsl _848EEA
 
 .CEB3:
     rts
@@ -107,7 +107,7 @@ dig_labour:
     jmp .CECA
 
 .CEC6:
-    jsl 0x848EEA
+    jsl _848EEA
 .CECA:
     rts
 
@@ -116,13 +116,13 @@ dig_labour:
     bne .CEDC
 
     lda.b #0x00
-    jsl 0x848F07
+    jsl _848EEA.8F07
     lda.b #0x02
     sta.b 0x01
     jmp .CEE0
 
 .CEDC:
-    jsl 0x848EEA
+    jsl _848EEA
 .CEE0:
     rts
 

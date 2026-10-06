@@ -27,7 +27,7 @@ x_buster:
     lda.b #0x08
     sta.b 0x16
     lda.b #0x04
-    jsl 0x848F07
+    jsl _848EEA.8F07
     rts
 
 .A25F:
@@ -61,7 +61,7 @@ x_buster:
     lda.b 0x0E
     beq .A2C0
 
-    jsl 0x848EEA
+    jsl _848EEA
     rts
 
 .A294:

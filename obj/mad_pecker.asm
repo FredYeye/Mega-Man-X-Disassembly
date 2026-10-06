@@ -38,7 +38,7 @@ mad_pecker:
     lda.b #0x04
     sta.b 0x12
     lda.b #0x00
-    jsl 0x848F07
+    jsl _848EEA.8F07
     rep #0x20
     lda.w #0xCB49
     sta.b 0x20
@@ -66,12 +66,12 @@ mad_pecker:
     rts
 
 .A84F:
-    jsl 0x848EEA
+    jsl _848EEA
     jsr .A951
     bcs .A868
 
     lda.b #0x01
-    jsl 0x848F07
+    jsl _848EEA.8F07
     lda.b #0x04
     sta.b 0x01
     stz.b 0x02
@@ -86,7 +86,7 @@ mad_pecker:
     rts
 
 .A873:
-    jsl 0x848EEA
+    jsl _848EEA
     lda.b 0x02
     bne .A8CA
 
@@ -109,7 +109,7 @@ mad_pecker:
     inc.w 0x0000,X
     lda.b #0x1F
     sta.w 0x000A,X
-    jsl 0x849086
+    jsl get_rng
     xba
     lda.b #0x00
     xba
@@ -164,7 +164,7 @@ mad_pecker:
     rts
 
 .A8FD:
-    jsl 0x848EEA
+    jsl _848EEA
     jsr .A951
     bcc .A90A
 
@@ -175,7 +175,7 @@ mad_pecker:
     dec.b 0x33
     bne .A92A
 
-    jsl 0x849086
+    jsl get_rng
     and.b #0x0F
     tax
     lda.w 0x00CB4D,X
@@ -187,7 +187,7 @@ mad_pecker:
     sta.b 0x01
     stz.b 0x02
     lda.b #0x01
-    jsl 0x848F07
+    jsl _848EEA.8F07
 .A92A:
     jsl 0x82806E
     bcc .A934

@@ -42,7 +42,7 @@ spiky:
 
     stz.b 0x02
     lda.b #0x02
-    jsl 0x848F07
+    jsl _848EEA.8F07
 .9C14:
     lda.b #0x04
     sta.b 0x01
@@ -78,7 +78,7 @@ spiky:
     jml 0x828387
 
 .9C4C:
-    jsl 0x8490A0
+    jsl _8490A0
     cmp.b #0x3F
     bne .9C62
 
@@ -140,13 +140,13 @@ spiky:
     sta.b 0x2F
     jsl 0x8491BE
     lda.b #0x00
-    jsl 0x848F07
+    jsl _848EEA.8F07
     rts
 
 .9CCB:
     ldx.b 0x02
     jsr (.9CD5,X)
-    jsl 0x848EEA
+    jsl _848EEA
     rts
 
 .9CD5: d16[.9CDB, .9D8A, .9E82]
@@ -244,7 +244,7 @@ spiky:
     lda.b #0x04
     sta.b 0x02
     lda.b #0x01
-    jsl 0x848F07
+    jsl _848EEA.8F07
     rep #0x20
     lda.w #0x0600
     sta.b obj.speed_y
@@ -260,7 +260,7 @@ spiky:
 .9D8A:
     ldx.b 0x03
     jsr (.9D94,X)
-    jsl 0x848EEA
+    jsl _848EEA
     rts
 
 .9D94: d16[.9D98, .9E25]
@@ -288,7 +288,7 @@ spiky:
     sta.b 0x3A
 .9DB8:
     lda.b #0x03
-    jsl 0x848F07
+    jsl _848EEA.8F07
     jmp .9E24
 
 .9DC1:
@@ -311,7 +311,7 @@ spiky:
     stz.b 0x3A
 .9DDA:
     lda.b #0x06
-    jsl 0x848F07
+    jsl _848EEA.8F07
     jmp .9E24
 
 .9DE3:
@@ -334,7 +334,7 @@ spiky:
     sta.b 0x3A
 .9DFC:
     lda.b #0x03
-    jsl 0x848F07
+    jsl _848EEA.8F07
     jmp .9E24
 
 .9E05:
@@ -357,7 +357,7 @@ spiky:
     stz.b 0x3A
 .9E1E:
     lda.b #0x06
-    jsl 0x848F07
+    jsl _848EEA.8F07
 .9E24:
     rts
 
@@ -375,7 +375,7 @@ spiky:
     eor.b #0x40
     sta.b 0x11
     lda.b #0x03
-    jsl 0x848F07
+    jsl _848EEA.8F07
 .9E3F:
     sep #0x20
     lda.b 0x3A
@@ -400,7 +400,7 @@ spiky:
 .9E5F:
     lda.b #0x00
     sta.b 0x02
-    jsl 0x848F07
+    jsl _848EEA.8F07
     bra .9E70
 
 .9E69:
@@ -433,7 +433,7 @@ spiky:
     lda.b #0x00
     sta.b 0x02
     stz.b 0x03
-    jsl 0x848F07
+    jsl _848EEA.8F07
     lda.b 0x11
     eor.b #0x40
     sta.b 0x11
@@ -495,7 +495,7 @@ spiky:
     sta.b 0x2F
     jsl 0x8491BE
 .9F06:
-    jsl 0x848EEA
+    jsl _848EEA
     bra .9F14
 
 .9F0C:

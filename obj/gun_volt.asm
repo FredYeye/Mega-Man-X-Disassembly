@@ -47,7 +47,7 @@ gun_volt:
     lda.b #0x10
     sta.b 0x27
     lda.b #0x00
-    jsl 0x848F07
+    jsl _848EEA.8F07
     lda.b #0x3C
     sta.b 0x34
     rep #0x20
@@ -71,7 +71,7 @@ gun_volt:
     jml 0x828387
 
 .DA6D:
-    jsl 0x848EEA
+    jsl _848EEA
     dec.b 0x34
     bne .DAA0
 
@@ -81,7 +81,7 @@ gun_volt:
     sta.b 0x37
     bpl .DAA1
 
-    jsl 0x849086
+    jsl get_rng
     ldx.b #0x04
     lsr
     bcc .DA8C
@@ -91,11 +91,11 @@ gun_volt:
     stx.b 0x01
     lda.b #0x01
     sta.b 0x35
-    jsl 0x849086
+    jsl get_rng
     and.b #0x07
     sta.b 0x36
     lda.b #0x01
-    jsl 0x848F07
+    jsl _848EEA.8F07
 .DAA0:
     rts
 
@@ -105,7 +105,7 @@ gun_volt:
     rts
 
 .DAA6:
-    jsl 0x848EEA
+    jsl _848EEA
     lda.b 0x17
     bpl .DAD7
 
@@ -128,14 +128,14 @@ gun_volt:
     lda.b #0x02
     sta.b 0x01
     lda.b #0x07
-    jsl 0x848F07
+    jsl _848EEA.8F07
     lda.b #0x3C
     sta.b 0x34
 .DAD7:
     rts
 
 .DAD8:
-    jsl 0x848EEA
+    jsl _848EEA
     lda.b 0x17
     bpl .DB18
 
@@ -162,7 +162,7 @@ gun_volt:
     lda.b #0x02
     sta.b 0x01
     lda.b #0x07
-    jsl 0x848F07
+    jsl _848EEA.8F07
     lda.b #0x3C
     sta.b 0x34
 .DB18:

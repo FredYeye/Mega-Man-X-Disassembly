@@ -57,12 +57,12 @@ turn_cannon:
     bcs .99B7
 
     lda.b #0x00
-    jsl 0x848F07
+    jsl _848EEA.8F07
     bra .99BD
 
 .99B7:
     lda.b #0x08
-    jsl 0x848F07
+    jsl _848EEA.8F07
 .99BD:
     lda.b #0x04
     sta.b 0x01
@@ -87,25 +87,25 @@ turn_cannon:
     lda.b #0x04
     sta.b 0x02
     lda.b #0x01
-    jsl 0x848F07
+    jsl _848EEA.8F07
     bra .99EF
 
 .99E5:
     lda.b #0x06
     sta.b 0x02
     lda.b #0x09
-    jsl 0x848F07
+    jsl _848EEA.8F07
 .99EF:
     lda.b #0x06
     sta.b 0x01
     rts
 
 .99F4:
-    jsl 0x848EEA
+    jsl _848EEA
     rts
 
 .99F9:
-    jsl 0x848EEA
+    jsl _848EEA
     lda.b 0x0B
     bpl .9A0A
 

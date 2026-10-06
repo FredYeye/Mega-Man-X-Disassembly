@@ -54,7 +54,7 @@ crag_man:
     lda.b #0x02
     sta.b 0x26
     lda.b #0x00
-    jsl 0x848F07
+    jsl _848EEA.8F07
     rep #0x20
     lda.w #0xD027
     sta.b 0x20
@@ -95,7 +95,7 @@ crag_man:
     beq .D947
 
     lda.b #0x06
-    jsl 0x848F07
+    jsl _848EEA.8F07
     lda.b #0x06
     sta.b 0x01
     lda.b #0x20
@@ -121,7 +121,7 @@ crag_man:
     rts
 
 .D94C:
-    jsl 0x848EEA
+    jsl _848EEA
     lda.b 0x02
     bne .D966
 
@@ -142,7 +142,7 @@ crag_man:
     sta.b 0x01
     stz.b 0x02
     lda.b #0x05
-    jsl 0x848F07
+    jsl _848EEA.8F07
     rep #0x20
     lda.w #0xD031
     sta.b 0x20
@@ -155,7 +155,7 @@ crag_man:
 .D987:
     lda.b #0x7F
     sta.b 0x27
-    jsl 0x848EEA
+    jsl _848EEA
     lda.b 0x0F
     bpl .D9A9
 
@@ -164,7 +164,7 @@ crag_man:
     lda.b #0x1E
     sta.b 0x35
     lda.b #0x10
-    jsl 0x848F07
+    jsl _848EEA.8F07
     lda.b #0x08
     sta.b 0x27
     lda.b #0x03
@@ -177,7 +177,7 @@ crag_man:
     dec.b 0x35
     bne .DA07
 
-    jsl 0x849086
+    jsl get_rng
     and.b #0x0F
     cmp.b #0x0A
     bcc .DA03
@@ -208,7 +208,7 @@ crag_man:
     lda.b #0x0C
     sta.b 0x01
     lda.b #0x07
-    jsl 0x848F07
+    jsl _848EEA.8F07
     stz.b 0x0B
 .DA01:
     sep #0x10
@@ -228,13 +228,13 @@ crag_man:
 
     lda.b #0x0E
     sta.b 0x01
-    jsl 0x848EEA
+    jsl _848EEA
 .DA1F:
     rts
 
 .DA20:
     lda.b #0x10
-    jsl 0x848F07
+    jsl _848EEA.8F07
     lda.b #0x0A
     sta.b 0x01
     rts
@@ -242,7 +242,7 @@ crag_man:
 .DA2B:
     jsl 0x84AC92
     jsr .DB64
-    jsl 0x848EEA
+    jsl _848EEA
     lda.b 0x02
     bne .DA7F
 
@@ -286,7 +286,7 @@ crag_man:
     bpl .DA8F
 
     lda.b #0x10
-    jsl 0x848F07
+    jsl _848EEA.8F07
     lda.b #0x0A
     sta.b 0x01
     stz.b 0x02
@@ -368,7 +368,7 @@ crag_man:
     sta.w 0x000A,X
     lda.b 0x11
     sta.w 0x0011,X
-    jsl 0x849086
+    jsl get_rng
     lda.b #0x00
     xba
     and.b #0x0F
@@ -376,7 +376,7 @@ crag_man:
     lda 0x00D0B1,Y
     sta.w 0x000B,X
     rep #0x20
-    jsl 0x849086
+    jsl get_rng
     lsr
     and.w #0x001E
     tay
@@ -387,7 +387,7 @@ crag_man:
     inc
 .DB35:
     sta.w 0x001A,X
-    jsl 0x849086
+    jsl get_rng
     and.w #0x001E
     tay
     lda 0x00D091,Y

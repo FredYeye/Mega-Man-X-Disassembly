@@ -3,7 +3,7 @@ jamminger:
     tsb.b 0x11
     ldx.b 0x01
     jsr (.DDA2,X)
-    jsl 0x848EEA
+    jsl _848EEA
     stz.b 0x35
     jsl 0x849B03
     beq .DD7B
@@ -46,7 +46,7 @@ jamminger:
     sta.b 0x12
     stz.b 0x34
     lda.b #0x00
-    jsl 0x848F07
+    jsl _848EEA.8F07
     rep #0x20
     lda.w #0xD0C5
     sta.b 0x20
@@ -165,7 +165,7 @@ jamminger:
     beq .DEA2
 
     lda.b #0x01
-    jsl 0x848F07
+    jsl _848EEA.8F07
     lda.b #0x04
     sta.b 0x1D
     stz.b 0x1C
@@ -214,7 +214,7 @@ jamminger:
     beq .DEEF
 
     lda.b #0x01
-    jsl 0x848F07
+    jsl _848EEA.8F07
     lda.b #0x04
     sta.b 0x1D
     stz.b 0x1C
@@ -244,7 +244,7 @@ jamminger:
     bne .DF13
 
     lda.b #0x00
-    jsl 0x848F07
+    jsl _848EEA.8F07
     lda.b #0x02
     sta.b 0x01
     stz.b 0x02
@@ -256,14 +256,14 @@ jamminger:
     bne .DF29
 
     lda.b #0x00
-    jsl 0x848F07
+    jsl _848EEA.8F07
     rep #0x20
     lda.w #0x0300
     sta.b 0x1C
     sep #0x20
     inc.b 0x02
 .DF29:
-    jsl 0x848EEA
+    jsl _848EEA
     jsl update_pos_y
     rts
 

@@ -124,7 +124,7 @@ d_rex_upper:
     lda.b #0x3C
     sta.b 0x35
     lda.b #0x09
-    jsl 0x848F07
+    jsl _848EEA.8F07
 .B788:
     rts
 
@@ -141,7 +141,7 @@ d_rex_upper:
     lda.b #0x06
     sta.b 0x28
     lda.b #0x00
-    jsl 0x848F07
+    jsl _848EEA.8F07
     lda.b 0x36
     sta.b 0x11
     jmp _88BD71
@@ -175,7 +175,7 @@ d_rex_upper:
     lda.b #0x3C
     sta.b 0x33
     lda.b #0x00
-    jsl 0x848F07
+    jsl _848EEA.8F07
     rts
 
 .B7D7:
@@ -286,7 +286,7 @@ d_rex_upper:
     lda.b #0x01
     sta.b 0x1D
     lda.b #0x01
-    jsl 0x848F07
+    jsl _848EEA.8F07
     rts
 
 .B88A:
@@ -296,9 +296,9 @@ d_rex_upper:
     lda.b #0x04
     sta.b 0x03
     lda.b #0x00
-    jsl 0x848F07
+    jsl _848EEA.8F07
 .B898:
-    jsl 0x848EEA
+    jsl _848EEA
     rts
 
 .B89D:
@@ -315,7 +315,7 @@ d_rex_upper:
 .B8B0:
     sep #0x20
     jsl update_pos_y
-    jsl 0x848EEA
+    jsl _848EEA
     rts
 
 .B8BB:
@@ -331,7 +331,7 @@ d_rex_upper:
     dec.b 0x33
     bne .B8F0
 
-    jsl 0x849086
+    jsl get_rng
     and.b #0x0F
     clc
     adc.b 0x39
@@ -356,7 +356,7 @@ d_rex_upper:
 .B8EE:
     stz.b 0x39
 .B8F0:
-    jsl 0x848EEA
+    jsl _848EEA
     rts
 
 .B8F5:
@@ -395,7 +395,7 @@ d_rex_upper:
     rts
 
 .B929:
-    jsl 0x848EEA
+    jsl _848EEA
     jsl update_pos_x
     lda.b 0x1B
     bmi .B94B
@@ -471,7 +471,7 @@ d_rex_upper:
 .B9A3:
     sep #0x20
     jsl 0x82820A
-    jsl 0x848EEA
+    jsl _848EEA
     rts
 
 .B9AE:
@@ -488,7 +488,7 @@ d_rex_upper:
 .B9C1:
     sep #0x20
     jsl update_pos_y
-    jsl 0x848EEA
+    jsl _848EEA
     rts
 
 .B9CC:
@@ -529,7 +529,7 @@ d_rex_upper:
     sep #0x20
 .BA10:
     jsl update_pos_x
-    jsl 0x848EEA
+    jsl _848EEA
     rts
 
 .BA19:
@@ -559,7 +559,7 @@ d_rex_upper:
     lda.b #0x04
     sta.b 0x26
     lda.b #0x01
-    jsl 0x848F07
+    jsl _848EEA.8F07
     rts
 
 .BA53:
@@ -585,9 +585,9 @@ d_rex_upper:
     lda.b #0x01
     sta.b 0x1D
     lda.b #0x00
-    jsl 0x848F07
+    jsl _848EEA.8F07
 .BA7B:
-    jsl 0x848EEA
+    jsl _848EEA
     rts
 
 .BA80:
@@ -657,7 +657,7 @@ d_rex_upper:
 .BAF4:
     sep #0x20
     jsl update_pos_x
-    jsl 0x848EEA
+    jsl _848EEA
     rts
 
 .BAFF:
@@ -677,7 +677,7 @@ d_rex_upper:
 .BB16:
     sep #0x20
     jsl update_pos_y
-    jsl 0x848EEA
+    jsl _848EEA
     rts
 
 .BB21:
@@ -692,11 +692,11 @@ d_rex_upper:
     jmp _88BD28.BD32
 
 .BB33:
-    jsl 0x848EEA
+    jsl _848EEA
     rts
 
 .BB38:
-    jsl 0x848EEA
+    jsl _848EEA
     dec.b 0x33
     bne .BB59
 
@@ -719,11 +719,11 @@ d_rex_upper:
     jmp _88BD97
 
 .BB5C:
-    jsl 0x848EEA
+    jsl _848EEA
     dec.b 0x33
     bne .BB88
 
-    jsl 0x849086
+    jsl get_rng
     and.b #0x0F
     clc
     adc.b 0x3A
@@ -776,7 +776,7 @@ d_rex_upper:
 .BBB0:
     sep #0x20
     jsl update_pos_y
-    jsl 0x848EEA
+    jsl _848EEA
     rts
 
 .BBBB:
@@ -799,7 +799,7 @@ d_rex_upper:
     lda.b 0x36
     sta.b 0x11
     lda.b #0x0A
-    jsl 0x848F07
+    jsl _848EEA.8F07
     jml 0x8280B4
 
 .BBF2:

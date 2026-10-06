@@ -80,7 +80,7 @@ rangda_bangda_nose:
     lda.b #0x40
     tsb.b 0x33
     lda.b #0x02
-    jsl 0x848F07
+    jsl _848EEA.8F07
 .B2B3:
     rts
 
@@ -98,7 +98,7 @@ rangda_bangda_nose:
     lda.b #0x01
     sta.w 0x1F41
     lda.b #0x03
-    jsl 0x848F07
+    jsl _848EEA.8F07
     rts
 
 .B2D3:
@@ -112,7 +112,7 @@ rangda_bangda_nose:
     lda.b #0xFF
     sta.b 0x1D
 .B2E3:
-    jsl 0x848EEA
+    jsl _848EEA
     rts
 
 .B2E8:
@@ -138,7 +138,7 @@ rangda_bangda_nose:
     inc.b 0x03
     lda.b #0x40
     trb.b 0x33
-    jsl 0x849086
+    jsl get_rng
     and.b #0x01
     sta.b 0x35
     asl
@@ -232,7 +232,7 @@ rangda_bangda_nose:
     lda.b #0x00
     sta.b 0x1D
     lda.b #0x04
-    jsl 0x848F07
+    jsl _848EEA.8F07
     rts
 
 .B3B7:
@@ -256,7 +256,7 @@ rangda_bangda_nose:
     stz.b 0x02
     stz.b 0x03
 .B3D5:
-    jsl 0x848EEA
+    jsl _848EEA
     rts
 
 .B3DA:
@@ -305,7 +305,7 @@ rangda_bangda_nose:
     sta.w 0x0011,X
     eor.b #0x40
     sta.b 0x11
-    jsl 0x849086
+    jsl get_rng
     and.b #0x03
     clc
     adc.b #0x5D

@@ -137,14 +137,14 @@ bee_blader:
     sta.b 0x34
 .B99B:
     sep #0x20
-    jsl 0x848EEA
+    jsl _848EEA
     jml 0x82808F
 
 .B9A5:
     dec.b 0x34
     bne .B9B7
 
-    jsl 0x849086
+    jsl get_rng
     and.b #0x1F
     tax
     lda.w 0x86CBFB,X
@@ -152,7 +152,7 @@ bee_blader:
     stz.b 0x02
 .B9B7:
     jsr .BBD1
-    jsl 0x848EEA
+    jsl _848EEA
     jmp .BC4A
 
 .B9C1:
@@ -197,7 +197,7 @@ bee_blader:
     sta.b 0x01
 .BA0C:
     jsr .BBD1
-    jsl 0x848EEA
+    jsl _848EEA
     jmp .BC4A
 
 .BA16:
@@ -223,7 +223,7 @@ bee_blader:
     sta.b 0x01
 .BA3E:
     jsr .BBD1
-    jsl 0x848EEA
+    jsl _848EEA
     jmp .BC4A
 
 .BA48:
@@ -263,7 +263,7 @@ bee_blader:
     sta.b 0x34
 .BA86:
     jsr .BBD1
-    jsl 0x848EEA
+    jsl _848EEA
     jmp .BC4A
 
 .BA90:
@@ -321,7 +321,7 @@ bee_blader:
     lda.b #0x30
     sta.b 0x1E
     lda.b #0x0A
-    jsl 0x848F07
+    jsl _848EEA.8F07
     jsl 0x8282B9
     bne .BB20
 
@@ -347,7 +347,7 @@ bee_blader:
     lda.b #0x06
     sta.b 0x02
     lda.b #0x01
-    jsl 0x848F07
+    jsl _848EEA.8F07
     stz.w 0x0000
     ldy.b #0x05
     jsr .BD0A

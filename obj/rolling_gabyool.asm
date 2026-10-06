@@ -87,7 +87,7 @@ rolling_gabyool:
     lda.b #0x28
     sta.b 0x33
     lda.b #0x03
-    jsl 0x848F07
+    jsl _848EEA.8F07
     lda.b #0x01
     sta.b 0x0B
     rts
@@ -123,7 +123,7 @@ rolling_gabyool:
     beq .D200
 
     lda.b #0x02
-    jsl 0x848F07
+    jsl _848EEA.8F07
     stz.b 0x0B
     lda.b #0x02
     sta.b 0x02
@@ -131,7 +131,7 @@ rolling_gabyool:
 
 .D200:
     lda.b #0x01
-    jsl 0x848F07
+    jsl _848EEA.8F07
     lda.b #0x01
     sta.b 0x0B
     lda.b #0x04
@@ -188,7 +188,7 @@ rolling_gabyool:
 
     jsl update_pos_x
     jsr .D368
-    jsl 0x848EEA
+    jsl _848EEA
     jmp .D276
 
 .D26A:
@@ -207,7 +207,7 @@ rolling_gabyool:
 
     jsl update_pos_x
     jsr .D368
-    jsl 0x848EEA
+    jsl _848EEA
     jmp .D295
 
 .D289:
@@ -232,18 +232,18 @@ rolling_gabyool:
     bne .D2AF
 
     lda.b #0x02
-    jsl 0x848F07
+    jsl _848EEA.8F07
     stz.b 0x0B
     jmp .D2BE
 
 .D2AF:
     lda.b #0x01
     sta.b 0x0B
-    jsl 0x848F07
+    jsl _848EEA.8F07
     jmp .D2BE
 
 .D2BA:
-    jsl 0x848EEA
+    jsl _848EEA
 .D2BE:
     jsl update_pos_x
     jsr .D368
@@ -259,7 +259,7 @@ rolling_gabyool:
     lda.b 0x0F
     bmi .D2DF
 
-    jsl 0x848EEA
+    jsl _848EEA
     jsl update_pos_x
     jsr .D368
     jmp .D2E9
@@ -322,7 +322,7 @@ rolling_gabyool:
     lda.b 0x0B
     bne .D354
 
-    jsl 0x849086
+    jsl get_rng
     and.b #0x07
     lsr
     beq .D34B
@@ -351,7 +351,7 @@ rolling_gabyool:
     rts
 
 .D354:
-    jsl 0x849086
+    jsl get_rng
     and.b #0x07
     beq .D363
 

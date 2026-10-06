@@ -60,7 +60,7 @@ flamer:
     lda.b #0x10
     sta.b 0x3B
     lda.b #0x02
-    jsl 0x848F07
+    jsl _848EEA.8F07
     lda.b #0x06
     sta.b 0x01
     ldy.b #0x11
@@ -130,7 +130,7 @@ flamer:
     sta.w 0x000C,X
     sep #0x20
     lda.b #0x01
-    jsl 0x848F07
+    jsl _848EEA.8F07
 .E06F:
     sep #0x30
     bra .E085
@@ -142,7 +142,7 @@ flamer:
     lda.b #0x02
     sta.b 0x01
     lda.b #0x00
-    jsl 0x848F07
+    jsl _848EEA.8F07
     lda.b #0x3C
     sta.b 0x3B
 .E085:
@@ -197,7 +197,7 @@ flamer:
     jsl 0x82806E
     bcs .E0C9
 
-    jsl 0x848EEA
+    jsl _848EEA
     jml 0x8280B4
 
 .E0E7:
@@ -269,14 +269,14 @@ flamer:
     lda.b #0x0A
     sta.b 0x01
     lda.b #0x03
-    jsl 0x848F07
+    jsl _848EEA.8F07
 .E15C:
     jsl 0x849B03
-    jsl 0x848EEA
+    jsl _848EEA
     jml 0x8280B4
 
 .E168:
-    jsl 0x848EEA
+    jsl _848EEA
     lda.b 0x0F
     bpl .E174
 

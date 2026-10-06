@@ -28,7 +28,7 @@ lava_drop:
     sta.b 0x20
     sep #0x20
     lda.b #0x00
-    jsl 0x848F07
+    jsl _848EEA.8F07
     rts
 
 .C9DA:
@@ -38,13 +38,13 @@ lava_drop:
     lda.b #0x04
     sta.b 0x01
     lda.b #0x01
-    jsl 0x848F07
+    jsl _848EEA.8F07
     lda.b #0x15
     sta.b 0x33
     jmp .C9F3
 
 .C9EF:
-    jsl 0x848EEA
+    jsl _848EEA
 .C9F3:
     rts
 
@@ -56,8 +56,8 @@ lava_drop:
     lda.b #0x06
     sta.b 0x01
     lda.b #0x00
-    jsl 0x848F07
-    jsl 0x849086
+    jsl _848EEA.8F07
+    jsl get_rng
     and.b #0x03
     beq .CA15
 
@@ -84,7 +84,7 @@ lava_drop:
     jmp .CA2E
 
 .CA2A:
-    jsl 0x848EEA
+    jsl _848EEA
 .CA2E:
     rts
 
@@ -97,7 +97,7 @@ lava_drop:
     jmp .CA3E
 
 .CA3A:
-    jsl 0x848EEA
+    jsl _848EEA
 .CA3E:
     rts
 

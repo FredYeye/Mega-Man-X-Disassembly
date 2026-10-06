@@ -44,7 +44,7 @@ mettool_c_15:
     sta.b 0x26
     stz.b 0x2F
     lda.b #0x00
-    jsl 0x848F07
+    jsl _848EEA.8F07
     lda.b #0x78
     sta.b 0x34
     rts
@@ -55,7 +55,7 @@ mettool_c_15:
 
     inc.b 0x02
     lda.b #0x00
-    jsl 0x848F07
+    jsl _848EEA.8F07
     stz.b 0x28
 .C3F9:
     jsl 0x84AC92
@@ -114,18 +114,18 @@ mettool_c_15:
     lda.b #0x02
     sta.b 0x02
     lda.b #0x01
-    jsl 0x848F07
+    jsl _848EEA.8F07
     lda.b #0x03
     sta.b 0x28
 .C45D:
-    jsl 0x848EEA
+    jsl _848EEA
     lda.b 0x0F
     bpl .C46F
 
     lda.b #0x04
     sta.b 0x02
     lda.b #0x02
-    jsl 0x848F07
+    jsl _848EEA.8F07
 .C46F:
     rts
 
@@ -145,19 +145,19 @@ mettool_c_15:
     beq .C492
 
     lda.b #0x03
-    jsl 0x848F07
+    jsl _848EEA.8F07
     lda.b #0x06
     sta.b 0x02
     rts
 
 .C492:
     jsl update_pos_x
-    jsl 0x848EEA
+    jsl _848EEA
     jsl 0x8491BE
     rts
 
 .C49F:
-    jsl 0x848EEA
+    jsl _848EEA
     lda.b 0x0F
     bpl .C4AD
 
@@ -178,18 +178,18 @@ mettool_c_15:
     lda.b #0x02
     sta.b 0x02
     lda.b #0x01
-    jsl 0x848F07
+    jsl _848EEA.8F07
     lda.b #0x03
     sta.b 0x28
 .C4CB:
-    jsl 0x848EEA
+    jsl _848EEA
     lda.b 0x0F
     bpl .C544
 
     lda.b #0x04
     sta.b 0x02
     lda.b #0x03
-    jsl 0x848F07
+    jsl _848EEA.8F07
     jsl 0x84A07C
     tay
     lda.b 0x11
@@ -257,7 +257,7 @@ mettool_c_15:
     rts
 
 .C545:
-    jsl 0x848EEA
+    jsl _848EEA
     lda.b 0x0F
     bpl .C557
 
@@ -295,13 +295,13 @@ mettool_c_15:
 .C577:
     sta.b 0x29
     stz.b 0x2A
-    jsl 0x8490A0
+    jsl _8490A0
     cmp.b #0x34
     bcs .C5A3
 
     lda.b #0x0B
     sta.b 0x2A
-    jsl 0x8490A0
+    jsl _8490A0
     cmp.b #0x34
     bcs .C59B
 

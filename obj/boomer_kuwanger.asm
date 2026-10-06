@@ -75,7 +75,7 @@ boomer_kuwanger:
     lda.b #0x02
     sta.b 0x02
     lda.b #0x18
-    jsl 0x848F07
+    jsl _848EEA.8F07
     rts
 
 .8B1A:
@@ -193,7 +193,7 @@ boomer_kuwanger:
     lda.b 0x0F
     bmi .8BD4
 
-    jsl 0x848EEA
+    jsl _848EEA
     rts
 
 .8BD4:
@@ -253,7 +253,7 @@ boomer_kuwanger:
     pha
     lda.b 0x0F
     and.b #0x7F
-    jsl 0x848F07
+    jsl _848EEA.8F07
     pla
     sta.b 0x13
 .8C39:
@@ -423,7 +423,7 @@ boomer_kuwanger:
     sep #0x20
     bcs .8D62
 
-    jsl 0x849086
+    jsl get_rng
     and.b #0x0F
     cmp.b #0x06
     bcc .8D6C
@@ -434,7 +434,7 @@ boomer_kuwanger:
     rts
 
 .8D62:
-    jsl 0x849086
+    jsl get_rng
     and.b #0x0F
     cmp.b #0x06
     bcc .8D5D
@@ -443,7 +443,7 @@ boomer_kuwanger:
     rts
 
 .8D6D:
-    jsl 0x848EEA
+    jsl _848EEA
     lda.b 0x0F
     bpl .8D91
 
@@ -488,14 +488,14 @@ boomer_kuwanger:
 
 .8DBA:
     jsl 0x84AC92
-    jsl 0x848EEA
+    jsl _848EEA
     dec.b 0x34
     bne .8DE3
 
     lda.b 0x35
     bne .8DE1
 
-    jsl 0x849086
+    jsl get_rng
     and.b #0x0F
     tax
     lda.b 0x31
@@ -530,7 +530,7 @@ boomer_kuwanger:
 
 .8DFF:
     jsl 0x84AC92
-    jsl 0x848EEA
+    jsl _848EEA
     lda.b 0x17
     bpl .8E4C
 
@@ -572,7 +572,7 @@ boomer_kuwanger:
     rts
 
 .8E4D:
-    jsl 0x848EEA
+    jsl _848EEA
     dec.b 0x34
     bne .8E59
 
@@ -623,7 +623,7 @@ boomer_kuwanger:
     rts
 
 .8EA0:
-    jsl 0x848EEA
+    jsl _848EEA
     lda.b 0x0F
     bpl .8EB0
 
@@ -675,7 +675,7 @@ boomer_kuwanger:
     bne .8F04
 
     lda.b #0x00
-    jsl 0x848F07
+    jsl _848EEA.8F07
     lda.b #0x08
     sta.b 0x03
     lda.b #0x08
@@ -686,7 +686,7 @@ boomer_kuwanger:
 
 .8F05:
     jsl 0x84AC92
-    jsl 0x848EEA
+    jsl _848EEA
     dec.b 0x34
     bne .8F42
 
@@ -698,7 +698,7 @@ boomer_kuwanger:
     rts
 
 .8F1A:
-    jsl 0x849086
+    jsl get_rng
     and.b #0x0F
     tax
     rep #0x20
@@ -741,7 +741,7 @@ boomer_kuwanger:
     rts
 
 .8F63:
-    jsl 0x848EEA
+    jsl _848EEA
     lda.b 0x0F
     beq .8FA1
 
@@ -795,7 +795,7 @@ boomer_kuwanger:
     lda.b 0x34
     bne .8FCD
 
-    jsl 0x848EEA
+    jsl _848EEA
     lda.b 0x0F
     beq .8FCC
 
@@ -811,21 +811,21 @@ boomer_kuwanger:
     rts
 
 .8FD0:
-    jsl 0x848EEA
+    jsl _848EEA
     lda.b 0x0F
     bpl .8FE6
 
     lda.b #0x08
     sta.b 0x03
     lda.b #0x00
-    jsl 0x848F07
+    jsl _848EEA.8F07
     lda.b #0x1E
     sta.b 0x34
 .8FE6:
     rts
 
 .8FE7:
-    jsl 0x848EEA
+    jsl _848EEA
     dec.b 0x34
     bne .8FF3
 
@@ -835,7 +835,7 @@ boomer_kuwanger:
     rts
 
 .8FF4:
-    jsl 0x848EEA
+    jsl _848EEA
     lda.b 0x11
     asl
     asl
@@ -871,12 +871,12 @@ boomer_kuwanger:
     cmp.b #0x11
     bcs .9041
 
-    jsl 0x849086
+    jsl get_rng
     and.b #0x0F
     cmp.b #0x06
     bcs .9041
 
-    jsl 0x849086
+    jsl get_rng
     and.b #0x07
     clc
     adc.b #0x06
@@ -947,7 +947,7 @@ boomer_kuwanger:
     lda.w 0x1F15
     bne .90A6
 
-    jsl 0x848EEA
+    jsl _848EEA
 .90A6:
     lda.b 0x03
     cmp.b #0x14
@@ -969,13 +969,13 @@ boomer_kuwanger:
 .90B8:
     tax
     lda.w 0x00C59A,X
-    jsl 0x848F07
+    jsl _848EEA.8F07
     rts
 
 ;-----
 
 .90C1:
-    jsl 0x849086
+    jsl get_rng
     and.b #0x03
     asl
     tax

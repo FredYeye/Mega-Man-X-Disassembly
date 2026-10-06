@@ -57,7 +57,7 @@ spark_mandriller:
     sta.b 0x12
     stz.b 0x02
     lda.b #0x06
-    jsl 0x848F07
+    jsl _848EEA.8F07
     lda.b #0xFF
     sta.b 0x2F
     rtl
@@ -69,7 +69,7 @@ spark_mandriller:
 .9C61: d16[.9C6F, .9C84, .9CB7, .9CE5, .9D05, .9D15, .9D3C]
 
 .9C6F:
-    jsl 0x848EEA
+    jsl _848EEA
     lda.b 0x0F
     beq .9C80
 
@@ -81,7 +81,7 @@ spark_mandriller:
     jml 0x8280B4
 
 .9C84:
-    jsl 0x848EEA
+    jsl _848EEA
     lda.b 0x0F
     bpl .9CA4
 
@@ -108,7 +108,7 @@ spark_mandriller:
 
 .9CB7:
     jsl update_pos_xy.neg_ay
-    jsl 0x848EEA
+    jsl _848EEA
     jsl 0x8491BE
     lda.b 0x2B
     and.b #0x04
@@ -117,7 +117,7 @@ spark_mandriller:
     lda.b #0x06
     sta.b 0x02
     lda.b #0x05
-    jsl 0x848F07
+    jsl _848EEA.8F07
     stz.b 0x2F
     lda.b #0x4D
     jsl _80888B
@@ -127,14 +127,14 @@ spark_mandriller:
     jml 0x8280B4
 
 .9CE5:
-    jsl 0x848EEA
+    jsl _848EEA
     lda.b 0x0F
     bpl .9D01
 
     lda.b #0x08
     sta.b 0x02
     lda.b #0x04
-    jsl 0x848F07
+    jsl _848EEA.8F07
     rep #0x20
     tdc
     sta.w 0x1F0E
@@ -144,7 +144,7 @@ spark_mandriller:
     jml 0x8280B4
 
 .9D05:
-    jsl 0x848EEA
+    jsl _848EEA
     lda.b 0x0F
     bpl .9D11
 
@@ -184,7 +184,7 @@ spark_mandriller:
     lda.b #0x04
     sta.b 0x01
     stz.b 0x03
-    jsl 0x849086
+    jsl get_rng
     and.b #0x03
     asl
     sta.b 0x02
@@ -244,7 +244,7 @@ spark_mandriller:
     stz.b 0x02
     stz.b 0x03
     lda.b #0x11
-    jsl 0x848F07
+    jsl _848EEA.8F07
     lda.b #0x13
     jsl _80888B
     lda.b #0x29
@@ -327,7 +327,7 @@ spark_mandriller:
     lda.b #0x02
     sta.b 0x03
     lda.b #0x09
-    jsl 0x848F07
+    jsl _848EEA.8F07
     jsl 0x84AC92
     lda.b #0x16
     sta.b 0x2A
@@ -340,7 +340,7 @@ spark_mandriller:
     lda.b #0xEA
 .9E61:
     sta.b 0x2A
-    jsl 0x8490A0
+    jsl _8490A0
     cmp.b #0x34
     bcc .9E71
 
@@ -351,7 +351,7 @@ spark_mandriller:
     rts
 
 .9E72:
-    jsl 0x848EEA
+    jsl _848EEA
     lda.b 0x0F
     beq .9EF5
 
@@ -414,7 +414,7 @@ spark_mandriller:
     rts
 
 .9EF6:
-    jsl 0x848EEA
+    jsl _848EEA
     lda.b 0x0F
     beq .9F13
 
@@ -423,7 +423,7 @@ spark_mandriller:
     lda.b #0x06
     sta.b 0x03
     lda.b #0x00
-    jsl 0x848F07
+    jsl _848EEA.8F07
     lda.b #0x20
     sta.b 0x34
     rts
@@ -436,7 +436,7 @@ spark_mandriller:
 
 .9F14:
     jsl 0x84AC92
-    jsl 0x848EEA
+    jsl _848EEA
     dec.b 0x34
     bne .9F23
 
@@ -454,7 +454,7 @@ spark_mandriller:
 .9F37:
     jsl 0x84AC92
     lda.b #0x02
-    jsl 0x848F07
+    jsl _848EEA.8F07
     lda.b #0x02
     sta.b 0x03
     rep #0x20
@@ -469,7 +469,7 @@ spark_mandriller:
     rts
 
 .9F59:
-    jsl 0x848EEA
+    jsl _848EEA
     lda.b 0x0F
     bpl .9F79
 
@@ -478,7 +478,7 @@ spark_mandriller:
     bpl .9F79
 
     lda.b #0x07
-    jsl 0x848F07
+    jsl _848EEA.8F07
     lda.b #0x04
     sta.b 0x03
     lda.b #0x0A
@@ -487,12 +487,12 @@ spark_mandriller:
     rts
 
 .9F7A:
-    jsl 0x848EEA
+    jsl _848EEA
     lda.b 0x0F
     bpl .9F8C
 
     lda.b #0x08
-    jsl 0x848F07
+    jsl _848EEA.8F07
     lda.b #0x06
     sta.b 0x03
 .9F8C:
@@ -516,7 +516,7 @@ spark_mandriller:
     sta.b 0x05
     sep #0x20
 .9FA6:
-    jsl 0x848EEA
+    jsl _848EEA
     lda.b 0x0F
     and.b #0x0F
     sta.w 0x0000
@@ -558,7 +558,7 @@ spark_mandriller:
 
 .9FEB:
     lda.b #0x07
-    jsl 0x848F07
+    jsl _848EEA.8F07
     lda.b #0x08
     sta.b 0x03
     rep #0x20
@@ -582,7 +582,7 @@ spark_mandriller:
     beq .A031
 
     lda.b #0x05
-    jsl 0x848F07
+    jsl _848EEA.8F07
     stz.b 0x2F
     lda.b #0x0A
     sta.b 0x03
@@ -594,14 +594,14 @@ spark_mandriller:
     rts
 
 .A032:
-    jsl 0x848EEA
+    jsl _848EEA
     lda.b 0x0F
     bpl .A048
 
     lda.b #0x0C
     sta.b 0x03
     lda.b #0x00
-    jsl 0x848F07
+    jsl _848EEA.8F07
     lda.b #0x20
     sta.b 0x34
 .A048:
@@ -609,7 +609,7 @@ spark_mandriller:
 
 .A049:
     jsl 0x84AC92
-    jsl 0x848EEA
+    jsl _848EEA
     dec.b 0x34
     bne .A058
 
@@ -636,7 +636,7 @@ spark_mandriller:
     lda.b #0xDE
 .A078:
     sta.b 0x29
-    jsl 0x8490A0
+    jsl _8490A0
     cmp.b #0x34
     bcs .A0C3
 
@@ -647,7 +647,7 @@ spark_mandriller:
     lda.b #0xCE
 .A08A:
     sta.b 0x29
-    jsl 0x8490A0
+    jsl _8490A0
     cmp.b #0x34
     bcs .A0C3
 
@@ -658,12 +658,12 @@ spark_mandriller:
     lda.b #0xC8
 .A09C:
     sta.b 0x29
-    jsl 0x8490A0
+    jsl _8490A0
     cmp.b #0x34
     bcs .A0C3
 
     lda.b #0x0A
-    jsl 0x848F07
+    jsl _848EEA.8F07
     lda.b 0x11
     asl
     asl
@@ -683,11 +683,11 @@ spark_mandriller:
     lda.b #0x04
     sta.b 0x03
     lda.b #0x10
-    jsl 0x848F07
+    jsl _848EEA.8F07
     rts
 
 .A0CE:
-    jsl 0x848EEA
+    jsl _848EEA
     lda.b 0x0F
     bpl .A0FF
 
@@ -702,7 +702,7 @@ spark_mandriller:
     beq .A0FF
 
     lda.b #0x0B
-    jsl 0x848F07
+    jsl _848EEA.8F07
     lda.b #0x06
     sta.b 0x03
     lda.b #0x1E
@@ -717,7 +717,7 @@ spark_mandriller:
     rts
 
 .A10D:
-    jsl 0x848EEA
+    jsl _848EEA
     lda.b 0x0F
     beq .A121
 
@@ -735,14 +735,14 @@ spark_mandriller:
     sta.b 0x20
     sep #0x20
     jsl 0x849B03
-    jsl 0x848EEA
+    jsl _848EEA
     dec.b 0x34
     bne .A146
 
     lda.b #0x08
     sta.b 0x03
     lda.b #0x00
-    jsl 0x848F07
+    jsl _848EEA.8F07
     lda.b #0x20
     sta.b 0x34
     rts
@@ -765,7 +765,7 @@ spark_mandriller:
 
 .A15E:
     jsl 0x84AC92
-    jsl 0x848EEA
+    jsl _848EEA
     dec.b 0x34
     bne .A16D
 
@@ -784,7 +784,7 @@ spark_mandriller:
     lda.b #0x02
     sta.b 0x03
     lda.b #0x02
-    jsl 0x848F07
+    jsl _848EEA.8F07
     jsl 0x84AC92
     rep #0x20
     lda.w 0x0BAD
@@ -801,7 +801,7 @@ spark_mandriller:
     rts
 
 .A1A3:
-    jsl 0x848EEA
+    jsl _848EEA
     lda.b 0x0F
     bpl .A1B3
 
@@ -824,7 +824,7 @@ spark_mandriller:
     beq .A1E3
 
     lda.b #0x05
-    jsl 0x848F07
+    jsl _848EEA.8F07
     stz.b 0x2F
     lda.b #0x06
     sta.b 0x03
@@ -836,14 +836,14 @@ spark_mandriller:
     rts
 
 .A1E4:
-    jsl 0x848EEA
+    jsl _848EEA
     lda.b 0x0F
     bpl .A1FA
 
     lda.b #0x08
     sta.b 0x03
     lda.b #0x00
-    jsl 0x848F07
+    jsl _848EEA.8F07
     lda.b #0x20
     sta.b 0x34
 .A1FA:
@@ -851,7 +851,7 @@ spark_mandriller:
 
 .A1FB:
     jsl 0x84AC92
-    jsl 0x848EEA
+    jsl _848EEA
     dec.b 0x34
     bne .A20A
 
@@ -883,9 +883,9 @@ spark_mandriller:
     lda.b #0x20
     sta.b 0x34
     lda.b #0x01
-    jsl 0x848F07
+    jsl _848EEA.8F07
 .A235:
-    jsl 0x848EEA
+    jsl _848EEA
     lda.b 0x11
     asl
     asl
@@ -935,7 +935,7 @@ spark_mandriller:
     lda.b #0x40
     sta.b 0x1E
     lda.b #0x12
-    jsl 0x848F07
+    jsl _848EEA.8F07
     lda.b #0x02
     sta.b 0x03
     rts
@@ -978,7 +978,7 @@ spark_mandriller:
     lda.b #0x06
     sta.b 0x03
     lda.b #0x12
-    jsl 0x848F07
+    jsl _848EEA.8F07
     rts
 
 .A2DC:
@@ -986,7 +986,7 @@ spark_mandriller:
     rts
 
 .A2DF:
-    jsl 0x848EEA
+    jsl _848EEA
     lda.b 0x0F
     bpl .A321
 
@@ -1053,7 +1053,7 @@ spark_mandriller:
     jml 0x828398
 
 .A353:
-    jsl 0x848EEA
+    jsl _848EEA
     lda.b 0x03
     cmp.b #0x14
     bcs .A361
@@ -1070,7 +1070,7 @@ spark_mandriller:
     adc.b #0x03
     tax
     ldy.b #0x03
-    jsl 0x849086
+    jsl get_rng
     and.b #0x1F
 .A371:
     sec

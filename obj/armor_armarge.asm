@@ -94,7 +94,7 @@ armor_armarge:
 .B202: d16[.B20C, .B23A, .B274, .B291, .B2C3]
 
 .B20C:
-    jsl 0x848EEA
+    jsl _848EEA
     jsl update_pos_xy.neg_ay
     jsl 0x8491BE
     lda.b 0x2B
@@ -121,7 +121,7 @@ armor_armarge:
     lda.b 0x03
     bne .B252
 
-    jsl 0x848EEA
+    jsl _848EEA
     lda.b 0x0F
     bpl .B252
 
@@ -129,7 +129,7 @@ armor_armarge:
     bpl .B252
 
     lda.b #0x02
-    jsl 0x848F07
+    jsl _848EEA.8F07
     inc.b 0x03
 .B252:
     jsl update_pos_xy.neg_ay
@@ -150,7 +150,7 @@ armor_armarge:
     rts
 
 .B274:
-    jsl 0x848EEA
+    jsl _848EEA
     lda.b 0x0F
     bpl .B290
 
@@ -162,7 +162,7 @@ armor_armarge:
     sta.w 0x1F0E
     sep #0x20
     lda.b #0x15
-    jsl 0x848F07
+    jsl _848EEA.8F07
 .B290:
     rts
 
@@ -170,7 +170,7 @@ armor_armarge:
     lda.b 0x0F
     bmi .B29A
 
-    jsl 0x848EEA
+    jsl _848EEA
     rts
 
 .B29A:
@@ -400,7 +400,7 @@ armor_armarge:
 .B413:
     jsl 0x84AC92
     jsl update_pos_xy.neg_ay
-    jsl 0x848EEA
+    jsl _848EEA
     jsl 0x8491BE
     lda.b 0x0F
     bpl .B43D
@@ -421,7 +421,7 @@ armor_armarge:
 .B43E:
     jsl 0x84AC92
     jsl update_pos_xy.neg_ay
-    jsl 0x848EEA
+    jsl _848EEA
     jsl 0x8491BE
     lda.b 0x2B
     and.b #0x04
@@ -440,7 +440,7 @@ armor_armarge:
 
 .B465:
     jsl 0x84AC92
-    jsl 0x848EEA
+    jsl _848EEA
     jsl update_pos_xy.neg_ay
     lda.b 0x2B
     and.b #0x04
@@ -466,7 +466,7 @@ armor_armarge:
 .B490:
     jsl update_pos_x
     jsl 0x8491BE
-    jsl 0x848EEA
+    jsl _848EEA
     lda.b 0x2B
     and.b #0x03
     beq .B4FA
@@ -489,7 +489,7 @@ armor_armarge:
     sta.w 0x0002
     jsr _83BB35
     sep #0x20
-    jsl 0x849086
+    jsl get_rng
     and.b #0x0F
     cmp.b #0x06
     bcs .B4D9
@@ -529,7 +529,7 @@ armor_armarge:
     eor.b #0x40
     tsb.b 0x11
     jsl 0x82820A
-    jsl 0x848EEA
+    jsl _848EEA
     jsl 0x8491BE
     lda.b 0x2B
     bne .B519
@@ -540,7 +540,7 @@ armor_armarge:
     bit.b #0x04
     beq .B545
 
-    jsl 0x849086
+    jsl get_rng
     and.b #0x0F
     cmp.b #0x06
     bcs .B545
@@ -618,7 +618,7 @@ armor_armarge:
     sta.b 0x20
     sep #0x20
     jsl update_pos_xy.neg_ay
-    jsl 0x848EEA
+    jsl _848EEA
     jsl 0x8491BE
     lda.b 0x2B
     and.b #0x03
@@ -645,7 +645,7 @@ armor_armarge:
 
 .B5DF:
     jsl 0x8491BE
-    jsl 0x848EEA
+    jsl _848EEA
     lda.b 0x0F
     bpl .B5F1
 
@@ -705,7 +705,7 @@ armor_armarge:
     rts
 
 .B640:
-    jsl 0x849086
+    jsl get_rng
     and.b #0x0F
     tax
     rep #0x20
@@ -778,7 +778,7 @@ armor_armarge:
 .B6A5:
     lda.b #0x02
     sta.b 0x03
-    jsl 0x849086
+    jsl get_rng
     and.b #0x0F
     tax
     lda.w 0x00C973,X
@@ -788,7 +788,7 @@ armor_armarge:
     rts
 
 .B6BB:
-    jsl 0x848EEA
+    jsl _848EEA
     lda.b 0x17
     bpl .B73E
 
@@ -916,7 +916,7 @@ armor_armarge:
 
 .B7A2:
     jsr _83BAA7
-    jsl 0x848EEA
+    jsl _848EEA
     lda.b 0x17
     bpl .B812
 
@@ -1031,7 +1031,7 @@ armor_armarge:
 
 .B875:
     jsl update_pos_xy.neg_ay
-    jsl 0x848EEA
+    jsl _848EEA
     jsl 0x8491BE
     lda.b 0x2B
     and.b #0x04
@@ -1050,7 +1050,7 @@ armor_armarge:
 
 .B894:
     jsl update_pos_x
-    jsl 0x848EEA
+    jsl _848EEA
     jsl 0x8491BE
     lda.b 0x3A
     bne .B8BA
@@ -1076,7 +1076,7 @@ armor_armarge:
 
 .B8BD:
     jsl update_pos_x
-    jsl 0x848EEA
+    jsl _848EEA
     jsl 0x8491BE
     lda.b 0x3A
     bne .B8DD
@@ -1094,7 +1094,7 @@ armor_armarge:
     rts
 
 .B8E0:
-    jsl 0x848EEA
+    jsl _848EEA
     lda.b 0x17
     bpl .B8F6
 
@@ -1137,7 +1137,7 @@ armor_armarge:
     lda.w 0x1F15
     bne .B92D
 
-    jsl 0x848EEA
+    jsl _848EEA
 .B92D:
     lda.b 0x03
     cmp.b #0x14

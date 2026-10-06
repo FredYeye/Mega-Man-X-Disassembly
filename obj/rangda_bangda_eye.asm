@@ -82,7 +82,7 @@ rangda_bangda_eye:
     lda.b #0x40
     tsb.b 0x33
     lda.b #0x00
-    jsl 0x848F07
+    jsl _848EEA.8F07
 .AEAC:
     rts
 
@@ -103,7 +103,7 @@ rangda_bangda_eye:
     sta.b 0x11
     sta.b 0x3B
     lda.b #0x01
-    jsl 0x848F07
+    jsl _848EEA.8F07
     jmp .B1C8
 
 .AED9:
@@ -131,14 +131,14 @@ rangda_bangda_eye:
     sta.w 0x0004
     lda.w 0x0BB0
     sta.w 0x0006
-    jsl 0x80CEAE
+    jsl _80CEAE
     lda.w 0x0000
     lsr
     sta.b 0x34
     sta.b 0x36
     sep #0x20
 .AF1C:
-    jsl 0x848EEA
+    jsl _848EEA
     rts
 
 .AF21:
@@ -178,7 +178,7 @@ rangda_bangda_eye:
     tsb.b 0x33
     jsr .B167
     lda.b #0x10
-    jsl 0x848F07
+    jsl _848EEA.8F07
     rts
 
 .AF5C:
@@ -192,7 +192,7 @@ rangda_bangda_eye:
     stz.b 0x02
     stz.b 0x03
 .AF69:
-    jsl 0x848EEA
+    jsl _848EEA
     rts
 
 .AF6E:
@@ -211,7 +211,7 @@ rangda_bangda_eye:
     sta.b 0x11
     sta.b 0x3B
     lda.b #0x01
-    jsl 0x848F07
+    jsl _848EEA.8F07
     jmp .B1C8
 
 .AF96:
@@ -225,7 +225,7 @@ rangda_bangda_eye:
     lda.b #0x0F
     sta.b 0x38
 .AFA6:
-    jsl 0x848EEA
+    jsl _848EEA
     rts
 
 .AFAB:
@@ -250,7 +250,7 @@ rangda_bangda_eye:
     lda.b #0x40
     tsb.b 0x33
     lda.b #0x10
-    jsl 0x848F07
+    jsl _848EEA.8F07
 .AFCF:
     rts
 
@@ -261,7 +261,7 @@ rangda_bangda_eye:
     stz.b 0x02
     stz.b 0x03
 .AFD8:
-    jsl 0x848EEA
+    jsl _848EEA
     rts
 
 .AFDD:
@@ -281,7 +281,7 @@ rangda_bangda_eye:
     sta.b 0x11
     sta.b 0x3B
     lda.b #0x01
-    jsl 0x848F07
+    jsl _848EEA.8F07
     jmp .B1C8
 
 .B00B:
@@ -295,7 +295,7 @@ rangda_bangda_eye:
     lda.b #0x0F
     sta.b 0x38
 .B01B:
-    jsl 0x848EEA
+    jsl _848EEA
     rts
 
 .B020:
@@ -304,7 +304,7 @@ rangda_bangda_eye:
 
     lda.b #0x06
     sta.b 0x03
-    jsl 0x849086
+    jsl get_rng
     and.b #0x1C
     tax
     lda.w 0x00D53E,X
@@ -369,7 +369,7 @@ rangda_bangda_eye:
     tsb.b 0x33
     jsr .B167
     lda.b #0x10
-    jsl 0x848F07
+    jsl _848EEA.8F07
     rts
 
 .B099:
@@ -383,7 +383,7 @@ rangda_bangda_eye:
     stz.b 0x02
     stz.b 0x03
 .B0A6:
-    jsl 0x848EEA
+    jsl _848EEA
     rts
 
 .B0AB:
@@ -403,7 +403,7 @@ rangda_bangda_eye:
     sta.b 0x11
     sta.b 0x3B
     lda.b #0x01
-    jsl 0x848F07
+    jsl _848EEA.8F07
     jmp .B1C8
 
 .B0D5:
@@ -417,7 +417,7 @@ rangda_bangda_eye:
     lda.b #0x0F
     sta.b 0x38
 .B0E5:
-    jsl 0x848EEA
+    jsl _848EEA
     rts
 
 .B0EA:
@@ -432,7 +432,7 @@ rangda_bangda_eye:
     lda.b #0x40
     tsb.b 0x33
     lda.b #0x10
-    jsl 0x848F07
+    jsl _848EEA.8F07
     rts
 
 .B101:
@@ -468,7 +468,7 @@ rangda_bangda_eye:
     stz.b 0x02
     stz.b 0x03
 .B12E:
-    jsl 0x848EEA
+    jsl _848EEA
     rts
 
 .B133:
@@ -582,7 +582,7 @@ rangda_bangda_eye:
     sta.w 0x0011,X
     eor.b #0x40
     sta.b 0x11
-    jsl 0x849086
+    jsl get_rng
     and.b #0x01
     clc
     adc.b #0x5B
