@@ -139,19 +139,19 @@ jamminger:
 .DE5E: d16[.DE66, .DE6C, .DE72, .DE78]
 
 .DE66:
-    jsl 0x828174
+    jsl update_pos_xy.neg_ay_ax
     bra .DE7C
 
 .DE6C:
-    jsl 0x8281B2
+    jsl update_pos_xy.pos_ay_neg_ax
     bra .DE7C
 
 .DE72:
-    jsl 0x8281CF
+    jsl update_pos_xy.pos_ay_ax
     bra .DE7C
 
 .DE78:
-    jsl 0x828195
+    jsl update_pos_xy.neg_ay_pos_ax
 .DE7C:
     dec.b 0x34
     bne .DE88
@@ -229,7 +229,7 @@ jamminger:
     lda.b 0x02
     bne .DF03
 
-    jsl 0x82825D
+    jsl update_pos_y
     dec.b 0x34
     bne .DF02
 
@@ -264,7 +264,7 @@ jamminger:
     inc.b 0x02
 .DF29:
     jsl 0x848EEA
-    jsl 0x82825D
+    jsl update_pos_y
     rts
 
 ;-----

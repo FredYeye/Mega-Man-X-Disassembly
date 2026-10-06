@@ -189,7 +189,7 @@ sigma:
 
 .C522:
     dec.b 0x38
-    jsl 0x82825D
+    jsl update_pos_y
     rep #0x30
     ldx.b 0x20
     lda.b 0x08
@@ -215,7 +215,7 @@ sigma:
     jml 0x8280B4
 
 .C555:
-    jsl 0x82825D
+    jsl update_pos_y
     dec.b 0x33
     bne .C56C
 
@@ -326,7 +326,7 @@ sigma:
 
 .C622:
     dec.b 0x38
-    jsl 0x82825D
+    jsl update_pos_y
     jml 0x8280B4
 
 .C62C:
@@ -537,7 +537,7 @@ sigma:
     rts
 
 .C7A7:
-    jsl 0x82823E
+    jsl update_pos_x
     dec.b 0x33
     beq .C7C2
 
@@ -1400,7 +1400,7 @@ sigma:
     jml 0x8280B4
 
 .CDDA:
-    jsl 0x8281E8
+    jsl update_pos_xy.neg_ay
     jsl 0x8491BE
     lda.b 0x2B
     and.b #0x04
@@ -1418,7 +1418,7 @@ sigma:
     jml 0x8280B4
 
 .CDFF:
-    jsl 0x8281E8
+    jsl update_pos_xy.neg_ay
     jsl 0x8491BE
     lda.b 0x2B
     and.b #0x04

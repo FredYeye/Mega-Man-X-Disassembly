@@ -158,7 +158,7 @@ hoganmer:
     jmp .B0B8
 
 .AF96:
-    jsl 0x828174
+    jsl update_pos_xy.neg_ay_ax
     rts
 
 .AF9B:
@@ -278,7 +278,7 @@ hoganmer:
     jmp .B0BD
 
 .B062:
-    jsl 0x828174
+    jsl update_pos_xy.neg_ay_ax
     rep #0x20
     lda.b 0x1C
     cmp.w #0x0080

@@ -56,7 +56,7 @@ dodge_blaster:
     lda.b #0x08
     sta.b 0x34
 .9A10:
-    jsl 0x82823E
+    jsl update_pos_x
     jsl 0x8491BE
     lda.b 0x2B
     and.b #0x03
@@ -178,7 +178,7 @@ dodge_blaster:
     sta.b 0x1C
     sep #0x20
 .9AD4:
-    jsl 0x82825D
+    jsl update_pos_y
     jsl 0x8491BE
     jsl 0x848EEA
     dec.b 0x35
@@ -249,7 +249,7 @@ dodge_blaster:
     cmp.b #0x34
     bcc .9B5E
 
-    jsl 0x82825D
+    jsl update_pos_y
     jsl 0x8491BE
 .9B5E:
     rts

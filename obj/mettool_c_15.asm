@@ -151,7 +151,7 @@ mettool_c_15:
     rts
 
 .C492:
-    jsl 0x82823E
+    jsl update_pos_x
     jsl 0x848EEA
     jsl 0x8491BE
     rts

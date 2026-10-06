@@ -1440,9 +1440,9 @@ _84893D:
     sta.w 0x00C0
     lda.b 0x13
     sta.w 0x00C1
-    stz.w 0x2123
-    stz.w 0x2124
-    stz.w 0x2125
+    stz.w snes_regs.w12sel
+    stz.w snes_regs.w34sel
+    stz.w snes_regs.wobjsel
     rep #0x20
     lda.b 0x2F
     sta.w 0x0300
@@ -1894,19 +1894,19 @@ _848D28:
     beq .8D4A
 
     lda.b #0x22
-    sta.w 0x2123
-    stz.w 0x2124
+    sta.w snes_regs.w12sel
+    stz.w snes_regs.w34sel
     lda.b #0x02
-    sta.w 0x2125
+    sta.w snes_regs.wobjsel
     lda.b #0x17
-    sta.w 0x212E
+    sta.w snes_regs.tmw
     rts
 
 .8D4A:
-    stz.w 0x2123
-    stz.w 0x2124
-    stz.w 0x2125
-    stz.w 0x212E
+    stz.w snes_regs.w12sel
+    stz.w snes_regs.w34sel
+    stz.w snes_regs.wobjsel
+    stz.w snes_regs.tmw
 .8D56:
     rts
 
@@ -6913,7 +6913,7 @@ _84AD62:
     lda.b 0x02
     sta.w snes_regs.wrdivl
     ldx.b #0x40
-    stx.w 0x4206
+    stx.w snes_regs.wrdivb
     nop
     nop
     nop
@@ -6922,7 +6922,7 @@ _84AD62:
     nop
     nop
     nop
-    lda.w 0x4214
+    lda.w snes_regs.rddivl
     asl
     ldx.b 0x13
     beq .ADC3

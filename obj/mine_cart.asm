@@ -261,11 +261,11 @@ mine_cart:
 .998A: d16[.9992, .9999, .9999, .9992]
 
 .9992:
-    jsl 0x828174
+    jsl update_pos_xy.neg_ay_ax
     jmp .999D
 
 .9999:
-    jsl 0x828195
+    jsl update_pos_xy.neg_ay_pos_ax
 .999D:
     ldx.b #0x40
     bit.b 0x1B
@@ -279,7 +279,7 @@ mine_cart:
 .99A8:
     jsr .9A67
     jsl 0x848EEA
-    jsl 0x828174
+    jsl update_pos_xy.neg_ay_ax
     lda.b 0x1D
     bpl .99BB
 
@@ -323,7 +323,7 @@ mine_cart:
     rts
 
 .99F6:
-    jsl 0x828174
+    jsl update_pos_xy.neg_ay_ax
     rep #0x20
     lda.w #0xFD00
     cmp.b 0x1C
@@ -389,7 +389,7 @@ mine_cart:
     rts
 
 .9A62:
-    jsl 0x828174
+    jsl update_pos_xy.neg_ay_ax
     rts
 
 ;-----

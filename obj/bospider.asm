@@ -125,7 +125,7 @@ bospider:
 
 .DC54:
     dec.b 0x35
-    jsl 0x82825D
+    jsl update_pos_y
     jsl 0x848EEA
     jsl 0x8280B4
 .DC62:
@@ -348,7 +348,7 @@ bospider:
     sta.b 0x2F
 .DDC6:
     dec.b 0x2F
-    jsl 0x82825D
+    jsl update_pos_y
     jsl 0x848EEA
     rep #0x20
     lda.b 0x08
@@ -385,7 +385,7 @@ bospider:
     sta.b 0x2F
 .DE0C:
     dec.b 0x2F
-    jsl 0x82823E
+    jsl update_pos_x
     jsl 0x848EEA
     jsr .E0EF
     jsr .E0B2
@@ -397,7 +397,7 @@ bospider:
     cmp.w #0x0100
     bpl .DE2D
 
-    jsl 0x82825D
+    jsl update_pos_y
     jmp .DE86
 
 .DE2D:
@@ -556,7 +556,7 @@ bospider:
 
 .DF42:
     sep #0x20
-    jsl 0x82825D
+    jsl update_pos_y
 .DF48:
     sep #0x20
     jsl 0x848EEA

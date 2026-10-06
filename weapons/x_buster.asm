@@ -6,7 +6,7 @@ x_buster:
 .A224: d16[.A22E, .A25F, .A294, .A2BA, .A2BA]
 
 .A22E:
-    jsr 0x81A54C
+    jsr _81A54C
     rep #0x20
     lda.w #0x0400
     bit.b 0x10
@@ -34,7 +34,7 @@ x_buster:
     bit.b 0x11
     bvs .A276
 
-    jsl 0x828174
+    jsl update_pos_xy.neg_ay_ax
     rep #0x20
     lda.w #0xFA00
     cmp.b 0x1A
@@ -46,7 +46,7 @@ x_buster:
     bra .A287
 
 .A276:
-    jsl 0x828195
+    jsl update_pos_xy.neg_ay_pos_ax
     rep #0x20
     lda.w #0x0600
     cmp.b 0x1A

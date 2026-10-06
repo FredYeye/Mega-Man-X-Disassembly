@@ -557,19 +557,19 @@ anglerge:
 
 .B1F5:
     lda.b #0x88
-    sta.w 0x2123
+    sta.w snes_regs.w12sel
     sta.w 0x00C6
     lda.b #0x08
-    sta.w 0x2124
+    sta.w snes_regs.w34sel
     sta.w 0x00C7
-    stz.w 0x2125
+    stz.w snes_regs.wobjsel
     stz.w 0x00C8
     stz.w 0x212A
     stz.w 0x212B
     lda.b #0x07
-    sta.w 0x212E
+    sta.w snes_regs.tmw
     sta.w 0x00CE
-    stz.w 0x212F
+    stz.w snes_regs.tsw
     stz.w 0x00CF
     lda.b #0x04
     sta.b 0x03
@@ -839,9 +839,9 @@ anglerge:
 .B3E3:
     stz.w 0x0AA1
     stz.w 0x0AA8
-    stz.w 0x2123
+    stz.w snes_regs.w12sel
     stz.w 0x00C6
-    stz.w 0x2124
+    stz.w snes_regs.w34sel
     stz.w 0x00C7
     lda.b #0x40
     trb.w 0x1F2C

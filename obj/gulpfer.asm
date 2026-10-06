@@ -115,7 +115,7 @@ gulpfer:
     lda.b #0x1E
     sta.b 0x33
 .A40E:
-    jsl 0x82823E
+    jsl update_pos_x
     jsl 0x848EEA
     dec.b 0x33
     bne .A41D
@@ -353,7 +353,7 @@ gulpfer:
     cmp.b #0x0D
     beq .A5A9
 
-    jsl 0x82823E
+    jsl update_pos_x
     bra .A5AD
 
 .A5A9:
@@ -390,7 +390,7 @@ gulpfer:
 .A5DE:
     sta.b 0x1A
     sep #0x20
-    jsl 0x82823E
+    jsl update_pos_x
     jsl 0x8491BE
     lda.b 0x2B
     and.b #0x03

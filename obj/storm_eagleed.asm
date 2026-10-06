@@ -85,7 +85,7 @@ storm_eagleed:
     rts
 
 .D902:
-    jsl 0x82825D
+    jsl update_pos_y
     jsl 0x848EEA
     lda.b 0x17
     bpl .D91C
@@ -317,7 +317,7 @@ storm_eagleed:
 
 .DA98:
     jsl 0x848EEA
-    jsl 0x82825D
+    jsl update_pos_y
     jsl 0x84AC92
     jsl 0x8491BE
     lda.b 0x2B
@@ -444,7 +444,7 @@ storm_eagleed:
 
 .DB7D:
     jsl 0x848EEA
-    jsl 0x82825D
+    jsl update_pos_y
     rep #0x20
     lda.w 0x1E50
     sec
@@ -552,7 +552,7 @@ storm_eagleed:
     rts
 
 .DC46:
-    jsl 0x82825D
+    jsl update_pos_y
     jsl 0x848EEA
     jsl 0x84AC92
     rep #0x20
@@ -632,7 +632,7 @@ storm_eagleed:
 
 .DCCD:
     jsl 0x848EEA
-    jsl 0x82825D
+    jsl update_pos_y
     jsl 0x84AC92
     jsl 0x8491BE
     lda.b 0x2B
@@ -723,7 +723,7 @@ storm_eagleed:
 
 .DD71:
     jsl 0x848EEA
-    jsl 0x82825D
+    jsl update_pos_y
     jsl 0x84AC92
     dec.b 0x34
     beq .DD64

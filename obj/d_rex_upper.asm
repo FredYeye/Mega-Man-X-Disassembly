@@ -247,7 +247,7 @@ d_rex_upper:
     rts
 
 .B847:
-    jsl 0x828174
+    jsl update_pos_xy.neg_ay_ax
     rep #0x20
     lda.w #0xFA00
     cmp.b 0x1C
@@ -314,7 +314,7 @@ d_rex_upper:
     stz.b 0x03
 .B8B0:
     sep #0x20
-    jsl 0x82825D
+    jsl update_pos_y
     jsl 0x848EEA
     rts
 
@@ -396,7 +396,7 @@ d_rex_upper:
 
 .B929:
     jsl 0x848EEA
-    jsl 0x82823E
+    jsl update_pos_x
     lda.b 0x1B
     bmi .B94B
 
@@ -487,7 +487,7 @@ d_rex_upper:
     stz.b 0x03
 .B9C1:
     sep #0x20
-    jsl 0x82825D
+    jsl update_pos_y
     jsl 0x848EEA
     rts
 
@@ -528,7 +528,7 @@ d_rex_upper:
     stz.b 0x1A
     sep #0x20
 .BA10:
-    jsl 0x82823E
+    jsl update_pos_x
     jsl 0x848EEA
     rts
 
@@ -563,7 +563,7 @@ d_rex_upper:
     rts
 
 .BA53:
-    jsl 0x828174
+    jsl update_pos_xy.neg_ay_ax
     rep #0x20
     lda.w #0xFA00
     cmp.b 0x1C
@@ -606,7 +606,7 @@ d_rex_upper:
 
 .BA97:
     sep #0x20
-    jsl 0x82825D
+    jsl update_pos_y
     rts
 
 .BA9E:
@@ -656,7 +656,7 @@ d_rex_upper:
 
 .BAF4:
     sep #0x20
-    jsl 0x82823E
+    jsl update_pos_x
     jsl 0x848EEA
     rts
 
@@ -676,7 +676,7 @@ d_rex_upper:
 
 .BB16:
     sep #0x20
-    jsl 0x82825D
+    jsl update_pos_y
     jsl 0x848EEA
     rts
 
@@ -775,7 +775,7 @@ d_rex_upper:
 
 .BBB0:
     sep #0x20
-    jsl 0x82825D
+    jsl update_pos_y
     jsl 0x848EEA
     rts
 

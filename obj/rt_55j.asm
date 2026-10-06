@@ -112,13 +112,13 @@ rt_55j:
 
     lda.b #0x04
     sta.b 0x02
-    jsl 0x8281E8
+    jsl update_pos_xy.neg_ay
     jsl 0x8491BE
 .CCED:
     rts
 
 .CCEE:
-    jsl 0x8281E8
+    jsl update_pos_xy.neg_ay
     jsl 0x8491BE
     lda.b 0x1D
     bpl .CD00
@@ -146,7 +146,7 @@ rt_55j:
     lda.b #0x30
     sta.b 0x1E
 .CD20:
-    jsl 0x8281E8
+    jsl update_pos_xy.neg_ay
     jsl 0x848EEA
     jsl 0x8491BE
     lda.b 0x2B

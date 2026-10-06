@@ -86,7 +86,7 @@ _88803C:
     jml 0x8280B4
 
 .809A:
-    jsl 0x82823E
+    jsl update_pos_x
     jsl 0x8491BE
     lda.b 0x2B
     and.b #0x03
@@ -110,7 +110,7 @@ _88803C:
     bra .80F4
 
 .80C8:
-    jsl 0x82825D
+    jsl update_pos_y
     jsl 0x8491BE
     lda.b 0x2B
     and.b #0x0C
@@ -178,11 +178,11 @@ _888108:
     cmp.b #0x08
     beq .814D
 
-    jsl 0x8281E8
+    jsl update_pos_xy.neg_ay
     jmp .8151
 
 .814D:
-    jsl 0x8281FB
+    jsl update_pos_xy.pos_ay
 .8151:
     jsl 0x848EEA
     jsl 0x8280B4
@@ -248,7 +248,7 @@ _888162:
     rts
 
 .81C7:
-    jsl 0x8281E8
+    jsl update_pos_xy.neg_ay
     jsl 0x8491BE
     lda.b 0x2B
     and.b #0x04
@@ -340,7 +340,7 @@ _888162:
     rts
 
 .8259:
-    jsl 0x82823E
+    jsl update_pos_x
     lda.b 0x11
     and.b #0x40
     bne .826A
@@ -400,7 +400,7 @@ _888162:
     rts
 
 .82BB:
-    jsl 0x82825D
+    jsl update_pos_y
     jsl 0x848EEA
     rts
 
@@ -666,7 +666,7 @@ _8883BE:
     rts
 
 .8497:
-    jsl 0x82823E
+    jsl update_pos_x
     jsl 0x848EEA
     rts
 
@@ -907,7 +907,7 @@ _8893A4:
     rts
 
 .94B3:
-    jsl 0x82825D
+    jsl update_pos_y
     rep #0x20
     lda.b 0x08
     cmp.w #0x0140
@@ -940,7 +940,7 @@ _8893A4:
     sep #0x10
     ldx.b #0x06
     stx.b 0x02
-    jsl 0x82823E
+    jsl update_pos_x
     rts
 
 .94F8:
@@ -961,7 +961,7 @@ _8893A4:
     rts
 
 .950C:
-    jsl 0x82823E
+    jsl update_pos_x
     rts
 
 .9511:
@@ -1112,7 +1112,7 @@ _8893A4:
     stx.b 0x03
 .9635:
     sep #0x20
-    jsl 0x82823E
+    jsl update_pos_x
     rts
 
 .963C:
@@ -1152,7 +1152,7 @@ _8893A4:
     lda.b #0x0E
     sta.b 0x03
 .9673:
-    jsl 0x82825D
+    jsl update_pos_y
     rts
 
 .9678:
@@ -1199,7 +1199,7 @@ _8893A4:
     sta.w 0x000C,X
     sep #0x30
 .96BE:
-    jsl 0x82825D
+    jsl update_pos_y
     rts
 
 .96C3:
@@ -1240,7 +1240,7 @@ _8893A4:
     jmp _88979B
 
 .9709:
-    jsl 0x82825D
+    jsl update_pos_y
     rts
 
 .970E:
@@ -1558,7 +1558,7 @@ _88A382:
     rts
 
 .A4F3:
-    jsl 0x82823E
+    jsl update_pos_x
     jsl 0x848EEA
     rts
 
@@ -1581,7 +1581,7 @@ _88A382:
     lda.b #0x04
     sta.b 0x01
 .A517:
-    jsl 0x82825D
+    jsl update_pos_y
     rts
 
 .A51C:
@@ -1614,7 +1614,7 @@ _88A382:
     lda.b #0x0D
     jsl 0x848F07
 .A553:
-    jsl 0x82825D
+    jsl update_pos_y
     rts
 
 .A558:
@@ -1695,7 +1695,7 @@ _88A382:
     jsl 0x848F07
 .A5D7:
     jsl 0x848EEA
-    jsl 0x82823E
+    jsl update_pos_x
     rep #0x21
     lda.w 0x0BAD
     adc.w #0x0020
@@ -1875,7 +1875,7 @@ _88A382:
     sta.w 0x1F23
     sta.w 0x1F9B
 .A703:
-    jsl 0x82825D
+    jsl update_pos_y
     rts
 
 .A708:
@@ -2979,7 +2979,7 @@ _88B452:
     rts
 
 .B4CF:
-    jsl 0x82823E
+    jsl update_pos_x
     dec.b 0x33
     bne .B4DF
 
@@ -3008,7 +3008,7 @@ _88B452:
     rts
 
 .B4F9:
-    jsl 0x82823E
+    jsl update_pos_x
     dec.b 0x33
     bne .B509
 
@@ -3067,7 +3067,7 @@ _88B452:
     rts
 
 .B54A:
-    jsl 0x82823E
+    jsl update_pos_x
     dec.b 0x33
     bne .B55D
 
@@ -3111,7 +3111,7 @@ _88B452:
 
 .B590:
     jsr _88B668
-    jsl 0x82823E
+    jsl update_pos_x
     dec.b 0x33
     bne .B59F
 
@@ -3579,7 +3579,7 @@ _88BDB4:
 
 .BF1D:
     sep #0x20
-    jsl 0x8281B2
+    jsl update_pos_xy.pos_ay_neg_ax
     jsl 0x848EEA
     rts
 
@@ -3802,7 +3802,7 @@ d_rex_lower:
 .C0B2:
     sep #0x20
 .C0B4:
-    jsl 0x828174
+    jsl update_pos_xy.neg_ay_ax
     rep #0x20
     lda.w #0xFA00
     cmp.b 0x1C
@@ -3960,7 +3960,7 @@ d_rex_lower:
     sta.b 0x33
     jsl 0x84A311
 .C1A7:
-    jsl 0x82823E
+    jsl update_pos_x
     rts
 
 .C1AC:
@@ -4016,7 +4016,7 @@ d_rex_lower:
     lda.b #0x04
     sta.b 0x03
 .C1FC:
-    jsl 0x82823E
+    jsl update_pos_x
     rts
 
 .C201:
@@ -4079,7 +4079,7 @@ d_rex_lower:
 
 .C263:
     sep #0x20
-    jsl 0x82823E
+    jsl update_pos_x
     rts
 
 .C26A:
@@ -4389,7 +4389,7 @@ _88CF4A:
     jml 0x8280B4
 
 .CFF8:
-    jsl 0x82825D
+    jsl update_pos_y
     dec.b 0x1A
     bne .D007
 
@@ -4732,7 +4732,7 @@ _88D1B1:
     lda.b #0x0D
     jsl 0x848F07
 .D26C:
-    jsl 0x82825D
+    jsl update_pos_y
     rts
 
 .D271:
@@ -4862,7 +4862,7 @@ _88D1B1:
     lda.b #0x04
     sta.b 0x01
 .D349:
-    jsl 0x82823E
+    jsl update_pos_x
     jsl 0x848EEA
     rts
 
@@ -5036,7 +5036,7 @@ _88D1B1:
     rts
 
 .D470:
-    jsl 0x828174
+    jsl update_pos_xy.neg_ay_ax
     lda.b 0x1D
     bpl .D482
 
@@ -5076,7 +5076,7 @@ _88D1B1:
     jsl _88D838
 .D4C2:
     sep #0x20
-    jsl 0x828174
+    jsl update_pos_xy.neg_ay_ax
     rts
 
 .D4C9:
@@ -5275,7 +5275,7 @@ _88D1B1:
     sta.b 0x1E
     sep #0x20
 .D63C:
-    jsl 0x828174
+    jsl update_pos_xy.neg_ay_ax
     jmp _88ADB9
 
 .D643:
@@ -5825,7 +5825,7 @@ _88D93B:
     rts
 
 .DA1C:
-    jsl 0x82825D
+    jsl update_pos_y
     jsl 0x848EEA
     rep #0x20
     lda.b 0x08
@@ -5860,7 +5860,7 @@ _88D93B:
     rts
 
 .DA5A:
-    jsl 0x828174
+    jsl update_pos_xy.neg_ay_ax
     jsl 0x8491BE
     jsl 0x848EEA
     rep #0x20
@@ -5899,7 +5899,7 @@ _88D93B:
     rts
 
 .DAA0:
-    jsl 0x82823E
+    jsl update_pos_x
     jsl 0x8491BE
     jsl 0x848EEA
     lda.b 0x2B
@@ -6279,7 +6279,7 @@ _88DAD3:
     sep #0x20
     lda.b #0x30
     sta.b 0x1E
-    jsl 0x8281E8
+    jsl update_pos_xy.neg_ay
     lda.b #0x02
     sta.b 0x03
     stz.b 0x35
@@ -6309,7 +6309,7 @@ _88DAD3:
     lda.b #0x03
     jsl 0x848F07
 .DD8B:
-    jsl 0x8281E8
+    jsl update_pos_xy.neg_ay
     lda.b 0x35
     bne .DDB7
 
@@ -6402,7 +6402,7 @@ _88DAD3:
     rts
 
 .DE21:
-    jsl 0x8281E8
+    jsl update_pos_xy.neg_ay
     jsl 0x8491BE
     lda.b 0x2B
     and.b #0x04
@@ -6678,7 +6678,7 @@ _88DAD3:
     sta.b 0x0C
 .DFF0:
     dec.b 0x0C
-    jsl 0x82823E
+    jsl update_pos_x
     rep #0x20
     lda.b 0x05
     sec
@@ -6711,7 +6711,7 @@ _88DAD3:
 .E024:
     dec.b 0x0C
     rep #0x20
-    jsl 0x82823E
+    jsl update_pos_x
     lda.b 0x05
     sec
     sbc.b 0x3C
@@ -7299,7 +7299,7 @@ _88E3DE:
     rts
 
 .E463:
-    jsl 0x8281E8
+    jsl update_pos_xy.neg_ay
     rep #0x20
     lda.b 0x08
     cmp.w #0x059F
@@ -7413,7 +7413,7 @@ _88E3DE:
     rts
 
 .E532:
-    jsl 0x82823E
+    jsl update_pos_x
     jsl 0x848EEA
     jsl 0x8280B4
     rts
@@ -7566,7 +7566,7 @@ _88E939:
     lda.w 0x00DC3F,X
     jsl 0x848F07
 .E9A1:
-    jsl 0x8281E8
+    jsl update_pos_xy.neg_ay
     lda.b 0x0B
     eor.w 0x0B9B
     lsr
@@ -7632,7 +7632,7 @@ _88E9BA:
     lda.b #0x2C
     sta.b 0x1E
 .EA16:
-    jsl 0x8281E8
+    jsl update_pos_xy.neg_ay
     jsl 0x848EEA
     lda.b 0x0B
     eor.w 0x0B9B
@@ -7664,7 +7664,7 @@ _88EA33:
     beq .EA5F
 
     jsl 0x848EEA
-    jsl 0x8281E8
+    jsl update_pos_xy.neg_ay
     lda.b 0x0B
     eor.b #0x01
     sta.b 0x0B

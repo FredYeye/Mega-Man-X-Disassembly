@@ -98,7 +98,7 @@ sea_attacker:
     rts
 
 .A232:
-    jsl 0x82825D
+    jsl update_pos_y
     rep #0x20
     lda.b 0x08
     cmp.b 0x38
@@ -154,8 +154,8 @@ sea_attacker:
 
     jsr .A324
 .A29A:
-    jsl 0x82823E
-    jsl 0x82825D
+    jsl update_pos_x
+    jsl update_pos_y
     jsl 0x848EEA
     rts
 

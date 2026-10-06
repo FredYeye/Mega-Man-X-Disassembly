@@ -154,7 +154,7 @@ sky_claw:
     rts
 
 .C499:
-    jsl 0x82825D
+    jsl update_pos_y
     jsl 0x848EEA
     jmp .C608
 
@@ -183,7 +183,7 @@ sky_claw:
     stz.b 0x02
     stz.b 0x03
 .C4C8:
-    jsl 0x82825D
+    jsl update_pos_y
     jsl 0x848EEA
     rts
 
@@ -236,7 +236,7 @@ sky_claw:
     sta.b 0x34
     sta.b 0x35
 .C528:
-    jsl 0x82825D
+    jsl update_pos_y
     jsl 0x848EEA
     jmp .C6B1
 
@@ -337,7 +337,7 @@ sky_claw:
     stz.b 0x02
     stz.b 0x03
 .C5D0:
-    jsl 0x82825D
+    jsl update_pos_y
     jsl 0x848EEA
     rts
 
@@ -367,7 +367,7 @@ sky_claw:
     rts
 
 .C5FF:
-    jsl 0x82823E
+    jsl update_pos_x
     jsl 0x848EEA
     rts
 
@@ -509,7 +509,7 @@ sky_claw:
     eor.w #0xFFFF
     inc
     sta.b 0x1A
-    jsl 0x82823E
+    jsl update_pos_x
 .C6FB:
     sep #0x20
     rts

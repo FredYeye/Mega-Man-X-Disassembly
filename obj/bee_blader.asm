@@ -116,7 +116,7 @@ bee_blader:
     rtl
 
 .B972:
-    jsl 0x8281FB
+    jsl update_pos_xy.pos_ay
     jsl 0x8491BE
     lda.b 0x2B
     and.b #0x04
@@ -408,7 +408,7 @@ bee_blader:
 ;-----
 
 .BBBC:
-    jsl 0x8281E8
+    jsl update_pos_xy.neg_ay
     rep #0x20
     lda.b 0x1C
     cmp.w #0xFB00
@@ -423,7 +423,7 @@ bee_blader:
 ;-----
 
 .BBD1:
-    jsl 0x82825D
+    jsl update_pos_y
     rep #0x20
     lda.b 0x08
     sec
@@ -440,7 +440,7 @@ bee_blader:
     eor.w #0xFFFF
     inc
     sta.b 0x1C
-    jsl 0x82825D
+    jsl update_pos_y
 .BBF3:
     sep #0x20
     rts

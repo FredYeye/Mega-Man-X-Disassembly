@@ -64,7 +64,7 @@ icy_penguigo:
 .B580: d16[.B58A, .B5A3, .B5C0, .B5E5, .B614]
 
 .B58A:
-    jsl 0x8281E8
+    jsl update_pos_xy.neg_ay
     jsl 0x8491BE
     lda.b 0x2B
     and.b #0x04
@@ -408,7 +408,7 @@ icy_penguigo:
     lda.b 0x0F
     beq .B81B
 
-    jsl 0x8281E8
+    jsl update_pos_xy.neg_ay
     lda.b 0x1D
     bpl .B81B
 
@@ -465,7 +465,7 @@ icy_penguigo:
 
 .B842:
     jsl 0x848EEA
-    jsl 0x8281E8
+    jsl update_pos_xy.neg_ay
     jsl 0x8491BE
     lda.b 0x2B
     and.b #0x04
@@ -555,11 +555,11 @@ icy_penguigo:
     asl
     bcs .B8E7
 
-    jsl 0x828195
+    jsl update_pos_xy.neg_ay_pos_ax
     bra .B8EB
 
 .B8E7:
-    jsl 0x828174
+    jsl update_pos_xy.neg_ay_ax
 .B8EB:
     jsl 0x8491BE
     rep #0x20
@@ -646,7 +646,7 @@ icy_penguigo:
     rts
 
 .B97F:
-    jsl 0x8281E8
+    jsl update_pos_xy.neg_ay
     jsl 0x8491BE
     jsl 0x848EEA
     rep #0x20
@@ -662,7 +662,7 @@ icy_penguigo:
     rts
 
 .B99E:
-    jsl 0x8281E8
+    jsl update_pos_xy.neg_ay
     jsl 0x8491BE
     jsl 0x848EEA
     rep #0x20
@@ -861,7 +861,7 @@ icy_penguigo:
     rts
 
 .BB00:
-    jsl 0x8281E8
+    jsl update_pos_xy.neg_ay
     jsl 0x848EEA
     jsl 0x8491BE
     lda.b 0x2B
@@ -885,7 +885,7 @@ icy_penguigo:
     rts
 
 .BB2A:
-    jsl _82823E
+    jsl update_pos_x
     jsl 0x848EEA
     jsl 0x8491BE
     lda.b 0x37

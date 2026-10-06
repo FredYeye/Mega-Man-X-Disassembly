@@ -328,7 +328,7 @@ wolf_sigma_claw:
     jml 0x8280B4
 
 .E79E:
-    jsl 0x8281E8
+    jsl update_pos_xy.neg_ay
     jsl 0x8491BE
     lda.b 0x2B
     and.b #0x04
@@ -348,7 +348,7 @@ wolf_sigma_claw:
     jml 0x8280B4
 
 .E7C2:
-    jsl 0x8281E8
+    jsl update_pos_xy.neg_ay
     jsl 0x8491BE
     lda.b 0x2B
     and.b #0x04

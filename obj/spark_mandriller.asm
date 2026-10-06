@@ -107,7 +107,7 @@ spark_mandriller:
     jml 0x8280B4
 
 .9CB7:
-    jsl 0x8281E8
+    jsl update_pos_xy.neg_ay
     jsl 0x848EEA
     jsl 0x8491BE
     lda.b 0x2B
@@ -473,7 +473,7 @@ spark_mandriller:
     lda.b 0x0F
     bpl .9F79
 
-    jsl 0x8281E8
+    jsl update_pos_xy.neg_ay
     lda.b 0x1D
     bpl .9F79
 
@@ -571,7 +571,7 @@ spark_mandriller:
     rts
 
 .A002:
-    jsl 0x8281E8
+    jsl update_pos_xy.neg_ay
     rep #0x20
     lda.w #0xCFBB
     sta.b 0x20
@@ -691,7 +691,7 @@ spark_mandriller:
     lda.b 0x0F
     bpl .A0FF
 
-    jsl 0x82823E
+    jsl update_pos_x
     rep #0x20
     lda.w #0xCFD4
     sta.b 0x20
@@ -813,7 +813,7 @@ spark_mandriller:
     rts
 
 .A1B4:
-    jsl 0x8281E8
+    jsl update_pos_xy.neg_ay
     rep #0x20
     lda.w #0xCFBB
     sta.b 0x20
@@ -891,11 +891,11 @@ spark_mandriller:
     asl
     bcs .A245
 
-    jsl 0x828174
+    jsl update_pos_xy.neg_ay_ax
     bra .A249
 
 .A245:
-    jsl 0x828195
+    jsl update_pos_xy.neg_ay_pos_ax
 .A249:
     rep #0x20
     lda.w #0xCFBB
@@ -946,7 +946,7 @@ spark_mandriller:
     rts
 
 .A29D:
-    jsl 0x8281E8
+    jsl update_pos_xy.neg_ay
     rep #0x20
     lda.w #0xCFBB
     sta.b 0x20

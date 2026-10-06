@@ -156,7 +156,7 @@ capsule:
     sta.b 0x02
     stz.b 0x03
 .CBB2:
-    jsl 0x82825D
+    jsl update_pos_y
     jsl 0x848EEA
     rts
 

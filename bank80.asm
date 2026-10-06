@@ -3959,7 +3959,7 @@ _8094BA:
     lda.w 0x1F23
     bpl .9B8B
 
-    lda.w 0x213F
+    lda.w snes_regs.stat78
     bit.b #0x10
     beq .9B85
 
@@ -4856,7 +4856,7 @@ _80A1B3:
     rts
 
 .A200:
-    jsl _82825D
+    jsl update_pos_y
     dec.b 0x1F
     bne .A213
 
@@ -4940,7 +4940,7 @@ _80A241:
 
 .A28C:
     jsl _82808F.80B4
-    jsl _828174.820A
+    jsl update_pos_xy.no_accel
     rep #0x20
     dec.b 0x0C
     sep #0x20
@@ -6233,7 +6233,7 @@ _80AB56:
     sta.b 0x01
 .ABA2:
     jsl 0x848EEA
-    jml _828174.820A
+    jml update_pos_xy.no_accel
 
 .ABAA:
     jml 0x828398
@@ -7211,7 +7211,7 @@ decompress:
     tay
     lda.b 0xF8
     sta.l 0x7F8000,X
-    lda compressed_data+0,Y
+    lda compressed_data,Y
     adc.w #0x07
     lsr
     lsr
@@ -9556,12 +9556,12 @@ _80C1FD:
     lda.b #0x17
     sta.w 0x00C0
     stz.w 0x00C1
-    stz.w 0x2123
-    stz.w 0x2124
+    stz.w snes_regs.w12sel
+    stz.w snes_regs.w34sel
     stz.w 0x00C6
     stz.w 0x00C7
     lda.b #0xA0
-    sta.w 0x2125
+    sta.w snes_regs.wobjsel
     sta.w 0x00C8
     lda.b #0x10
     sta.w 0x00C9
@@ -10745,7 +10745,7 @@ _80C96C:
     stz.w 0x0AC4
     stz.w 0x0ACB
     sep #0x20
-    stz.w 0x420C
+    stz.w snes_regs.hdmaen
     plp
     rts
 
@@ -11036,7 +11036,7 @@ _80CB2D:
     lda.b #0x86
     sta.w snes_regs.a1b0
     lda.b #0x18
-    sta.w 0x4301
+    sta.w snes_regs.bbad0
     lda.b #0x01
     sta.w snes_regs.mdmaen
     sep #0x10
@@ -13041,7 +13041,7 @@ _80D7E2:
     lda.b #0x80
     tsb.w 0x0BCF
     lda.b #0xAA
-    sta.w ram.oam.high+0
+    sta.w ram.oam.high
     sta.w ram.oam.high+1
     sta.w ram.oam.high+2
     lda.b #0xAA
@@ -18044,16 +18044,16 @@ _80F779: d16[
 
 _80F8D9: d16[
     .F9B1, .thunk_hoganmer, .thunk_icy_penguigo, .thunk_thunder_slimer, .thunk_flammingle, .thunk_boomer_kuwanger, .thunk_planty, .thunk_launcher_octopuld,
-    .F9D5, .thunk_rt_55j, .thunk_sting_chameleao, .F9E4, .F9E9, .thunk_rush_roader, .F9F3, .thunk_crusher,
-    .F9FD, .FA02, .FA07, .thunk_dodge_blaster, .thunk_armor_armarge, .thunk_spiky, .FA1B, .thunk_turn_cannon,
+    .F9D5, .thunk_rt_55j, .thunk_sting_chameleao, .thunk_axe_max, .F9E9, .thunk_rush_roader, .F9F3, .thunk_crusher,
+    .thunk_sine_faller, .FA02, .FA07, .thunk_dodge_blaster, .thunk_armor_armarge, .thunk_spiky, .FA1B, .thunk_turn_cannon,
     .FA25, .thunk_bomb_been, .FA2F, .FA34, .thunk_sea_attacker, .thunk_gulpfer, .thunk_mad_pecker, .thunk_creeper,
     .thunk_amenhopper, .thunk_anglerge, .thunk_bee_blader, .thunk_utuboros_head, .thunk_utuboros_body, .thunk_utuboros_tail, .thunk_velguader, .thunk_ball_de_voux,
-    .FA75, .thunk_gun_volt, .FA7F, .thunk_mine_cart, .thunk_mole_borer, .thunk_batton_bone, .thunk_mettool_c_15, .thunk_ride_armor,
+    .FA75, .thunk_gun_volt, .thunk_scrap_robo, .thunk_mine_cart, .thunk_mole_borer, .thunk_batton_bone, .thunk_mettool_c_15, .thunk_ride_armor,
     .thunk_dig_labour, .thunk_spark_mandriller, .FAA7, .FAAC, .thunk_crag_man, .thunk_metal_wing, .thunk_jamminger, .thunk_hotarion,
-    .thunk_flamer, .FACA, .FACF, .FAD4, .FAD9, .FADE, .FAE3, .FAE8,
-    .FAED, .FAF2, .FAF7, .FAFC, .FB01, .FB06, .FB0B, .FB10,
-    .FB15, .thunk_sky_claw, .FB1F, .FB24, .FB29, .thunk_capsule, .FB33, .FB38,
-    .FB3D, .thunk_ray_bit, .thunk_storm_eagleed, .FB4C, .FB51, .FB56, .FB5B, .FB60,
+    .thunk_flamer, .thunk_scrap_press, .thunk_tombot, .thunk_ladder_yadder, .FAD9, .FADE, .FAE3, .thunk_slide_cannon,
+    .FAED, .FAF2, .FAF7, .FAFC, .thunk_ray_trap, .FB06, .FB0B, .FB10,
+    .FB15, .thunk_sky_claw, .FB1F, .FB24, .thunk_lava_drop, .thunk_capsule, .FB33, .thunk_rolling_gabyool,
+    .FB3D, .thunk_ray_bit, .thunk_storm_eagleed, .thunk_snow_shooter, .FB51, .FB56, .FB5B, .FB60,
     .FB65, .FB6A, .FB6F, .thunk_mega_tortoise, .FB79, .FB7E, .thunk_rangda_bangda_eye, .thunk_rangda_bangda_nose,
     .FB8D, .thunk_d_rex_upper, .thunk_d_rex_lower, .thunk_bospider, .FBA1, .thunk_sigma, .FBAB, .FBB0,
     .FBB5, .FBBA, .FBBF, .thunk_wolf_sigma_claw,
@@ -18102,8 +18102,8 @@ _80F8D9: d16[
     jsl sting_chameleao
     rts
 
-.F9E4:
-    jsl _81D020
+.thunk_axe_max:
+    jsl axe_max
     rts
 
 .F9E9:
@@ -18122,8 +18122,8 @@ _80F8D9: d16[
     jsl crusher
     rts
 
-.F9FD:
-    jsl _81D2CC
+.thunk_sine_faller:
+    jsl sine_faller
     rts
 
 .FA02:
@@ -18226,8 +18226,8 @@ _80F8D9: d16[
     jsl gun_volt
     rts
 
-.FA7F:
-    jsl 0x879B70
+.thunk_scrap_robo: ;todo: also scrap utuboros head?
+    jsl scrap_robo
     rts
 
 .thunk_mine_cart:
@@ -18286,23 +18286,23 @@ _80F8D9: d16[
     jsl flamer
     rts
 
-.FACA:
-    jsl _83E1B9
+.thunk_scrap_press:
+    jsl scrap_press
     rts
 
-.FACF:
-    jsl _83E401
+.thunk_tombot:
+    jsl tombot
     rts
 
-.FAD4:
-    jsl _87A9DF
+.thunk_ladder_yadder:
+    jsl ladder_yadder
     rts
 
 .FAD9:
     jsl _87ABA3
     rts
 
-.FADE:
+.FADE: ;tower stage elevator platform?
     jsl _87ADD8
     rts
 
@@ -18310,8 +18310,8 @@ _80F8D9: d16[
     jsl _87AF5D
     rts
 
-.FAE8:
-    jsl _87B216
+.thunk_slide_cannon:
+    jsl slide_cannon
     rts
 
 .FAED:
@@ -18322,16 +18322,16 @@ _80F8D9: d16[
     jsl _87B542
     rts
 
-.FAF7:
+.FAF7: ;ray trap laser traps?
     jsl _87B808
     rts
 
-.FAFC:
+.FAFC: ;ray trap laser beam?
     jsl _87B91C
     rts
 
-.FB01:
-    jsl _87BA72
+.thunk_ray_trap:
+    jsl ray_trap
     rts
 
 .FB06:
@@ -18362,8 +18362,8 @@ _80F8D9: d16[
     jsl 0x87C75E
     rts
 
-.FB29:
-    jsl 0x87C994
+.thunk_lava_drop:
+    jsl lava_drop
     rts
 
 .thunk_capsule:
@@ -18374,8 +18374,8 @@ _80F8D9: d16[
     jsl 0x87D012
     rts
 
-.FB38:
-    jsl 0x87D119
+.thunk_rolling_gabyool:
+    jsl rolling_gabyool
     rts
 
 .FB3D:
@@ -18390,11 +18390,11 @@ _80F8D9: d16[
     jsl storm_eagleed
     rts
 
-.FB4C:
-    jsl 0x87DE93
+.thunk_snow_shooter:
+    jsl snow_shooter
     rts
 
-.FB51:
+.FB51: ;snowball?
     jsl 0x87E037
     rts
 

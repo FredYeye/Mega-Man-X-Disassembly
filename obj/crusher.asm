@@ -171,7 +171,7 @@ crusher:
     stx.b 0x33
 .97C1:
     sep #0x20
-    jsl 0x82823E
+    jsl update_pos_x
     jsl 0x8491BE
     lda.b 0x2B
     bit.b #0x03
@@ -338,7 +338,7 @@ crusher:
     rts
 
 .98E8:
-    jsl 0x82825D
+    jsl update_pos_y
     rep #0x20
     lda.b 0x39
     cmp.b 0x08
@@ -362,7 +362,7 @@ crusher:
     rts
 
 .990C:
-    jsl 0x8281B2
+    jsl update_pos_xy.pos_ay_neg_ax
     lda.b 0x1D
     cmp.b #0x02
     bmi .991C

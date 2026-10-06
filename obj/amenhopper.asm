@@ -71,7 +71,7 @@ amenhopper:
     sta.b 0x02
 .AB64:
     jsl 0x848EEA
-    jsl 0x8281E8
+    jsl update_pos_xy.neg_ay
     jsl 0x8491BE
     rep #0x20
     lda.b 0x1C
@@ -231,7 +231,7 @@ amenhopper:
 
 .AC81:
     jsl 0x848EEA
-    jsl 0x828195
+    jsl update_pos_xy.neg_ay_pos_ax
     jsr .ADE2
     jsl 0x8491BE
     lda.b 0x2B
@@ -274,7 +274,7 @@ amenhopper:
 
 .ACCC:
     jsl 0x848EEA
-    jsl 0x828174
+    jsl update_pos_xy.neg_ay_ax
     jsr .ADE2
     jsl 0x8491BE
     lda.b 0x2B
@@ -392,7 +392,7 @@ amenhopper:
     rts
 
 .AD9B:
-    jsl 0x8281E8
+    jsl update_pos_xy.neg_ay
     jsl 0x848EEA
     jsl 0x8491BE
     rep #0x20

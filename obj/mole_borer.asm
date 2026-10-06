@@ -141,7 +141,7 @@ mole_borer:
     lda.b #0x42
     jsl _80888B
 .C04A:
-    jsl 0x82823E
+    jsl update_pos_x
     jsl 0x8491BE
     lda.b 0x2B
     bne .C064
@@ -157,7 +157,7 @@ mole_borer:
     jmp .C086
 
 .C067:
-    jsl 0x8281E8
+    jsl update_pos_xy.neg_ay
     jsl 0x8491BE
     jsl 0x82808F
     lda.b 0x2B
@@ -180,7 +180,7 @@ mole_borer:
     rts
 
 .C08F:
-    jsl 0x8281E8
+    jsl update_pos_xy.neg_ay
     jsl 0x8491BE
     lda.b 0x2B
     and.b #0x04

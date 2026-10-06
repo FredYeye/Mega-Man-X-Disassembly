@@ -20,14 +20,16 @@ struct oam {
 
 struct obj {
     unk1: d08[0x00->0x04],
-    pos_x: d24,
-    pos_y: d24,
-    type: d08,
+    pos_x: d24,   ;04
+    pos_y: d24,   ;07
+    type: d08,    ;0A
     unk2: d08[0x0B->0x1A],
-    speed_x: d16,
-    speed_y: d16,
-    unk3: d08[0x1E->0x27],
-    hp: d08,
+    speed_x: d16, ;1A
+    speed_y: d16, ;1C
+    accel_y: d08, ;1E
+    accel_x: d08, ;1F
+    unk3: d08[0x20->0x27],
+    hp: d08,      ;27
     unk4: d08[0x28->0x40],
 }
 

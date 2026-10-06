@@ -100,7 +100,7 @@ ball_de_voux:
 
 .D295:
     jsl 0x848EEA
-    jsl 0x8281E8
+    jsl update_pos_xy.neg_ay
     rep #0x20
     lda.w #0x001C
     cmp.w #0xFB00
@@ -155,11 +155,11 @@ ball_de_voux:
     and.b #0x40
     beq .D2FD
 
-    jsl 0x828174
+    jsl update_pos_xy.neg_ay_ax
     bra .D301
 
 .D2FD:
-    jsl 0x828195
+    jsl update_pos_xy.neg_ay_pos_ax
 .D301:
     jsl 0x8491BE
     lda.b 0x2B
@@ -373,7 +373,7 @@ ball_de_voux:
 .D465:
     sta.b 0x1B
     stz.b 0x1A
-    jsl 0x82823E
+    jsl update_pos_x
 .D46D:
     jsl 0x8491BE
     lda.b 0x2B

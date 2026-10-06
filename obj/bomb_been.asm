@@ -75,7 +75,7 @@ bomb_been:
     rts
 
 .9FDD:
-    jsl 0x82823E
+    jsl update_pos_x
     jsl 0x848EEA
     dec.b 0x38
     bne .9FF9
@@ -200,7 +200,7 @@ bomb_been:
     rts
 
 .A0AC:
-    jsl 0x82825D
+    jsl update_pos_y
     jsl 0x848EEA
     rts
 

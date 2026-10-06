@@ -79,7 +79,7 @@ boomer_kuwanger:
     rts
 
 .8B1A:
-    jsl 0x82823E
+    jsl update_pos_x
     dec.b 0x34
     bne .8B58
 
@@ -118,7 +118,7 @@ boomer_kuwanger:
     rts
 
 .8B59:
-    jsl 0x82825D
+    jsl update_pos_y
     dec.b 0x34
     bne .8B93
 
@@ -155,7 +155,7 @@ boomer_kuwanger:
     rts
 
 .8B94:
-    jsl 0x82823E
+    jsl update_pos_x
     dec.b 0x34
     bne .8BCA
 
@@ -466,7 +466,7 @@ boomer_kuwanger:
 
 .8D94:
     inc.b 0x31
-    jsl 0x82823E
+    jsl update_pos_x
     jsl 0x8491BE
     lda.b 0x2B
     and.b #0x03
@@ -637,7 +637,7 @@ boomer_kuwanger:
 .8EB1:
     lda.b #0x02
     sta.b 0x39
-    jsl 0x82823E
+    jsl update_pos_x
     jsl 0x8491BE
     lda.b 0x2B
     and.b #0x03

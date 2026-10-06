@@ -85,7 +85,7 @@ creeper:
     rts
 
 .AA23:
-    jsl 0x8281E8
+    jsl update_pos_xy.neg_ay
     jsl 0x8491BE
     lda.b 0x2B
     and.b #0x03
@@ -143,7 +143,7 @@ creeper:
     rts
 
 .AA89:
-    jsl 0x82823E
+    jsl update_pos_x
     jsl 0x8491BE
     lda.b 0x2B
     and.b #0x03

@@ -7,13 +7,13 @@ spiky:
     jmp .9C62
 
 .9BD7:
-    lda.b 0x27
+    lda.b obj.hp
     beq .9C3A
 
     jsl 0x849B43
     beq .9C22
 
-    lda.b 0x27
+    lda.b obj.hp
     and.b #0x7F
     bne .9C1A
 
@@ -22,9 +22,9 @@ spiky:
     beq .9BF1
 
     lda.b #0x01
-    sta.b 0x27
+    sta.b obj.hp
 .9BF1:
-    lda.b 0x27
+    lda.b obj.hp
     cmp.b #0x80
     bne .9BFD
 
@@ -101,7 +101,7 @@ spiky:
     and.b #0x0E
     sta.b 0x33
     lda.b #0x02
-    sta.b 0x27
+    sta.b obj.hp
     lda.b #0x03
     sta.b 0x28
     lda.b #0x02
@@ -123,16 +123,16 @@ spiky:
 
     rep #0x20
     lda.w #0x0180
-    sta.b 0x1A
+    sta.b obj.speed_x
     jmp .9CB0
 
 .9CA9:
     rep #0x20
     lda.w #0xFE80
-    sta.b 0x1A
+    sta.b obj.speed_x
 .9CB0:
     lda.w #0xFC00
-    sta.b 0x1C
+    sta.b obj.speed_y
     lda.w #0xCA2E
     sta.b 0x20
     sep #0x20
@@ -167,13 +167,13 @@ spiky:
 
     rep #0x20
     lda.w #0xFE80
-    sta.b 0x1A
+    sta.b obj.speed_x
     jmp .9D3B
 
 .9CF5:
     rep #0x20
     lda.w #0x0180
-    sta.b 0x1A
+    sta.b obj.speed_x
     jmp .9D3B
 
 .9CFF:
@@ -182,34 +182,34 @@ spiky:
     bne .9D22
 
     rep #0x20
-    lda.b 0x1A
+    lda.b obj.speed_x
     clc
     adc.w #0x0004
-    sta.b 0x1A
+    sta.b obj.speed_x
     cmp.w #0xFE80
     bmi .9D1E
 
     lda.w #0x0006
     sta.b 0x39
     lda.w #0xFE80
-    sta.b 0x1A
+    sta.b obj.speed_x
 .9D1E:
     sep #0x20
     bra .9D3D
 
 .9D22:
     rep #0x20
-    lda.b 0x1A
+    lda.b obj.speed_x
     sec
     sbc.w #0x0004
-    sta.b 0x1A
+    sta.b obj.speed_x
     cmp.w #0x0180
     bpl .9D3B
 
     lda.w #0x0006
     sta.b 0x39
     lda.w #0x0180
-    sta.b 0x1A
+    sta.b obj.speed_x
 .9D3B:
     sep #0x20
 .9D3D:
@@ -236,7 +236,7 @@ spiky:
     lda.b 0x36
     eor.w #0xFFFF
     inc
-    sta.b 0x1A
+    sta.b obj.speed_x
     sep #0x20
     bra .9D89
 
@@ -247,10 +247,10 @@ spiky:
     jsl 0x848F07
     rep #0x20
     lda.w #0x0600
-    sta.b 0x1C
-    lda.b 0x1A
+    sta.b obj.speed_y
+    lda.b obj.speed_x
     sta.b 0x36
-    stz.b 0x1A
+    stz.b obj.speed_x
     sep #0x20
     lda.b #0xC0
     sta.b 0x1E
@@ -367,7 +367,7 @@ spiky:
     beq .9E51
 
     rep #0x20
-    lda.b 0x1A
+    lda.b obj.speed_x
     bne .9E3F
 
     sep #0x20
@@ -381,11 +381,11 @@ spiky:
     lda.b 0x3A
     bne .9E4B
 
-    jsl 0x828174
+    jsl update_pos_xy.neg_ay_ax
     bra .9E55
 
 .9E4B:
-    jsl 0x828195
+    jsl update_pos_xy.neg_ay_pos_ax
     bra .9E55
 
 .9E51:
@@ -422,7 +422,7 @@ spiky:
     rts
 
 .9E82:
-    jsl 0x8281E8
+    jsl update_pos_xy.neg_ay
     lda.b #0xFF
     sta.b 0x2F
     jsl 0x8491BE
@@ -441,9 +441,9 @@ spiky:
     lda.b 0x36
     eor.w #0xFFFF
     inc
-    sta.b 0x1A
+    sta.b obj.speed_x
     lda.w #0xFC00
-    sta.b 0x1C
+    sta.b obj.speed_y
     sep #0x20
 .9EB5:
     rts
@@ -469,7 +469,7 @@ spiky:
 
     lda.b #0xC0
     sta.b 0x1E
-    jsl 0x8281E8
+    jsl update_pos_xy.neg_ay
     jmp .9EDD
 
 .9EDB:
@@ -481,7 +481,7 @@ spiky:
 
     lda.b #0x05
     sta.b 0x1F
-    jsl 0x8281B2
+    jsl update_pos_xy.pos_ay_neg_ax
     lda.b #0x01
     sta.b 0x2F
     jsl 0x8491BE
@@ -490,7 +490,7 @@ spiky:
 .9EF6:
     lda.b #0x05
     sta.b 0x1F
-    jsl 0x828195
+    jsl update_pos_xy.neg_ay_pos_ax
     lda.b #0x01
     sta.b 0x2F
     jsl 0x8491BE

@@ -345,7 +345,7 @@ batton_bone: ;also batton m-501
 
     jsr .A452
 .A2D3:
-    jsl 0x82825D
+    jsl update_pos_y
     lda.b 0x0B
     and.b #0x01
     beq .A2E8

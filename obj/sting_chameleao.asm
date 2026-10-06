@@ -110,7 +110,7 @@ sting_chameleao:
     rts
 
 .8622:
-    jsl 0x82825D
+    jsl update_pos_y
     jsl 0x848EEA
     dec.b 0x34
     bne .863C
@@ -151,7 +151,7 @@ sting_chameleao:
     rts
 
 .8669:
-    jsl 0x8281E8
+    jsl update_pos_xy.neg_ay
     jsl 0x848EEA
     jsl 0x8491BE
     lda.b 0x2B
@@ -450,7 +450,7 @@ sting_chameleao:
     rts
 
 .8879:
-    jsl 0x8281E8
+    jsl update_pos_xy.neg_ay
     rep #0x20
     lda.w #0xC774
     sta.b 0x20
@@ -486,7 +486,7 @@ sting_chameleao:
     rts
 
 .88B4:
-    jsl 0x8281E8
+    jsl update_pos_xy.neg_ay
     rep #0x20
     lda.w #0xC774
     sta.b 0x20
@@ -502,7 +502,7 @@ sting_chameleao:
     rts
 
 .88D0:
-    jsl 0x8281E8
+    jsl update_pos_xy.neg_ay
     rep #0x20
     lda.w #0xC774
     sta.b 0x20
@@ -1110,7 +1110,7 @@ sting_chameleao:
     rts
 
 .8CC4:
-    jsl 0x8281E8
+    jsl update_pos_xy.neg_ay
     jsl 0x848EEA
     rep #0x20
     lda.w #0xC774

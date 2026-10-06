@@ -196,7 +196,7 @@ thunder_slimer:
     cmp.b #0x4B
     bcs .AFB5
 
-    jsl 0x82825D
+    jsl update_pos_y
     jsr .B76E
 .AFB5:
     dec.b 0x18
@@ -284,7 +284,7 @@ thunder_slimer:
     rts
 
 .B045:
-    jsl 0x8281B2
+    jsl update_pos_xy.pos_ay_neg_ax
     rts
 
 .B04A:
@@ -352,7 +352,7 @@ thunder_slimer:
     jmp .B5CE
 
 .B0B5:
-    jsl 0x82823E
+    jsl update_pos_x
     rts
 
 .B0BA:
@@ -431,7 +431,7 @@ thunder_slimer:
     rts
 
 .B12D:
-    jsl 0x82823E
+    jsl update_pos_x
     rep #0x30
     ldx.w #0x0100
     lda.w 0x0BAD
@@ -636,7 +636,7 @@ thunder_slimer:
     jmp .B769
 
 .B27B:
-    jsl 0x828174
+    jsl update_pos_xy.neg_ay_ax
     rts
 
 .B280:
@@ -707,7 +707,7 @@ thunder_slimer:
     jmp .B769
 
 .B2F3:
-    jsl 0x828174
+    jsl update_pos_xy.neg_ay_ax
     rts
 
 .B2F8:

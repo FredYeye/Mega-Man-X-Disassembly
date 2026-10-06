@@ -63,7 +63,7 @@ planty:
     jsl 0x84A4AB
     stz.w 0x0000
     stz.w 0x0001
-    jmp 0x81C3C1
+    jmp .C3C1
 
 .C2C4:
     jsl 0x849B03
@@ -84,7 +84,7 @@ planty:
     rts
 
 .C2E4:
-    jsr _81C407
+    jsr .C407
     beq .C2F1
 
     stz.b 0x30
@@ -125,7 +125,7 @@ planty:
     lda.b #0x08
     sta.w 0x0000
     stz.w 0x0001
-    jsr _81C3C1
+    jsr .C3C1
 .C328:
     jsl 0x848EEA
     rts
@@ -154,12 +154,12 @@ planty:
     bit.b #0x01
     beq .C354
 
-    jsr _81C395
+    jsr .C395
 .C354:
     lda.b 0x0F
     bpl .C363
 
-    jsr _81C407
+    jsr .C407
     bne .C363
 
     lda.b #0x06
@@ -192,11 +192,99 @@ planty:
 
     stz.w 0x0000
     stz.w 0x0001
-    jsr _81C3C1
+    jsr .C3C1
 .C38B:
     jsl 0x848EEA
     rts
 
 .C390:
     jsl 0x828387
+    rts
+
+;-----
+
+.C395:
+    jsl 0x828358
+    bne .C3BE
+
+    inc.w 0x0000,X
+    lda.b #0x05
+    sta.w 0x000A,X
+    lda.b 0x18
+    sta.w 0x0018,X
+    rep #0x20
+    lda.b 0x05
+    sta.w 0x0005,X
+    lda.b 0x08
+    sec
+    sbc.w #0x0006
+    sta.w 0x0008,X
+    tdc
+    sta.w 0x003A,X
+    sep #0x20
+.C3BE:
+    sep #0x20
+    rts
+
+;-----
+
+.C3C1:
+    rep #0x10
+    ldy.w #0x0008
+.C3C6:
+    jsl 0x8282D3
+    bne .C404
+
+    inc.w 0x0000,X
+    lda.b #0x01
+    sta.w 0x000A,X
+    lda.b 0x18
+    sta.w 0x0018,X
+    rep #0x21
+    lda.b 0x05
+    adc 0xC5F2,Y
+    sta.w 0x0005,X
+    lda.b 0x08
+    clc
+    adc 0xC5F4,Y
+    sec
+    sbc.w 0x0000
+    sta.w 0x0008,X
+    lda 0xC5FE,Y
+    sta.w 0x001A,X
+    lda 0xC600,Y
+    sta.w 0x001C,X
+    sep #0x20
+    dey
+    dey
+    dey
+    dey
+    bpl .C3C6
+
+.C404:
+    sep #0x20
+    rts
+
+;-----
+
+.C407:
+    rep #0x10
+    ldx.b 0x20
+    phx
+    ldx.w #0xC5EA
+    stx.b 0x20
+    ldx.w #0x0BA8
+    jsl 0x849C0E
+    bcc .C41F
+
+    ldy.w #0x0001
+    bra .C422
+
+.C41F:
+    ldy.w #0x0000
+.C422:
+    plx
+    stx.b 0x20
+    sep #0x10
+    tya
     rts

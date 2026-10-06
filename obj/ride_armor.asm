@@ -272,7 +272,7 @@ ride_armor:
     jmp _8386F1
 
 .C7A8:
-    jsl 0x828174
+    jsl update_pos_xy.neg_ay_ax
     rts
 
 .C7AD:
@@ -375,7 +375,7 @@ ride_armor:
 
 .C845:
     jsr _83CB14
-    jsl 0x82823E
+    jsl update_pos_x
     lda.b #0x00
     xba
     lda.b #0x70
@@ -476,7 +476,7 @@ ride_armor:
     jmp _8386F1
 
 .C8EC:
-    jsl 0x828174
+    jsl update_pos_xy.neg_ay_ax
     rts
 
 .C8F1:
@@ -518,7 +518,7 @@ ride_armor:
 
 .C921:
     jsr _83CB69
-    jsl 0x828174
+    jsl update_pos_xy.neg_ay_ax
     jsl 0x848EEA
     rts
 
@@ -581,7 +581,7 @@ ride_armor:
     jmp _8386F1
 
 .C98C:
-    jsl 0x82823E
+    jsl update_pos_x
     jsl 0x848EEA
     rts
 
@@ -615,7 +615,7 @@ ride_armor:
 
 .C9BD:
     jsr _83CB69
-    jsl 0x82823E
+    jsl update_pos_x
     jsl 0x848EEA
     rts
 
@@ -720,7 +720,7 @@ ride_armor:
     sta.b 0x1C
 .CA6F:
     sep #0x20
-    jsl 0x828174
+    jsl update_pos_xy.neg_ay_ax
     rts
 
 .CA76:

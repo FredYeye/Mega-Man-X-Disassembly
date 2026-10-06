@@ -116,7 +116,7 @@ rangda_bangda_nose:
     rts
 
 .B2E8:
-    jsl 0x82825D
+    jsl update_pos_y
     rep #0x20
     lda.w #0x0090
     cmp.b 0x08
@@ -236,7 +236,7 @@ rangda_bangda_nose:
     rts
 
 .B3B7:
-    jsl 0x82825D
+    jsl update_pos_y
     rep #0x20
     lda.w #0x0088
     cmp.b 0x08

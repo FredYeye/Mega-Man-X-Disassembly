@@ -79,7 +79,7 @@ launcher_octopuld:
     rts
 
 .C4BE:
-    jsl 0x82825D
+    jsl update_pos_y
     jsl 0x848EEA
     lda.b 0x34
     beq .C4CE
@@ -292,7 +292,7 @@ launcher_octopuld:
 
 .C639:
     jsl 0x84AC92
-    jsl 0x8281E8
+    jsl update_pos_xy.neg_ay
     jsl 0x8491BE
     jsl 0x848EEA
     lda.b 0x17
@@ -317,7 +317,7 @@ launcher_octopuld:
 
 .C664:
     jsl 0x84AC92
-    jsl 0x8281E8
+    jsl update_pos_xy.neg_ay
     jsl 0x8491BE
     lda.b 0x2B
     and.b #0x04
@@ -368,7 +368,7 @@ launcher_octopuld:
     and.w #0xFF00
     sta.w snes_regs.wrdivl
     lda.w #0x002A
-    sta.w 0x4206
+    sta.w snes_regs.wrdivb
     lda.w #0x0720
     sta.b 0x1C
     ldx.b #0x2C
@@ -377,7 +377,7 @@ launcher_octopuld:
     lda.b 0x10
     asl
     asl
-    lda.w 0x4214
+    lda.w snes_regs.rddivl
     bcs .C6E4
 
     eor.w #0xFFFF
@@ -389,7 +389,7 @@ launcher_octopuld:
 
 .C6E9:
     jsl 0x848EEA
-    jsl 0x8281E8
+    jsl update_pos_xy.neg_ay
     jsl 0x8491BE
     lda.b 0x1D
     bpl .C73F
@@ -431,7 +431,7 @@ launcher_octopuld:
 
 .C740:
     jsl 0x848EEA
-    jsl 0x82825D
+    jsl update_pos_y
     jsl 0x8491BE
     lda.b 0x2B
     and.b #0x04
@@ -588,7 +588,7 @@ launcher_octopuld:
     rts
 
 .C86B:
-    jsl 0x82825D
+    jsl update_pos_y
     jsl 0x848EEA
     jsl 0x8491BE
     lda.b 0x2B
@@ -615,7 +615,7 @@ launcher_octopuld:
 .C89C:
     jsl 0x84AC92
     jsl 0x848EEA
-    jsl 0x8281E8
+    jsl update_pos_xy.neg_ay
     jsl 0x8491BE
     lda.b 0x2B
     and.b #0x04
@@ -778,7 +778,7 @@ launcher_octopuld:
     inc.b 0x03
 .C9AE:
     jsl 0x848EEA
-    jsl 0x8281E8
+    jsl update_pos_xy.neg_ay
     jsl 0x8491BE
     lda.b 0x2B
     and.b #0x04

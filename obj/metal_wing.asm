@@ -99,7 +99,7 @@ metal_wing:
     jmp _8386F1
 
 .DC4D:
-    jsl 0x82823E
+    jsl update_pos_x
     jsl 0x848EEA
     rts
 
@@ -125,12 +125,12 @@ metal_wing:
     lda.b #0x00
     jsl 0x848F07
 .DC7D:
-    jsl 0x828195
+    jsl update_pos_xy.neg_ay_pos_ax
     jsl 0x848EEA
     rts
 
 .DC86:
-    jsl 0x828195
+    jsl update_pos_xy.neg_ay_pos_ax
     rep #0x20
     lda.w #0x0680
     cmp.b 0x1A
@@ -153,7 +153,7 @@ metal_wing:
     lda.b #0x01
     jsl 0x848F07
 .DCAE:
-    jsl 0x828174
+    jsl update_pos_xy.neg_ay_ax
     rep #0x21
     lda.b 0x05
     adc.w #0xFFC0
@@ -210,7 +210,7 @@ metal_wing:
     lda.b #0x04
     sta.b 0x02
 .DD16:
-    jsl 0x828174
+    jsl update_pos_xy.neg_ay_ax
     rep #0x20
     lda.w #0x0200
     cmp.b 0x1A

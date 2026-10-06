@@ -172,11 +172,11 @@ rush_roader:
     bit.b 0x37
     bvs .9067
 
-    jsl 0x828174
+    jsl update_pos_xy.neg_ay_ax
     bra .906B
 
 .9067:
-    jsl 0x828195
+    jsl update_pos_xy.neg_ay_pos_ax
 .906B:
     lda.b 0x33
     beq .907A
@@ -272,7 +272,7 @@ rush_roader:
     jmp .92FD
 
 .90F2:
-    jsl 0x82823E
+    jsl update_pos_x
     jsl 0x848EEA
     rts
 
@@ -327,11 +327,11 @@ rush_roader:
     bit.b 0x37
     bvc .914F
 
-    jsl 0x828174
+    jsl update_pos_xy.neg_ay_ax
     bra .9153
 
 .914F:
-    jsl 0x828195
+    jsl update_pos_xy.neg_ay_pos_ax
 .9153:
     rep #0x20
     lda.b 0x1A
@@ -412,7 +412,7 @@ rush_roader:
     jmp .92E3
 
 .91C7:
-    jsl 0x828174
+    jsl update_pos_xy.neg_ay_ax
     jsl 0x848EEA
     rts
 
@@ -440,7 +440,7 @@ rush_roader:
     jmp .92E3
 
 .91F2:
-    jsl 0x828174
+    jsl update_pos_xy.neg_ay_ax
     jsl 0x848EEA
     rts
 
@@ -485,7 +485,7 @@ rush_roader:
     rts
 
 .923C:
-    jsl 0x828174
+    jsl update_pos_xy.neg_ay_ax
     rts
 
 .9241:
@@ -518,7 +518,7 @@ rush_roader:
 .926E:
     sta.b 0x1A
     sep #0x20
-    jsl 0x82823E
+    jsl update_pos_x
     jsl 0x848EEA
     rts
 
@@ -573,7 +573,7 @@ rush_roader:
     sta.b 0x1C
     sep #0x20
 .92CB:
-    jsl 0x828174
+    jsl update_pos_xy.neg_ay_ax
     jsl 0x848EEA
     rts
 

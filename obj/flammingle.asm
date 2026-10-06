@@ -158,7 +158,7 @@ flammingle:
     bit.b 0x0F
     bvc .C143
 
-    jsr _81C200
+    jsr .C200
 .C143:
     lda.b 0x0F
     bpl .C14B
@@ -264,4 +264,39 @@ flammingle:
     sep #0x20
     jsl 0x828387
     stz.b 0x30
+    rts
+
+;-----
+
+.C200:
+    jsl 0x828358
+    bne .C23E
+
+    inc.w 0x0000,X
+    lda.b #0x03
+    sta.w 0x000A,X
+    lda.b 0x18
+    sta.w 0x0018,X
+    lda.b 0x11
+    and.b #0xF0
+    ora.l 0x7F8302
+    sta.w 0x0011,X
+    rep #0x21
+    lda.w #0x0010
+    bit.b 0x10
+    bvs .C22A
+
+    lda.w #0xFFF0
+.C22A:
+    adc.b 0x05
+    sta.w 0x0005,X
+    lda.b 0x08
+    sec
+    sbc.w #0x0010
+    sta.w 0x0008,X
+    tdc
+    sta.w 0x003A,X
+    sep #0x20
+.C23E:
+    sep #0x10
     rts

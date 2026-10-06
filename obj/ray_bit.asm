@@ -138,7 +138,7 @@ ray_bit:
     rts
 
 .D6F6:
-    jsl 0x8281E8
+    jsl update_pos_xy.neg_ay
     jsl 0x8491BE
     lda.b 0x2B
     and.b #0x01
