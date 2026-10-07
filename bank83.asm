@@ -130,7 +130,7 @@ _838000:
     ldx.b 0x02
     jsr (.810F,X)
     jsr _8388C4
-    jsl 0x8491BE
+    jsl _8491AD.91BE
     bit.b 0x0A
     bvc .80F4
 
@@ -1635,7 +1635,7 @@ _83898E:
 .8A24:
     ldx.b 0x02
     jsr (.8A2E,X)
-    jsl 0x8280B4
+    jsl _82808F.80B4
     rts
 
 .8A2E: d16[.8A32, .8A57]
@@ -1757,7 +1757,7 @@ _83898E:
 .8AF4:
     ldx.b 0x02
     jsr (.8AFE,X)
-    jsl 0x8280B4
+    jsl _82808F.80B4
     rts
 
 .8AFE: d16[.8B02, .8B1A]
@@ -2008,7 +2008,7 @@ _838C3E:
     ldx.b 0x02
     jsr (.8C9D,X)
     jsl 0x848FCA
-    jsl 0x8280B4
+    jsl _82808F.80B4
     lda.b 0x0E
     bne .8C9A
 
@@ -2081,7 +2081,7 @@ _838C3E:
     inc.b 0x30
     lda.b #0x02
     sta.b 0x02
-    jsl 0x8280B4
+    jsl _82808F.80B4
     lda.b #0x02
     jsl _848EEA.8F07
     jsl 0x848FCA
@@ -2094,7 +2094,7 @@ _838C3E:
     lda.b #0x04
     sta.b 0x02
 .8D1C:
-    jsl 0x8280B4
+    jsl _82808F.80B4
     jsl 0x848FCA
     jsl _848EEA
     rts
@@ -2109,7 +2109,7 @@ _838C3E:
     ldx.b 0x02
     jsr (.8D42,X)
     jsl 0x848FCA
-    jsl 0x8280B4
+    jsl _82808F.80B4
     rts
 
 .8D42: d16[.8D46, .8D5F]
@@ -2235,7 +2235,7 @@ _838DAF:
     ldx.b 0x02
     jsr (.8E27,X)
     jsl 0x848FCA
-    jsl 0x8280B4
+    jsl _82808F.80B4
     lda.b 0x0E
     bne .8E26
 
@@ -2289,7 +2289,7 @@ _838DAF:
     inc.b 0x30
     lda.b #0x02
     sta.b 0x02
-    jsl 0x8280B4
+    jsl _82808F.80B4
     lda.b #0x01
     jsl _848EEA.8F07
     jsl 0x848FCA
@@ -2302,7 +2302,7 @@ _838DAF:
     lda.b #0x04
     sta.b 0x02
 .8E85:
-    jsl 0x8280B4
+    jsl _82808F.80B4
     jsl 0x848FCA
     jsl _848EEA
     rts
@@ -2315,247 +2315,7 @@ _838DAF:
 
 ;-----
 
-_838E9D:
-    ldx.b 0x01
-    jmp (.8EA2,X)
-
-.8EA2: d16[.8EAC, .8F65, .9040, .903C, .903C]
-
-.8EAC:
-    lda.b #0x02
-    sta.b 0x01
-    jsl _83917D
-    ldx.w 0x1F7A
-    lda.w 0x0BB9
-    and.b #0x70
-    ora.b #0x06
-    sta.b 0x11
-    stz.b 0x30
-    lda.b #0x01
-    sta.b 0x38
-    lda.b #0x03
-    sta.b 0x3E
-    lda.b #0xFF
-    sta.b 0x10
-    lda.b #0x10
-    sta.b 0x16
-    ldx.b 0x3C
-    lda.w 0x00BE3C,X
-    sta.w 0x0000
-    stz.w 0x0001
-    stz.w 0x0003
-    lda.w 0x00BE3D,X
-    sta.w 0x0002
-    bpl .8EEB
-
-    dec.w 0x0003
-.8EEB:
-    rep #0x20
-    lda.w 0x0000
-    bit.b 0x10
-    bvs .8EF8
-
-    eor.w #0xFFFF
-    inc
-.8EF8:
-    clc
-    adc.w 0x0BAD
-    sta.b 0x05
-    lda.w 0x0BB0
-    clc
-    adc.w 0x0002
-    sta.b 0x08
-    lda.w #0x0400
-    bit.b 0x10
-    bvs .8F11
-
-    lda.w #0xFC00
-.8F11:
-    sta.b 0x1A
-    stz.b 0x1C
-    lda.w #0xBED3
-    sta.b 0x20
-    lda.w #0xABE5
-    sta.b 0x31
-    stz.b 0x0C
-    lda.w #0xFFFF
-    sta.b 0x39
-    stz.b 0x1A
-    stz.b 0x1C
-    sep #0x20
-    lda.b 0x11
-    asl
-    asl
-    bcc .8F40
-
-    lda.b #0x01
-    sta.b 0x1B
-    lda.b #0x08
-    sta.b 0x37
-    sta.b 0x3B
-    lda.b #0x0C
-    bra .8F4C
-
-.8F40:
-    lda.b #0xFF
-    sta.b 0x1B
-    lda.b #0x18
-    sta.b 0x37
-    sta.b 0x3B
-    lda.b #0x04
-.8F4C:
-    sta.b 0x3D
-    jsl _848EEA.8F07
-    jsl 0x848FCA
-    lda.b #0x40
-    trb.b 0x11
-    jsr _839047
-    lda.b #0x08
-    sta.b 0x38
-    stz.b 0x1F
-    stz.b 0x1E
-.8F65:
-    dec.b 0x3E
-    bne .8F70
-
-    lda.b #0x03
-    sta.b 0x3E
-    jsr _839133
-.8F70:
-    dec.b 0x38
-    bne .8F84
-
-    lda.b #0x01
-    sta.b 0x38
-    lda.b 0x0D
-    beq .8F81
-
-    jsr _8390AF
-    bra .8F84
-
-.8F81:
-    jsr _839047
-.8F84:
-    lda.b 0x3B
-    asl
-    asl
-    tax
-    rep #0x20
-    lda.w 0x00EE3A,X
-    asl
-    asl
-    asl
-    asl
-    bpl .8F98
-
-    eor.w #0xFFFF
-    inc
-.8F98:
-    sep #0x20
-    xba
-    sta.b 0x1F
-    rep #0x20
-    lda.w 0x00EE3C,X
-    asl
-    asl
-    asl
-    asl
-    bpl .8FAC
-
-    eor.w #0xFFFF
-    inc
-.8FAC:
-    sep #0x20
-    xba
-    sta.b 0x1E
-    lda.b 0x37
-    bit.b #0x10
-    beq .8FF5
-
-    bit.b #0x08
-    beq .8FD8
-
-    jsl update_pos_xy.pos_ay_neg_ax
-    jsr _839113
-    rep #0x20
-    lda.w 0x0000
-    cmp.b 0x1A
-    bmi .8FCD
-
-    sta.b 0x1A
-.8FCD:
-    lda.w 0x0002
-    cmp.b 0x1C
-    bpl .9031
-
-    sta.b 0x1C
-    bra .9031
-
-.8FD8:
-    jsl update_pos_xy.neg_ay_ax
-    jsr _839113
-    rep #0x20
-    lda.w 0x0000
-    cmp.b 0x1A
-    bmi .8FEA
-
-    sta.b 0x1A
-.8FEA:
-    lda.w 0x0002
-    cmp.b 0x1C
-    bmi .9031
-
-    sta.b 0x1C
-    bra .9031
-
-.8FF5:
-    bit.b #0x08
-    beq .9016
-
-    jsl update_pos_xy.neg_ay_pos_ax
-    jsr _839113
-    rep #0x20
-    lda.w 0x0000
-    cmp.b 0x1A
-    bpl .900B
-
-    sta.b 0x1A
-.900B:
-    lda.w 0x0002
-    cmp.b 0x1C
-    bmi .9031
-
-    sta.b 0x1C
-    bra .9031
-
-.9016:
-    jsl update_pos_xy.pos_ay_ax
-    jsr _839113
-    rep #0x20
-    lda.w 0x0000
-    cmp.b 0x1A
-    bpl .9028
-
-    sta.b 0x1A
-.9028:
-    lda.w 0x0002
-    cmp.b 0x1C
-    bpl .9031
-
-    sta.b 0x1C
-.9031:
-    sep #0x20
-    jsl 0x8280B4
-    lda.b 0x0E
-    beq .9040
-
-    rtl
-
-.903C:
-    jsl 0x84A51A
-.9040:
-    dec.w 0x0BDD
-    jml 0x8283A3
+    incsrc "weapons/horming_torpedo.asm"
 
 ;-----
 
@@ -2844,7 +2604,7 @@ _8391D2:
 .920C:
     ldx.b 0x02
     jsr (.921E,X)
-    jsl 0x8280B4
+    jsl _82808F.80B4
     lda.b 0x0E
     bne .921D
 
@@ -3038,11 +2798,11 @@ _8392EC:
     sta.b 0x20
     lda.b #0xBF
     sta.b 0x21
-    jsl 0x8491BE
+    jsl _8491AD.91BE
     lda.b 0x00
     beq .9346
 
-    jsl 0x8280B4
+    jsl _82808F.80B4
     lda.b 0x0E
     bne .9378
 
@@ -3254,7 +3014,7 @@ _83943D:
     lda.b 0x00
     beq .94A3
 
-    jsl 0x8280B4
+    jsl _82808F.80B4
     lda.b 0x02
     sta.b 0x38
     lda.b 0x03
@@ -3558,7 +3318,7 @@ _83965B:
 .96B8:
     ldx.b 0x02
     jsr (.96CA,X)
-    jsl 0x8280B4
+    jsl _82808F.80B4
     lda.b 0x0E
     bne .96C9
 
@@ -3662,7 +3422,7 @@ _83965B:
     sta.b 0x01
 .975E:
     jsl _848EEA
-    jsl 0x8280B4
+    jsl _82808F.80B4
     rts
 
 .9767:
@@ -3858,7 +3618,7 @@ _839807:
 
     jsl update_pos_x
     jsr _8398F7
-    jsl 0x8491BE
+    jsl _8491AD.91BE
     lda.b 0x2B
     beq .98D6
 
@@ -3868,7 +3628,7 @@ _839807:
 .98D2:
     jsl 0x82820A
 .98D6:
-    jsl 0x8280B4
+    jsl _82808F.80B4
     lda.b 0x0E
     beq .98F0
 
@@ -4218,7 +3978,7 @@ _83995D:
     sta.b 0x1C
 .9B34:
     sep #0x20
-    jsl 0x8280B4
+    jsl _82808F.80B4
     lda.b 0x0E
     beq .9B4F
 
@@ -4488,7 +4248,7 @@ _839C53:
     bcs .9CF9
 
 .9CF5:
-    jsl 0x8280B4
+    jsl _82808F.80B4
 .9CF9:
     jmp .9DC5
 
@@ -4546,7 +4306,7 @@ _839C53:
     lda.b 0x00
     beq .9D57
 
-    jsl 0x8280B4
+    jsl _82808F.80B4
 .9D57:
     jmp .9DC5
 
@@ -4693,7 +4453,7 @@ _839DD4:
     cmp.b #0x06
     beq .9E29
 
-    jsl 0x8280B4
+    jsl _82808F.80B4
     lda.b 0x0E
     bne .9E5B
 
@@ -4730,7 +4490,7 @@ _839DD4:
     rts
 
 .9E90:
-    jsl 0x8491BE
+    jsl _8491AD.91BE
     lda.b 0x2B
     bit.b #0x04
     beq .9EA0
@@ -4802,7 +4562,7 @@ _839DD4:
     jsr _839F3B
 .9F0D:
     jsl update_pos_x
-    jsl 0x8491BE
+    jsl _8491AD.91BE
     jsl 0x82806E
     bcs .9F25
 
@@ -5131,7 +4891,7 @@ _83A0DA:
 .A129:
     ldx.b 0x02
     jsr (.A145,X)
-    jsl 0x8280B4
+    jsl _82808F.80B4
     lda.b 0x02
     sta.b 0x38
     lda.b 0x03
@@ -5589,7 +5349,7 @@ _83A391:
     sta.b 0x1C
 .A475:
     sep #0x20
-    jsl 0x8491BE
+    jsl _8491AD.91BE
     lda.b 0x2B
     and.b #0x04
     beq .A48F
@@ -5708,7 +5468,7 @@ _83A508:
     sta.b 0x1C
 .A548:
     sep #0x20
-    jsl 0x8491BE
+    jsl _8491AD.91BE
     lda.b 0x2B
     and.b #0x03
     beq .A55A
@@ -5842,10 +5602,10 @@ _83A605:
     sta.b 0x37
 .A637:
     jsl 0x82820A
-    jsl 0x849B03
+    jsl _849B03
     bne .A64E
 
-    jsl 0x8280B4
+    jsl _82808F.80B4
     lda.b 0x0E
     beq .A64E
 
@@ -5876,7 +5636,7 @@ _83A652:
     sta.b 0x26
     lda.b #0x02
     sta.b 0x12
-    jsl 0x8280B4
+    jsl _82808F.80B4
     lda.b #0x60
     sta.b 0x39
     lda.b 0x0B
@@ -5895,12 +5655,12 @@ _83A652:
 
     jsl 0x849B43
 .A68C:
-    jsl 0x849B03
+    jsl _849B03
     bne .A6A5
 
     jsl update_pos_x
     jsl _848EEA
-    jsl 0x8280B4
+    jsl _82808F.80B4
     lda.b 0x0E
     bne .A6B3
 
@@ -5947,7 +5707,7 @@ _83A6B4:
     sta.b 0x16
     lda.b #0x02
     jsl _848EEA.8F07
-    jsl 0x8280B4
+    jsl _82808F.80B4
     rts
 
 .A6EE:
@@ -5961,12 +5721,12 @@ _83A6B4:
     sta.b 0x37
 .A6FD:
     sep #0x10
-    jsl 0x849B03
+    jsl _849B03
     bne .A71E
 
     jsl update_pos_xy.neg_ay
     jsl _848EEA
-    jsl 0x8280B4
+    jsl _82808F.80B4
     jsl 0x82806E
     bcc .A73B
 
@@ -6077,7 +5837,7 @@ _83A73E:
 
 .A7BF:
     jsl update_pos_xy.neg_ay
-    jsl 0x849B03
+    jsl _849B03
     lda.b 0x02
     bne .A7E7
 
@@ -6098,7 +5858,7 @@ _83A73E:
     inc.b 0x02
 .A7E7:
     sep #0x10
-    jsl 0x8280B4
+    jsl _82808F.80B4
     lda.b 0x0E
     beq .A7F2
 
@@ -6117,13 +5877,13 @@ _83A73E:
 
 .A803:
     jsl 0x82820A
-    jsl 0x849B03
+    jsl _849B03
     bne .A81C
 
     jsl 0x82806E
     bcs .A81C
 
-    jsl 0x8280B4
+    jsl _82808F.80B4
     lda.b 0x0E
     beq .A858
 
@@ -6281,7 +6041,7 @@ _83A8BD:
     bit.b 0x34
     bvs .A952
 
-    jsl 0x849B03
+    jsl _849B03
     beq .A952
 
     lda.b #0x40
@@ -6314,7 +6074,7 @@ _83A8BD:
     lsr
     bcs .A971
 
-    jsl 0x8280B4
+    jsl _82808F.80B4
 .A971:
     jml 0x8491BE
 
@@ -6668,7 +6428,7 @@ _83AB58:
     lda.b #0x02
     sta.b 0x26
     sta.b 0x27
-    jsl 0x849B03
+    jsl _849B03
     jml 0x8280B4
 
 .ABC5:
@@ -6680,7 +6440,7 @@ _83AB58:
     sta.b 0x01
 .ABD1:
     jsl _848EEA
-    jsl 0x849B03
+    jsl _849B03
     jml 0x8280B4
 
 .ABDD:
@@ -6757,7 +6517,7 @@ _83AB58:
 .AC5C:
     sep #0x30
     jsl _848EEA
-    jsl 0x849B03
+    jsl _849B03
     jml 0x8280B4
 
 ;-----
@@ -6795,7 +6555,7 @@ _83AC6A:
     adc.w #0xC320
     sta.b 0x20
     sep #0x20
-    jsl 0x8280B4
+    jsl _82808F.80B4
     lda.b 0x0B
     jsl _848EEA.8F07
     lda.b 0x38
@@ -6817,7 +6577,7 @@ _83AC6A:
     rts
 
 .ACCB:
-    jsl 0x849B03
+    jsl _849B03
     jsl _8490A0
     cmp.b #0x00
     beq .AD22
@@ -6861,7 +6621,7 @@ _83AC6A:
 .AD22:
     jsl 0x82820A
     jsl _848EEA
-    jsl 0x8280B4
+    jsl _82808F.80B4
     lda.b 0x0E
     bne .AD36
 
@@ -6874,7 +6634,7 @@ _83AC6A:
     bmi .AD46
 
     jsl _848EEA
-    jsl 0x8280B4
+    jsl _82808F.80B4
     jmp .AD4A
 
 .AD46:
@@ -6895,7 +6655,7 @@ _83AD4B:
     rtl
 
 .AD59:
-    jsl 0x849B03
+    jsl _849B03
     bne .AD67
 
     jsl 0x849B43
@@ -6913,7 +6673,7 @@ _83AD4B:
     lda.b #0x0E
     trb.b 0x11
 .AD75:
-    jsl 0x8280B4
+    jsl _82808F.80B4
     lda.b 0x0E
     beq .AD7E
 
@@ -7009,7 +6769,7 @@ _83AD4B:
 .AE1D:
     jsl update_pos_y
     jsl _848EEA
-    jsl 0x8491BE
+    jsl _8491AD.91BE
     lda.b 0x2B
     bit.b #0x04
     beq .AE35
@@ -7054,7 +6814,7 @@ _83AE3F:
     beq .AE7D
 
     jsl 0x82820A
-    jsl 0x849B03
+    jsl _849B03
     bne .AE7D
 
     jsl 0x82806E
@@ -7140,10 +6900,10 @@ _83B938:
 .B9AA:
     jsl _848EEA
     jsl 0x82820A
-    jsl 0x849B03
+    jsl _849B03
     bne .B9C1
 
-    jsl 0x8280B4
+    jsl _82808F.80B4
     lda.b 0x0E
     beq .B9C1
 
@@ -7325,7 +7085,7 @@ _83BAA7:
     adc.b 0x05
     sta.b 0x05
     sep #0x20
-    jsl 0x8491BE
+    jsl _8491AD.91BE
 .BAC6:
     rts
 
@@ -7611,7 +7371,7 @@ _83BBCF:
 .BCBC:
     jsl _848EEA
     jsl update_pos_xy.neg_ay
-    jsl 0x8491BE
+    jsl _8491AD.91BE
     lda.b 0x2B
     and.b #0x04
     beq .BD09
@@ -8066,7 +7826,7 @@ _83CB69:
     lda.b #0x06
 .CB87:
     sta.b 0x26
-    jsl 0x849B03
+    jsl _849B03
     beq .CB95
 
     lda.b #0x3C
@@ -8473,7 +8233,7 @@ _83CF6D:
     sta.b 0x11
     ldx.b 0x02
     jsr (.D039,X)
-    jsl 0x8280B4
+    jsl _82808F.80B4
     lda.b 0x27
     and.b #0x7F
     sta.b 0x3B
@@ -8541,7 +8301,7 @@ _83CF6D:
     lsr
     bcs .D035
 
-    jsl 0x849B03
+    jsl _849B03
 .D035:
     jml 0x8491BE
 
@@ -9824,7 +9584,7 @@ _83E7DE:
     sta.b 0x11
     ldx.b 0x02
     jsr (.E8C3,X)
-    jsl 0x8280B4
+    jsl _82808F.80B4
     lda.b 0x27
     and.b #0x7F
     sta.b 0x3B
@@ -9873,7 +9633,7 @@ _83E7DE:
     lsr
     bcs .E8BF
 
-    jsl 0x849B03
+    jsl _849B03
 .E8BF:
     jml 0x8491BE
 

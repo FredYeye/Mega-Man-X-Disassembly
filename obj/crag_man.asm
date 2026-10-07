@@ -3,7 +3,7 @@ crag_man:
     tsb.b 0x11
     ldx.b 0x01
     jsr (.D8AF,X)
-    jsl 0x849B03
+    jsl _849B03
     jsl 0x849B43
     beq .D8A1
 
@@ -89,7 +89,7 @@ crag_man:
 
 .D90B:
     jsl update_pos_xy.neg_ay
-    jsl 0x8491BE
+    jsl _8491AD.91BE
     lda.b 0x2B
     and.b #0x04
     beq .D947
@@ -126,7 +126,7 @@ crag_man:
     bne .D966
 
     jsl update_pos_xy.neg_ay
-    jsl 0x8491BE
+    jsl _8491AD.91BE
     lda.b 0x2B
     and.b #0x04
     beq .D982
@@ -414,7 +414,7 @@ crag_man:
     lda.b 0x03
     bne .DB85
 
-    jsl 0x8491BE
+    jsl _8491AD.91BE
     lda.b 0x2B
     and.b #0x04
     bne .DB97
@@ -432,7 +432,7 @@ crag_man:
 
 .DB85:
     jsl update_pos_xy.neg_ay
-    jsl 0x8491BE
+    jsl _8491AD.91BE
     lda.b 0x2B
     and.b #0x04
     beq .DB97

@@ -17,7 +17,7 @@ scrap_press:
     adc.w #0x0030
     sta.b 0x08
     sep #0x20
-    jsl 0x8280B4
+    jsl _82808F.80B4
     jsl 0x82806E
     bcc .E1F5
 
@@ -207,7 +207,7 @@ scrap_press:
     beq .E33C
 
 .E335:
-    jsl 0x849B03
+    jsl _849B03
     jmp .E33C
 
 .E33C:
@@ -224,7 +224,7 @@ scrap_press:
 
     jsl 0x82C70E
 .E354:
-    jsl 0x8491BE
+    jsl _8491AD.91BE
     lda.b 0x2E
     cmp.b #0x00
     beq .E398

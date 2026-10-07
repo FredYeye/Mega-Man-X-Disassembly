@@ -19,7 +19,7 @@ amenhopper:
     jml 0x828387
 
 .AAF7:
-    jsl 0x849B03
+    jsl _849B03
     jsl 0x82806E
     bcs .AAF3
 
@@ -72,7 +72,7 @@ amenhopper:
 .AB64:
     jsl _848EEA
     jsl update_pos_xy.neg_ay
-    jsl 0x8491BE
+    jsl _8491AD.91BE
     rep #0x20
     lda.b 0x1C
     cmp.w #0xF800
@@ -233,7 +233,7 @@ amenhopper:
     jsl _848EEA
     jsl update_pos_xy.neg_ay_pos_ax
     jsr .ADE2
-    jsl 0x8491BE
+    jsl _8491AD.91BE
     lda.b 0x2B
     and.b #0x02
     beq .ACB8
@@ -276,7 +276,7 @@ amenhopper:
     jsl _848EEA
     jsl update_pos_xy.neg_ay_ax
     jsr .ADE2
-    jsl 0x8491BE
+    jsl _8491AD.91BE
     lda.b 0x2B
     and.b #0x01
     beq .AD03
@@ -394,7 +394,7 @@ amenhopper:
 .AD9B:
     jsl update_pos_xy.neg_ay
     jsl _848EEA
-    jsl 0x8491BE
+    jsl _8491AD.91BE
     rep #0x20
     lda.b 0x1C
     sep #0x20

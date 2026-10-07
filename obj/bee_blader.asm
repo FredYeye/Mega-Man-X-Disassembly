@@ -117,7 +117,7 @@ bee_blader:
 
 .B972:
     jsl update_pos_xy.pos_ay
-    jsl 0x8491BE
+    jsl _8491AD.91BE
     lda.b 0x2B
     and.b #0x04
     beq .B99B
@@ -499,7 +499,7 @@ bee_blader:
     jsr .BD51
     lda.b 0x27
     sta.b 0x3D
-    jsl 0x849B03
+    jsl _849B03
     jsl 0x849B43
     beq .BC83
 
@@ -633,7 +633,7 @@ bee_blader:
 .BD3B:
     jsr .BCA9
     jsr .BBBC
-    jsl 0x8491BE
+    jsl _8491AD.91BE
     jsl 0x84AB6E
     jsr .BCCD
     lda.b 0x2B

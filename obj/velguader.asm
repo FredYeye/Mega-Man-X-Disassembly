@@ -50,7 +50,7 @@ velguader:
 .C88B:
     ldx.b 0x02
     jsr (.C894,X)
-    jmp 0x8280B4
+    jmp _82808F.80B4
 
     rtl
 
@@ -208,7 +208,7 @@ velguader:
 .C999:
     stz.b 0x3D
     dec.b 0x38
-    jsl 0x849B03
+    jsl _849B03
 .C9A1:
     jml 0x8280B4
 
@@ -316,7 +316,7 @@ velguader:
 
     jsl update_pos_xy.neg_ay
 .CA63:
-    jsl 0x8491BE
+    jsl _8491AD.91BE
     lda.b 0x2B
     and.b #0x01
     bne .CA73
@@ -392,7 +392,7 @@ velguader:
 
 .CAD4:
     jsl update_pos_xy.neg_ay
-    jsl 0x8491BE
+    jsl _8491AD.91BE
     lda.b 0x2B
     and.b #0x04
     bne .CB1A
@@ -462,7 +462,7 @@ velguader:
     sta.b 0x1C
 .CB4E:
     sep #0x20
-    jsl 0x8491BE
+    jsl _8491AD.91BE
     lda.b 0x2B
     and.b #0x04
     beq .CB64
@@ -886,7 +886,7 @@ velguader:
 .CE1B:
     jsl update_pos_x
     jsl _848EEA
-    jsl 0x8491BE
+    jsl _8491AD.91BE
     lda.b 0x2B
     and.b #0x01
     bne .CE6F
@@ -978,7 +978,7 @@ velguader:
 
 .CEC1:
     jsl 0x879ED4
-    jsl 0x8491BE
+    jsl _8491AD.91BE
     lda.b 0x35
     beq .CED2
 
@@ -1184,7 +1184,7 @@ velguader:
 .CFDF:
     jsl _848EEA
     jsl update_pos_xy.neg_ay
-    jsl 0x8491BE
+    jsl _8491AD.91BE
     lda.b 0x2B
     and.b #0x01
     bne .D003
@@ -1237,7 +1237,7 @@ velguader:
     lda.b 0x3B
     bne .D042
 
-    jmp 0x8280B4
+    jmp _82808F.80B4
 
 .D042:
     rtl
@@ -1272,7 +1272,7 @@ velguader:
     bne .D0AF
 
     jsl update_pos_xy.neg_ay
-    jsl 0x8491BE
+    jsl _8491AD.91BE
     lda.b 0x2B
     and.b #0x01
     bne .D095

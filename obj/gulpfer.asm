@@ -122,7 +122,7 @@ gulpfer:
 
     jsr .A72B
 .A41D:
-    jsl 0x849B03
+    jsl _849B03
     rts
 
 .A422:
@@ -254,7 +254,7 @@ gulpfer:
     rts
 
 .A4F9:
-    jsl 0x849B03
+    jsl _849B03
     rts
 
 .A4FE:
@@ -359,7 +359,7 @@ gulpfer:
 .A5A9:
     jsl 0x82820A
 .A5AD:
-    jsl 0x8491BE
+    jsl _8491AD.91BE
     lda.b 0x2B
     bne .A5B9
 
@@ -370,7 +370,7 @@ gulpfer:
     stz.b 0x02
 .A5BB:
     jsl _848EEA
-    jsl 0x849B03
+    jsl _849B03
     rts
 
 .A5C4:
@@ -391,7 +391,7 @@ gulpfer:
     sta.b 0x1A
     sep #0x20
     jsl update_pos_x
-    jsl 0x8491BE
+    jsl _8491AD.91BE
     lda.b 0x2B
     and.b #0x03
     bne .A5F4

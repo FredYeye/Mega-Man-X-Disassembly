@@ -6,7 +6,7 @@ bomb_been:
     jsl 0x82806E
     bcs .9F76
 
-    jsl 0x849B03
+    jsl _849B03
     jsl 0x849B43
     beq .9F6E
 

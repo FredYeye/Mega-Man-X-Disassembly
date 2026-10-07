@@ -5,7 +5,7 @@ jamminger:
     jsr (.DDA2,X)
     jsl _848EEA
     stz.b 0x35
-    jsl 0x849B03
+    jsl _849B03
     beq .DD7B
 
     inc.b 0x35

@@ -23,7 +23,7 @@ x_buster:
     lda.b #0x40
     sta.b 0x1F
     stz.b 0x1E
-    jsl 0x8280B4
+    jsl _82808F.80B4
     lda.b #0x08
     sta.b 0x16
     lda.b #0x04
@@ -56,7 +56,7 @@ x_buster:
 .A285:
     sep #0x20
 .A287:
-    jsl 0x8280B4
+    jsl _82808F.80B4
 .A28B:
     lda.b 0x0E
     beq .A2C0
@@ -74,7 +74,7 @@ x_buster:
     sta.b 0x1C
     stz.b 0x1E
     sep #0x20
-    jsl 0x8280B4
+    jsl _82808F.80B4
     lda.w 0x1F9D
     bpl .A2B3
 

@@ -4,10 +4,21 @@ base 0x868000
 ;-----
 
 _868000:
-    d08[0x08]
+    d08[0x04 << 1]
     d16[snes_regs.inidisp]
-    d08[0x80]
+    d08[0x80, 0x03, 0x00, 0x00]
 
+    d08[0x08 << 1]
+    d16[snes_regs.bgmode]
+    d08[0x09, 0x00, 0x51, 0x59, 0x0A, 0x00, 0x11, 0x00]
+
+    d08[(0x08 << 1) | 1]
+    d16[snes_regs.bg1hofs]
+    d16[0, 0, 0, 0, 0, 0, 0, 0]
+
+    d08[0x03 << 1]
+    d16[snes_regs.vmain]
+    d08[0x80, 0x00, 0x00]
 ;-----
 
 compressed_data: ;0x86F6FA

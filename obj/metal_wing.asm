@@ -69,7 +69,7 @@ metal_wing:
     lda.b #0x0E
     trb.b 0x11
 .DC19:
-    jsl 0x849B03
+    jsl _849B03
     jml 0x8280B4
 
 .DC21: d16[.DC27, .DC56, .DC9E]
@@ -183,7 +183,7 @@ metal_wing:
 .DCDD:
     ldx.b 0x02
     jsr (.DCE7,X)
-    jsl 0x8280B4
+    jsl _82808F.80B4
     rtl
 
 .DCE7: d16[.DCED, .DD07, .DD2C]

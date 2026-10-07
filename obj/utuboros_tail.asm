@@ -78,7 +78,7 @@ utuboros_tail:
     sta.w 0x003C,X
     sep #0x10
 .C7C2:
-    jsl 0x849B03
+    jsl _849B03
     jml 0x8280B4
 
 .C7CA: d16[.C7CE, .C7CF]

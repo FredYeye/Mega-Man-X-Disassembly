@@ -21,7 +21,7 @@ mad_pecker:
     lda.b #0x08
     sta.b 0x01
 .A7F6:
-    jsl 0x849B03
+    jsl _849B03
     jml 0x8280B4
 
 .A7FE: d16[.A808, .A84F, .A873, .A8FD, .A935]

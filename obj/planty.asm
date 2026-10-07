@@ -27,7 +27,7 @@ planty:
     ldx.b #0x40
 .C274:
     stx.b 0x33
-    jsl 0x8280B4
+    jsl _82808F.80B4
     sep #0x20
     lda.b #0x00
     jsl _848EEA.8F07
@@ -44,7 +44,7 @@ planty:
 .C28E:
     ldx.b 0x02
     jsr (.C2C9,X)
-    jsl 0x8280B4
+    jsl _82808F.80B4
     lda.l 0x7F8304
     sta.b 0x11
     jsl 0x849B43
@@ -66,7 +66,7 @@ planty:
     jmp .C3C1
 
 .C2C4:
-    jsl 0x849B03
+    jsl _849B03
     rts
 
 .C2C9: d16[.C2D1, .C2F2, .C32D, .C368]

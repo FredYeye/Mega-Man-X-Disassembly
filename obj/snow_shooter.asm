@@ -33,7 +33,7 @@ snow_shooter:
     ora.b 0x11
     sta.b 0x11
 .DECE:
-    jsl 0x849B03
+    jsl _849B03
 .DED2:
     rep #0x20
     lda.b 0x08
@@ -41,7 +41,7 @@ snow_shooter:
     adc.w #0x0020
     sta.b 0x08
     sep #0x20
-    jsl 0x8280B4
+    jsl _82808F.80B4
     rep #0x20
     lda.b 0x08
     sec

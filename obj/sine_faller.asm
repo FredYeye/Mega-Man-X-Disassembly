@@ -3,7 +3,7 @@ sine_faller:
     tsb.b 0x11
     ldx.b 0x01
     jsr (.D30C,X)
-    jsl 0x849B03
+    jsl _849B03
     beq .D2DD
 
     inc.b 0x3B
@@ -29,7 +29,7 @@ sine_faller:
     lda.b 0x00
     beq .D30B
 
-    jsl 0x8280B4
+    jsl _82808F.80B4
     lda.b 0x0E
     beq .D2FB
 
@@ -124,7 +124,7 @@ sine_faller:
     lda.b 0x0B
     beq .D3B8
 
-    jmp 0x81D529
+    jmp .D529
 
 .D3B8:
     rts
@@ -237,7 +237,7 @@ sine_faller:
     lda.b 0x0B
     beq .D472
 
-    jmp 0x81D529
+    jmp .D529
 
 .D472:
     rts
@@ -257,7 +257,7 @@ sine_faller:
     jsl _848EEA.8F07
 .D48B:
     jsl update_pos_xy.neg_ay
-    jsl 0x8491BE
+    jsl _8491AD.91BE
     lda.b 0x2B
     and.b #0x04
     beq .D4A1
@@ -354,7 +354,7 @@ sine_faller:
     rts
 
 .D529:
-    jsl 0x8491BE
+    jsl _8491AD.91BE
     lda.b 0x2B
     beq .D53D
 

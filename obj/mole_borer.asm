@@ -7,7 +7,7 @@ mole_borer:
     sta.b 0x28
     lda.b 0x27
     sta.b 0x0B
-    jsl 0x849B03
+    jsl _849B03
     jsl 0x849B43
     beq .BF7A
 
@@ -49,7 +49,7 @@ mole_borer:
     lda.b #0x7F
     sta.b 0x26
     stz.b 0x28
-    jsl 0x849B03
+    jsl _849B03
     jsl 0x849B43
     pla
     sta.b 0x26
@@ -142,7 +142,7 @@ mole_borer:
     jsl _80888B
 .C04A:
     jsl update_pos_x
-    jsl 0x8491BE
+    jsl _8491AD.91BE
     lda.b 0x2B
     bne .C064
 
@@ -158,7 +158,7 @@ mole_borer:
 
 .C067:
     jsl update_pos_xy.neg_ay
-    jsl 0x8491BE
+    jsl _8491AD.91BE
     jsl 0x82808F
     lda.b 0x2B
     beq .C086
@@ -181,7 +181,7 @@ mole_borer:
 
 .C08F:
     jsl update_pos_xy.neg_ay
-    jsl 0x8491BE
+    jsl _8491AD.91BE
     lda.b 0x2B
     and.b #0x04
     beq .C0A1

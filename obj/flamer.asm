@@ -168,7 +168,7 @@ flamer:
     lda.b 0x08
     sta.b 0x33
     sep #0x30
-    jsl 0x849B03
+    jsl _849B03
     jsl 0x849B43
     beq .E0D9
 
@@ -271,7 +271,7 @@ flamer:
     lda.b #0x03
     jsl _848EEA.8F07
 .E15C:
-    jsl 0x849B03
+    jsl _849B03
     jsl _848EEA
     jml 0x8280B4
 

@@ -29,11 +29,11 @@ sea_attacker:
     ora.b 0x11
     sta.b 0x11
 .A1B8:
-    jsl 0x849B03
+    jsl _849B03
     beq .A1BE
 
 .A1BE:
-    jsl 0x8280B4
+    jsl _82808F.80B4
     jsl 0x82806E
     bcc .A1CC
 

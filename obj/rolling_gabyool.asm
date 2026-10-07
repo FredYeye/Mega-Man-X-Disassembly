@@ -42,9 +42,9 @@ rolling_gabyool:
     and.b #0x20
     bne .D164
 
-    jsl 0x849B03
+    jsl _849B03
 .D164:
-    jsl 0x8280B4
+    jsl _82808F.80B4
     jsl 0x82806E
     bcc .D172
 

@@ -27,8 +27,8 @@ tombot:
     ora.b 0x11
     sta.b 0x11
 .E430:
-    jsl 0x849B03
-    jsl 0x8280B4
+    jsl _849B03
+    jsl _82808F.80B4
     lda.b 0x0E
     bne .E440
 

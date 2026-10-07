@@ -53,7 +53,7 @@ rangda_bangda_nose:
     lda.b #0x3C
     sta.b 0x34
 .B27C:
-    jsl 0x849B03
+    jsl _849B03
 .B280:
     lda.b 0x34
     beq .B28C
@@ -64,7 +64,7 @@ rangda_bangda_nose:
     lda.b #0x07
     sta.b 0x28
 .B28C:
-    jsl 0x8491BE
+    jsl _8491AD.91BE
     jml 0x8280B4
 
 .B294: d16[.B29C, .B2B4, .B302, .B399]

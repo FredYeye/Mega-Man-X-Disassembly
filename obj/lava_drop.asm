@@ -1,8 +1,8 @@
 lava_drop:
     ldx.b 0x01
     jsr (.C9AC,X)
-    jsl 0x849B03
-    jsl 0x8280B4
+    jsl _849B03
+    jsl _82808F.80B4
     jsl 0x82806E
     bcc .C9AB
 

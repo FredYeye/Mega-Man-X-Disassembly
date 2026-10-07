@@ -107,7 +107,7 @@ bospider:
 
     lda.b #0x24
     jsl _80878B
-    jsl 0x8280B4
+    jsl _82808F.80B4
 .DC40:
     rts
 
@@ -127,7 +127,7 @@ bospider:
     dec.b 0x35
     jsl update_pos_y
     jsl _848EEA
-    jsl 0x8280B4
+    jsl _82808F.80B4
 .DC62:
     rts
 
@@ -193,7 +193,7 @@ bospider:
     lda.b 0x34
     tsb.b 0x11
 .DCD0:
-    jsl 0x849B03
+    jsl _849B03
 .DCD4:
     jml 0x8280B4
 
@@ -648,7 +648,7 @@ bospider:
     sep #0x20
     lda.b #0x03
     sta.w 0x0008
-    jsl 0x8280B4
+    jsl _82808F.80B4
     jml 0x84A4C6
 
 .DFFC:

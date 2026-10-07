@@ -7,7 +7,7 @@ axe_max:
     and.b #0x7F
     beq .D033
 
-    jsl 0x849B03
+    jsl _849B03
 .D033:
     jsl 0x849B43
     beq .D057

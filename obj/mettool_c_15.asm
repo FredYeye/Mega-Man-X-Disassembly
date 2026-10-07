@@ -10,7 +10,7 @@ mettool_c_15:
     adc.w #0xCF26
     sta.b 0x20
     sep #0x20
-    jsl 0x849B03
+    jsl _849B03
     jsl 0x849B43
     beq .C3BA
 
@@ -153,7 +153,7 @@ mettool_c_15:
 .C492:
     jsl update_pos_x
     jsl _848EEA
-    jsl 0x8491BE
+    jsl _8491AD.91BE
     rts
 
 .C49F:

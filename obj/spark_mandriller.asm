@@ -109,7 +109,7 @@ spark_mandriller:
 .9CB7:
     jsl update_pos_xy.neg_ay
     jsl _848EEA
-    jsl 0x8491BE
+    jsl _8491AD.91BE
     lda.b 0x2B
     and.b #0x04
     beq .9CE1
@@ -312,7 +312,7 @@ spark_mandriller:
     lda.b #0x0E
     trb.b 0x11
 .9E24:
-    jsl 0x849B03
+    jsl _849B03
     jml 0x8280B4
 
 .9E2C: d16[.9E38, .9F24, .A059, .A16E, .A20B, .A25E]
@@ -540,7 +540,7 @@ spark_mandriller:
     dec.b 0x22
 .9FCD:
     sep #0x20
-    jsl 0x8491BE
+    jsl _8491AD.91BE
     lda.b 0x2B
     and.b #0x03
     bne .9FEB
@@ -576,7 +576,7 @@ spark_mandriller:
     lda.w #0xCFBB
     sta.b 0x20
     sep #0x20
-    jsl 0x8491BE
+    jsl _8491AD.91BE
     lda.b 0x2B
     and.b #0x04
     beq .A031
@@ -696,7 +696,7 @@ spark_mandriller:
     lda.w #0xCFD4
     sta.b 0x20
     sep #0x20
-    jsl 0x8491BE
+    jsl _8491AD.91BE
     lda.b 0x2B
     and.b #0x03
     beq .A0FF
@@ -713,7 +713,7 @@ spark_mandriller:
     lda.w #0xCFD9
     sta.b 0x20
     sep #0x20
-    jsl 0x849B03
+    jsl _849B03
     rts
 
 .A10D:
@@ -734,7 +734,7 @@ spark_mandriller:
     lda.w #0xCFD9
     sta.b 0x20
     sep #0x20
-    jsl 0x849B03
+    jsl _849B03
     jsl _848EEA
     dec.b 0x34
     bne .A146
@@ -818,7 +818,7 @@ spark_mandriller:
     lda.w #0xCFBB
     sta.b 0x20
     sep #0x20
-    jsl 0x8491BE
+    jsl _8491AD.91BE
     lda.b 0x2B
     and.b #0x04
     beq .A1E3
@@ -901,7 +901,7 @@ spark_mandriller:
     lda.w #0xCFBB
     sta.b 0x20
     sep #0x20
-    jsl 0x8491BE
+    jsl _8491AD.91BE
     dec.b 0x34
     bne .A25D
 
@@ -951,7 +951,7 @@ spark_mandriller:
     lda.w #0xCFBB
     sta.b 0x20
     sep #0x20
-    jsl 0x8491BE
+    jsl _8491AD.91BE
     lda.b 0x2B
     and.b #0x04
     beq .A2C6

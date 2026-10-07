@@ -42,9 +42,9 @@ slide_cannon:
     lda.b 0x38
     bne .B25C
 
-    jsl 0x849B03
+    jsl _849B03
 .B25C:
-    jsl 0x8280B4
+    jsl _82808F.80B4
     rep #0x10
     ldx.b 0x36
     lda.w 0x0000,X

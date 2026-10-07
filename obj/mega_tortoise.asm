@@ -17,7 +17,7 @@ mega_tortoise:
     lda.b #0x0E
     trb.b 0x11
 .EC21:
-    jsl 0x849B03
+    jsl _849B03
     jsl 0x82808F
     lda.b 0x0E
     beq .EC2E

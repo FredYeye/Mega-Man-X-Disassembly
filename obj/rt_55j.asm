@@ -11,7 +11,7 @@ rt_55j:
     lda.w #0xC70E
     sta.b 0x20
     sep #0x20
-    jsl 0x849B03
+    jsl _849B03
     jsl 0x849B43
     rep #0x20
     lda.w #0xC704
@@ -26,7 +26,7 @@ rt_55j:
     lda.b #0x05
 .CC36:
     sta.b 0x28
-    jsl 0x849B03
+    jsl _849B03
     jsl 0x849B43
     beq .CC60
 
@@ -113,13 +113,13 @@ rt_55j:
     lda.b #0x04
     sta.b 0x02
     jsl update_pos_xy.neg_ay
-    jsl 0x8491BE
+    jsl _8491AD.91BE
 .CCED:
     rts
 
 .CCEE:
     jsl update_pos_xy.neg_ay
-    jsl 0x8491BE
+    jsl _8491AD.91BE
     lda.b 0x1D
     bpl .CD00
 
@@ -148,7 +148,7 @@ rt_55j:
 .CD20:
     jsl update_pos_xy.neg_ay
     jsl _848EEA
-    jsl 0x8491BE
+    jsl _8491AD.91BE
     lda.b 0x2B
     and.b #0x04
     beq .CD48

@@ -473,7 +473,7 @@ sigma:
     lda.b #0x0E
     trb.b 0x11
 .C731:
-    jsl 0x849B03
+    jsl _849B03
     lda.b #0x01
     sta.b 0x30
     jml 0x8280B4
@@ -545,7 +545,7 @@ sigma:
     lda.w #0xD780
     sta.b 0x20
     sep #0x20
-    jsl 0x8491BE
+    jsl _8491AD.91BE
     lda.b 0x2B
     and.b #0x03
     beq .C7C5
@@ -617,7 +617,7 @@ sigma:
     lda.w #0xD780
     sta.b 0x20
     sep #0x20
-    jsl 0x8491BE
+    jsl _8491AD.91BE
     lda.b 0x2B
     and.b #0x03
     beq .C84E
@@ -804,7 +804,7 @@ sigma:
     lda.w #0xD780
     sta.b 0x20
     sep #0x20
-    jsl 0x8491BE
+    jsl _8491AD.91BE
     lda.b 0x2B
     and.b #0x03
     beq .C9AD
@@ -878,7 +878,7 @@ sigma:
     lda.w #0xD780
     sta.b 0x20
     sep #0x20
-    jsl 0x8491BE
+    jsl _8491AD.91BE
     lda.b 0x2B
     bit.b #0x04
     beq .CA0D
@@ -1186,7 +1186,7 @@ sigma:
     lda.w #0xD796
     sta.b 0x20
     sep #0x20
-    jsl 0x849B03
+    jsl _849B03
     jml 0x8280B4
 
 .CC39: d16[.CC41, .CC8C, .CCA3, .CCE9]
@@ -1401,7 +1401,7 @@ sigma:
 
 .CDDA:
     jsl update_pos_xy.neg_ay
-    jsl 0x8491BE
+    jsl _8491AD.91BE
     lda.b 0x2B
     and.b #0x04
     beq .CDF5
@@ -1419,7 +1419,7 @@ sigma:
 
 .CDFF:
     jsl update_pos_xy.neg_ay
-    jsl 0x8491BE
+    jsl _8491AD.91BE
     lda.b 0x2B
     and.b #0x04
     beq .CE15

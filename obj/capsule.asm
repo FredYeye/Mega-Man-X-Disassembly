@@ -172,7 +172,7 @@ capsule:
     sta.b 0x20
     lda.b #0xD3
     sta.b 0x21
-    jsl 0x849B03
+    jsl _849B03
     beq .CC25
 
     lda.b #0xF1
@@ -277,7 +277,7 @@ capsule:
     sta.b 0x20
     lda.b #0xD3
     sta.b 0x21
-    jsl 0x849B03
+    jsl _849B03
     beq .CCAD
 
     lda.b #0x08

@@ -3,7 +3,7 @@ ball_de_voux:
     tsb.b 0x11
     ldx.b 0x01
     jsr (.D223,X)
-    jsl 0x849B03
+    jsl _849B03
     jsl 0x849B43
     beq .D20D
 
@@ -110,7 +110,7 @@ ball_de_voux:
     sta.b 0x1C
 .D2AC:
     sep #0x20
-    jsl 0x8491BE
+    jsl _8491AD.91BE
     lda.b 0x2B
     and.b #0x04
     beq .D2F0
@@ -161,7 +161,7 @@ ball_de_voux:
 .D2FD:
     jsl update_pos_xy.neg_ay_pos_ax
 .D301:
-    jsl 0x8491BE
+    jsl _8491AD.91BE
     lda.b 0x2B
     and.b #0x03
     beq .D31D
@@ -272,7 +272,7 @@ ball_de_voux:
     stz.b 0x1A
     stz.b 0x1C
     jsl 0x82820A
-    jsl 0x8491BE
+    jsl _8491AD.91BE
     jsr .D508
 .D3C2:
     lda.b 0x0F
@@ -283,7 +283,7 @@ ball_de_voux:
     lda.w #0xCD5F
     sta.b 0x20
     sep #0x20
-    jsl 0x849B03
+    jsl _849B03
     rep #0x20
     lda.w #0xCD4B
     sta.b 0x20
@@ -375,7 +375,7 @@ ball_de_voux:
     stz.b 0x1A
     jsl update_pos_x
 .D46D:
-    jsl 0x8491BE
+    jsl _8491AD.91BE
     lda.b 0x2B
     bit.b #0x04
     beq .D4BC

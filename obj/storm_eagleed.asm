@@ -98,7 +98,7 @@ storm_eagleed:
     lda.b #0x58
     jsl _80888B
 .D91C:
-    jsl 0x8491BE
+    jsl _8491AD.91BE
     lda.b 0x2B
     and.b #0x04
     beq .D93C
@@ -235,7 +235,7 @@ storm_eagleed:
     lda.b #0x0E
     trb.b 0x11
 .DA0F:
-    jsl 0x849B03
+    jsl _849B03
     lda.w 0x0BCF
     and.b #0x7F
     bne .DA1E
@@ -319,7 +319,7 @@ storm_eagleed:
     jsl _848EEA
     jsl update_pos_y
     jsl 0x84AC92
-    jsl 0x8491BE
+    jsl _8491AD.91BE
     lda.b 0x2B
     and.b #0x04
     beq .DABC
@@ -634,7 +634,7 @@ storm_eagleed:
     jsl _848EEA
     jsl update_pos_y
     jsl 0x84AC92
-    jsl 0x8491BE
+    jsl _8491AD.91BE
     lda.b 0x2B
     and.b #0x04
     bne .DCBE

@@ -39,9 +39,9 @@ hotarion:
     bra .A4A3
 
 .A4A3:
-    jsl 0x849B03
+    jsl _849B03
     jsl .A5AE
-    jsl 0x8280B4
+    jsl _82808F.80B4
     jsl 0x82806E
     bcc .A4CD
 

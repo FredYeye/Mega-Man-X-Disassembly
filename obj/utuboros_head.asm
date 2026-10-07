@@ -82,7 +82,7 @@ utuboros_head:
     lda.b 0x39
     bne .BE46
 
-    jsl 0x8491BE
+    jsl _8491AD.91BE
     lda.b 0x2B
     bit.b #0x04
     beq .BE46
@@ -150,7 +150,7 @@ utuboros_head:
     lda.b #0x0E
     trb.b 0x11
 .BE8F:
-    jsl 0x849B03
+    jsl _849B03
 .BE93:
     lda.b 0x11
     and.b #0x3F

@@ -103,7 +103,7 @@ ride_armor:
     sta.b 0x11
     ldx.b 0x02
     jsr (.C6CD,X)
-    jsl 0x8280B4
+    jsl _82808F.80B4
     lda.b 0x27
     and.b #0x7F
     sta.b 0x3B
@@ -156,7 +156,7 @@ ride_armor:
     and.b #0x3F
     ora.b 0x33
     sta.b 0x11
-    jsl 0x849B03
+    jsl _849B03
     jml 0x8491BE
 
 .C6CD: d16[

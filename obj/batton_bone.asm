@@ -45,7 +45,7 @@ batton_bone: ;also batton m-501
     sta.b 0x35
     beq .A0D7
 
-    jsl 0x849B03
+    jsl _849B03
     lda.w 0x0BCF
     and.b #0x7F
     cmp.b 0x35
@@ -69,7 +69,7 @@ batton_bone: ;also batton m-501
     sta.b 0x1C
     sep #0x20
 .A0F6:
-    jsl 0x8280B4
+    jsl _82808F.80B4
     jsl 0x82806E
     bcc .A104
 
@@ -392,7 +392,7 @@ batton_bone: ;also batton m-501
     lda.b #0x01
     sta.b 0x03
 .A328:
-    jsl 0x8491BE
+    jsl _8491AD.91BE
     lda.b 0x2B
     cmp.b #0x08
     bne .A354

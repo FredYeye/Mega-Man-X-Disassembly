@@ -27,8 +27,8 @@ ray_bit:
     ora.b 0x11
     sta.b 0x11
 .D636:
-    jsl 0x849B03
-    jsl 0x8280B4
+    jsl _849B03
+    jsl _82808F.80B4
     jsl 0x82806E
     bcc .D648
 
@@ -139,7 +139,7 @@ ray_bit:
 
 .D6F6:
     jsl update_pos_xy.neg_ay
-    jsl 0x8491BE
+    jsl _8491AD.91BE
     lda.b 0x2B
     and.b #0x01
     beq .D709

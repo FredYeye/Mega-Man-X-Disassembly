@@ -55,7 +55,7 @@ rangda_bangda_eye:
     lda.b #0x3C
     sta.b 0x3C
 .AE75:
-    jsl 0x849B03
+    jsl _849B03
 .AE79:
     lda.b 0x3C
     beq .AE85

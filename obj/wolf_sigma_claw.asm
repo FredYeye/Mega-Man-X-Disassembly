@@ -329,7 +329,7 @@ wolf_sigma_claw:
 
 .E79E:
     jsl update_pos_xy.neg_ay
-    jsl 0x8491BE
+    jsl _8491AD.91BE
     lda.b 0x2B
     and.b #0x04
     beq .E7BE
@@ -349,7 +349,7 @@ wolf_sigma_claw:
 
 .E7C2:
     jsl update_pos_xy.neg_ay
-    jsl 0x8491BE
+    jsl _8491AD.91BE
     lda.b 0x2B
     and.b #0x04
     beq .E7D8
@@ -395,7 +395,7 @@ wolf_sigma_claw:
     lda.w 0x1F3F
     bmi .E82F
 
-    jsl 0x849B03
+    jsl _849B03
     jml 0x8280B4
 
 .E82F:

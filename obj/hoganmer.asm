@@ -57,8 +57,8 @@ hoganmer:
     sta.b 0x01
     sta.b 0x0B
 .AEF1:
-    jsl 0x8280B4
-    jsl 0x849B03
+    jsl _82808F.80B4
+    jsl _849B03
     rts
 
 .AEFA: d16[.AF04, .AF70, .AF9B, .B01E, .B075]
@@ -136,7 +136,7 @@ hoganmer:
 .AF70:
     ldx.b 0x03
     jsr (.AF7A,X)
-    jsl 0x8491BE
+    jsl _8491AD.91BE
     rts
 
 .AF7A: d16[.AF7E, .AF8D]
@@ -192,7 +192,7 @@ hoganmer:
     rep #0x10
     ldx.w #0xC422
     stx.b 0x20
-    jsl 0x849B03
+    jsl _849B03
     rep #0x10
     ldx.w #0xC426
     stx.b 0x20
@@ -227,7 +227,7 @@ hoganmer:
     lda.w #0xC41A
     sta.b 0x20
     sep #0x20
-    jsl 0x849B03
+    jsl _849B03
     rep #0x20
     lda.w #0xC426
     sta.b 0x20
@@ -239,7 +239,7 @@ hoganmer:
 .B01E:
     ldx.b 0x03
     jsr (.B028,X)
-    jsl 0x8491BE
+    jsl _8491AD.91BE
     rts
 
 .B028: d16[.B02C, .B059]

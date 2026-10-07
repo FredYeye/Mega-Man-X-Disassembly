@@ -133,7 +133,7 @@ utuboros_body:
 .C474:
     sta.b 0x1C
     sep #0x20
-    jsl 0x8491BE
+    jsl _8491AD.91BE
     lda.b 0x2B
     bit.b #0x04
     beq .C499
@@ -176,7 +176,7 @@ utuboros_body:
     sep #0x20
     bcc .C4CD
 
-    jsl 0x8491BE
+    jsl _8491AD.91BE
     lda.b 0x2B
     bit.b #0x04
     beq .C4E4

@@ -30,7 +30,7 @@ dig_labour:
     ora.b 0x11
     sta.b 0x11
 .CE39:
-    jsl 0x849B03
+    jsl _849B03
     lda.b 0x0B
     cmp.b #0xFF
     bne .CE53
@@ -43,7 +43,7 @@ dig_labour:
     lda.b #0x50
     sta.b 0x33
 .CE53:
-    jsl 0x8280B4
+    jsl _82808F.80B4
     jsl 0x82806E
     bcc .CE61
 

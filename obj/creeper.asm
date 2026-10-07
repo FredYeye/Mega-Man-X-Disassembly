@@ -31,7 +31,7 @@ creeper:
     cmp.b #0x34
     bcs .A9AD
 
-    jsl 0x849B03
+    jsl _849B03
     jml 0x8280B4
 
 .A9C9: d16[.A9D1, .AA22, .AA23, .AA89]
@@ -86,7 +86,7 @@ creeper:
 
 .AA23:
     jsl update_pos_xy.neg_ay
-    jsl 0x8491BE
+    jsl _8491AD.91BE
     lda.b 0x2B
     and.b #0x03
     beq .AA43
@@ -144,7 +144,7 @@ creeper:
 
 .AA89:
     jsl update_pos_x
-    jsl 0x8491BE
+    jsl _8491AD.91BE
     lda.b 0x2B
     and.b #0x03
     beq .AAA9

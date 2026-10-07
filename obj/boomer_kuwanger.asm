@@ -349,7 +349,7 @@ boomer_kuwanger:
     lda.b 0x39
     bne .8CE0
 
-    jsl 0x849B03
+    jsl _849B03
     lda.w 0x0BCF
     and.b #0x7F
     bne .8CE0
@@ -467,7 +467,7 @@ boomer_kuwanger:
 .8D94:
     inc.b 0x31
     jsl update_pos_x
-    jsl 0x8491BE
+    jsl _8491AD.91BE
     lda.b 0x2B
     and.b #0x03
     bne .8DA8
@@ -638,7 +638,7 @@ boomer_kuwanger:
     lda.b #0x02
     sta.b 0x39
     jsl update_pos_x
-    jsl 0x8491BE
+    jsl _8491AD.91BE
     lda.b 0x2B
     and.b #0x03
     bne .8ED9
@@ -853,7 +853,7 @@ boomer_kuwanger:
 .9008:
     sta.b 0x05
     sep #0x20
-    jsl 0x8491BE
+    jsl _8491AD.91BE
     dec.b 0x34
     beq .9015
 

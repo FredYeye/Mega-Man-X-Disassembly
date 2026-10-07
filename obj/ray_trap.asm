@@ -18,7 +18,7 @@ ray_trap:
     lda.b #0x80
     sta.b 0x2C
     jsl 0x82D7D0
-    jsl 0x8280B4
+    jsl _82808F.80B4
     jsl 0x82806E
     bcc .BAA3
 

@@ -57,7 +57,7 @@ rush_roader:
 .8F91:
     ldx.b 0x02
     jsr (.9011,X)
-    jsl 0x8280B4
+    jsl _82808F.80B4
     jsl 0x82806E
     bcc .8FA5
 
@@ -68,7 +68,7 @@ rush_roader:
     rep #0x10
     ldx.w #0xC8A6
     stx.b 0x20
-    jsl 0x849B03
+    jsl _849B03
     lda.b 0x36
     bne .8FE9
 
@@ -126,7 +126,7 @@ rush_roader:
     sta.b 0x01
     stz.b 0x02
 .900C:
-    jsl 0x8491BE
+    jsl _8491AD.91BE
     rts
 
 .9011: d16[.901D, .90FB, .918E, .91D0, .91FB, .927B]

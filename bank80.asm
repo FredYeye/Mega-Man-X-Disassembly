@@ -22,27 +22,27 @@ entry:
     pha
     plb
     rep #0x10
-    ldx.w #0x8000
+    ldx.w #_868000
 .8024:
-    lda.w 0x0000,X
+    lda.w 0,X
     beq .8052
 
     lsr
     sta.b 0x00
     inx
-    lda.w 0x0000,X
+    lda.w 0,X
     sta.b 0x10
     inx
-    lda.w 0x0000,X
+    lda.w 0,X
     sta.b 0x11
     inx
 .8039:
-    lda.w 0x0000,X
+    lda.w 0,X
     sta (0x10)
     inx
     bcc .8047
 
-    lda.w 0x0000,X
+    lda.w 0,X
     sta (0x10)
     inx
 .8047:
@@ -2687,14 +2687,14 @@ _808C37:
     stz.w 0x0BA9
     lda.b #0x10
     tsb.w 0x0C26
-    jsl _81812E
+    jsl mega_man
     stz.w 0x0BAA
     stz.w 0x0BAB
     lda.b #0x04
     sta.w 0x0BD3
     lda.b #0x1E
     sta.w 0x0BCF
-    jsl _81812E
+    jsl mega_man
     lda.b #0x40
     sta.w 0x0C11
     ora.b #0x32
@@ -2792,7 +2792,7 @@ _808C37:
 .92BD:
     lda.b #0x04
     sta.w 0x0BD3
-    jsl _81812E
+    jsl mega_man
     php
     phd
     jsr _80D3F1
@@ -6592,7 +6592,7 @@ _80ABAE:
 
 .AE83:
     rep #0x20
-    jsl _81812E
+    jsl mega_man
     lda.w #0x0180
     cmp.w 0x0BB0
     bcs .AEA7
@@ -6645,11 +6645,11 @@ _80ABAE:
     lda.b #0x40
     sta.w 0x0BE3
 .AEE2:
-    jsl _81812E
+    jsl mega_man
     rts
 
 .AEE7:
-    jsl _81812E
+    jsl mega_man
     rep #0x20
     lda.w 0x0BB0
     cmp.w #0x0100
@@ -6797,7 +6797,7 @@ _80AFD4:
     stz.w 0x0BA9
     lda.b #0x10
     tsb.w 0x0C26
-    jsl _81812E
+    jsl mega_man
     lda.b #0x40
     sta.w 0x0C11
     ora.b #0x32
@@ -11991,7 +11991,7 @@ _80D201:
 .D227:
     jsr _80D2B1
 .D22A:
-    jsl _81812E
+    jsl mega_man
     stz.w 0x0BD4
     ldx.w 0x1F13
     beq .D23B
@@ -17682,7 +17682,7 @@ _80F596: d16[
 ;-----
 
 _80F68B: d16[
-    .thunk_x_buster, .F6CC, .F6D1, .F6D6, .F6DB, .F6E0, .F6E5, .F6EA,
+    .thunk_x_buster, .F6CC, .F6D1, .F6D6, .F6DB, .F6E0, .F6E5, .thunk_horming_torpedo,
     .F6EF, .F6F4, .F6F9, .F6FE, .F703, .F708, .F70D, .F712,
     .F717, .F71C, .F721, .F726, .F72B, .F730, .F735, .F73A,
     .F73F, .F744, .F749, .F74E, .F753, .F758,
@@ -17716,8 +17716,8 @@ _80F68B: d16[
     jsl _81A4C2
     rts
 
-.F6EA:
-    jsl _838E9D
+.thunk_horming_torpedo:
+    jsl horming_torpedo
     rts
 
 .F6EF:

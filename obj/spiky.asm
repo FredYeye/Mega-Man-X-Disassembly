@@ -70,8 +70,8 @@ spiky:
     lda.b #0x02
     sta.b 0x02
 .9C3A:
-    jsl 0x849B03
-    jsl 0x8280B4
+    jsl _849B03
+    jsl _82808F.80B4
     jsl 0x82806E
     bcc .9C4C
 
@@ -138,7 +138,7 @@ spiky:
     sep #0x20
     lda.b #0xFF
     sta.b 0x2F
-    jsl 0x8491BE
+    jsl _8491AD.91BE
     lda.b #0x00
     jsl _848EEA.8F07
     rts
@@ -216,7 +216,7 @@ spiky:
     jsl 0x82820A
     lda.b #0xFF
     sta.b 0x2F
-    jsl 0x8491BE
+    jsl _8491AD.91BE
     stz.b 0x03
     lda.b 0x2B
     and.b #0x03
@@ -412,7 +412,7 @@ spiky:
 .9E70:
     lda.b #0xFF
     sta.b 0x2F
-    jsl 0x8491BE
+    jsl _8491AD.91BE
     lda.b 0x2B
     and.b #0x03
     beq .9E81
@@ -425,7 +425,7 @@ spiky:
     jsl update_pos_xy.neg_ay
     lda.b #0xFF
     sta.b 0x2F
-    jsl 0x8491BE
+    jsl _8491AD.91BE
     lda.b 0x2B
     and.b #0x04
     beq .9EB5
@@ -484,7 +484,7 @@ spiky:
     jsl update_pos_xy.pos_ay_neg_ax
     lda.b #0x01
     sta.b 0x2F
-    jsl 0x8491BE
+    jsl _8491AD.91BE
     jmp .9F06
 
 .9EF6:
@@ -493,7 +493,7 @@ spiky:
     jsl update_pos_xy.neg_ay_pos_ax
     lda.b #0x01
     sta.b 0x2F
-    jsl 0x8491BE
+    jsl _8491AD.91BE
 .9F06:
     jsl _848EEA
     bra .9F14

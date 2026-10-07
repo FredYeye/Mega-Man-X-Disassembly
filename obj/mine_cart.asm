@@ -48,7 +48,7 @@ mine_cart:
     jsl 0x82D7D0
     ldx.b 0x02
     jsr (.988B,X)
-    jsl 0x8491BE
+    jsl _8491AD.91BE
     lda.b #0x20
     trb.w 0x0C26
     lda.b 0x2C
@@ -91,12 +91,12 @@ mine_cart:
     sta.b 0x20
     lda.b #0xCE
     sta.b 0x21
-    jsl 0x849B03
+    jsl _849B03
     lda.b #0x54
     sta.b 0x20
     lda.b #0xCE
     sta.b 0x21
-    jsl 0x849B03
+    jsl _849B03
     lda.b #0x46
     sta.b 0x20
     lda.b #0xCE
@@ -350,7 +350,7 @@ mine_cart:
     lsr
     bcc .9A22
 
-    jsl 0x8280B4
+    jsl _82808F.80B4
 .9A22:
     rtl
 

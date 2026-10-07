@@ -3,7 +3,7 @@ dodge_blaster:
     tsb.b 0x11
     ldx.b 0x01
     jsr (.99D0,X)
-    jsl 0x849B03
+    jsl _849B03
     jsl 0x849B43
     beq .99C6
 
@@ -57,7 +57,7 @@ dodge_blaster:
     sta.b 0x34
 .9A10:
     jsl update_pos_x
-    jsl 0x8491BE
+    jsl _8491AD.91BE
     lda.b 0x2B
     and.b #0x03
     bne .9A28
@@ -179,7 +179,7 @@ dodge_blaster:
     sep #0x20
 .9AD4:
     jsl update_pos_y
-    jsl 0x8491BE
+    jsl _8491AD.91BE
     jsl _848EEA
     dec.b 0x35
     bne .9AEC
@@ -250,7 +250,7 @@ dodge_blaster:
     bcc .9B5E
 
     jsl update_pos_y
-    jsl 0x8491BE
+    jsl _8491AD.91BE
 .9B5E:
     rts
 

@@ -20,7 +20,7 @@ flammingle:
     rep #0x20
     ldx.b #0x00
     stx.b 0x33
-    jsl 0x8280B4
+    jsl _82808F.80B4
     sep #0x20
     lda.b #0x01
     jsl _848EEA.8F07
@@ -29,7 +29,7 @@ flammingle:
 .C063:
     ldx.b 0x02
     jsr (.C0C8,X)
-    jsl 0x8280B4
+    jsl _82808F.80B4
     lda.l 0x7F8302
     sta.b 0x11
     lda.b 0x11
@@ -44,7 +44,7 @@ flammingle:
     adc.w #0xC55C
     sta.b 0x20
     sep #0x20
-    jsl 0x849B03
+    jsl _849B03
     stz.b 0x30
     jsl 0x849B43
     beq .C0A6
@@ -75,7 +75,7 @@ flammingle:
     lda.b #0x04
     sta.b 0x01
 .C0C3:
-    jsl 0x849B03
+    jsl _849B03
     rts
 
 .C0C8: d16[.C0D0, .C12F, .C150, .C170]

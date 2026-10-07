@@ -20,7 +20,7 @@ turn_cannon:
     lda.b #0x0E
     trb.b 0x11
 .996B:
-    jsl 0x849B03
+    jsl _849B03
     jml 0x8280B4
 
 .9973:

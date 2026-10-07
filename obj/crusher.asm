@@ -87,7 +87,7 @@ crusher:
     jsr (.9764,X)
     lda.l 0x7F831E
     sta.b 0x11
-    jsl 0x8280B4
+    jsl _82808F.80B4
     jsl 0x849B43
     beq .975F
 
@@ -115,7 +115,7 @@ crusher:
     rts
 
 .975F:
-    jsl 0x849B03
+    jsl _849B03
     rts
 
 .9764: d16[.976C, .9808, .9847, .9921]
@@ -172,7 +172,7 @@ crusher:
 .97C1:
     sep #0x20
     jsl update_pos_x
-    jsl 0x8491BE
+    jsl _8491AD.91BE
     lda.b 0x2B
     bit.b #0x03
     beq .97E3

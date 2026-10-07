@@ -56,7 +56,7 @@ ladder_yadder:
     lda.b #0x0E
     trb.b 0x11
 .AA46:
-    jsl 0x849B03
+    jsl _849B03
 .AA4A:
     jml 0x8280B4
 

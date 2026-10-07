@@ -65,13 +65,13 @@ d_rex_upper:
     lda.b #0x02
     sta.b 0x3C
 .B707:
-    jsl 0x849B03
+    jsl _849B03
 .B70B:
     jsr .B761
     bit.b 0x34
     bvs .B716
 
-    jsl 0x8491BE
+    jsl _8491AD.91BE
 .B716:
     jml 0x8280B4
 
@@ -828,7 +828,7 @@ d_rex_upper:
     sep #0x20
     lda.b #0x03
     sta.w 0x0008
-    jsl 0x8280B4
+    jsl _82808F.80B4
     jml 0x84A4C6
 
 .BC30:

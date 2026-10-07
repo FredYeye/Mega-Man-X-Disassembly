@@ -3,7 +3,7 @@ gun_volt:
     tsb.b 0x11
     ldx.b 0x01
     jsr (.DA25,X)
-    jsl 0x849B03
+    jsl _849B03
     jsl 0x849B43
     beq .DA13
 
