@@ -3151,7 +3151,7 @@ _8094BA:
     lda.b #0x02
     sta.w ram.lives
     lda.b #0x10
-    sta.w 0x1F9A
+    sta.w ram.max_hp
     stz.w 0x1F99
     stz.w 0x1F9B
     stz.w 0x1F82
@@ -16999,7 +16999,7 @@ _80F188:
     asl
     clc
     adc.b #0x10
-    sta.w 0x1F9A
+    sta.w ram.max_hp
     stz.w 0x1F7C
     lda.b 0x26
     sta.b 0x30
@@ -18048,7 +18048,7 @@ _80F8D9: d16[
     .thunk_sine_faller, .FA02, .FA07, .thunk_dodge_blaster, .thunk_armor_armarge, .thunk_spiky, .FA1B, .thunk_turn_cannon,
     .FA25, .thunk_bomb_been, .FA2F, .FA34, .thunk_sea_attacker, .thunk_gulpfer, .thunk_mad_pecker, .thunk_creeper,
     .thunk_amenhopper, .thunk_anglerge, .thunk_bee_blader, .thunk_utuboros_head, .thunk_utuboros_body, .thunk_utuboros_tail, .thunk_velguader, .thunk_ball_de_voux,
-    .FA75, .thunk_gun_volt, .thunk_scrap_robo, .thunk_mine_cart, .thunk_mole_borer, .thunk_batton_bone, .thunk_mettool_c_15, .thunk_ride_armor,
+    .FA75, .thunk_gun_volt, .thunk_scrap_robo, .thunk_mine_cart, .thunk_mole_borer, .thunk_batton_bone, .thunk_mettool_c_15, .thunk_ride_armor_soldier,
     .thunk_dig_labour, .thunk_spark_mandriller, .FAA7, .FAAC, .thunk_crag_man, .thunk_metal_wing, .thunk_jamminger, .thunk_hotarion,
     .thunk_flamer, .thunk_scrap_press, .thunk_tombot, .thunk_ladder_yadder, .FAD9, .FADE, .FAE3, .thunk_slide_cannon,
     .FAED, .FAF2, .FAF7, .FAFC, .thunk_ray_trap, .FB06, .FB0B, .FB10,
@@ -18246,8 +18246,8 @@ _80F8D9: d16[
     jsl mettool_c_15
     rts
 
-.thunk_ride_armor:
-    jsl ride_armor ;todo: also armor soldier?
+.thunk_ride_armor_soldier:
+    jsl ride_armor_soldier
     rts
 
 .thunk_dig_labour:

@@ -141,7 +141,7 @@ mega_man:
     cmp.l 0x408000,X
     beq .824F
 
-    stz.w 0x1F99
+    stz.w ram.upgrades
 .824F:
     lda.b #0x47
     jsl _848EEA.8F07
@@ -791,8 +791,8 @@ mega_man:
     stz.b 0x50
     jsr .992A
     ldx.b #0x44
-    lda.w 0x1F99
-    bit.b #0x04
+    lda.w ram.upgrades
+    bit.b #upgrade.body
     beq .8693
 
     rep #0x20
@@ -3086,8 +3086,8 @@ mega_man:
 
 .9588:
     ldx.b #0x00
-    lda.w 0x1F99
-    bit.b #0x01
+    lda.w ram.upgrades
+    bit.b #upgrade.helmet
     beq .9593
 
     ldx.b #0x18
@@ -3106,8 +3106,8 @@ mega_man:
 
 .95AA:
     ldx.b #0x66
-    lda.w 0x1F99
-    bit.b #0x01
+    lda.w ram.upgrades
+    bit.b #upgrade.helmet
     beq .95B5
 
     ldx.b #0xA4
@@ -3381,8 +3381,8 @@ mega_man:
 ;-----
 
 .9712:
-    lda.w 0x1F99
-    bit.b #0x08
+    lda.w ram.upgrades
+    bit.b #upgrade.dash
     beq .96CA
 
     lda.w 0x1F23
@@ -3477,8 +3477,8 @@ mega_man:
 ;-----
 
 .9789:
-    lda.w 0x1F99
-    bit.b #0x08
+    lda.w ram.upgrades
+    bit.b #upgrade.dash
     beq .9788
 
     lda.w 0x1F23
@@ -3530,8 +3530,8 @@ mega_man:
     lda.b 0x27
     beq .97F8
 
-    lda.w 0x1F99
-    bit.b #0x02
+    lda.w ram.upgrades
+    bit.b #upgrade.arm
     bne .97DB
 
     lda.b 0x33
@@ -3678,8 +3678,8 @@ mega_man:
     cmp.b #0x50
     beq .98CE
 
-    lda.w 0x1F99
-    bit.b #0x02
+    lda.w ram.upgrades
+    bit.b #upgrade.arm
     beq .98D4
 
     ldy.b #0x04
@@ -3726,8 +3726,8 @@ mega_man:
 ;-----
 
 .98F2:
-    lda.w 0x1F99
-    bit.b #0x08
+    lda.w ram.upgrades
+    bit.b #upgrade.dash
     beq .9929
 
     rep #0x31

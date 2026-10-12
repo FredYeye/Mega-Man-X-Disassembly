@@ -7093,7 +7093,7 @@ _83BF1E:
 
     incsrc "obj/mole_borer.asm"
     incsrc "obj/mettool_c_15.asm"
-    incsrc "obj/ride_armor.asm"
+    incsrc "obj/ride_armor_soldier.asm"
 
 ;-----
 

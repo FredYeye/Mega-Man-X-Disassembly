@@ -1,4 +1,4 @@
-ride_armor:
+ride_armor_soldier:
     ldx.b 0x01
     jmp (.C5AD,X)
 

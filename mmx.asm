@@ -1,5 +1,6 @@
 incsrc "snes_defines.asm"
 incsrc "ram_map.asm"
+incsrc "constants.asm"
 
 incsrc "bank80.asm"
 incsrc "bank81.asm"
