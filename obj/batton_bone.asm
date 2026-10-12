@@ -494,7 +494,7 @@ batton_bone: ;also batton m-501
 
 .A3C8:
     rep #0x10
-    jsl 0x8282D3
+    jsl _8282AC.82D3
     bne .A3E9
 
     inc.w 0x0000,X

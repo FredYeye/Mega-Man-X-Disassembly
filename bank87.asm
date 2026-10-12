@@ -888,7 +888,7 @@ _87858F:
     bne .85B8
 
 .85B4:
-    jsl 0x8283A3
+    jsl _8283A3
 .85B8:
     rtl
 
@@ -1399,7 +1399,7 @@ _8788B5:
 
     jsl 0x84A4AB
 .8963:
-    jsl 0x8283A3
+    jsl _8283A3
 .8967:
     rts
 
@@ -1447,7 +1447,7 @@ _878968:
     bne .89BE
 
 .89BA:
-    jsl 0x8283A3
+    jsl _8283A3
 .89BE:
     rts
 
@@ -2722,7 +2722,7 @@ _879ED4:
 _879EF2:
     rep #0x10
     sep #0x20
-    jsl 0x8282D3
+    jsl _8282AC.82D3
     bne .9F46
 
     inc.w 0x0000,X
@@ -2921,7 +2921,7 @@ _87A027:
     and.w #0x0008
     sta.w 0x0002
     sep #0x20
-    jsl 0x8282D3
+    jsl _8282AC.82D3
     bne .A078
 
     inc.w 0x0000,X
@@ -3761,7 +3761,7 @@ _87AF5D:
 
 _87B0F7:
     rep #0x10
-    jsl 0x8282D3
+    jsl _8282AC.82D3
     bne .B131
 
     inc.w 0x0000,X
@@ -3793,7 +3793,7 @@ _87B0F7:
 
 _87B134:
     rep #0x10
-    jsl 0x8282D3
+    jsl _8282AC.82D3
     bne .B16C
 
     inc.w 0x0000,X
@@ -3826,7 +3826,7 @@ _87B16F:
     rep #0x10
     ldy.w #0x0006
 .B174:
-    jsl 0x8282D3
+    jsl _8282AC.82D3
     bne .B1AA
 
     inc.w 0x0000,X
@@ -3858,7 +3858,7 @@ _87B16F:
     rep #0x10
     ldy.w #0x0003
 .B1B2:
-    jsl 0x8282D3
+    jsl _8282AC.82D3
     bne .B1F7
 
     inc.w 0x0000,X
@@ -4256,7 +4256,7 @@ _87B675:
 _87B69F:
     sta.w 0x0000
     stz.w 0x0001
-    jsl 0x8282D3
+    jsl _8282AC.82D3
     bne .B6E7
 
     inc.w 0x0000,X
@@ -4316,7 +4316,7 @@ _87B6EA:
     rep #0x10
     ldy.w #0x0001
 .B70F:
-    jsl 0x8282D3
+    jsl _8282AC.82D3
     bne .B751
 
     inc.w 0x0000,X
@@ -4384,7 +4384,7 @@ _87B75A:
 ;-----
 
 _87B77F:
-    jsl 0x8282D3
+    jsl _8282AC.82D3
     bne .B7AF
 
     inc.w 0x0000,X
@@ -5342,7 +5342,7 @@ _87BD70:
 
 _87BF17:
     rep #0x10
-    jsl 0x8282D3
+    jsl _8282AC.82D3
     beq .BF22
 
     jmp .BFD5
@@ -5454,7 +5454,7 @@ _87BFE5:
     rep #0x10
     ldy.w #0x0004
 .BFEA:
-    jsl 0x8282D3
+    jsl _8282AC.82D3
     bne .C03F
 
     inc.w 0x0000,X
@@ -5498,7 +5498,7 @@ _87BFE5:
 
 _87C042:
     rep #0x10
-    jsl 0x8282D3
+    jsl _8282AC.82D3
     bne .C077
 
     inc.w 0x0000,X
@@ -5803,7 +5803,7 @@ _87C269:
     sta.l 0x7F830A
     ldy.w #0x0003
 .C274:
-    jsl 0x8282D3
+    jsl _8282AC.82D3
     bne .C2A7
 
     inc.w 0x0000,X
@@ -5836,7 +5836,7 @@ _87C2AA:
     rep #0x10
     ldy.w #0x0001
 .C2AF:
-    jsl 0x8282D3
+    jsl _8282AC.82D3
     bne .C31D
 
     inc.w 0x0000,X
@@ -5865,7 +5865,7 @@ _87C2AA:
 
     ldy.w #0x0001
 .C2EE:
-    jsl 0x8282D3
+    jsl _8282AC.82D3
     bne .C31D
 
     inc.w 0x0000,X
@@ -6226,7 +6226,7 @@ _87C75E:
 ;-----
 
 _87C8EF:
-    jsl 0x8282D3
+    jsl _8282AC.82D3
     bne .C91C
 
     inc.w 0x0000,X
@@ -6255,7 +6255,7 @@ _87C91F:
     jsl 0x82806E
     bcs .C94B
 
-    jsl 0x8282D3
+    jsl _8282AC.82D3
     bne .C949
 
     inc.w 0x0000,X
@@ -6680,7 +6680,7 @@ _87D492:
 
 _87D4FA:
     rep #0x20
-    jsl 0x8282D3
+    jsl _8282AC.82D3
     bne .D537
 
     inc.w 0x0000,X
@@ -6779,7 +6779,7 @@ _87D576:
 
 _87D592:
     rep #0x10
-    jsl 0x8282D3
+    jsl _8282AC.82D3
     bne .D5C6
 
     inc.w 0x0000,X
@@ -6810,7 +6810,7 @@ _87D5C9:
     rep #0x10
     ldy.w #0x0006
 .D5CE:
-    jsl 0x8282D3
+    jsl _8282AC.82D3
     bne .D604
 
     inc.w 0x0000,X
@@ -7050,7 +7050,7 @@ _87E037:
     and.b #0x03
     bne .E1C0
 
-    jsl 0x8282D3
+    jsl _8282AC.82D3
     bne .E1C0
 
     inc.w 0x0000,X
@@ -7082,7 +7082,7 @@ _87E037:
     adc.b #0x06
     sta.b 0x33
 .E1D0:
-    jsl 0x8282D3
+    jsl _8282AC.82D3
     bne .E22E
 
     inc.w 0x0000,X
@@ -7487,7 +7487,7 @@ _87E4A9:
     rep #0x10
     ldy.w #0x0002
 .E4AE:
-    jsl 0x8282D3
+    jsl _8282AC.82D3
     bne .E503
 
     inc.w 0x0000,X
@@ -7537,7 +7537,7 @@ _87E504:
     rep #0x10
     ldy.w #0x0019
 .E509:
-    jsl 0x8282D3
+    jsl _8282AC.82D3
     bne .E544
 
     inc.w 0x0000,X
@@ -7869,7 +7869,7 @@ _87E751:
     rep #0x10
     ldy.w #0x0002
 .E756:
-    jsl 0x8282D3
+    jsl _8282AC.82D3
     bne .E7D1
 
     inc.w 0x0000,X
@@ -8577,7 +8577,7 @@ _87ED8D:
     lda.b #0x02
     sta.b 0x01
     rep #0x10
-    jsl 0x8282D3
+    jsl _8282AC.82D3
     bne .EDE8
 
     stx.b 0x35
@@ -8631,7 +8631,7 @@ _87ED8D:
     rep #0x10
     ldy.w #0x0000
 .EE1C:
-    jsl 0x8282D3
+    jsl _8282AC.82D3
     bne .EE74
 
     inc.w 0x0000,X
@@ -9407,7 +9407,7 @@ _87F35A:
 
 _87F371:
     sta.w 0x0000
-    jsl 0x8282D3
+    jsl _8282AC.82D3
     bne .F38A
 
     inc.w 0x0000,X
@@ -9660,7 +9660,7 @@ _87F477:
 
 _87F519:
     rep #0x10
-    jsl 0x8282D3
+    jsl _8282AC.82D3
     bne .F56C
 
     inc.w 0x0000,X
@@ -10728,7 +10728,7 @@ _87FB40:
 .FC92:
     ldy.b #0x07
 .FC94:
-    jsl 0x8282D3
+    jsl _8282AC.82D3
     bne .FCBF
 
     inc.w 0x0000,X
@@ -11029,7 +11029,7 @@ _87FE5F:
 
 _87FE83:
     rep #0x10
-    jsl 0x8282D3
+    jsl _8282AC.82D3
     bne .FEA9
 
     inc.w 0x0000,X
@@ -11052,7 +11052,7 @@ _87FE83:
 
 _87FEAC:
     rep #0x10
-    jsl 0x8282D3
+    jsl _8282AC.82D3
     bne .FED2
 
     inc.w 0x0000,X

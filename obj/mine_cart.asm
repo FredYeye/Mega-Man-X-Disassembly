@@ -478,7 +478,7 @@ mine_cart:
 ;-----
 
 .9AE7:
-    jsl 0x8282D3
+    jsl _8282AC.82D3
     bne .9B0F
 
     inc.w 0x0000,X
@@ -505,7 +505,7 @@ mine_cart:
     rep #0x10
     ldy.w #0x0007
 .9B17:
-    jsl 0x8282D3
+    jsl _8282AC.82D3
     bne .9B6D
 
     inc.w 0x0000,X
@@ -551,7 +551,7 @@ mine_cart:
     rep #0x10
     ldy.w #0x0007
 .9B75:
-    jsl 0x8282D3
+    jsl _8282AC.82D3
     bne .9BBF
 
     inc.w 0x0000,X

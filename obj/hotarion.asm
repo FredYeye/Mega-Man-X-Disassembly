@@ -741,7 +741,7 @@ hotarion:
 
 .A974:
     rep #0x10
-    jsl 0x8282D3
+    jsl _8282AC.82D3
     bne .A9DC
 
     inc.w 0x0000,X

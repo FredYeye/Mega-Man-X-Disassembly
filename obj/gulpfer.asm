@@ -592,7 +592,7 @@ gulpfer:
     sta.b 0x01
     stz.b 0x02
     inc.b 0x03
-    jsl 0x8282D3
+    jsl _8282AC.82D3
     bne .A75B
 
     inc.w 0x0000,X
@@ -616,7 +616,7 @@ gulpfer:
 ;-----
 
 .A75E:
-    jsl 0x8282D3
+    jsl _8282AC.82D3
     bne .A796
 
     inc.w 0x0000,X

@@ -825,7 +825,7 @@ armor_armarge:
     sec
     sbc.w #0x000E
     sta.w 0x0008,X
-    jsl 0x8282D3
+    jsl _8282AC.82D3
     bne .B726
 
     inc.w 0x0000,X

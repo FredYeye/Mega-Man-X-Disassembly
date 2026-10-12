@@ -860,7 +860,7 @@ utuboros_head:
 ;-----
 
 .C32A:
-    jsl 0x8282D3
+    jsl _8282AC.82D3
     inc.w 0x0000,X
     lda.b #0x1A
     sta.w 0x000A,X

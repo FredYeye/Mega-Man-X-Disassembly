@@ -430,7 +430,7 @@ tombot:
 .E6C1:
     rep #0x10
 .E6C3:
-    jsl 0x8282D3
+    jsl _8282AC.82D3
     beq .E6CC
 
     jmp .E76D
@@ -524,7 +524,7 @@ tombot:
 
 .E772:
     rep #0x10
-    jsl 0x8282D3
+    jsl _8282AC.82D3
     bne .E79E
 
     inc.w 0x0000,X

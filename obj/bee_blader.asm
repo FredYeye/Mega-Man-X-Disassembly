@@ -53,7 +53,7 @@ bee_blader:
     jml 0x828387
 
 .B8F4:
-    jsl 0x8282D3
+    jsl _8282AC.82D3
     bne .B8DC
 
     inc.w 0x0000,X
@@ -372,8 +372,8 @@ bee_blader:
     lda.b #0x02
     sta.w 0x0001
     stz.w 0x0000
-    jsl 0x83FE72
-    jsl 0x8282D3
+    jsl _83FE72
+    jsl _8282AC.82D3
     bne .BBA4
 
     inc.w 0x0000,X
@@ -594,7 +594,7 @@ bee_blader:
 
     lda.b #0x1F
     sta.w 0x0BCE
-    jsl 0x849F2A
+    jsl _849F25.9F2A
 .BD07:
     sep #0x30
     rts
@@ -603,7 +603,7 @@ bee_blader:
 
 .BD0A:
     sep #0x20
-    jsl 0x8282D3
+    jsl _8282AC.82D3
     bne .BD38
 
     inc.w 0x0000,X

@@ -265,7 +265,7 @@ rangda_bangda_nose:
     jml 0x828398
 
 .B3E3:
-    jsl 0x8282D3
+    jsl _8282AC.82D3
     bne .B409
 
     inc.w 0x0000,X
@@ -295,7 +295,7 @@ rangda_bangda_nose:
     sta.l 0x7F838F
     ldy.w #0x000F
 .B419:
-    jsl 0x8282D3
+    jsl _8282AC.82D3
     bne .B44F
 
     inc.w 0x0000,X

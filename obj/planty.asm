@@ -232,7 +232,7 @@ planty:
     rep #0x10
     ldy.w #0x0008
 .C3C6:
-    jsl 0x8282D3
+    jsl _8282AC.82D3
     bne .C404
 
     inc.w 0x0000,X

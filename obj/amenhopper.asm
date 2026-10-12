@@ -119,7 +119,7 @@ amenhopper:
     sbc.w #0x0007
     sta.b 0x08
     sep #0x20
-    jsl 0x8282D3
+    jsl _8282AC.82D3
     bne .ABE5
 
     inc.w 0x0000,X

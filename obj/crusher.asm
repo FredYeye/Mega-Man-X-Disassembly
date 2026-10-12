@@ -274,7 +274,7 @@ crusher:
     sta.b 0x03
     stz.b 0x37
     stz.b 0x38
-    jsl 0x8282D3
+    jsl _8282AC.82D3
     bne .989F
 
     inc.w 0x0000,X

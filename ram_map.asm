@@ -9,12 +9,14 @@ struct ram {
     ride_armor:  ride_armor, ;0E18
     objects:     obj[15],    ;0E68
     weapons:     obj[8],     ;1228
-    obj4:        obj[8],     ;1428
-    obj5:        obj2[16],   ;1628
-    obj6:        obj3[15],   ;1928
-    obj7:        obj4[16],   ;1D08
-    unk5:        d08[0x1E08->0x1F80]
+    obj3:        obj[8],     ;1428
+    obj4:        obj2[16],   ;1628
+    obj5:        obj3[15],   ;1928
+    obj6:        obj4[16],   ;1D08
+    unk5:        d08[0x1E08->0x1F80],
     lives:       d08,        ;1F80
+
+    ;1F99 1/2/4/8 x upgrades?
 }
 
 struct oam {

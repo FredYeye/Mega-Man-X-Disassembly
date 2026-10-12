@@ -572,7 +572,7 @@ rangda_bangda_eye:
     sta.l 0x7F838F
     ldy.w #0x000F
 .B1DD:
-    jsl 0x8282D3
+    jsl _8282AC.82D3
     bne .B213
 
     inc.w 0x0000,X

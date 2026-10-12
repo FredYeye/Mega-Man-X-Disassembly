@@ -1203,7 +1203,7 @@ anglerge:
     and.b #0x03
     bne .B67C
 
-    jsl 0x8282D3
+    jsl _8282AC.82D3
     bne .B67A
 
     inc.w 0x0000,X
@@ -1241,7 +1241,7 @@ anglerge:
 ;-----
 
 .B67D:
-    jsl 0x8282D3
+    jsl _8282AC.82D3
     inc.w 0x0000,X
     lda.b #0x1C
     sta.w 0x000A,X
@@ -1333,7 +1333,7 @@ anglerge:
 ;-----
 
 .B731:
-    jsl 0x8282D3
+    jsl _8282AC.82D3
     inc.w 0x0000,X
     lda.b #0x1E
     sta.w 0x000A,X

@@ -411,7 +411,7 @@ sky_claw:
     rep #0x10
     ldy.w #0x0001
 .C64B:
-    jsl 0x8282D3
+    jsl _8282AC.82D3
     bne .C69C
 
     inc.w 0x0000,X
@@ -433,7 +433,7 @@ sky_claw:
 
     ldy.w #0x0005
 .C675:
-    jsl 0x8282D3
+    jsl _8282AC.82D3
     bne .C69C
 
     inc.w 0x0000,X

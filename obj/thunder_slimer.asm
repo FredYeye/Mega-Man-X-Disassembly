@@ -849,7 +849,7 @@ thunder_slimer:
 ;-----
 
 .B40B:
-    jsl 0x8282D3
+    jsl _8282AC.82D3
     bne .B430
 
     inc.w 0x0000,X
@@ -1170,7 +1170,7 @@ thunder_slimer:
 ;-----
 
 .B5FB:
-    jsl 0x8282D3
+    jsl _8282AC.82D3
     bne .B61D
 
     inc.w 0x0000,X
@@ -1430,7 +1430,7 @@ thunder_slimer:
     and.b #0x03
     bne .B81F
 
-    jsl 0x8282D3
+    jsl _8282AC.82D3
     bne .B81F
 
     inc.w 0x0000,X

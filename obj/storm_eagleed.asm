@@ -883,7 +883,7 @@ storm_eagleed:
 
     lda.b #0x03
     sta.b 0x39
-    jsl 0x8282D3
+    jsl _8282AC.82D3
     bne .DE90
 
     inc.w 0x0000,X

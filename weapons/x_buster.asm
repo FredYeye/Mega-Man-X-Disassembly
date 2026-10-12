@@ -90,5 +90,5 @@ x_buster:
     jsl 0x84A51A
 .A2C0:
     dec.w 0x0BDD
-    jsl 0x8283A3
+    jsl _8283A3
     rts

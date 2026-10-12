@@ -539,7 +539,7 @@ capsule:
     rep #0x10
     ldy.w #0x0003
 .CE77:
-    jsl 0x8282D3
+    jsl _8282AC.82D3
     bne .CEB0
 
     inc.w 0x0000,X
@@ -677,7 +677,7 @@ capsule:
 ;-----
 
 .CF38:
-    jsl 0x8282D3
+    jsl _8282AC.82D3
     bne .CF5A
 
     inc.w 0x0000,X
@@ -705,7 +705,7 @@ capsule:
     rep #0x10
     ldy.w #0x0003
 .CF69:
-    jsl 0x8282D3
+    jsl _8282AC.82D3
     bne .CF8D
 
     inc.w 0x0000,X
@@ -736,7 +736,7 @@ capsule:
     bit.b #0x03
     bne .CFB0
 
-    jsl 0x8282D3
+    jsl _8282AC.82D3
     bne .CFB0
 
     inc.w 0x0000,X

@@ -143,7 +143,7 @@ turn_cannon:
 
     ldy.w #0x0000
     jsr .9A90
-    jsl 0x8282D3
+    jsl _8282AC.82D3
     bne .9A58
 
     ldy.w #0x0000
@@ -153,7 +153,7 @@ turn_cannon:
 
     ldy.w #0x0004
     jsr .9A90
-    jsl 0x8282D3
+    jsl _8282AC.82D3
     bne .9A58
 
     ldy.w #0x0004
@@ -169,7 +169,7 @@ turn_cannon:
 
     ldy.w #0x0010
     jsr .9ADB
-    jsl 0x8282D3
+    jsl _8282AC.82D3
     bne .9A8D
 
     ldy.w #0x0010
@@ -179,7 +179,7 @@ turn_cannon:
 
     ldy.w #0x0014
     jsr .9ADB
-    jsl 0x8282D3
+    jsl _8282AC.82D3
     bne .9A8D
 
     ldy.w #0x0014

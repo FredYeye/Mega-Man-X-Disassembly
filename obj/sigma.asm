@@ -78,7 +78,7 @@ sigma:
     dec.b 0x33
     bne .C487
 
-    jsl 0x8282D3
+    jsl _8282AC.82D3
     bne .C488
 
     inc.w 0x0000,X
@@ -959,7 +959,7 @@ sigma:
     sta.b 0x05
     lda.w #0x003E
     sta.b 0x08
-    jsl 0x8282D3
+    jsl _8282AC.82D3
     bne .CACC
 
     inc.w 0x0000,X
@@ -1018,7 +1018,7 @@ sigma:
     lda.w 0x1F3F
     bne .CB2D
 
-    jsl 0x8282D3
+    jsl _8282AC.82D3
     bne .CB2B
 
     inc.w 0x0000,X
@@ -1045,7 +1045,7 @@ sigma:
     lda.w 0x1F3F
     bne .CB59
 
-    jsl 0x8282D3
+    jsl _8282AC.82D3
     bne .CB57
 
     inc.w 0x0000,X

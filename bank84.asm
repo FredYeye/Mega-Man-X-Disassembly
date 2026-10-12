@@ -551,7 +551,7 @@ _848317:
     stz.w 0x00C1
     lda.b #0x09
     sta.w snes_regs.bgmode
-    jsl 0x80D1EF
+    jsl _80D1EF
 .8393:
     stz.w 0x0B9D
 .8396:
@@ -656,8 +656,8 @@ _848317:
     sta.b 0x05
     lda.w 0x1E0F
     sta.b 0x08
-    jsl 0x80D1F9
-    jsl 0x80D1FD
+    jsl _80D1F9
+    jsl _80D1FD
     pld
     sep #0x30
     jsr _848705
@@ -5521,7 +5521,7 @@ _84A462:
 .A463:
     rep #0x10
     sep #0x20
-    jsl 0x8282D3
+    jsl _8282AC.82D3
     bne .A4A9
 
     sta.l 0x701000
@@ -5614,7 +5614,7 @@ _84A51A:
     php
     sep #0x20
     rep #0x10
-    jsl 0x8282D3
+    jsl _8282AC.82D3
     bne .A542
 
     inc.w 0x0000,X
@@ -6349,7 +6349,7 @@ _84AA7C:
     and.b #0x03
     bne .AAC7
 
-    jsl 0x8282D3
+    jsl _8282AC.82D3
     bne .AAC7
 
     inc.w 0x0000,X
@@ -7004,4 +7004,4 @@ _84ADE2:
 
 ;-----
 
-incbin "todo/bank84.bin"
+;bank84

@@ -522,7 +522,7 @@ launcher_octopuld:
 
     lda.b #0x02
     sta.w 0x0BCE
-    jsl 0x849F2A
+    jsl _849F25.9F2A
     bra .C847
 
 .C7F7:
@@ -958,7 +958,7 @@ launcher_octopuld:
     stz.b 0x03
     ldy.b #0x03
 .CAD2:
-    jsl 0x8282D3
+    jsl _8282AC.82D3
     bne .CAF3
 
     inc.w 0x0000,X

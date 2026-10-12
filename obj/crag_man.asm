@@ -296,7 +296,7 @@ crag_man:
 ;-----
 
 .DA90:
-    jsl 0x8282D3
+    jsl _8282AC.82D3
     bne .DAFB
 
     inc.w 0x0000,X
@@ -360,7 +360,7 @@ crag_man:
 ;-----
 
 .DAFE:
-    jsl 0x8282D3
+    jsl _8282AC.82D3
     bne .DB61
 
     inc.w 0x0000,X

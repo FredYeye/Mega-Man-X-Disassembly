@@ -545,7 +545,7 @@ rt_55j:
     cmp.b 0x35
     bcs .D01F
 
-    jsl 0x8282D3
+    jsl _8282AC.82D3
     bne .D01B
 
     inc.w 0x0000,X

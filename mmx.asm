@@ -31,8 +31,8 @@ incsrc "bank88.asm"
 
 incsrc "banks9A-AA.asm"
 
-;bankAB
-;bankAC
+incsrc "bankAB.asm"
+incsrc "bankAC.asm"
 ;bankAD
 ;bankAE
 ;bankAF

@@ -449,7 +449,7 @@ boomer_kuwanger:
 
     lda.b #0x04
     sta.b 0x03
-    jsl 0x8282D3
+    jsl _8282AC.82D3
     bne .8D8F
 
     inc.w 0x0000,X
@@ -1107,7 +1107,7 @@ boomer_kuwanger:
     stz.b 0x3C
     lda.b #0x04
     sta.w 0x0BCE
-    jsl 0x849F2A
+    jsl _849F25.9F2A
     lda.w 0x0BCF
     and.b #0x7F
     bne .9191

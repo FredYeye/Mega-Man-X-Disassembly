@@ -19,6 +19,87 @@ _868000:
     d08[0x03 << 1]
     d16[snes_regs.vmain]
     d08[0x80, 0x00, 0x00]
+
+;-----
+
+_86A1D8:
+
+.A1D8: d16[
+    _86A1D8->.A1F2+0, _86A1D8->.A1F2+4, 0x24, 0x26,
+    0x28, 0x2A, 0x2C, 0x2E,
+    0x30, 0x32, 0x32, 0x32,
+    0x32,
+]
+
+.A1F2: d16[
+    _86A1D8->.A223, _86A1D8->.A22E, _86A1D8->.A242, _86A1D8->.A24D,
+    _86A1D8->.A258, _86A1D8->.A20C, _86A1D8->.A20E, _86A1D8->.A210,
+    _86A1D8->.A212, _86A1D8->.A21D, _86A1D8->.A21F, _86A1D8->.A221,
+    _86A1D8->.A20C,
+]
+
+; byte count, vram dst, src, ?, ?
+
+.A20C: d16[0]
+.A20E: d16[0]
+.A210: d16[0]
+.A212: d16[0x1000, 0x8000/2] d24[_ACEC18] d16[0x0C] d16[0]
+.A21D: d16[0]
+.A21F: d16[0]
+.A221: d16[0]
+.A223: d16[0x3600, 0x6A00/2] d24[_ABAAE0] d16[0x0C] d16[0]
+.A22E: d16[0x1600, 0x6A00/2] d24[_ACB5A0] d16[0x0C]
+       d16[0x1000, 0x8000/2] d24[_ACEC18] d16[0x0C] d16[0]
+.A242: d16[0x1A80, 0x8000/2] d24[_AC8000] d16[0x0C] d16[0]
+.A24D: d16[0x1B20, 0x8000/2] d24[_AC9A80] d16[0x0C] d16[0]
+.A258: d16[0x1000, 0x8000/2] d24[_ABE0E0] d16[0x0C] d16[0]
+
+;-----
+
+_86E3A3:
+    lda.b 0x01
+    bne .E3AF
+
+    inc.b 0x01
+    lda.b 0x0B
+    jsl _848EEA.8F07
+.E3AF:
+    lda.b 0x0B
+    cmp.b #0x04
+    bne .E3C5
+
+    rep #0x20
+    lda.b 0x1C
+    bpl .E3DA
+
+    lda.w #0x0005
+    jsl _848EEA.8F07
+    jmp .E3DA
+
+.E3C5:
+    sep #0x20
+    lda.b 0x0B
+    cmp.b #0x06
+    bne .E3DA
+
+    rep #0x20
+    lda.b 0x1C
+    bpl .E3DA
+
+    lda.w #0x0007
+    jsl _848EEA.8F07
+.E3DA:
+    sep #0x20
+    jsl update_pos_xy.neg_ay_ax
+    jsl _82808F.80B4
+    lda.b 0x0E
+    bne .E3EC
+
+    jml _828372.8398
+
+.E3EC:
+    rtl
+
 ;-----
 
 compressed_data: ;0x86F6FA

@@ -187,7 +187,7 @@ mega_tortoise:
     sta.b 0x38
     sta.w 0x0008,X
     sep #0x20
-    jsl 0x8282D3
+    jsl _8282AC.82D3
     bne .ED6E
 
     inc.w 0x0000,X

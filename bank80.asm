@@ -947,7 +947,7 @@ _80852C:
     sta.b 0xCC
     sta.b 0xCD
     stz.w 0x1F7A
-    jmp 0x808C37
+    jmp _808C37
 
 ;-----
 
@@ -3149,7 +3149,7 @@ _8094BA:
     stz.w 0x1F7E
     stz.w 0x1F7F
     lda.b #0x02
-    sta.w 0x1F80
+    sta.w ram.lives
     lda.b #0x10
     sta.w 0x1F9A
     stz.w 0x1F99
@@ -3927,10 +3927,10 @@ _8094BA:
     jsr _808850.885C
     lda.b #0xF1
     jsr _808850.8874
-    lda.w 0x1F80
+    lda.w ram.lives
     beq .9B66
 
-    dec.w 0x1F80
+    dec.w ram.lives
     lda.b #0x04
     sta.b 0xD2
     stz.b 0xD3
@@ -4225,7 +4225,7 @@ _8094BA:
     jsr _808A2E
     jsr _80EFBA
     lda.b #0x02
-    sta.w 0x1F80
+    sta.w ram.lives
     stz.b 0xD2
     stz.b 0xD3
     stz.b 0xD4
@@ -7488,7 +7488,7 @@ _80B42A:
     sep #0x10
     lda.w #0x0000
     tcd
-    lda.w #0xB44A
+    lda.w #_80B44A
     ldx.b #0x20
     stx.w 0x0050
     jsr _80813B
@@ -7512,14 +7512,14 @@ _80B44A:
     and.w #0x00FF
     asl
     tax
-    lda.w 0x86A1D8,X
+    lda.w _86A1D8,X
     clc
     adc.b 0x00
     tax
-    lda.w 0x86A1D8,X
+    lda.w _86A1D8,X
     tax
 .B46C:
-    lda.w 0x86A1D8,X
+    lda.w _86A1D8,X
     beq .B4EE
 
     sta.b 0x58
@@ -7556,9 +7556,9 @@ _80B44A:
     lda.b 0x5A
     lsr
     clc
-    adc.w 0x86A1DA,X
+    adc.w _86A1D8+2,X
     sta 0x0501,Y
-    lda.w 0x86A1DC,X
+    lda.w _86A1D8+4,X
     clc
     adc.b 0x5A
     sta 0x0505,Y
@@ -7567,7 +7567,7 @@ _80B44A:
     adc.w #0x0400
     sta.b 0x5A
     sep #0x20
-    lda.w 0x86A1DE,X
+    lda.w _86A1D8+6,X
     sta 0x0507,Y
     tya
     clc
@@ -7581,7 +7581,7 @@ _80B44A:
     bpl .B475
 
 .B4DC:
-    ldy.w 0x86A1DF,X
+    ldy.w _86A1D8+7,X
     phx
     jsl _828000.8011
     plx
@@ -11068,7 +11068,7 @@ _80CC1F:
     sta.w snes_regs.vmain
     lda.b #0xE0
     clc
-    adc.w 0x1F80
+    adc.w ram.lives
     tax
     rep #0x20
     lda.w #0x5AD9
@@ -14551,7 +14551,7 @@ _80E0F2:
 
     ldx.b #0x7F
     stx.w 0x0BCE
-    jsl 0x849F2A
+    jsl _849F25.9F2A
 .E15E:
     lda.b 0x12
     cmp.b 0x08
@@ -17038,7 +17038,7 @@ _80F188:
     and.b #0x10
     sta.w 0x1F9B
     lda.b #0x02
-    sta.w 0x1F80
+    sta.w ram.lives
     stz.w 0x1F7B
     stz.w 0x1F7A
     rep #0x20
@@ -17454,7 +17454,7 @@ _80F3B5: d16[
     rts
 
 .F53A:
-    jsl 0x86E3A3
+    jsl _86E3A3
     rts
 
 .F53F:
@@ -17683,7 +17683,7 @@ _80F596: d16[
 
 _80F68B: d16[
     .thunk_x_buster, .F6CC, .F6D1, .F6D6, .F6DB, .F6E0, .F6E5, .thunk_horming_torpedo,
-    .F6EF, .F6F4, .F6F9, .F6FE, .F703, .F708, .F70D, .F712,
+    .thunk_chameleon_sting, .thunk_rolling_shield, .F6F9, .thunk_storm_tornado, .thunk_electric_spark, .thunk_boomerang_cutter, .F70D, .F712,
     .F717, .F71C, .F721, .F726, .F72B, .F730, .F735, .F73A,
     .F73F, .F744, .F749, .F74E, .F753, .F758,
 ]
@@ -17720,28 +17720,28 @@ _80F68B: d16[
     jsl horming_torpedo
     rts
 
-.F6EF:
-    jsl _8391D2
+.thunk_chameleon_sting:
+    jsl chameleon_sting
     rts
 
-.F6F4:
-    jsl _8392EC
+.thunk_rolling_shield:
+    jsl rolling_shield
     rts
 
 .F6F9:
     jsl _83943D
     rts
 
-.F6FE:
+.thunk_storm_tornado:
     jsl _839550
     rts
 
-.F703:
-    jsl _83965B
+.thunk_electric_spark:
+    jsl electric_spark
     rts
 
-.F708:
-    jsl _8283B0
+.thunk_boomerang_cutter:
+    jsl boomerang_cutter
     rts
 
 .F70D:
