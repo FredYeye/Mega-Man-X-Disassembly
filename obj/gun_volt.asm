@@ -168,7 +168,7 @@ gun_volt:
 .DB18:
     rts
 
-;-----
+//-----
 
 .DB19:
     lda.b 0x36
@@ -198,7 +198,7 @@ gun_volt:
     sep #0x30
     rts
 
-;-----
+//-----
 
 .DB4C:
     jsl 0x828358

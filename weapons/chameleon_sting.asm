@@ -123,7 +123,7 @@ chameleon_sting:
     jsl _8283A3
     rts
 
-;-----
+//-----
 
 .92A4:
     rep #0x10

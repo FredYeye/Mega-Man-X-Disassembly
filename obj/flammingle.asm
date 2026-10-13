@@ -266,7 +266,7 @@ flammingle:
     stz.b 0x30
     rts
 
-;-----
+//-----
 
 .C200:
     jsl 0x828358

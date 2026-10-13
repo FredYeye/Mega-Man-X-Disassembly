@@ -406,7 +406,7 @@ amenhopper:
 .ADB5:
     rts
 
-;-----
+//-----
 
 .ADB6:
     lda.b #0x40
@@ -440,7 +440,7 @@ amenhopper:
     tsb.b 0x11
     rts
 
-;-----
+//-----
 
 .ADE2:
     dec.b 0x35

@@ -247,7 +247,7 @@ ladder_yadder:
     sep #0x20
     rts
 
-;-----
+//-----
 
 .AB80:
     lda.b #0x10

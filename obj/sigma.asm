@@ -1505,7 +1505,7 @@ sigma:
     jsr .CEB4
     jml 0x8280B4
 
-;-----
+//-----
 
 .CEB4:
     dec.b 0x39
@@ -1517,7 +1517,7 @@ sigma:
 .CEC0:
     rts
 
-;-----
+//-----
 
 .CEC1:
     rep #0x20
@@ -1533,7 +1533,7 @@ sigma:
     jsl 0x84A4C6
     rts
 
-;-----
+//-----
 
 .CEE1:
     jsl get_rng
@@ -1548,7 +1548,7 @@ sigma:
     stz.b 0x03
     rts
 
-;-----
+//-----
 
 .CEF4:
     stz.b 0x3D

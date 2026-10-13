@@ -341,7 +341,7 @@ hoganmer:
     stz.b 0x03
     rts
 
-;-----
+//-----
 
 .B0C4:
     lda.b #0x04
@@ -349,7 +349,7 @@ hoganmer:
     stz.b 0x03
     rts
 
-;-----
+//-----
 
 .B0CB:
     lda.b #0x06
@@ -357,7 +357,7 @@ hoganmer:
     stz.b 0x03
     rts
 
-;-----
+//-----
 
 .B0D2:
     lda.b #0x08
@@ -365,7 +365,7 @@ hoganmer:
     stz.b 0x03
     rts
 
-;-----
+//-----
 
 .B0D9:
     stz.b 0x34
@@ -394,7 +394,7 @@ hoganmer:
     sep #0x30
     rts
 
-;-----
+//-----
 
 .B109:
     jsl 0x828358

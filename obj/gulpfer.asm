@@ -502,7 +502,7 @@ gulpfer:
 .A6A0:
     rts
 
-;-----
+//-----
 
 .A6A1:
     php
@@ -540,7 +540,7 @@ gulpfer:
     plp
     rts
 
-;-----
+//-----
 
 .A6E4:
     lda.b 0x27
@@ -585,7 +585,7 @@ gulpfer:
     trb.b 0x11
     rts
 
-;-----
+//-----
 
 .A72B:
     lda.b #0x04
@@ -613,7 +613,7 @@ gulpfer:
     sep #0x30
     rts
 
-;-----
+//-----
 
 .A75E:
     jsl _8282AC.82D3
@@ -649,7 +649,7 @@ gulpfer:
     sep #0x30
     rts
 
-;-----
+//-----
 
 .A799:
     rep #0x20

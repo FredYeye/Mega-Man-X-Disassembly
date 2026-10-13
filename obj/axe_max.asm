@@ -250,7 +250,7 @@ axe_max:
     jsr .D227
     jmp .D26F
 
-;-----
+//-----
 
 .D1ED:
     php
@@ -283,7 +283,7 @@ axe_max:
     plp
     rts
 
-;-----
+//-----
 
 .D227:
     lda.b 0x0B
@@ -337,7 +337,7 @@ axe_max:
     sep #0x10
     rts
 
-;-----
+//-----
 
 .D26F:
     lda.b 0x0B
@@ -375,7 +375,7 @@ axe_max:
 .D2AA:
     rts
 
-;-----
+//-----
 
 .D2AB:
     rep #0x10

@@ -722,7 +722,7 @@ utuboros_head:
 .C254:
     rtl
 
-;-----
+//-----
 
 .C255:
     ldy.b 0x38
@@ -754,7 +754,7 @@ utuboros_head:
 .C27C:
     rts
 
-;-----
+//-----
 
 .C27D:
     rep #0x30
@@ -791,7 +791,7 @@ utuboros_head:
     sep #0x30
     rts
 
-;-----
+//-----
 
 .C2B6:
     rep #0x10
@@ -831,7 +831,7 @@ utuboros_head:
     sep #0x30
     rts
 
-;-----
+//-----
 
 .C305:
     rep #0x30
@@ -857,7 +857,7 @@ utuboros_head:
     sep #0x30
     rts
 
-;-----
+//-----
 
 .C32A:
     jsl _8282AC.82D3
@@ -881,7 +881,7 @@ utuboros_head:
     sep #0x10
     rts
 
-;-----
+//-----
 
 .C35C:
     jsl 0x828307
@@ -901,7 +901,7 @@ utuboros_head:
     sep #0x10
     rts
 
-;-----
+//-----
 
 .C37E:
     lda.w 0x0B9C

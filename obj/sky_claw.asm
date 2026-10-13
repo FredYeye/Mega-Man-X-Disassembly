@@ -490,7 +490,7 @@ sky_claw:
 .C6DC:
     rts
 
-;-----
+//-----
 
 .C6DD:
     rep #0x20
@@ -514,7 +514,7 @@ sky_claw:
     sep #0x20
     rts
 
-;-----
+//-----
 
 .C6FE:
     lda.b 0x0B

@@ -1,7 +1,7 @@
 org 0x8000*6
 base 0x868000
 
-;-----
+//-----
 
 _868000:
     d08[0x04 << 1]
@@ -20,7 +20,7 @@ _868000:
     d16[snes_regs.vmain]
     d08[0x80, 0x00, 0x00]
 
-;-----
+//-----
 
 _86A1D8:
 
@@ -38,7 +38,7 @@ _86A1D8:
     _86A1D8->.A20C,
 ]
 
-; byte count, vram dst, src, ?, ?
+// byte count, vram dst, src, ?, ?
 
 .A20C: d16[0]
 .A20E: d16[0]
@@ -54,7 +54,7 @@ _86A1D8:
 .A24D: d16[0x1B20, 0x8000/2] d24[_AC9A80] d16[0x0C] d16[0]
 .A258: d16[0x1000, 0x8000/2] d24[_ABE0E0] d16[0x0C] d16[0]
 
-;-----
+//-----
 
 _86E3A3:
     lda.b 0x01
@@ -100,9 +100,9 @@ _86E3A3:
 .E3EC:
     rtl
 
-;-----
+//-----
 
-compressed_data: ;0x86F6FA
+compressed_data: // 0x86F6FA
     d16[0x0D40] d24[0x9A8000]
     d16[0x2000] d24[0x9A8AF3]
     d16[0x09C0] d24[0x9AA52D]

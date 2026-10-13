@@ -263,7 +263,7 @@ slide_cannon:
 .B3C9:
     rts
 
-;-----
+//-----
 
 .B3CA:
     lda.b #0x80
@@ -275,7 +275,7 @@ slide_cannon:
 .B3D6:
     rts
 
-;-----
+//-----
 
 .B3D7:
     jsl 0x828358

@@ -267,7 +267,7 @@ jamminger:
     jsl update_pos_y
     rts
 
-;-----
+//-----
 
 .DF32:
     rep #0x20
@@ -294,7 +294,7 @@ jamminger:
     sep #0x20
     rts
 
-;-----
+//-----
 
 .DF5B:
     lda.b 0x01

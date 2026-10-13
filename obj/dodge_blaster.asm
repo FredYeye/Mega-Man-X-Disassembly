@@ -231,7 +231,7 @@ dodge_blaster:
 .9B3A:
     rts
 
-;-----
+//-----
 
 .9B3B:
     rep #0x20
@@ -254,7 +254,7 @@ dodge_blaster:
 .9B5E:
     rts
 
-;-----
+//-----
 
 .9B5F:
     lda.b 0x11

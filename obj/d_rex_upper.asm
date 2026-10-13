@@ -961,7 +961,7 @@ d_rex_upper:
     lda.b #0x01
     rts
 
-;-----
+//-----
 
 .BD12:
     rep #0x30

@@ -563,7 +563,7 @@ rangda_bangda_eye:
     sta.w 0x1F3F,X
     rts
 
-;-----
+//-----
 
 .B1D0:
     rep #0x10

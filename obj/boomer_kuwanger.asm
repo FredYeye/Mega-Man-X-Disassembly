@@ -958,7 +958,7 @@ boomer_kuwanger:
 .90B0:
     rtl
 
-;-----
+//-----
 
 .90B1:
     ldx.b 0x35
@@ -972,7 +972,7 @@ boomer_kuwanger:
     jsl _848EEA.8F07
     rts
 
-;-----
+//-----
 
 .90C1:
     jsl get_rng
@@ -1027,7 +1027,7 @@ boomer_kuwanger:
     sta.b 0x3A
     rts
 
-;-----
+//-----
 
 .9113:
     lda.b #0x20
@@ -1043,7 +1043,7 @@ boomer_kuwanger:
 .9128:
     rts
 
-;-----
+//-----
 
 .9129:
     lda.b #0x28
@@ -1094,7 +1094,7 @@ boomer_kuwanger:
     lda.b #0x00
     rts
 
-;-----
+//-----
 
 .9170:
     lda.b 0x3C

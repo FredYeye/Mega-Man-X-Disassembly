@@ -392,7 +392,7 @@ mine_cart:
     jsl update_pos_xy.neg_ay_ax
     rts
 
-;-----
+//-----
 
 .9A67:
     lda.b 0x2B
@@ -428,7 +428,7 @@ mine_cart:
 .9A96:
     rts
 
-;-----
+//-----
 
 .9A97:
     ldx.b 0x37
@@ -443,7 +443,7 @@ mine_cart:
     sta.b 0x37
     rts
 
-;-----
+//-----
 
 .9AAD:
     rep #0x20
@@ -475,7 +475,7 @@ mine_cart:
 
     sep #0x20
     rts
-;-----
+//-----
 
 .9AE7:
     jsl _8282AC.82D3
@@ -499,7 +499,7 @@ mine_cart:
     sep #0x10
     rts
 
-;-----
+//-----
 
 .9B12:
     rep #0x10
@@ -545,7 +545,7 @@ mine_cart:
     sep #0x10
     rts
 
-;-----
+//-----
 
 .9B70:
     rep #0x10
@@ -590,7 +590,7 @@ mine_cart:
     sep #0x10
     rts
 
-;-----
+//-----
 
 .9BC5:
     jsl 0x82833E

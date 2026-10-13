@@ -210,7 +210,7 @@ mega_tortoise:
     sep #0x30
     rts
 
-;-----
+//-----
 
 .ED71:
     rep #0x20

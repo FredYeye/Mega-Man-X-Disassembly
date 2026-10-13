@@ -1326,7 +1326,7 @@ velguader:
 .D0E6:
     rts
 
-;-----
+//-----
 
 .D0E7:
     lda.b 0x11
@@ -1380,7 +1380,7 @@ velguader:
     sep #0x20
     rts
 
-;-----
+//-----
 
 .D137:
     stz.b 0x03
@@ -1392,7 +1392,7 @@ velguader:
     sta.b 0x35
     rts
 
-;-----
+//-----
 
 .D148:
     jsl get_rng
@@ -1400,7 +1400,7 @@ velguader:
     sta.b 0x36
     rts
 
-;-----
+//-----
 
 .D151:
     rep #0x10
@@ -1431,7 +1431,7 @@ velguader:
     sep #0x10
     rts
 
-;-----
+//-----
 
 .D188:
     rep #0x20

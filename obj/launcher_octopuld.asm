@@ -931,7 +931,7 @@ launcher_octopuld:
 .CAA6:
     rts
 
-;-----
+//-----
 
 .CAA7:
     lda.b 0x0C

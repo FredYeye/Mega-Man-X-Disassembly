@@ -295,7 +295,7 @@ scrap_press:
     jsl _848EEA
     rts
 
-;-----
+//-----
 
 .E3DE:
     rep #0x20

@@ -820,7 +820,7 @@ storm_eagleed:
 .DE1E:
     rtl
 
-;-----
+//-----
 
 .DE1F:
     lda.b 0x02
@@ -847,7 +847,7 @@ storm_eagleed:
     stz.b 0x03
     rts
 
-;-----
+//-----
 
 .DE3F:
     lda.b 0x17
@@ -875,7 +875,7 @@ storm_eagleed:
 .DE62:
     rts
 
-;-----
+//-----
 
 .DE63:
     dec.b 0x39

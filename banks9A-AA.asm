@@ -1,7 +1,7 @@
 org 0x8000*0x1A
 base 0x9A8000
 
-;-----
+//-----
 
 incbin "compressed_data/compressed_000.bin"
 incbin "compressed_data/compressed_001.bin"

@@ -405,7 +405,7 @@ bee_blader:
     jsl 0x82808F
     jml 0x84AB6E
 
-;-----
+//-----
 
 .BBBC:
     jsl update_pos_xy.neg_ay
@@ -420,7 +420,7 @@ bee_blader:
     sep #0x20
     rts
 
-;-----
+//-----
 
 .BBD1:
     jsl update_pos_y
@@ -445,7 +445,7 @@ bee_blader:
     sep #0x20
     rts
 
-;-----
+//-----
 
 .BBF6:
     jsl 0x828358
@@ -470,7 +470,7 @@ bee_blader:
     sep #0x30
     rts
 
-;-----
+//-----
 
 .BC22:
     jsl 0x828321
@@ -493,7 +493,7 @@ bee_blader:
     sep #0x20
     rts
 
-;-----
+//-----
 
 .BC4A:
     jsr .BD51
@@ -546,7 +546,7 @@ bee_blader:
 .BCA8:
     rtl
 
-;-----
+//-----
 
 .BCA9:
     sta.w 0x0008
@@ -563,7 +563,7 @@ bee_blader:
     jsl 0x84A4C6
     rts
 
-;-----
+//-----
 
 .BCCD:
     lda.w 0x0BD3
@@ -599,7 +599,7 @@ bee_blader:
     sep #0x30
     rts
 
-;-----
+//-----
 
 .BD0A:
     sep #0x20
@@ -628,7 +628,7 @@ bee_blader:
     sep #0x30
     rts
 
-;-----
+//-----
 
 .BD3B:
     jsr .BCA9
@@ -640,7 +640,7 @@ bee_blader:
     and.b #0x04
     rts
 
-;-----
+//-----
 
 .BD51:
     lda.w 0x0B9C

@@ -856,7 +856,7 @@ anglerge:
 .B40C:
     rts
 
-;-----
+//-----
 
 .B40D:
     lda.w 0x1E50
@@ -869,7 +869,7 @@ anglerge:
     plp
     rts
 
-;-----
+//-----
 
 .B419:
     php
@@ -1013,7 +1013,7 @@ anglerge:
     plp
     rts
 
-;-----
+//-----
 
 .B51C:
     lda.w 0x0C32
@@ -1072,7 +1072,7 @@ anglerge:
     lda.b #0x00
     rts
 
-;-----
+//-----
 
 .B58B:
     ldy.b #0x0F
@@ -1110,7 +1110,7 @@ anglerge:
     sty.b 0x38
     rts
 
-;-----
+//-----
 
 .B5B6:
     ldy.b #0x17
@@ -1148,7 +1148,7 @@ anglerge:
     sty.b 0x39
     rts
 
-;-----
+//-----
 
 .B5E1:
     rep #0x21
@@ -1196,7 +1196,7 @@ anglerge:
     lda.b #0xFF
     rts
 
-;-----
+//-----
 
 .B630:
     lda.w 0x0B9C
@@ -1238,7 +1238,7 @@ anglerge:
 .B67C:
     rts
 
-;-----
+//-----
 
 .B67D:
     jsl _8282AC.82D3
@@ -1259,7 +1259,7 @@ anglerge:
     sep #0x30
     rts
 
-;-----
+//-----
 
 .B6A5:
     jsl get_rng
@@ -1308,7 +1308,7 @@ anglerge:
     sep #0x10
     rts
 
-;-----
+//-----
 
 .B706:
     jsl 0x8282B9
@@ -1330,7 +1330,7 @@ anglerge:
     sep #0x30
     rts
 
-;-----
+//-----
 
 .B731:
     jsl _8282AC.82D3
@@ -1351,7 +1351,7 @@ anglerge:
     sep #0x30
     rts
 
-;-----
+//-----
 
 .B759:
     rep #0x30

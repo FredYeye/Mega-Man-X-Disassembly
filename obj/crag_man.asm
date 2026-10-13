@@ -293,7 +293,7 @@ crag_man:
 .DA8F:
     rts
 
-;-----
+//-----
 
 .DA90:
     jsl _8282AC.82D3
@@ -357,7 +357,7 @@ crag_man:
     sep #0x30
     rts
 
-;-----
+//-----
 
 .DAFE:
     jsl _8282AC.82D3
@@ -408,7 +408,7 @@ crag_man:
     sep #0x30
     rts
 
-;-----
+//-----
 
 .DB64:
     lda.b 0x03

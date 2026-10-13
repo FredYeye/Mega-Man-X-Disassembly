@@ -186,7 +186,7 @@ rolling_shield:
     jsl _8283A3
     rts
 
-;-----
+//-----
 
 .942A:
     rep #0x20

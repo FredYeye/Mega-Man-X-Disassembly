@@ -178,7 +178,7 @@ boomerang_cutter:
     dec.w 0x0BDD
     jml 0x8283A3
 
-;-----
+//-----
 
 .84F2:
     asl
@@ -220,7 +220,7 @@ boomerang_cutter:
     sep #0x20
     rtl
 
-;-----
+//-----
 
 .8538:
     lda.b 0x3A

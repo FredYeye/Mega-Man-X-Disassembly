@@ -825,7 +825,7 @@ thunder_slimer:
     sta.w 0x1E6E
     jml 0x828398
 
-;-----
+//-----
 
 .B3EA:
     lda.w 0x1F27
@@ -846,7 +846,7 @@ thunder_slimer:
 .B40A:
     rts
 
-;-----
+//-----
 
 .B40B:
     jsl _8282AC.82D3
@@ -870,7 +870,7 @@ thunder_slimer:
 .B432:
     rts
 
-;-----
+//-----
 
 .B433:
     ldx.b 0x10
@@ -907,7 +907,7 @@ thunder_slimer:
     jsr .B470
     jmp .B50B
 
-;-----
+//-----
 
 .B470:
     rep #0x30
@@ -1013,7 +1013,7 @@ thunder_slimer:
 .B50A:
     rts
 
-;-----
+//-----
 
 .B50B:
     lda.w #0x0000
@@ -1060,7 +1060,7 @@ thunder_slimer:
     sep #0x30
     rts
 
-;-----
+//-----
 
 .B55F:
     cmp.w #0x007F
@@ -1095,7 +1095,7 @@ thunder_slimer:
     inx
     rts
 
-;-----
+//-----
 
 .B596:
     rep #0x20
@@ -1131,14 +1131,14 @@ thunder_slimer:
     sep #0x20
     rts
 
-;-----
+//-----
 
 .B5C7:
     jsl get_rng
     and.b #0x0F
     rts
 
-;-----
+//-----
 
 .B5CE:
     rep #0x10
@@ -1148,7 +1148,7 @@ thunder_slimer:
     sep #0x10
     rts
 
-;-----
+//-----
 
 .B5DB:
     jsl 0x828358
@@ -1167,7 +1167,7 @@ thunder_slimer:
     sep #0x30
     rts
 
-;-----
+//-----
 
 .B5FB:
     jsl _8282AC.82D3
@@ -1188,7 +1188,7 @@ thunder_slimer:
     sep #0x30
     rts
 
-;-----
+//-----
 
 .B620:
     lda.w 0x0B9C
@@ -1220,7 +1220,7 @@ thunder_slimer:
 .B64D:
     rts
 
-;-----
+//-----
 
 .B64E:
     rep #0x10
@@ -1259,7 +1259,7 @@ thunder_slimer:
     sep #0x10
     rts
 
-;-----
+//-----
 
 .B68C:
     rep #0x30
@@ -1358,7 +1358,7 @@ thunder_slimer:
     sep #0x30
     rts
 
-;-----
+//-----
 
 .B743:
     rep #0x30
@@ -1386,14 +1386,14 @@ thunder_slimer:
     sep #0x30
     rts
 
-;-----
+//-----
 
 .B769:
     sta.b 0x02
     stz.b 0x03
     rts
 
-;-----
+//-----
 
 .B76E:
     rep #0x30
@@ -1411,7 +1411,7 @@ thunder_slimer:
     sep #0x30
     rts
 
-;-----
+//-----
 
 .B788:
     rep #0x20
@@ -1481,7 +1481,7 @@ thunder_slimer:
     sep #0x30
     rts
 
-;-----
+//-----
 
 .B822:
     rep #0x30
@@ -1533,7 +1533,7 @@ thunder_slimer:
     sep #0x30
     rts
 
-;-----
+//-----
 
 .B876:
     rep #0x30
@@ -1554,7 +1554,7 @@ thunder_slimer:
     sep #0x30
     rts
 
-;-----
+//-----
 
 .B892:
     lda.b 0x27

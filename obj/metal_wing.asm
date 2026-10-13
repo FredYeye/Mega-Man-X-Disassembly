@@ -227,7 +227,7 @@ metal_wing:
     jsl 0x828387
     rts
 
-;-----
+//-----
 
 .DD35:
     lda.w 0x0B9C

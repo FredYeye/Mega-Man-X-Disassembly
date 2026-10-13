@@ -619,7 +619,7 @@ rush_roader:
     stz.b 0x03
     rts
 
-;-----
+//-----
 
 .930B:
     lda.b #0x20
@@ -648,7 +648,7 @@ rush_roader:
 .9337:
     rts
 
-;-----
+//-----
 
 .9338:
     jsl 0x849ACD
@@ -697,7 +697,7 @@ rush_roader:
     sta.b 0x35
     rts
 
-;-----
+//-----
 
 .9383:
     jsl 0x849ACD

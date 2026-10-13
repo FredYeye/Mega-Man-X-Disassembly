@@ -182,7 +182,7 @@ hotarion:
 .A5AD:
     rts
 
-;-----
+//-----
 
 .A5AE:
     ldx.b 0x02
@@ -496,7 +496,7 @@ hotarion:
     sep #0x30
     rts
 
-;-----
+//-----
 
 .A7F6:
     ldy.b #0x00
@@ -640,7 +640,7 @@ hotarion:
     sep #0x30
     rts
 
-;-----
+//-----
 
 .A8DA:
     lda.b 0x3B
@@ -712,7 +712,7 @@ hotarion:
     jsr .A7F6
     rts
 
-;-----
+//-----
 
 .A94F:
     lda.b 0x2D
@@ -737,7 +737,7 @@ hotarion:
 .A973:
     rts
 
-;-----
+//-----
 
 .A974:
     rep #0x10

@@ -273,7 +273,7 @@ rolling_gabyool:
 .D2E9:
     rts
 
-;-----
+//-----
 
 .D2EA:
     jsr .D328
@@ -316,7 +316,7 @@ rolling_gabyool:
 .D327:
     rts
 
-;-----
+//-----
 
 .D328:
     lda.b 0x0B
@@ -366,7 +366,7 @@ rolling_gabyool:
     lda.b #0xFF
     rts
 
-;-----
+//-----
 
 .D368:
     rep #0x20

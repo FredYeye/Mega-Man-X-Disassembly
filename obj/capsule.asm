@@ -513,7 +513,7 @@ capsule:
 .CE4F:
     jml 0x828398
 
-;-----
+//-----
 
 .CE53:
     sta.w 0x0000
@@ -569,7 +569,7 @@ capsule:
 .CEB2:
     rts
 
-;-----
+//-----
 
 .CEB3:
     lda.b 0x34
@@ -582,7 +582,7 @@ capsule:
     sta.b 0x36
     rts
 
-;-----
+//-----
 
 .CEC0:
     lda.b 0x34
@@ -595,7 +595,7 @@ capsule:
     sta.b 0x36
     rts
 
-;-----
+//-----
 
 .CECD:
     sta.w 0x0000
@@ -616,7 +616,7 @@ capsule:
     sep #0x10
     rts
 
-;-----
+//-----
 
 .CEF3:
     dec.b 0x37
@@ -652,7 +652,7 @@ capsule:
 .CF25:
     rts
 
-;-----
+//-----
 
 .CF26:
     lda.b 0x38
@@ -663,7 +663,7 @@ capsule:
 .CF2E:
     rts
 
-;-----
+//-----
 
 .CF2F:
     lda.b 0x38
@@ -674,7 +674,7 @@ capsule:
 .CF37:
     rts
 
-;-----
+//-----
 
 .CF38:
     jsl _8282AC.82D3
@@ -695,7 +695,7 @@ capsule:
     sep #0x30
     rts
 
-;-----
+//-----
 
 .CF5D:
     lda.w 0x0B9C
@@ -729,7 +729,7 @@ capsule:
 .CF8F:
     rts
 
-;-----
+//-----
 
 .CF90:
     lda.w 0x0B9C
@@ -750,7 +750,7 @@ capsule:
     sep #0x20
     rts
 
-;-----
+//-----
 
 .CFB3:
     rep #0x21
@@ -774,7 +774,7 @@ capsule:
     sep #0x20
     rts
 
-;-----
+//-----
 
 .CFE1:
     lda.b 0x20
@@ -783,7 +783,7 @@ capsule:
     sta.b 0x20
     rts
 
-;-----
+//-----
 
 .CFEA:
     jsl 0x828321

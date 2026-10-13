@@ -1169,7 +1169,7 @@ sting_chameleao:
 .8D2E:
     rtl
 
-;-----
+//-----
 
 .8D2F:
     lda.b #0xA0
@@ -1205,7 +1205,7 @@ sting_chameleao:
     sep #0x20
     rts
 
-;-----
+//-----
 
 .8D79:
     ldx.b #0x00
@@ -1236,7 +1236,7 @@ sting_chameleao:
     stx.b 0x35
     rts
 
-;-----
+//-----
 
 .8DAB:
     php
@@ -1295,7 +1295,7 @@ sting_chameleao:
     plp
     rts
 
-;-----
+//-----
 
 .8E0F:
     php
@@ -1339,7 +1339,7 @@ sting_chameleao:
     plp
     rts
 
-;-----
+//-----
 
 .8E4F:
     jsl 0x84AC92
@@ -1391,7 +1391,7 @@ sting_chameleao:
     lda.b #0x00
     rts
 
-;-----
+//-----
 
 .8EA4:
     jsl 0x84AC92
@@ -1403,7 +1403,7 @@ sting_chameleao:
     sep #0x10
     rts
 
-;-----
+//-----
 
 .8EB9:
     rep #0x20

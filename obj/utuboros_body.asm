@@ -195,7 +195,7 @@ utuboros_body:
 .C4E4:
     rts
 
-;-----
+//-----
 
 .C4E5:
     php

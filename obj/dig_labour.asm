@@ -126,7 +126,7 @@ dig_labour:
 .CEE0:
     rts
 
-;-----
+//-----
 
 .CEE1:
     rep #0x10
@@ -184,7 +184,7 @@ dig_labour:
     sta.b 0x33
     rts
 
-;-----
+//-----
 
 .CF52:
     rep #0x20

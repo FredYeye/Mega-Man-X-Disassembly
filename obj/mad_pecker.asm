@@ -211,7 +211,7 @@ mad_pecker:
     sep #0x10
     rts
 
-;-----
+//-----
 
 .A951:
     rep #0x20

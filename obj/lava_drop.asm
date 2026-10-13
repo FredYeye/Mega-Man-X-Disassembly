@@ -101,7 +101,7 @@ lava_drop:
 .CA3E:
     rts
 
-;-----
+//-----
 
 .CA3F:
     rep #0x10

@@ -1,4 +1,4 @@
-batton_bone: ;also batton m-501
+batton_bone: // also batton m-501
     ldx.b 0x01
     jsr (.A105,X)
     lda.b 0x27
@@ -470,7 +470,7 @@ batton_bone: ;also batton m-501
 .A3AD:
     rts
 
-;-----
+//-----
 
 .A3AE:
     rep #0x20
@@ -490,7 +490,7 @@ batton_bone: ;also batton m-501
     stz.b 0x39
     rts
 
-;-----
+//-----
 
 .A3C8:
     rep #0x10
@@ -511,7 +511,7 @@ batton_bone: ;also batton m-501
     sep #0x30
     rts
 
-;-----
+//-----
 
 .A3EC:
     rep #0x20
@@ -566,7 +566,7 @@ batton_bone: ;also batton m-501
     lda.b #0x01
     rtl
 
-;-----
+//-----
 
 .A438:
     beq .A451
@@ -585,7 +585,7 @@ batton_bone: ;also batton m-501
 .A451:
     rts
 
-;-----
+//-----
 
 .A452:
     lda.b 0x0F

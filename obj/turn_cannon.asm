@@ -188,7 +188,7 @@ turn_cannon:
     sep #0x10
     rts
 
-;-----
+//-----
 
 .9A90:
     inc.w 0x0000,X
@@ -229,7 +229,7 @@ turn_cannon:
     sep #0x20
     rts
 
-;-----
+//-----
 
 .9ADB:
     inc.w 0x0000,X
@@ -284,7 +284,7 @@ turn_cannon:
     sep #0x20
     rts
 
-;-----
+//-----
 
 .9B3A:
     inc.w 0x0000,X

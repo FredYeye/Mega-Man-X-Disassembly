@@ -286,7 +286,7 @@ rangda_bangda_nose:
     sep #0x30
     rts
 
-;-----
+//-----
 
 .B40C:
     rep #0x10

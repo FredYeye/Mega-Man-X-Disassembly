@@ -196,7 +196,7 @@ electric_spark:
     sep #0x10
     rts
 
-;-----
+//-----
 
 .97A8:
     lda.b 0x2D

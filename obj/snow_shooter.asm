@@ -178,7 +178,7 @@ snow_shooter:
 .DFCC:
     rts
 
-;-----
+//-----
 
 .DFCD:
     rep #0x10

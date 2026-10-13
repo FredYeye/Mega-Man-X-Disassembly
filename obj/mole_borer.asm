@@ -215,7 +215,7 @@ mole_borer:
     jsl 0x828398
     rts
 
-;-----
+//-----
 
 .C0D4:
     jsr .C2DA
@@ -277,7 +277,7 @@ mole_borer:
 
     rts
 
-;-----
+//-----
 
 .C12F:
     stz.b 0x3D
@@ -319,7 +319,7 @@ mole_borer:
 .C179:
     rts
 
-;-----
+//-----
 
 .C17A:
     lda.b 0x32
@@ -367,7 +367,7 @@ mole_borer:
     inc.b 0x31
     rts
 
-;-----
+//-----
 
 .C1D5:
     stz.b 0x34
@@ -536,7 +536,7 @@ mole_borer:
     jsl _80B8D5
     rts
 
-;-----
+//-----
 
 .C2DA:
     phb
@@ -553,7 +553,7 @@ mole_borer:
     sep #0x30
     rts
 
-;-----
+//-----
 
 .C2F4:
     phx
@@ -571,7 +571,7 @@ mole_borer:
     sta.l 0x7FF200,X
     rts
 
-;-----
+//-----
 
 .C313:
     lda.b #0x03

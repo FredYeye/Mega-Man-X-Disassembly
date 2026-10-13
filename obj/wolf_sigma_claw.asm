@@ -407,7 +407,7 @@ wolf_sigma_claw:
     jsl _848EEA.8F07
     jml 0x8280B4
 
-;-----
+//-----
 
 .E841:
     lda.b 0x37
@@ -452,7 +452,7 @@ wolf_sigma_claw:
     sep #0x20
     rts
 
-;-----
+//-----
 
 .E880:
     jsl 0x828358

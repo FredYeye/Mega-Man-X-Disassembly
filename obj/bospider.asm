@@ -746,7 +746,7 @@ bospider:
     sta.w 0x1F7B
     jml 0x828398
 
-;-----
+//-----
 
 .E0B2:
     lda.b #0x2B
@@ -787,7 +787,7 @@ bospider:
     sep #0x20
     rts
 
-;-----
+//-----
 
 .E0EF:
     rep #0x20
@@ -879,7 +879,7 @@ bospider:
     sep #0x20
     rts
 
-;-----
+//-----
 
 .E17D:
     rep #0x30
@@ -915,7 +915,7 @@ bospider:
     sep #0x30
     rts
 
-;-----
+//-----
 
 .E1B2:
     rep #0x10
@@ -966,7 +966,7 @@ bospider:
 .E211:
     rts
 
-;-----
+//-----
 
 .E212:
     phb
@@ -986,7 +986,7 @@ bospider:
     sta.l 0x7FD070
     rts
 
-;-----
+//-----
 
 .E239:
     phb
@@ -1013,7 +1013,7 @@ bospider:
     sta.l 0x7FD073
     rts
 
-;-----
+//-----
 
 .E27C:
     ldx.w #0x00DE

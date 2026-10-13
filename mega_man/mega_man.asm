@@ -2785,7 +2785,7 @@ mega_man:
 .93A7:
     rts
 
-;-----
+//-----
 
 .93A8:
     sta.w 0x0000
@@ -2860,11 +2860,11 @@ mega_man:
     stz.b 0x59
     rts
 
-;-----
+//-----
 
 .942B:
     sta.w 0x0000
-    lda.l _809D9D.9E5E ;could this be a copy protection check?
+    lda.l _809D9D.9E5E // could this be a copy protection check?
     cmp.l .853A
     beq .943D
 
@@ -2929,7 +2929,7 @@ mega_man:
     stz.b 0x59
     rts
 
-;-----
+//-----
 
 .94A5:
     lda.b 0x59
@@ -3020,7 +3020,7 @@ mega_man:
     sep #0x20
     rts
 
-;-----
+//-----
 
 .9536:
     sta.w 0x0000
@@ -3045,7 +3045,7 @@ mega_man:
     jsl _848EEA
     rts
 
-;-----
+//-----
 
 .9560:
     ldx.b 0x50
@@ -3063,7 +3063,7 @@ mega_man:
     jsl _848EEA
     rts
 
-;-----
+//-----
 
 .9576:
     lda.b 0x37
@@ -3082,7 +3082,7 @@ mega_man:
 .9587:
     rts
 
-;-----
+//-----
 
 .9588:
     ldx.b #0x00
@@ -3102,7 +3102,7 @@ mega_man:
     stz.w 0x0C79
     rts
 
-;-----
+//-----
 
 .95AA:
     ldx.b #0x66
@@ -3122,7 +3122,7 @@ mega_man:
     stz.w 0x0C79
     rts
 
-;-----
+//-----
 
 .95CC:
     sep #0x30
@@ -3132,7 +3132,7 @@ mega_man:
     stz.b 0x03
     rts
 
-;-----
+//-----
 
 .95D7:
     sep #0x30
@@ -3142,7 +3142,7 @@ mega_man:
     stz.b 0x03
     rts
 
-;-----
+//-----
 
 .95E2:
     sep #0x30
@@ -3216,7 +3216,7 @@ mega_man:
     sep #0x20
     jmp 0x81992A
 
-;-----
+//-----
 
 .9658:
     sep #0x30
@@ -3227,7 +3227,7 @@ mega_man:
     sta.b 0x2F
     rts
 
-;-----
+//-----
 
 .9665:
     sep #0x30
@@ -3245,7 +3245,7 @@ mega_man:
     stz.b 0x2F
     rts
 
-;-----
+//-----
 
 .967C:
     sep #0x30
@@ -3255,7 +3255,7 @@ mega_man:
     stz.b 0x03
     rts
 
-;-----
+//-----
 
 .9687:
     sep #0x30
@@ -3269,7 +3269,7 @@ mega_man:
     stz.b 0x03
     rts
 
-;-----
+//-----
 
 .9699:
     sep #0x30
@@ -3292,7 +3292,7 @@ mega_man:
     stz.b 0x03
     rts
 
-;-----
+//-----
 
 .96B9:
     sep #0x30
@@ -3301,7 +3301,7 @@ mega_man:
     stz.b 0x03
     rts
 
-;-----
+//-----
 
 .96C2:
     sep #0x30
@@ -3311,7 +3311,7 @@ mega_man:
 .96CA:
     rts
 
-;-----
+//-----
 
 .96CB:
     sep #0x30
@@ -3324,7 +3324,7 @@ mega_man:
     sta.b 0x30
     rts
 
-;-----
+//-----
 
 .96DC:
     sep #0x30
@@ -3333,7 +3333,7 @@ mega_man:
     stz.b 0x03
     rts
 
-;-----
+//-----
 
 .96E5:
     sep #0x30
@@ -3342,7 +3342,7 @@ mega_man:
     stz.b 0x03
     rts
 
-;-----
+//-----
 
 .96EE:
     sep #0x30
@@ -3351,7 +3351,7 @@ mega_man:
     stz.b 0x03
     rts
 
-;-----
+//-----
 
 .96F7:
     sep #0x30
@@ -3360,7 +3360,7 @@ mega_man:
     stz.b 0x03
     rts
 
-;-----
+//-----
 
 .9700:
     sep #0x30
@@ -3369,7 +3369,7 @@ mega_man:
     stz.b 0x03
     rts
 
-;-----
+//-----
 
 .9709:
     sep #0x30
@@ -3378,7 +3378,7 @@ mega_man:
     stz.b 0x03
     rts
 
-;-----
+//-----
 
 .9712:
     lda.w ram.upgrades
@@ -3447,7 +3447,7 @@ mega_man:
 .976C:
     rts
 
-;-----
+//-----
 
 .976D:
     lda.b 0x02
@@ -3474,7 +3474,7 @@ mega_man:
 .9788:
     rts
 
-;-----
+//-----
 
 .9789:
     lda.w ram.upgrades
@@ -3521,7 +3521,7 @@ mega_man:
     tsb.b 0x7E
     jmp .96B9
 
-;-----
+//-----
 
 .97C8:
     lda.b 0x7D
@@ -3697,7 +3697,7 @@ mega_man:
 .98D4:
     rts
 
-;-----
+//-----
 
 .98D5:
     lda.b 0x02
@@ -3723,7 +3723,7 @@ mega_man:
 .98F1:
     rts
 
-;-----
+//-----
 
 .98F2:
     lda.w ram.upgrades
@@ -3753,7 +3753,7 @@ mega_man:
 .9929:
     rts
 
-;-----
+//-----
 
 .992A:
     lda.b 0x02
@@ -3776,7 +3776,7 @@ mega_man:
     sep #0x20
     lda.w 0x86B9B8,X
     sta.b 0x1E
-    lda.l .8533 ;copy protection?
+    lda.l .8533 // copy protection?
     cmp.l .966A
     beq .995F
 
@@ -3785,7 +3785,7 @@ mega_man:
 .995F:
     rts
 
-;-----
+//-----
 
 .9960:
     jsl 0x849ACD
@@ -3803,7 +3803,7 @@ mega_man:
     sep #0x20
     rts
 
-;-----
+//-----
 
 .9978:
     php
@@ -3824,7 +3824,7 @@ mega_man:
     plp
     rts
 
-;-----
+//-----
 
 .9990:
     jsr .local
@@ -3865,7 +3865,7 @@ mega_man:
 .99C8:
     rts
 
-;-----
+//-----
 
 .99C9:
     lda.w 0x1F23
@@ -3968,7 +3968,7 @@ mega_man:
 .9A65:
     rts
 
-;-----
+//-----
 
 .9A66:
     lda.w 0x1F9A
@@ -4001,7 +4001,7 @@ mega_man:
 .9A88:
     rts
 
-;-----
+//-----
 
 .9A89:
     ldy.b #0x16
@@ -4029,7 +4029,7 @@ mega_man:
     sep #0x30
     rts
 
-;-----
+//-----
 
 .9AC2:
     asl.b 0x72
@@ -4086,7 +4086,7 @@ mega_man:
     sep #0x30
     rts
 
-;-----
+//-----
 
 .9B23:
     rep #0x10
@@ -4130,7 +4130,7 @@ mega_man:
     sep #0x30
     rts
 
-;-----
+//-----
 
 .9B71:
     lda.b 0x70
@@ -4172,7 +4172,7 @@ mega_man:
     sep #0x30
     rts
 
-;-----
+//-----
 
 .9BB5:
     lda.b 0x70
@@ -4219,7 +4219,7 @@ mega_man:
     sep #0x30
     rts
 
-;-----
+//-----
 
 .9C0B:
     lda.b 0x70
@@ -4257,7 +4257,7 @@ mega_man:
     sep #0x30
     rts
 
-;-----
+//-----
 
 .9C4D:
     stz.b 0x29
@@ -4274,7 +4274,7 @@ mega_man:
 .9C65:
     rts
 
-;-----
+//-----
 
 .9C66:
     sta.w 0x0000
@@ -4292,7 +4292,7 @@ mega_man:
     sep #0x10
     rts
 
-;-----
+//-----
 
 .9C85:
     rep #0x30
@@ -4336,7 +4336,7 @@ mega_man:
     inc.w 0x00A1
     rts
 
-;-----
+//-----
 
 .9CD3:
     sep #0x20
@@ -4364,7 +4364,7 @@ mega_man:
     sep #0x10
     rts
 
-;-----
+//-----
 
 .9D00:
     rep #0x21
@@ -4382,7 +4382,7 @@ mega_man:
     sta.b 0x06
     rts
 
-;-----
+//-----
 
 .9D1A:
     bit.b 0x7E
@@ -4415,7 +4415,7 @@ mega_man:
     lda.b #0x00
     rts
 
-;-----
+//-----
 
 .9D3D:
     lda.b 0x33

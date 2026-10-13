@@ -192,7 +192,7 @@ sea_attacker:
     jsl 0x84A37F
     rts
 
-;-----
+//-----
 
 .A2E0:
     rep #0x20
@@ -239,7 +239,7 @@ sea_attacker:
     sep #0x20
     rts
 
-;-----
+//-----
 
 .A324:
     rep #0x20
