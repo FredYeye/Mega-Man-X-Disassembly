@@ -8,7 +8,7 @@ horming_torpedo:
     lda.b #0x02
     sta.b 0x01
     jsl _83917D
-    ldx.w 0x1F7A
+    ldx.w ram.current_stage
     lda.w 0x0BB9
     and.b #0x70
     ora.b #0x06

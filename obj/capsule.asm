@@ -5,7 +5,7 @@ capsule:
 .CA80: d16[.CA86, .CB16, .CE4F]
 
 .CA86:
-    ldx.w 0x1F7A
+    ldx.w ram.current_stage
     cpx.b #0x03
     bne .CAB9
 
@@ -19,7 +19,7 @@ capsule:
 
     lda.b #0x05
     sta.w 0x1F7E
-    lda.w 0x1F99
+    lda.w ram.upgrades
     and.w 0x1F9C
     cmp.b #0xFF
     bne .CAC4
@@ -37,7 +37,7 @@ capsule:
 .CAB9:
     ldy.w 0x86D365,X
     lda 0x86D3D8,Y
-    and.w 0x1F99
+    and.w ram.upgrades
     beq .CAC8
 
 .CAC4:
@@ -58,7 +58,7 @@ capsule:
     lda.b #0x02
     sta.b 0x02
     rep #0x20
-    lda.w 0x1F7A
+    lda.w ram.current_stage
     and.w #0x00FF
     asl
     asl
@@ -72,7 +72,7 @@ capsule:
     lda.w #0xB2E0
     sta.b 0x31
     sep #0x20
-    lda.w 0x1F7A
+    lda.w ram.current_stage
     cmp.b #0x02
     beq .CB10
 
@@ -129,7 +129,7 @@ capsule:
     lda.w #0x2C00
     sta.b 0x29
     sep #0x20
-    lda.w 0x1F7A
+    lda.w ram.current_stage
     cmp.b #0x02
     bne .CB8B
 
@@ -141,7 +141,7 @@ capsule:
     lda.b #0x00
     jsl _848EEA.8F07
 .CB97:
-    lda.w 0x1F7A
+    lda.w ram.current_stage
     cmp.b #0x05
     beq .CBA4
 
@@ -191,7 +191,7 @@ capsule:
     sta.l 0x7FF004
     lda.w 0x1E5C
     sta.l 0x7FF006
-    lda.w 0x1F7A
+    lda.w ram.current_stage
     and.w #0x00FF
     asl
     asl
@@ -218,7 +218,7 @@ capsule:
 
 .CC35:
     rep #0x20
-    lda.w 0x1F7A
+    lda.w ram.current_stage
     and.w #0x00FF
     asl
     asl
@@ -460,7 +460,7 @@ capsule:
     dec.b 0x3C
     bne .CE2B
 
-    ldx.w 0x1F7A
+    ldx.w ram.current_stage
     lda.w 0x86D36E,X
     clc
     adc.b 0x3B
@@ -607,7 +607,7 @@ capsule:
     sta.w 0x000A,X
     lda.w 0x0000
     sta.w 0x0003,X
-    lda.w 0x1F7A
+    lda.w ram.current_stage
     and.b #0xFF
     tay
     lda 0x86D365,Y
@@ -754,7 +754,7 @@ capsule:
 
 .CFB3:
     rep #0x21
-    lda.w 0x1F7A
+    lda.w ram.current_stage
     and.w #0x00FF
     asl
     asl

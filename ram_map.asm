@@ -1,23 +1,42 @@
 struct ram {
-    unk1:       d08[0x000->0x0700],
-    oam:        oam,        // 0700
-    unk2:       d08[0x0920->0x0BA6],
-    rng_state:  d16,        // 0BA6
-    mega_man:   mega_man,   // 0BA8
-    obj1:       obj3[3],    // 0C38
-    obj2:       obj3[12],   // 0C98
-    ride_armor: ride_armor, // 0E18
-    objects:    obj[15],    // 0E68
-    weapons:    obj[8],     // 1228
-    obj3:       obj[8],     // 1428
-    obj4:       obj2[16],   // 1628
-    obj5:       obj3[15],   // 1928
-    obj6:       obj4[16],   // 1D08
-    unk3:       d08[0x1E08->0x1F80],
-    lives:      d08,        // 1F80
-    unk4:       d08[0x1F81->0x1F99],
-    upgrades:   d08,        // 1F99
-    max_hp:     d08,        // 1F9A
+    unk1:          d08[0x000->0x0300],
+    palette:       d16[0x100],   // 0300
+    dma_queue:     dma_data[32], // 0500
+    dma_queue2:    dma_data2,    // 0600
+    oam:           oam,          // 0700
+    unk2:          d08[0x0920->0x0BA6],
+    rng_state:     d16,          // 0BA6
+    mega_man:      mega_man,     // 0BA8
+    obj1:          obj3[3],      // 0C38
+    obj2:          obj3[12],     // 0C98
+    ride_armor:    ride_armor,   // 0E18
+    objects:       obj[15],      // 0E68
+    weapons:       obj[8],       // 1228
+    obj3:          obj[8],       // 1428
+    obj4:          obj2[16],     // 1628
+    obj5:          obj3[15],     // 1928
+    obj6:          obj4[16],     // 1D08
+    unk3:          d08[0x1E08->0x1F7A],
+    current_stage: d08,          // 1F7A
+    unk4:          d08[0x1F7B->0x1F80],
+    lives:         d08,          // 1F80
+    unk5:          d08[0x1F81->0x1F99],
+    upgrades:      d08,          // 1F99
+    max_hp:        d08,          // 1F9A
+}
+
+struct dma_data {
+    vram_addr_mode: d08,
+    vram_dst: d16,
+    byte_count: d16,
+    src: d24,
+}
+
+struct dma_data2 {
+    vram_addr_mode: d08,
+    vram_dst: d16,
+    byte_count: d08,
+    transfer_data: d08[0xFC], // variable length (= byte_count), here set so it fills up the ram map
 }
 
 struct oam {

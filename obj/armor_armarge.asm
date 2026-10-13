@@ -1121,7 +1121,7 @@ armor_armarge:
     jsl 0x84A66D
     bpl .B924
 
-    lda.w 0x1F7A
+    lda.w ram.current_stage
     cmp.b #0x09
     bcc .B920
 

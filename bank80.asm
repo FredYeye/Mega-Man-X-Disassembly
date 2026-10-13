@@ -508,17 +508,17 @@ _8082C8:
     sta.w snes_regs.dmap0
     ldx.b #0x00
 .8342:
-    lda.w 0x0500,X
+    lda.w ram.dma_queue.vram_addr_mode,X
     sta.w snes_regs.vmain
     rep #0x21
-    lda.w 0x0501,X
+    lda.w ram.dma_queue.vram_dst,X
     sta.w snes_regs.vmaddl
-    lda.w 0x0503,X
+    lda.w ram.dma_queue.byte_count,X
     sta.w snes_regs.das0l
-    lda.w 0x0505,X
+    lda.w ram.dma_queue.src,X
     sta.w snes_regs.a1t0l
     sep #0x20
-    lda.w 0x0507,X
+    lda.w ram.dma_queue.src+2,X
     sta.w snes_regs.a1b0
     lda.b #0x01
     sta.w snes_regs.mdmaen
@@ -946,13 +946,13 @@ _80852C:
     sta.b 0xCB
     sta.b 0xCC
     sta.b 0xCD
-    stz.w 0x1F7A
+    stz.w ram.current_stage
     jmp _808C37
 
 //-----
 
 _808695:
-    lda.w 0x1F7A
+    lda.w ram.current_stage
     bne .86AE
 
     lda.w 0x00A7
@@ -960,7 +960,7 @@ _808695:
     and.b #0xF0
     beq .86AE
 
-    sta.w 0x1F7A
+    sta.w ram.current_stage
     jsr _808850.8862
     stz.b 0xC0
     lda.b #0x01
@@ -1656,16 +1656,16 @@ _808A70:
 
     jsr _808AD3
     lda.b 0x00
-    sta.w 0x0503,X
+    sta.w ram.dma_queue.byte_count,X
     lda.b 0x14
-    sta.w 0x0501,X
+    sta.w ram.dma_queue.vram_dst,X
     lda.b 0x18
-    sta.w 0x0505,X
+    sta.w ram.dma_queue.src,X
     sep #0x20
     lda.b 0x1A
-    sta.w 0x0507,X
+    sta.w ram.dma_queue.src+2,X
     lda.b #0x80
-    sta.w 0x0500,X
+    sta.w ram.dma_queue.vram_addr_mode,X
     bcc .8AC8
 
     clc
@@ -1674,17 +1674,17 @@ _808A70:
     tax
     rep #0x21
     lda.b 0x02
-    sta.w 0x0503,X
+    sta.w ram.dma_queue.byte_count,X
     lda.b 0x1C
-    sta.w 0x0501,X
+    sta.w ram.dma_queue.vram_dst,X
     lda.w #0x8000
-    sta.w 0x0505,X
+    sta.w ram.dma_queue.src,X
     sep #0x20
     lda.b 0x1A
     inc
-    sta.w 0x0507,X
+    sta.w ram.dma_queue.src+2,X
     lda.b #0x80
-    sta.w 0x0500,X
+    sta.w ram.dma_queue.vram_addr_mode,X
 .8AC8:
     txa
     adc.b #0x08
@@ -1891,16 +1891,16 @@ _808BCD:
 .8BFB:
     rep #0x20
     lda.b 0x14
-    sta.w 0x0503,X
+    sta.w ram.dma_queue.byte_count,X
     lda.b 0x18
-    sta.w 0x0501,X
+    sta.w ram.dma_queue.vram_dst,X
     lda.b 0x1C
-    sta.w 0x0505,X
+    sta.w ram.dma_queue.src,X
     sep #0x20
     lda.b #0x80
-    sta.w 0x0500,X
+    sta.w ram.dma_queue.vram_addr_mode,X
     lda.b 0x1E
-    sta.w 0x0507,X
+    sta.w ram.dma_queue.src+2,X
     txa
     clc
     adc.b #0x08
@@ -2467,8 +2467,8 @@ _808C37:
     sep #0x30
 .904A:
     lda.l 0x7F840B
-    sta.w 0x1F7A
-    lda.w 0x1F7A
+    sta.w ram.current_stage
+    lda.w ram.current_stage
     asl
     clc
     adc.b #0x04
@@ -2483,9 +2483,9 @@ _808C37:
 
     lda.b #0x02
     sta.b 0x3A
-    stz.w 0x1F99
+    stz.w ram.upgrades
     lda.b #0x0A
-    sta.w 0x1F9A
+    sta.w ram.max_hp
     lda.b #0x00
     sta.l 0x7F8400
     lda.l 0x7F840C
@@ -2669,7 +2669,7 @@ _808C37:
     jsr _80DB53
     jsr _808BB4
     jsr _808A2E
-    stz.w 0x1F99
+    stz.w ram.upgrades
     jsr _80B12B
     jsr _809431
     jsr _80941D
@@ -3142,7 +3142,7 @@ _8094BA:
 .94CC: d16[.94D0, .9528]
 
 .94D0:
-    stz.w 0x1F7A
+    stz.w ram.current_stage
     stz.w 0x1F7B
     stz.w 0x1F7C
     stz.w 0x1F7D
@@ -3152,7 +3152,7 @@ _8094BA:
     sta.w ram.lives
     lda.b #0x10
     sta.w ram.max_hp
-    stz.w 0x1F99
+    stz.w ram.upgrades
     stz.w 0x1F9B
     stz.w 0x1F82
     stz.w 0x1F9C
@@ -3194,8 +3194,8 @@ _8094BA:
     lda.w 0x1F9B
     bne .955F
 
-    stz.w 0x1F7A
-    stz.w 0x1F99
+    stz.w ram.current_stage
+    stz.w ram.upgrades
     lda.b #0x02
     sta.b 0xD2
     stz.b 0xD3
@@ -3219,7 +3219,7 @@ _8094BA:
 
 .958F:
     stz.w 0x1FA0
-    ldx.w 0x1F7A
+    ldx.w ram.current_stage
     bne .959F
 
 .9597:
@@ -3236,7 +3236,7 @@ _8094BA:
     bcs .9597
 
     jsr _809FEA
-    ldx.w 0x1F7A
+    ldx.w ram.current_stage
     and.w 0x8688CD,X
     bne .9597
 
@@ -3266,22 +3266,22 @@ _8094BA:
     jsr _808099.8100
     ldy.b #0xA2
     jsl _828000.8011
-    lda.w 0x1F7A
+    lda.w ram.current_stage
     asl
     clc
     adc.b #0x2E
     tay
     jsr _80B2FF
     jsr _808099.8100
-    lda.w 0x1F7A
+    lda.w ram.current_stage
     clc
     adc.b #0x0D
-    sta.w 0x1F7A
+    sta.w ram.current_stage
     jsr _80BAD5
-    lda.w 0x1F7A
+    lda.w ram.current_stage
     clc
     adc.b #0xF3
-    sta.w 0x1F7A
+    sta.w ram.current_stage
     rep #0x20
     stz.w 0x1E4D
     stz.w 0x1E50
@@ -3306,20 +3306,20 @@ _8094BA:
     stz.w 0x00CC
     stz.w 0x00CD
     stz.w 0x1F08
-    lda.w 0x1F7A
+    lda.w ram.current_stage
     clc
     adc.b #0x0D
-    sta.w 0x1F7A
+    sta.w ram.current_stage
     jsr _80B085.local
 .966A:
     jsr _808099.8100
     lda.w 0x0040
     bne .966A
 
-    lda.w 0x1F7A
+    lda.w ram.current_stage
     clc
     adc.b #0xF3
-    sta.w 0x1F7A
+    sta.w ram.current_stage
     jsr _80A002
     rep #0x10
     ldx.w #0x0050
@@ -3345,7 +3345,7 @@ _8094BA:
     sta.w 0x1973
     inc
     sta.w 0x1953
-    ldx.w 0x1F7A
+    ldx.w ram.current_stage
     lda.w 0x8688D6,X
     sta.w 0x1993
     lda.b #0x02
@@ -3430,7 +3430,7 @@ _8094BA:
     jsr _80A013
     inc.w 0x1988
     stz.w 0x1989
-    ldx.w 0x1F7A
+    ldx.w ram.current_stage
     lda.w 0x8688D6,X
     sta.w 0x1993
     lda.b #0x04
@@ -3531,7 +3531,7 @@ _8094BA:
     sep #0x20
     lda.b #0x20
     jsr _808850.8874
-    lda.w 0x1F7A
+    lda.w ram.current_stage
     clc
     adc.b #0x37
     jsr _8089CA
@@ -3546,7 +3546,7 @@ _8094BA:
     sta.w 0x1932
     lda.b #0x33
     sta.w 0x19D2
-    ldx.w 0x1F7A
+    ldx.w ram.current_stage
     lda.w 0x8688D6,X
     inc
     sta.w 0x1933
@@ -3658,7 +3658,7 @@ _8094BA:
     ldy.b #0x20
     jsr _80B2FF
     jsr _808099.8100
-    lda.w 0x1F7A
+    lda.w ram.current_stage
     asl
     clc
     adc.b #0x04
@@ -3748,7 +3748,7 @@ _8094BA:
     lda.b #0x02
     sta.b 0xD3
     stz.b 0xD4
-    ldx.w 0x1F7A
+    ldx.w ram.current_stage
     lda.w 0x8688B0,X
     ldx.w 0x1F7F
     beq .9A16
@@ -4042,7 +4042,7 @@ _8094BA:
     bvs .9BF7
 
     lda.b #0x09
-    sta.w 0x1F7A
+    sta.w ram.current_stage
     lda.b #0x40
     tsb.w 0x1F7C
     stz.w 0x1F08
@@ -4059,7 +4059,7 @@ _8094BA:
     jsr _808BB4
     jsr _808A2E
     jsr _808099.8100
-    lda.w 0x1F7A
+    lda.w ram.current_stage
     asl
     clc
     adc.b #0x04
@@ -4090,7 +4090,7 @@ _8094BA:
     jsr _80A027
     lda.b #0x01
     sta.w 0x1F7F
-    stz.w 0x1F7A
+    stz.w ram.current_stage
     lda.b #0x02
     sta.b 0xD2
     lda.b #0x16
@@ -4175,7 +4175,7 @@ _8094BA:
     jsr _80897E
     stz.w 0x0BA1
     lda.b #0x08
-    sta.w 0x1F7A
+    sta.w ram.current_stage
     stz.w 0x1F31
     stz.w 0x1F3B
     stz.b 0xD2
@@ -4255,7 +4255,7 @@ _809D9D:
     jsr _80B12B
     ldy.b #0x12
     jsl _828000.8011
-    lda.w 0x1F7A
+    lda.w ram.current_stage
     asl
     clc
     adc.b #0x60
@@ -4273,7 +4273,7 @@ _809D9D:
     jsr _80B582
     jsr _80B582.B58B
     jsr _808099.8100
-    lda.w 0x1F7A
+    lda.w ram.current_stage
     cmp.b #0x05
     bne .9E1F
 
@@ -5213,7 +5213,7 @@ _80A42A:
 //-----
 
 _80A45B:
-    lda.w 0x1F99
+    lda.w ram.upgrades
     and.b #0x05
     lsr
     bcc .A465
@@ -5241,22 +5241,22 @@ _80A45B:
 .A48C:
     rep #0x20
     lda.w 0x0002
-    sta.w 0x0501,X
+    sta.w ram.dma_queue.vram_dst,X
     clc
     adc.w #0x0020
     sta.w 0x0002
     lda.w #0x0008
-    sta.w 0x0503,X
+    sta.w ram.dma_queue.byte_count,X
     lda.w 0x0000
-    sta.w 0x0505,X
+    sta.w ram.dma_queue.src,X
     clc
     adc.w #0x0008
     sta.w 0x0000
     sep #0x20
     lda.b #0x80
-    sta.w 0x0500,X
+    sta.w ram.dma_queue.vram_addr_mode,X
     lda.b #0x86
-    sta.w 0x0507,X
+    sta.w ram.dma_queue.src+2,X
     txa
     clc
     adc.b #0x08
@@ -5508,7 +5508,7 @@ _80A637:
     jsr _80B2FF
     jsr _808099.8100
     lda.b #0x23
-    sta.w 0x1F7A
+    sta.w ram.current_stage
     jsr _80BAD5
     rep #0x20
     lda.w #0x0100
@@ -5539,7 +5539,7 @@ _80A637:
     stz.b 0xCD
     stz.w 0x1F08
     lda.b #0x23
-    sta.w 0x1F7A
+    sta.w ram.current_stage
     jsr _80B085.local
 .A6E2:
     jsr _808099.8100
@@ -5766,7 +5766,7 @@ _80A637:
     jsr _80B2FF
     jsr _808099.8100
     lda.b #0x24
-    sta.w 0x1F7A
+    sta.w ram.current_stage
     jsr _80BAD5
     rep #0x20
     stz.w 0x1E4D
@@ -6286,25 +6286,25 @@ _80ABAE:
     ldy.b #0x54
     jsr _80B2FF
     jsr _808099.8100
-    lda.w 0x1F7A
+    lda.w ram.current_stage
     asl
     clc
     adc.b #0x56
     tay
     jsr _80B2FF
     jsr _808099.8100
-    lda.w 0x1F7A
+    lda.w ram.current_stage
     clc
     adc.b #0x1A
-    sta.w 0x1F7A
+    sta.w ram.current_stage
     jsr _80BAD5
-    lda.w 0x1F7A
+    lda.w ram.current_stage
     sec
     sbc.b #0x1A
-    sta.w 0x1F7A
+    sta.w ram.current_stage
     rep #0x20
-    lda.w 0x1F99
-    bit.w #0x0002
+    lda.w ram.upgrades
+    bit.w #upgrade.arm
     beq .AC57
 
     lda.w #0x006A
@@ -6337,20 +6337,20 @@ _80ABAE:
     stz.w 0x00CC
     stz.w 0x00CD
     stz.w 0x1F08
-    lda.w 0x1F7A
+    lda.w ram.current_stage
     clc
     adc.b #0x1A
-    sta.w 0x1F7A
+    sta.w ram.current_stage
     jsr _80B085.local
 .AC9F:
     jsr _808099.8100
     lda.w 0x0040
     bne .AC9F
 
-    lda.w 0x1F7A
+    lda.w ram.current_stage
     clc
     adc.b #0xE6
-    sta.w 0x1F7A
+    sta.w ram.current_stage
     jsr _80895C
     pea 0x0E68
     pld
@@ -6496,7 +6496,7 @@ _80ABAE:
 
     lda.b #0x0E
     sta.b 0x02
-    lda.w 0x1F7A
+    lda.w ram.current_stage
     clc
     adc.b #0x02
     ora.b #0xC0
@@ -6528,7 +6528,7 @@ _80ABAE:
     lda.b #0x1E
     sta.b 0x02
     rep #0x31
-    lda.w 0x1F7A
+    lda.w ram.current_stage
     and.w #0x00FF
     asl
     adc.w #0x01AE
@@ -6635,7 +6635,7 @@ _80ABAE:
     bcc .AEE2
 
     lda.b #0x14
-    ldx.w 0x1F7A
+    ldx.w ram.current_stage
     cpx.b #0x04
     bne .AEDB
 
@@ -6743,7 +6743,7 @@ _80AF5D:
 
 _80AF7E:
     rep #0x10
-    lda.w 0x1F99
+    lda.w ram.upgrades
     and.b #0x0F
     sta.w 0x0000
     ldy.w #0x0003
@@ -6791,9 +6791,9 @@ _80AF7E:
 
 _80AFD4:
     sep #0x20
-    lda.w 0x1F7A
+    lda.w ram.current_stage
     sta.b 0x33
-    stz.w 0x1F7A
+    stz.w ram.current_stage
     stz.w 0x0BA9
     lda.b #0x10
     tsb.w 0x0C26
@@ -6814,7 +6814,7 @@ _80AFD4:
     lda.b #0xFF
     sta.w 0x1F86,X
     lda.b 0x33
-    sta.w 0x1F7A
+    sta.w ram.current_stage
     lda.w 0x0BDB
     clc
     adc.b #0x3E
@@ -6858,7 +6858,7 @@ _80B054:
     bpl .B079
 
     rep #0x31
-    lda.w 0x1F7A
+    lda.w ram.current_stage
     and.w #0x00FF
     asl
     adc.w #0x01C0
@@ -6913,7 +6913,7 @@ _80B0A5:
     and.w #0x00FF
     asl
     sta.b 0x00
-    lda.w 0x1F7A
+    lda.w ram.current_stage
     and.w #0x00FF
     asl
     tax
@@ -7094,7 +7094,7 @@ _80B16B:
     iny
 .B1C9:
     lda.b #0x80
-    sta.w 0x0500,X
+    sta.w ram.dma_queue.vram_addr_mode,X
     lda 0x0000,Y
     lsr
     clc
@@ -7107,28 +7107,28 @@ _80B16B:
     asl
     asl
     asl
-    sta.w 0x0503,X
+    sta.w ram.dma_queue.byte_count,X
     sta.b 0x00
     lda.b 0xED
     clc
     adc.b 0xEF
-    sta.w 0x0505,X
+    sta.w ram.dma_queue.src,X
     lda.b 0xEF
     clc
     adc.b 0x00
     sta.b 0xEF
     sep #0x20
     lda.b #0x7F
-    sta.w 0x0507,X
+    sta.w ram.dma_queue.src+2,X
     lda.b 0x48
-    sta.w 0x0501,X
+    sta.w ram.dma_queue.vram_dst,X
     lda 0x0001,Y
     bmi .B222
 
     and.b #0x7F
     clc
     adc.b 0x49
-    sta.w 0x0502,X
+    sta.w ram.dma_queue.vram_dst+1,X
     rep #0x21
     iny
     iny
@@ -7144,7 +7144,7 @@ _80B16B:
     and.b #0x7F
     clc
     adc.b 0x49
-    sta.w 0x0502,X
+    sta.w ram.dma_queue.vram_dst+1,X
     txa
     adc.b #0x08
     sta.b 0xA3
@@ -7331,29 +7331,29 @@ _80B2FF:
     lda (0x10),Y
     iny
     iny
-    sta.w 0x0503,X
+    sta.w ram.dma_queue.byte_count,X
     sta.b 0x08
     lda (0x10),Y
     iny
     iny
     sta.b 0x04
     and.w #0x7FFF
-    sta.w 0x0501,X
+    sta.w ram.dma_queue.vram_dst,X
     lda.w #0x0000
     clc
     adc.b 0x06
     clc
     adc.b 0x02
-    sta.w 0x0505,X
+    sta.w ram.dma_queue.src,X
     lda.b 0x02
     clc
     adc.b 0x08
     sta.b 0x02
     sep #0x20
     lda.b #0x7F
-    sta.w 0x0507,X
+    sta.w ram.dma_queue.src+2,X
     lda.b #0x80
-    sta.w 0x0500,X
+    sta.w ram.dma_queue.vram_addr_mode,X
     txa
     clc
     adc.b #0x08
@@ -7435,29 +7435,29 @@ _80B3A1:
     lda (0xF2),Y
     iny
     iny
-    sta.w 0x0503,X
+    sta.w ram.dma_queue.byte_count,X
     sta.b 0x08
     lda (0xF2),Y
     iny
     iny
     sta.b 0x04
     and.w #0x7FFF
-    sta.w 0x0501,X
+    sta.w ram.dma_queue.vram_dst,X
     lda.w #0x0000
     clc
     adc.b 0x06
     clc
     adc.b 0x02
-    sta.w 0x0505,X
+    sta.w ram.dma_queue.src,X
     lda.b 0x02
     clc
     adc.b 0x08
     sta.b 0x02
     sep #0x20
     lda.b #0x7F
-    sta.w 0x0507,X
+    sta.w ram.dma_queue.src+2,X
     lda.b #0x80
-    sta.w 0x0500,X
+    sta.w ram.dma_queue.vram_addr_mode,X
     txa
     clc
     adc.b #0x08
@@ -7508,7 +7508,7 @@ _80B44A:
     and.w #0x00FF
     asl
     sta.b 0x00
-    lda.w 0x1F7A
+    lda.w ram.current_stage
     and.w #0x00FF
     asl
     tax
@@ -7608,7 +7608,7 @@ _80B4F1:
     php
     rep #0x30
     stz.b 0x02
-    lda.w 0x1F7A
+    lda.w ram.current_stage
     and.w #0xFF
     cmp.w #0x04
     beq .B51C
@@ -7636,7 +7636,7 @@ _80B4F1:
     clc
     adc.b 0x02
     sta.b 0x00
-    lda.w 0x1F7A
+    lda.w ram.current_stage
     and.w #0x00FF
     asl
     tay
@@ -8497,10 +8497,10 @@ _80BAD5:
     php
     sep #0x30
     jsr _80BC59
-    lda.w 0x1F7A
+    lda.w ram.current_stage
     asl
     clc
-    adc.w 0x1F7A
+    adc.w ram.current_stage
     tax
     rep #0x20
     stz.b 0xD7
@@ -8528,10 +8528,10 @@ _80BAD5:
     jsr _80BB68
     jsr _80BC70
     sep #0x30
-    lda.w 0x1F7A
+    lda.w ram.current_stage
     asl
     clc
-    adc.w 0x1F7A
+    adc.w ram.current_stage
     tax
     rep #0x20
     inc.b 0xD7
@@ -8729,7 +8729,7 @@ _80BC59:
 //-----
 
 _80BC70:
-    lda.w 0x1F7A
+    lda.w ram.current_stage
     and.w #0xFF
     cmp.w #0x02
     beq .BCA9
@@ -8809,11 +8809,11 @@ _80BCCF:
     stz.b 0x14
     jsr _80C13A
     jsr _80C1FD
-    lda.w 0x1F7A
+    lda.w ram.current_stage
     bne .BD1D
 
     lda.b #0x01
-    sta.w 0x1F7A
+    sta.w ram.current_stage
 .BD1D:
     ldx.b 0x1E
     beq .BD23
@@ -9287,7 +9287,7 @@ _80BFE6:
     bra .C057
 
 .C057:
-    sta.w 0x1F7A
+    sta.w ram.current_stage
     inc.b 0x01
     inc.b 0x01
     stz.b 0x02
@@ -10085,7 +10085,7 @@ _80C58E:
     jsr _80B2FF
     jsr _808099.8100
     rep #0x20
-    lda.w 0x1F7A
+    lda.w ram.current_stage
     and.w #0xFF
     asl
     adc.w #0x04
@@ -10147,7 +10147,7 @@ _80C615:
     ldy.b #0x00
     jsr _808A70
     jsr _808099.8100
-    lda.w 0x1F7A
+    lda.w ram.current_stage
     asl
     clc
     adc.b #0x60
@@ -10244,7 +10244,7 @@ _80C693:
 
     lda.w 0x0BCF
     and.b #0x7F
-    cmp.w 0x1F9A
+    cmp.w ram.max_hp
     beq .C70D
 
     sec
@@ -10308,15 +10308,15 @@ _80C737:
     tax
     lda.w 0x0BCF
     and.b #0x7F
-    cmp.w 0x1F9A
+    cmp.w ram.max_hp
     beq .C768
 
     clc
     adc.b 0x11
-    cmp.w 0x1F9A
+    cmp.w ram.max_hp
     bcc .C760
 
-    lda.w 0x1F9A
+    lda.w ram.max_hp
 .C760:
     sta.w 0x0BCF
     phx
@@ -10640,8 +10640,8 @@ _80C8D9:
     pea 0x1928
     pld
     ldx.b #0x04
-    lda.w 0x1F99
-    and.b #0x08
+    lda.w ram.upgrades
+    and.b #upgrade.dash
     beq .C8EF
 
     stx.b 0x0B
@@ -10650,8 +10650,8 @@ _80C8D9:
     pea 0x1948
     pld
     ldx.b #0x03
-    lda.w 0x1F99
-    and.b #0x04
+    lda.w ram.upgrades
+    and.b #upgrade.body
     beq .C901
 
     stx.b 0x0B
@@ -10660,8 +10660,8 @@ _80C8D9:
     pea 0x1968
     pld
     ldx.b #0x02
-    lda.w 0x1F99
-    and.b #0x02
+    lda.w ram.upgrades
+    and.b #upgrade.arm
     beq .C913
 
     stx.b 0x0B
@@ -10669,8 +10669,8 @@ _80C8D9:
 .C913:
     pea 0x1988
     pld
-    lda.w 0x1F99
-    and.b #0x01
+    lda.w ram.upgrades
+    and.b #upgrade.helmet
     sta.b 0x0B
     jsr _80C924
     pld
@@ -10706,7 +10706,7 @@ _80C924:
 //-----
 
 _80C950:
-    lda.w 0x1F7A
+    lda.w ram.current_stage
     beq .C963
 
     cmp.b #0x09
@@ -11102,7 +11102,7 @@ _80CC54:
     stz.b 0x06
     stz.b 0x07
     stz.b 0x09
-    lda.w 0x1F9A
+    lda.w ram.max_hp
     bit.b #0x02
     beq .CC71
 
@@ -13079,10 +13079,10 @@ _80D7E2:
 
 .D850:
     and.b #0x7F
-    cmp.w 0x1F9A
+    cmp.w ram.max_hp
     bcc .D85D
 
-    lda.w 0x1F9A
+    lda.w ram.max_hp
     sta.w 0x0BCF
 .D85D:
     sta.b 0x00
@@ -13129,7 +13129,7 @@ _80D7E2:
 .D89E:
     lda.b #0x80
     trb.w 0x0BCF
-    lda.w 0x1F9A
+    lda.w ram.max_hp
     sec
     sbc.w 0x0BCF
     sta.b 0x00
@@ -13606,7 +13606,7 @@ CODE_JP_80DB85:
     lda.b #0x85
     pha
     plb
-    lda.w 0x1F7A
+    lda.w ram.current_stage
     asl
     tax
     rep #0x20
@@ -15287,7 +15287,7 @@ _80E6A2:
     and.w #0x00FF
     asl
     sta.w 0x0000
-    lda.w 0x1F7A
+    lda.w ram.current_stage
     and.w #0x00FF
     asl
     tax
@@ -16692,7 +16692,7 @@ _80EFBA:
 //-----
 
 _80F08C:
-    lda.w 0x1F99
+    lda.w ram.upgrades
     sta.b 0x18
     lda.w 0x1F9C
     sta.b 0x19
@@ -16964,7 +16964,7 @@ _80F188:
     bne .F1E0
 
     lda.b 0x24
-    sta.w 0x1F99
+    sta.w ram.upgrades
     and.b #0xF0
     sta.b 0x30
     stz.w 0x1F83
@@ -17040,7 +17040,7 @@ _80F188:
     lda.b #0x02
     sta.w ram.lives
     stz.w 0x1F7B
-    stz.w 0x1F7A
+    stz.w ram.current_stage
     rep #0x20
     lda.w 0x00A7
     and.w #0x0470

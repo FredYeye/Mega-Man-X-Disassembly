@@ -66,7 +66,7 @@ bomb_been:
     sta.b 0x34
     jsl _848EEA.8F07
     stz.b 0x3A
-    lda.w 0x1F7A
+    lda.w ram.current_stage
     beq .9FDC
 
     lda.b #0x02

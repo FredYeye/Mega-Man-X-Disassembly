@@ -1394,7 +1394,7 @@ _88A382:
     lda.w #0x0040
     sta.b 0x1E
     sep #0x20
-    lda.w 0x1F7A
+    lda.w ram.current_stage
     cmp.b #0x09
     bne .A3EC
 
@@ -1978,7 +1978,7 @@ _88A793:
     jsl 0x82827D
     lda.b #0x92
     sta.b 0x10
-    lda.w 0x1F7A
+    lda.w ram.current_stage
     cmp.b #0x03
     bne .A7BB
 
@@ -2004,7 +2004,7 @@ _88A793:
     lda.b #0x03
     sta.b 0x34
     stz.b 0x35
-    lda.w 0x1F7A
+    lda.w ram.current_stage
     cmp.b #0x04
     bne .A7DF
 
@@ -2079,7 +2079,7 @@ _88A793:
     sta.w 0x0004
     lda.b #0x30
     sta.w 0x0006
-    ldx.w 0x1F7A
+    ldx.w ram.current_stage
     lda.w 0x86D4E6,X
     sta.w 0x0008
     jsl _83F747
@@ -5402,7 +5402,7 @@ _88D1B1:
     lda.b #0x30
     sta.w 0x0006
     ldx.b #0x1C
-    lda.w 0x1F99
+    lda.w ram.upgrades
     bit.b #0x02
     bne .D747
 
@@ -5478,7 +5478,7 @@ _88D1B1:
     dec.b 0x34
     bne .D802
 
-    lda.w 0x1F99
+    lda.w ram.upgrades
     bit.b #0x02
     beq .D7CC
 
@@ -5489,7 +5489,7 @@ _88D1B1:
 
 .D7CC:
     lda.b #0x02
-    tsb.w 0x1F99
+    tsb.w ram.upgrades
     inc.w 0x0C38
     stz.w 0x0C42
     stz.w 0x0C43

@@ -968,7 +968,7 @@ _838605:
     lda.b #0x17
     jsl _80888B.88B6
     ldx.b #0x6A
-    lda.w 0x1F99
+    lda.w ram.upgrades
     bit.b #0x01
     beq .8637
 
@@ -1033,7 +1033,7 @@ _838673:
     sta.w 0x0BD9
     sep #0x30
     ldx.b #0x00
-    lda.w 0x1F99
+    lda.w ram.upgrades
     bit.b #0x01
     beq .86D1
 
@@ -1581,7 +1581,7 @@ _83898E:
     lda.b 0x0B
     bne .89E1
 
-    ldx.w 0x1F7A
+    ldx.w ram.current_stage
     lda.w 0x0BB9
     and.b #0x70
     ora.b #0x06
@@ -2906,7 +2906,7 @@ _839807:
     sta.b 0x01
     lda.b #0x02
     sta.b 0x18
-    ldx.w 0x1F7A
+    ldx.w ram.current_stage
     lda.w 0x0BB9
     and.b #0x70
     ora.b #0x06
@@ -3093,7 +3093,7 @@ _83995D:
     lda.b #0x02
     sta.b 0x01
     jsl _83917D
-    ldx.w 0x1F7A
+    ldx.w ram.current_stage
     lda.w 0x0BB9
     and.b #0x70
     ora.b #0x06
@@ -4908,7 +4908,7 @@ _83A59B:
     lda.b #0x08
     sta.b 0x18
     stz.b 0x30
-    ldx.w 0x1F7A
+    ldx.w ram.current_stage
     lda.w 0x0BB9
     and.b #0x70
     ora.b #0x06
@@ -6797,7 +6797,7 @@ _83BBCF:
     sep #0x20
     bcc .BD30
 
-    lda.w 0x1F99
+    lda.w ram.upgrades
     and.b #0x01
     bne .BD54
 
@@ -10878,7 +10878,7 @@ _83F517:
 .F52F:
     inc.b 0x01
     stz.b 0x02
-    lda.w 0x1F7A
+    lda.w ram.current_stage
     cmp.b #0x05
     beq .F540
 
@@ -11026,7 +11026,7 @@ _83F5B5:
     lda.b #0x80
     sta.w 0x00CD
 .F651:
-    lda.w 0x1F7A
+    lda.w ram.current_stage
     beq .F65C
 
     stz.w 0x1F3B
@@ -11042,7 +11042,7 @@ _83F5B5:
     rtl
 
 .F667:
-    lda.w 0x1F7A
+    lda.w ram.current_stage
     asl
     clc
     adc.b #0x60

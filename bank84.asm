@@ -29,7 +29,7 @@ _848000:
     pea 0x0000
     pld
     tya
-    ldx.w 0x1F7A
+    ldx.w ram.current_stage
     adc.w 0x84B899,X
     tax
     lda.w 0x84B899,X
@@ -1337,23 +1337,23 @@ _84893D:
     clc
     adc.w #0x0842
     ldx.w 0x00A3
-    sta.w 0x0501,X
+    sta.w ram.dma_queue.vram_dst,X
     clc
     adc.w #0x0020
     sta.w 0x0509,X
     lda.w #0x0038
-    sta.w 0x0503,X
+    sta.w ram.dma_queue.byte_count,X
     sta.w 0x050B,X
     lda.w #0xF000
-    sta.w 0x0505,X
+    sta.w ram.dma_queue.src,X
     lda.w #0xF100
     sta.w 0x050D,X
     sep #0x20
     lda.b #0x80
-    sta.w 0x0500,X
+    sta.w ram.dma_queue.vram_addr_mode,X
     sta.w 0x0508,X
     lda.b #0x7E
-    sta.w 0x0507,X
+    sta.w ram.dma_queue.src+2,X
     sta.w 0x050F,X
     txa
     clc
@@ -1645,23 +1645,23 @@ _848B18:
     sep #0x10
     ldx.b 0xA3
     lda.b #0x80
-    sta.w 0x0500,X
+    sta.w ram.dma_queue.vram_addr_mode,X
     lda.b 0x1C
-    sta.w 0x0501,X
+    sta.w ram.dma_queue.vram_dst,X
     lda.b 0x1D
-    sta.w 0x0502,X
+    sta.w ram.dma_queue.vram_dst+1,X
     lda.b 0x15
     asl
-    sta.w 0x0503,X
-    stz.w 0x0504,X
+    sta.w ram.dma_queue.byte_count,X
+    stz.w ram.dma_queue.byte_count+1,X
     rep #0x20
     lda.b 0x20
     clc
     adc.w #0xF000
-    sta.w 0x0505,X
+    sta.w ram.dma_queue.src,X
     sep #0x20
     lda.b #0x7E
-    sta.w 0x0507,X
+    sta.w ram.dma_queue.src+2,X
     txa
     clc
     adc.b #0x08
@@ -3724,7 +3724,7 @@ _849958:
     cmp.b #0x3C
     bne .99AD
 
-    lda.w 0x1F99
+    lda.w ram.upgrades
     bit.b #0x01
     beq .99AD
 
@@ -4360,7 +4360,7 @@ _849D07:
     stz.w 0x0BAB
     lda.b 0x26
     sta.w 0x0000
-    lda.w 0x1F99
+    lda.w ram.upgrades
     bit.b #0x04
     beq .9D4B
 
@@ -4672,7 +4672,7 @@ _849F25:
     beq .9F72
 
     sta.w 0x0000
-    lda.w 0x1F99
+    lda.w ram.upgrades
     bit.b #0x04
     beq .9F54
 
@@ -5920,7 +5920,7 @@ _84A66D:
     beq .A76A
 
     jsl _849FAD
-    lda.w 0x1F7A
+    lda.w ram.current_stage
     cmp.b #0x0C
     beq .A766
 
@@ -6280,7 +6280,7 @@ _84A66D:
 .A9FF:
     inc.b 0x03
     inc.b 0x03
-    lda.w 0x1F7A
+    lda.w ram.current_stage
     cmp.b #0x09
     bcs .AA38
 
@@ -6311,7 +6311,7 @@ _84A66D:
     rtl
 
 .AA38:
-    lda.w 0x1F7A
+    lda.w ram.current_stage
     cmp.b #0x0C
     beq .AA43
 
@@ -6390,7 +6390,7 @@ _84AA7C:
 //-----
 
 _84AACA:
-    lda.w 0x1F7A
+    lda.w ram.current_stage
     cmp.b #0x09
     bcs .AAE0
 

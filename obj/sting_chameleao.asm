@@ -29,7 +29,7 @@ sting_chameleao:
     rep #0x20
     stz.w 0x1E8D
     lda.w #0x0200
-    ldx.w 0x1F7A
+    ldx.w ram.current_stage
     cpx.b #0x09
     bcc .8588
 
@@ -1141,7 +1141,7 @@ sting_chameleao:
     jsl 0x84A66D
     bpl .8D20
 
-    lda.w 0x1F7A
+    lda.w ram.current_stage
     cmp.b #0x09
     bcc .8D1C
 

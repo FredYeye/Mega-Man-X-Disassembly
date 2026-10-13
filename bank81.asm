@@ -244,7 +244,7 @@ _819D70:
 _819D7E:
     rep #0x10
     stz.b 0x16
-    lda.w 0x1F99
+    lda.w ram.upgrades
     lsr
     sta.w 0x0000
     bcc .9D8F
@@ -364,7 +364,7 @@ _819E34:
 //-----
 
 _819E45:
-    lda.w 0x1F7A
+    lda.w ram.current_stage
     cmp.b #0x08
     bne .9E84
 
@@ -416,8 +416,8 @@ _819E85:
 _819E97:
     lda.b #0x04
     trb.b 0x7E
-    lda.w 0x1F99
-    bit.b #0x01
+    lda.w ram.upgrades
+    bit.b #upgrade.helmet
     beq .9EE4
 
     lda.b #0xED
@@ -502,7 +502,7 @@ _819F08:
     phy
     lda.b #0x00
     xba
-    lda.w 0x1F7A
+    lda.w ram.current_stage
     asl
     asl
     adc.w 0x0000
@@ -955,8 +955,8 @@ _81A1B5:
     cmp.b #0x50
     beq .A1F9
 
-    lda.w 0x1F99
-    bit.b #0x02
+    lda.w ram.upgrades
+    bit.b #upgrade.arm
     beq .A1FF
 
     ldx.b #0x71
@@ -1370,7 +1370,7 @@ _81A54C:
     ldy.b #0x06
 .A55C:
     sty.w 0x0000
-    ldx.w 0x1F7A
+    ldx.w ram.current_stage
     lda.w 0x0BB9
     and.b #0x70
     ora.w 0x0000
@@ -6946,7 +6946,7 @@ _81E4A8:
 .E4AE: d16[.E4B4, .E4FF, .E6AA]
 
 .E4B4:
-    lda.w 0x1F99
+    lda.w ram.upgrades
     and.b 0x0B
     beq .E4C0
 
@@ -7179,7 +7179,7 @@ _81E4A8:
     lda.b #0x80
     sta.w 0x1F83,X
     lda.b 0x0B
-    tsb.w 0x1F99
+    tsb.w ram.upgrades
     bra .E654
 
 .E64A:
@@ -7431,7 +7431,7 @@ _81E6B2:
 
 _81E829:
     rep #0x20
-    lda.w 0x1F7A
+    lda.w ram.current_stage
     and.w #0x00FF
     asl
     sta.b 0x27
@@ -7762,7 +7762,7 @@ _81E97F:
 
     lda.b 0x0B
     tsb.w 0x1F9C
-    lda.w 0x1F9A
+    lda.w ram.max_hp
     cmp.b #0x20
     bcc .EAE8
 
@@ -7814,7 +7814,7 @@ _81E97F:
 
     lda.b #0x04
     sta.b 0x26
-    lda.w 0x1F9A
+    lda.w ram.max_hp
     inc
     cmp.b #0x20
     bcc .EB44
@@ -7823,7 +7823,7 @@ _81E97F:
     sta.b 0x03
     lda.b #0x20
 .EB44:
-    sta.w 0x1F9A
+    sta.w ram.max_hp
     inc.w 0x0BCF
     lda.b #0x80
     tsb.w 0x0BCF
@@ -9542,7 +9542,7 @@ _81F698:
     and.w #0x00FF
     asl
     sta.w 0x0000
-    lda.w 0x1F7A
+    lda.w ram.current_stage
     and.w #0x00FF
     asl
     tax

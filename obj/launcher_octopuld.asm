@@ -793,7 +793,7 @@ launcher_octopuld:
     jsl 0x84A66D
     bpl .C9E3
 
-    lda.w 0x1F7A
+    lda.w ram.current_stage
     cmp.b #0x09
     bcc .C9DF
 

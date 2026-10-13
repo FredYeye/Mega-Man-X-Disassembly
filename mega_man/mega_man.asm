@@ -89,7 +89,7 @@ mega_man:
     lda.b #0x44
     sta.b 0x02
 .81D4:
-    ldx.w 0x1F7A
+    ldx.w ram.current_stage
     lda.b #0x02
     ora.w 0x86BAC5,X
     sta.b 0x11
@@ -98,7 +98,7 @@ mega_man:
     lda.b #0xFF
     sta.b 0x66
     stz.b 0x82
-    lda.w 0x1F7A
+    lda.w ram.current_stage
     asl
     asl
     tax
@@ -862,7 +862,7 @@ mega_man:
 
     lda.b #0x02
 .86FB:
-    ldx.w 0x1F7A
+    ldx.w ram.current_stage
     ora.w 0x86BAC5,X
     sta.b 0x11
     lda.b 0x0F
@@ -1690,14 +1690,14 @@ mega_man:
     lda.l 0x001F26
     beq .8C6B
 
-    lda.w 0x1F7A
+    lda.w ram.current_stage
     cmp.b #0x09
     bcs .8C73
 
     lda.w 0x1FA0
     bne .8C6B
 
-    lda.w 0x1F7A
+    lda.w ram.current_stage
     bne .8C73
 
 .8C6B:
@@ -1727,7 +1727,7 @@ mega_man:
     lda.l 0x001F26
     beq .8CA9
 
-    lda.w 0x1F7A
+    lda.w ram.current_stage
     beq .8CA9
 
     cmp.b #0x09
@@ -1751,7 +1751,7 @@ mega_man:
     lda.l 0x001F26
     beq .8CD5
 
-    lda.w 0x1F7A
+    lda.w ram.current_stage
     beq .8CD5
 
     cmp.b #0x09
@@ -2045,7 +2045,7 @@ mega_man:
     sta.b 0x03
     lda.b #0x08
     sta.b 0x2F
-    lda.w 0x1F7A
+    lda.w ram.current_stage
     cmp.b #0x09
     bne .8EA4
 
@@ -2114,7 +2114,7 @@ mega_man:
 
     lda.b #0x00
 .8F16:
-    ldx.w 0x1F7A
+    ldx.w ram.current_stage
     ora.w 0x86BAC5,X
     sta.b 0x11
     lda.b 0x0F
@@ -2197,7 +2197,7 @@ mega_man:
     jsl _80888B.88B6
     inc.b 0x27
     lda.b 0x27
-    cmp.w 0x1F9A
+    cmp.w ram.max_hp
     bcc .8FAE
 
     lda.b #0x06
@@ -3936,7 +3936,7 @@ mega_man:
     bvc .9A17
 
 .9A28:
-    ldx.w 0x1F7A
+    ldx.w ram.current_stage
     lda.b #0x02
     ora.w 0x86BAC5,X
     sta.b 0x11
@@ -3971,7 +3971,7 @@ mega_man:
 //-----
 
 .9A66:
-    lda.w 0x1F9A
+    lda.w ram.max_hp
     lsr
     lsr
     cmp.b 0x27

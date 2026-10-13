@@ -1773,7 +1773,7 @@ _8791A7:
     lda.b #0x01
     sta.w 0x1F0C
     sta.w 0x0BD8
-    lda.w 0x1F7A
+    lda.w ram.current_stage
     cmp.b #0x09
     bcs .933B
 
@@ -2205,7 +2205,7 @@ _8791A7:
     jsl 0x84A66D
     bpl .9658
 
-    lda.w 0x1F7A
+    lda.w ram.current_stage
     cmp.b #0x09
     bcc .9654
 
@@ -6427,7 +6427,7 @@ _87D012:
     trb.b 0x11
     ldx.b 0x0B
     lda.w 0x86D3D8,X
-    tsb.w 0x1F99
+    tsb.w ram.upgrades
     jmp .D0BD
 
 .D0B8:
@@ -6450,7 +6450,7 @@ _87D012:
     rts
 
 .D0D2:
-    lda.w 0x1F7A
+    lda.w ram.current_stage
     cmp.b #0x03
     bne .D0DF
 
@@ -9007,15 +9007,15 @@ _87F083:
     sep #0x10
     ldx.w 0x00A3
     lda.w #0x0800
-    sta.w 0x0501,X
-    sta.w 0x0503,X
+    sta.w ram.dma_queue.vram_dst,X
+    sta.w ram.dma_queue.byte_count,X
     lda.w #0xE000
-    sta.w 0x0505,X
+    sta.w ram.dma_queue.src,X
     sep #0x20
     lda.b #0x7F
-    sta.w 0x0507,X
+    sta.w ram.dma_queue.src+2,X
     lda.b #0x80
-    sta.w 0x0500,X
+    sta.w ram.dma_queue.vram_addr_mode,X
     txa
     clc
     adc.b #0x08
@@ -10517,17 +10517,17 @@ _87FAD6:
 
     ldx.w 0x00A3
     lda.b #0x00
-    sta.w 0x0500,X
+    sta.w ram.dma_queue.vram_addr_mode,X
     rep #0x20
     lda.w #0x0800
-    sta.w 0x0501,X
+    sta.w ram.dma_queue.vram_dst,X
     lda.w #0x0800
-    sta.w 0x0503,X
+    sta.w ram.dma_queue.byte_count,X
     lda.w #0xD000
-    sta.w 0x0505,X
+    sta.w ram.dma_queue.src,X
     sep #0x20
     lda.b #0x7F
-    sta.w 0x0507,X
+    sta.w ram.dma_queue.src+2,X
     txa
     clc
     adc.b #0x08
@@ -10681,7 +10681,7 @@ _87FB40:
     rts
 
 .FC44:
-    lda.w 0x1F99
+    lda.w ram.upgrades
     and.b #0x04
     beq .FC63
 
@@ -10867,7 +10867,7 @@ _87FD4F:
     rtl
 
 .FD76:
-    ldx.w 0x1F7A
+    ldx.w ram.current_stage
     cpx.b #0x09
     bcs .FD91
 

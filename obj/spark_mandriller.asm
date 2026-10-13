@@ -1040,7 +1040,7 @@ spark_mandriller:
     jsl 0x84A66D
     bpl .A353
 
-    lda.w 0x1F7A
+    lda.w ram.current_stage
     cmp.b #0x09
     bcc .A34F
 

@@ -931,7 +931,7 @@ boomer_kuwanger:
     jsl 0x84A66D
     bpl .909D
 
-    lda.w 0x1F7A
+    lda.w ram.current_stage
     cmp.b #0x09
     bcc .9099
 

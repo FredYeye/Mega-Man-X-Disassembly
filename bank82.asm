@@ -699,7 +699,7 @@ _82859B:
 .85DB:
     ldx.b 0x02
     jsr (.8653,X)
-    ldy.w 0x1F7A
+    ldy.w ram.current_stage
     rep #0x10
     ldx.b 0x0C
     lda.w 0x0011,X
@@ -1160,7 +1160,7 @@ _8288D1:
     phy
     lda.b #0x00
     xba
-    lda.w 0x1F7A
+    lda.w ram.current_stage
     tay
     lda.b 0x11
     and.b #0x40
@@ -4943,7 +4943,7 @@ _82E33B:
 .E4DB:
     lda.w 0x0BCF
     and.b #0x7F
-    cmp.w 0x1F9A
+    cmp.w ram.max_hp
     bne .E52F
 
     lda.b 0x0B
@@ -5035,12 +5035,12 @@ _82E33B:
     lda.w 0x0BCF
     and.b #0x7F
     inc
-    cmp.w 0x1F9A
+    cmp.w ram.max_hp
     bcc .E587
 
     lda.b #0x04
     sta.b 0x03
-    lda.w 0x1F9A
+    lda.w ram.max_hp
 .E587:
     ora.b #0x80
     sta.w 0x0BCF
@@ -6604,7 +6604,7 @@ _82EFFA:
 //-----
 
 _82F033:
-    lda.w 0x1F7A
+    lda.w ram.current_stage
     bne .F03B
 
     jmp .F0D2
@@ -6641,17 +6641,17 @@ _82F033:
     plb
     ldx.w 0x00A3
     lda.b #0x80
-    sta.w 0x0500,X
+    sta.w ram.dma_queue.vram_addr_mode,X
     rep #0x20
     lda.w #0x0BC0
-    sta.w 0x0501,X
+    sta.w ram.dma_queue.vram_dst,X
     lda.w #0x0880
-    sta.w 0x0503,X
+    sta.w ram.dma_queue.byte_count,X
     lda.w #0xD000
-    sta.w 0x0505,X
+    sta.w ram.dma_queue.src,X
     sep #0x20
     lda.b #0x7F
-    sta.w 0x0507,X
+    sta.w ram.dma_queue.src+2,X
     txa
     clc
     adc.b #0x08
@@ -8038,7 +8038,7 @@ _82F9DA:
     cmp.b #0x02
     beq .FA3A
 
-    lda.w 0x1F7A
+    lda.w ram.current_stage
     cmp.b #0x04
     beq .FA30
 

@@ -300,7 +300,7 @@ bee_blader:
     ldx.b #0x03
     ldy.b #0x01
     jsl 0x84A33C
-    lda.w 0x1F7A
+    lda.w ram.current_stage
     beq .BAF3
 
     jsl 0x84A4AB
@@ -526,7 +526,7 @@ bee_blader:
     stz.b 0x02
 .BC83:
     jsl 0x82808F
-    lda.w 0x1F7A
+    lda.w ram.current_stage
     beq .BCA8
 
     jsl 0x82806E
