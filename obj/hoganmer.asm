@@ -86,7 +86,7 @@ hoganmer:
     stz.w 0x0002,X
 .AF27:
     sep #0x30
-    jsl 0x828387
+    jsl _828372.8387
     rts
 
 .AF2E:
@@ -397,7 +397,7 @@ hoganmer:
 //-----
 
 .B109:
-    jsl 0x828358
+    jsl _828358
     bne .B13E
 
     inc.w 0x0000,X

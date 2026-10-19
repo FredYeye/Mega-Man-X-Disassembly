@@ -1270,7 +1270,7 @@ anglerge:
     lda.b #0x03
     sta.w 0x0001
 .B6B7:
-    jsl 0x828358
+    jsl _828358
     bne .B703
 
     rep #0x20

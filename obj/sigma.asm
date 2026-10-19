@@ -651,7 +651,7 @@ sigma:
     jmp .CEE1
 
 .C86E:
-    jsl 0x828358
+    jsl _828358
     bne .C89C
 
     inc.w 0x0000,X
@@ -695,7 +695,7 @@ sigma:
     jmp .CEE1
 
 .C8BC:
-    jsl 0x828358
+    jsl _828358
     bne .C8E1
 
     inc.w 0x0000,X
@@ -1257,7 +1257,7 @@ sigma:
 
     lda.b #0x10
     sta.b 0x33
-    jsl 0x828358
+    jsl _828358
     bne .CCE6
 
     inc.w 0x0000,X
@@ -1294,7 +1294,7 @@ sigma:
 
     lda.b #0x03
     sta.b 0x33
-    jsl 0x828358
+    jsl _828358
     bne .CD2D
 
     inc.w 0x0000,X

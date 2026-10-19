@@ -800,7 +800,7 @@ armor_armarge:
     beq .B73E
 
     dec.b 0x36
-    jsl 0x828358
+    jsl _828358
     bne .B726
 
     inc.w 0x0000,X
@@ -935,7 +935,7 @@ armor_armarge:
     and.w #0x007F
     beq .B7CE
 
-    jsl 0x828000
+    jsl _828000
 .B7CE:
     sep #0x30
     lda.b 0x0F
@@ -944,7 +944,7 @@ armor_armarge:
     lda.b #0x08
     sta.b 0x3D
 .B7D8:
-    jsl 0x828358
+    jsl _828358
     bne .B800
 
     inc.w 0x0000,X

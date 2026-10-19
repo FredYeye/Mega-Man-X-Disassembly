@@ -170,7 +170,7 @@ bee_blader:
 
     lda.b #0x1D
     jsl _80888B
-    jsl 0x828358
+    jsl _828358
     bne .B9FE
 
     inc.w 0x0000,X
@@ -448,7 +448,7 @@ bee_blader:
 //-----
 
 .BBF6:
-    jsl 0x828358
+    jsl _828358
     bne .BC1F
 
     inc.w 0x0000,X

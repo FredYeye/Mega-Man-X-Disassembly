@@ -6,7 +6,7 @@ lava_drop:
     jsl 0x82806E
     bcc .C9AB
 
-    jsl 0x828387
+    jsl _828372.8387
 .C9AB:
     rtl
 
@@ -105,7 +105,7 @@ lava_drop:
 
 .CA3F:
     rep #0x10
-    jsl 0x828358
+    jsl _828358
     bne .CA78
 
     inc.w 0x0000,X

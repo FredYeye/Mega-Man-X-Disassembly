@@ -617,7 +617,7 @@ _8883BE:
     beq .8494
 
     rep #0x10
-    jsl 0x828358
+    jsl _828358
     bne .8494
 
     lda.b #0x2E
@@ -1921,7 +1921,7 @@ _88A382:
     rts
 
 .A744:
-    jsl 0x82833E
+    jsl _82833E
     bne .A775
 
     inc.w 0x0000,X
@@ -3276,7 +3276,7 @@ _88BD28:
     lda.b #0x00
 .BD3E:
     sta.w 0x0000
-    jsl 0x828358
+    jsl _828358
     bne .BD6E
 
     inc.w 0x0000,X
@@ -5354,7 +5354,7 @@ _88D1B1:
     sta.w 0x0C0F
     ldx.b #0x30
     ldy.b #0x40
-    jsl 0x828000
+    jsl _828000
     jsl 0x84A2A7
     lda.b #0x01
     sta.w 0x0BB6
@@ -5508,7 +5508,7 @@ _88D1B1:
     lda.b #0x03
     sta.w 0x1F7D
     lda.b #0x02
-    sta.w 0x1F81
+    sta.w ram.checkpoint
 .D802:
     rts
 
@@ -5959,7 +5959,7 @@ _88DAD3:
     sta.b 0x0C
     sep #0x20
     lda.b #0x01
-    sta.w 0x1F81
+    sta.w ram.checkpoint
     lda.b #0x02
     sta.b 0x01
     stz.b 0x38
@@ -6554,7 +6554,7 @@ _88DAD3:
     beq .DF62
 
     rep #0x10
-    jsl 0x828358
+    jsl _828358
     bne .DF62
 
     lda.b #0x2F
@@ -7099,7 +7099,7 @@ _88E2C4:
     sta.w 0x0002
     sep #0x20
     rep #0x10
-    jsl 0x828358
+    jsl _828358
     bne .E336
 
     lda.b #0x2E
@@ -7752,7 +7752,7 @@ _88EA64:
     rep #0x10
     ldx.w 0x0000
     ldy.w 0x0002
-    jsl 0x828000
+    jsl _828000
 .EAE1:
     sep #0x30
     lda.b 0x0B

@@ -593,7 +593,7 @@ mine_cart:
 //-----
 
 .9BC5:
-    jsl 0x82833E
+    jsl _82833E
     beq .9BD0
 
     txa

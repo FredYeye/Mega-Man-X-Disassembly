@@ -171,7 +171,7 @@ electric_spark:
     rep #0x10
     ldy.w #0x0001
 .9776:
-    jsl 0x82833E
+    jsl _82833E
     bne .97A5
 
     inc.w 0x0000,X

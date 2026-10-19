@@ -182,7 +182,7 @@ crag_man:
     cmp.b #0x0A
     bcc .DA03
 
-    jsl 0x828358
+    jsl _828358
     bne .DA01
 
     inc.w 0x0000,X
@@ -251,7 +251,7 @@ crag_man:
     beq .DA8F
 
     inc.b 0x02
-    jsl 0x828358
+    jsl _828358
     bne .DA7D
 
     inc.w 0x0000,X

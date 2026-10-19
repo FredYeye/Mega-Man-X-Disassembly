@@ -658,7 +658,7 @@ ride_armor_soldier:
     bit.b 0x0F
     bvc .CA32
 
-    jsl 0x828358
+    jsl _828358
     bne .CA32
 
     inc.w 0x0000,X

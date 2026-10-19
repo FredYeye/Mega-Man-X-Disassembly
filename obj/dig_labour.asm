@@ -13,7 +13,7 @@ dig_labour:
     bne .CE2B
 
     jsl 0x84A4AB
-    jsl 0x828387
+    jsl _828372.8387
     sep #0x10
     lda.b #0x01
     jsl 0x84A37F
@@ -47,7 +47,7 @@ dig_labour:
     jsl 0x82806E
     bcc .CE61
 
-    jsl 0x828387
+    jsl _828372.8387
 .CE61:
     rtl
 
@@ -130,7 +130,7 @@ dig_labour:
 
 .CEE1:
     rep #0x10
-    jsl 0x828358
+    jsl _828358
     bne .CF45
 
     inc.w 0x0000,X

@@ -300,7 +300,7 @@ icy_penguigo:
     and.b #0x7F
     beq .B761
 
-    jsl 0x828358
+    jsl _828358
     bne .B75D
 
     inc.w 0x0000,X

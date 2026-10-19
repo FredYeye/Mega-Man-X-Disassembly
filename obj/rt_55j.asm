@@ -254,7 +254,7 @@ rt_55j:
     sta.b 0x02
     stz.b 0x36
     rep #0x10
-    jsl 0x828358
+    jsl _828358
     bne .CE11
 
     inc.w 0x0000,X
@@ -319,7 +319,7 @@ rt_55j:
     sta.b 0x02
     stz.b 0x36
     rep #0x10
-    jsl 0x828358
+    jsl _828358
     bne .CE88
 
     inc.w 0x0000,X

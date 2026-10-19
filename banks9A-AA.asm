@@ -3,16 +3,16 @@ base 0x9A8000
 
 //-----
 
-incbin "compressed_data/compressed_000.bin"
-incbin "compressed_data/compressed_001.bin"
-incbin "compressed_data/compressed_002.bin"
-incbin "compressed_data/compressed_003.bin"
-incbin "compressed_data/compressed_004.bin"
-incbin "compressed_data/compressed_005.bin"
-incbin "compressed_data/compressed_006.bin"
-incbin "compressed_data/compressed_007.bin"
-incbin "compressed_data/compressed_008.bin"
-incbin "compressed_data/compressed_009.bin"
+_9A8000: incbin "compressed_data/compressed_000.bin"
+_9A8AF3: incbin "compressed_data/compressed_001.bin"
+_9AA52D: incbin "compressed_data/compressed_002.bin"
+_9AAE04: incbin "compressed_data/compressed_003.bin"
+_9ABC5B: incbin "compressed_data/compressed_004.bin"
+_9AC2E5: incbin "compressed_data/compressed_005.bin"
+_9AC8AE: incbin "compressed_data/compressed_006.bin"
+_9ACB12: incbin "compressed_data/compressed_007.bin"
+_9AD8BA: incbin "compressed_data/compressed_008.bin"
+_9ADB3A: incbin "compressed_data/compressed_009.bin"
 
 incbin "compressed_data/compressed_010.bin"
 incbin "compressed_data/compressed_011.bin"

@@ -198,13 +198,13 @@ planty:
     rts
 
 .C390:
-    jsl 0x828387
+    jsl _828372.8387
     rts
 
 //-----
 
 .C395:
-    jsl 0x828358
+    jsl _828358
     bne .C3BE
 
     inc.w 0x0000,X

@@ -377,7 +377,7 @@ spark_mandriller:
     clc
     adc.w #0x0018
     sta.w 0x0002
-    jsl 0x828358
+    jsl _828358
     bne .9EF3
 
     inc.w 0x0000,X
@@ -394,7 +394,7 @@ spark_mandriller:
     sep #0x30
     lda.b #0x44
     jsl _80888B
-    jsl 0x828358
+    jsl _828358
     bne .9EF3
 
     inc.w 0x0000,X

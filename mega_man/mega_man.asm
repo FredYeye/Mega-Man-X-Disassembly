@@ -2804,7 +2804,7 @@ mega_man:
     bne .9426
 
 .93C0:
-    jsl 0x82833E
+    jsl _82833E
     bne .9426
 
     jsr .94A5
@@ -2886,7 +2886,7 @@ mega_man:
     bne .94A0
 
 .9452:
-    jsl 0x82833E
+    jsl _82833E
     bne .94A0
 
     jsr .94A5
@@ -3235,7 +3235,7 @@ mega_man:
 .966A:
     bpl .966F
 
-    stz.w 0x1F81
+    stz.w ram.checkpoint
 .966F:
     stz.b 0x55
     stz.b 0x6C
@@ -3577,7 +3577,7 @@ mega_man:
     beq .981B
 
     ldx.w #0x0010
-    jsl 0x828000
+    jsl _828000
     bra .9829
 
 .981B:
@@ -3957,7 +3957,7 @@ mega_man:
     clc
     adc.b #0x40
     tay
-    jsl 0x828000
+    jsl _828000
     rep #0x31
     lda.b 0x33
     and.w #0x00FF
@@ -4426,7 +4426,7 @@ mega_man:
     bne .9D58
 
     phx
-    jsl 0x82833E
+    jsl _82833E
     bne .9D57
 
     inc.w 0x0000,X

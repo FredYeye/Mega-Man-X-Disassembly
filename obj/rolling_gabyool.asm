@@ -48,7 +48,7 @@ rolling_gabyool:
     jsl 0x82806E
     bcc .D172
 
-    jsl 0x828387
+    jsl _828372.8387
 .D172:
     rtl
 

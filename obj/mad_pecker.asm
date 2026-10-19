@@ -81,7 +81,7 @@ mad_pecker:
     jsl 0x82806E
     bcc .A872
 
-    jsl 0x828387
+    jsl _828372.8387
 .A872:
     rts
 
@@ -192,7 +192,7 @@ mad_pecker:
     jsl 0x82806E
     bcc .A934
 
-    jsl 0x828387
+    jsl _828372.8387
 .A934:
     rts
 
@@ -207,7 +207,7 @@ mad_pecker:
     lda.b #0x04
     sta.w 0x0001,X
 .A94A:
-    jsl 0x828387
+    jsl _828372.8387
     sep #0x10
     rts
 

@@ -540,7 +540,7 @@ boomer_kuwanger:
     and.b #0x7F
     beq .8E3B
 
-    jsl 0x828358
+    jsl _828358
     bne .8E39
 
     inc.b 0x35

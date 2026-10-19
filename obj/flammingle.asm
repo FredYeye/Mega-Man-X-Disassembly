@@ -262,14 +262,14 @@ flammingle:
     sta.w 0x0002
     jsl 0x84A462
     sep #0x20
-    jsl 0x828387
+    jsl _828372.8387
     stz.b 0x30
     rts
 
 //-----
 
 .C200:
-    jsl 0x828358
+    jsl _828358
     bne .C23E
 
     inc.w 0x0000,X

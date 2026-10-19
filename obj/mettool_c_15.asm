@@ -222,7 +222,7 @@ mettool_c_15:
 
     ldy.b #0x06
 .C506:
-    jsl 0x828358
+    jsl _828358
     bne .C542
 
     inc.w 0x0000,X

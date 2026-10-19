@@ -33,7 +33,7 @@ ray_bit:
     bcc .D648
 
 .D644:
-    jsl 0x828387
+    jsl _828372.8387
 .D648:
     rtl
 
@@ -308,7 +308,7 @@ ray_bit:
 
 .D7F7:
     rep #0x10
-    jsl 0x828358
+    jsl _828358
     bne .D846
 
     inc.w 0x0000,X

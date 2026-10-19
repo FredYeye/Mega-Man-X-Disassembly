@@ -1970,7 +1970,7 @@ _8791A7:
 
     bmi .94DC
 
-    jsl 0x828358
+    jsl _828358
     bne .94D9
 
     inc.w 0x0000,X
@@ -2068,7 +2068,7 @@ _8791A7:
 
     bmi .9587
 
-    jsl 0x828358
+    jsl _828358
     bne .9582
 
     inc.w 0x0000,X
@@ -3926,7 +3926,7 @@ _87B443:
     jsl 0x82806E
     bcc .B45A
 
-    jsl 0x828387
+    jsl _828372.8387
 .B45A:
     rtl
 
@@ -5115,7 +5115,7 @@ _87BD70:
     jsl 0x82806E
     bcc .BD9B
 
-    jsl 0x828387
+    jsl _828372.8387
     jmp .BDAA
 
 .BD9B:
@@ -5579,7 +5579,7 @@ _87C07A:
     sta.b 0x02
     sta.w 0x0C0C
     lda.b #0x02
-    sta.w 0x1F81
+    sta.w ram.checkpoint
     jsl 0x849FF2
     jsr _87C35F
     jsl 0x84A28B
@@ -6629,7 +6629,7 @@ _87D3AF:
 
 _87D492:
     rep #0x10
-    jsl 0x828358
+    jsl _828358
     bne .D4F7
 
     inc.w 0x0000,X
@@ -7736,7 +7736,7 @@ _87E62A:
 
 .E65C:
     rep #0x10
-    jsl 0x828358
+    jsl _828358
     beq .E667
 
     jmp .E750
@@ -7957,7 +7957,7 @@ _87E7D4:
     bcc .E800
 
     jsr _87EAC2
-    jsl 0x828387
+    jsl _828372.8387
 .E800:
     rtl
 
@@ -9088,7 +9088,7 @@ _87F110:
     bne .F151
 
     sep #0x10
-    jsl 0x828387
+    jsl _828372.8387
     rts
 
 .F166:
@@ -9165,7 +9165,7 @@ _87F110:
 .F1EE:
     sep #0x20
     jsr _87F38D
-    jsl 0x828387
+    jsl _828372.8387
     sep #0x10
 .F1F9:
     rts
@@ -10045,7 +10045,7 @@ _87F797:
 
 .F7A4:
     ldx.b 0x0B
-    lda.w 0x1F81
+    lda.w ram.checkpoint
     cmp.w 0x00E455,X
     bcc .F7C0
 
@@ -10171,7 +10171,7 @@ _87F797:
     lda.w 0x00E455,X
     bmi .F89B
 
-    sta.w 0x1F81
+    sta.w ram.checkpoint
 .F89B:
     jml 0x828398
 

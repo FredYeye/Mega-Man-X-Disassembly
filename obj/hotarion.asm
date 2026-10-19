@@ -30,7 +30,7 @@ hotarion:
     bne .A49F
 
     jsr .A94F
-    jsl 0x828387
+    jsl _828372.8387
     sep #0x10
 .A49F:
     bra .A4CD
@@ -54,7 +54,7 @@ hotarion:
     bne .A4CD
 
     jsr .A94F
-    jsl 0x828387
+    jsl _828372.8387
 .A4CD:
     rtl
 
@@ -73,7 +73,7 @@ hotarion:
 
 .A4E7:
     nop
-    jsl 0x828387
+    jsl _828372.8387
     lda.b #0x01
     sta.b 0x1C
     jmp .A596

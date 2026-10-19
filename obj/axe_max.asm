@@ -254,7 +254,7 @@ axe_max:
 
 .D1ED:
     php
-    jsl 0x828358
+    jsl _828358
     bne .D220
 
     inc.w 0x0000,X
@@ -394,6 +394,6 @@ axe_max:
     stx.b 0x05
     bcc .D2CB
 
-    jsl 0x828387
+    jsl _828372.8387
 .D2CB:
     rts

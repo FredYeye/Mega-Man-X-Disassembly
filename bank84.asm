@@ -4454,7 +4454,7 @@ _849DC8:
     php
     sep #0x20
     rep #0x10
-    jsl 0x82833E
+    jsl _82833E
     bne .9E0E
 
     lda.w 0x1F0D
@@ -4746,7 +4746,7 @@ _849FAD:
     cmp.l 0x408000,X
     beq .9FC8
 
-    stz.w 0x1F81
+    stz.w ram.checkpoint
 .9FC8:
     rtl
 
@@ -5300,7 +5300,7 @@ _84A2A7:
 
     ldx.b #0x30
     ldy.b #0x46
-    jsl 0x828000
+    jsl _828000
 .A2FB:
     stz.w 0x0C0B
     stz.w 0x0BDD

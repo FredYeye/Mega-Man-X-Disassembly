@@ -495,7 +495,7 @@ gulpfer:
     lda.b 0x0F
     bpl .A6A0
 
-    jsl 0x828387
+    jsl _828372.8387
     stz.w 0x0000
     stz.w 0x0001
     jsr .A75E

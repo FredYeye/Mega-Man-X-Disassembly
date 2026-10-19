@@ -129,7 +129,7 @@ chameleon_sting:
     rep #0x10
     ldy.w #0x0003
 .92A9:
-    jsl 0x82833E
+    jsl _82833E
     bne .92E9
 
     inc.w 0x0000,X

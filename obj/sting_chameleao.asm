@@ -863,7 +863,7 @@ sting_chameleao:
 
     and.b #0x7F
     sta.b 0x17
-    jsl 0x828358
+    jsl _828358
     bne .8B51
 
     inc.w 0x0000,X
@@ -1438,7 +1438,7 @@ sting_chameleao:
     sta.w 0x0000
     ldy.b #0x02
 .8EF2:
-    jsl 0x828358
+    jsl _828358
     bne .8F21
 
     inc.w 0x0000,X

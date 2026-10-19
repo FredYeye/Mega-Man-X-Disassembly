@@ -178,7 +178,7 @@ gun_volt:
     tay
     lda 0x86CDF9,Y
     tay
-    jsl 0x828358
+    jsl _828358
     bne .DB49
 
     inc.w 0x0000,X
@@ -201,7 +201,7 @@ gun_volt:
 //-----
 
 .DB4C:
-    jsl 0x828358
+    jsl _828358
     bne .DB73
 
     inc.w 0x0000,X

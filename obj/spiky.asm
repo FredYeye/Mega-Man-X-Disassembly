@@ -513,7 +513,7 @@ spiky:
     lda.b #0x01
     sta.b 0x3D
     jsl 0x84A4AB
-    jsl 0x828387
+    jsl _828372.8387
     sep #0x10
     lda.b 0x3E
     bne .9F31

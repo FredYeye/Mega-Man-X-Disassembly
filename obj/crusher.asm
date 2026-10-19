@@ -22,7 +22,7 @@ crusher:
     cpy.b #0x04
     bcc .96B5
 
-    jsl 0x828387
+    jsl _828372.8387
     rts
 
 .96B5:
@@ -43,7 +43,7 @@ crusher:
 .96CD:
     lda.b #0x40
     sta.b 0x1E
-    jsl 0x828358
+    jsl _828358
     inc.w 0x0000,X
     lda.b #0x09
     sta.w 0x000A,X
@@ -383,7 +383,7 @@ crusher:
     rts
 
 .9930:
-    jsl 0x828387
+    jsl _828372.8387
     rts
 
 //-----

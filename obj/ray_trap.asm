@@ -23,7 +23,7 @@ ray_trap:
     bcc .BAA3
 
 .BA9F:
-    jsl 0x828387
+    jsl _828372.8387
 .BAA3:
     rtl
 
@@ -163,7 +163,7 @@ ray_trap:
 
 .BB6F:
     rep #0x10
-    jsl 0x828358
+    jsl _828358
     bne .BBB7
 
     stz.b 0x36

@@ -196,7 +196,7 @@ dodge_blaster:
     dec.b 0x35
     bne .9B3A
 
-    jsl 0x828358
+    jsl _828358
     bne .9B2E
 
     inc.w 0x0000,X

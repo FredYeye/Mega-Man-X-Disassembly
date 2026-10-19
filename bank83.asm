@@ -1484,7 +1484,7 @@ _8388C4:
 
 _838933:
     sta.w 0x0000
-    jsl 0x82833E
+    jsl _82833E
     bne .8945
 
     inc.w 0x0000,X
@@ -1860,7 +1860,7 @@ _838B6A:
 _838B99:
     ldy.b #0x01
 .8B9B:
-    jsl 0x82833E
+    jsl _82833E
     bne .8BCB
 
     inc.w 0x0000,X
@@ -3058,7 +3058,7 @@ _839924:
 
     ldy.b #0x09
 .9930:
-    jsl 0x82833E
+    jsl _82833E
     bne .995A
 
     inc.w 0x0000,X
@@ -3374,7 +3374,7 @@ _83995D:
 _839B56:
     ldy.b #0x04
 .9B58:
-    jsl 0x82833E
+    jsl _82833E
     bne .9B7A
 
     inc.w 0x0000,X
@@ -3692,7 +3692,7 @@ _839C53:
     stz.b 0x37
     ldx.b #0x30
     ldy.b #0x46
-    jsl 0x828000
+    jsl _828000
     lda.b #0x02
     jsl _848EEA.8F07
     rts
@@ -3712,7 +3712,7 @@ _839C53:
     jsl _848EEA
     rts
 
-    jsl 0x82833E
+    jsl _82833E
     bne .9D9F
 
     inc.w 0x0000,X
@@ -3966,7 +3966,7 @@ _839DD4:
 //-----
 
 _839F3B:
-    jsl 0x82833E
+    jsl _82833E
     bne .9F62
 
     inc.w 0x0000,X
@@ -4194,7 +4194,7 @@ _839FAA:
     rts
 
 .A0B5:
-    jsl 0x82833E
+    jsl _82833E
     bne .A0C6
 
     inc.w 0x0000,X
@@ -4343,7 +4343,7 @@ _83A0DA:
     rts
 
 .A1AF:
-    jsl 0x82833E
+    jsl _82833E
     bne .A1D8
 
     inc.w 0x0000,X
@@ -4451,7 +4451,7 @@ _83A1DB:
     lda.b #0x18
     sta.b 0x39
 .A27F:
-    jsl 0x82833E
+    jsl _82833E
     bne .A29C
 
     inc.w 0x0BDD
@@ -8706,7 +8706,7 @@ _83D709:
 //-----
 
 _83D722:
-    jsl 0x828358
+    jsl _828358
     bne .D74F
 
     inc.w 0x0000,X
@@ -9057,7 +9057,7 @@ _83E7DE:
 
     lda.b #0x01
     sta.w 0x1F7D
-    sta.w 0x1F81
+    sta.w ram.checkpoint
     stz.b 0x30
     jsl 0x849FFE
     lda.b #0x1E
@@ -9881,7 +9881,7 @@ _83EE77:
 //-----
 
 _83EE90:
-    jsl 0x828358
+    jsl _828358
     bne .EEBD
 
     inc.w 0x0000,X
@@ -12118,7 +12118,7 @@ _83FD78:
     jsl 0x82806E
     bcc .FD8C
 
-    jsl 0x828387
+    jsl _828372.8387
 .FD8C:
     plp
     rtl

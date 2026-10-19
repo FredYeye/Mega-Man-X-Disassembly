@@ -556,7 +556,7 @@ velguader:
 
 .CBD8:
     rep #0x10
-    jsl 0x828358
+    jsl _828358
     beq .CBE3
 
     jmp .CC5C
@@ -745,7 +745,7 @@ velguader:
 
 .CD1D:
     rep #0x10
-    jsl 0x828358
+    jsl _828358
     bne .CD86
 
     inc.b 0x3A

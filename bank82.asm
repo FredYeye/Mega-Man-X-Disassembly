@@ -3551,7 +3551,7 @@ _82B82F:
 //-----
 
 _82B860:
-    jsl 0x828358
+    jsl _828358
     bne .B88C
 
     inc.w 0x0000,X
@@ -4732,7 +4732,7 @@ _82E33B:
     lda.b 0x0B
     bpl .E393
 
-    jsl 0x828387
+    jsl _828372.8387
     rts
 
 .E393:
@@ -8211,7 +8211,7 @@ _82FB2F:
     lda.w #0x1D00
     sta.w 0x1E60
     ldx.b #0x02
-    stx.w 0x1F81
+    stx.w ram.checkpoint
     inc.b 0x01
 .FB50:
     rtl

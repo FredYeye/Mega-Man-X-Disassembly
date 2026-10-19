@@ -21,7 +21,7 @@ scrap_press:
     jsl 0x82806E
     bcc .E1F5
 
-    jsl 0x828387
+    jsl _828372.8387
     jmp .E201
 
 .E1F5:

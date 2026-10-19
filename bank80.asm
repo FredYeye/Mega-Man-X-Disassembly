@@ -203,6 +203,7 @@ _808099:
 .8121:
     bit.w 0x0B9D
     bmi .8127
+
     rts
 
 .8127:
@@ -2489,7 +2490,7 @@ _808C37:
     lda.b #0x00
     sta.l 0x7F8400
     lda.l 0x7F840C
-    sta.w 0x1F81
+    sta.w ram.checkpoint
     ldx.b #0x00
     jsr _808B79
     ldx.b #0x01
@@ -3664,12 +3665,12 @@ _8094BA:
     adc.b #0x04
     tay
     jsr _80B2FF
-    stz.w 0x1F81
+    stz.w ram.checkpoint
     lda.w 0x1F7F
     beq .9953
 
     lda.b #0x03
-    sta.w 0x1F81
+    sta.w ram.checkpoint
 .9953:
     jsr _809EF8
     lda.b #0x04
@@ -4066,7 +4067,7 @@ _8094BA:
     tay
     jsr _80B2FF
     lda.b #0x03
-    sta.w 0x1F81
+    sta.w ram.checkpoint
     jsr _808099.8100
     jsr _80DB6E
     jsr _809D9D
@@ -12524,7 +12525,7 @@ _80D4E7:
 
 _80D4FE:
     rep #0x20
-    lda.w #ram.obj1
+    lda.w #ram.objects.obj1
 .D503:
     tcd
     sep #0x30
@@ -15283,7 +15284,7 @@ _80E687:
 
 _80E6A2:
     rep #0x20
-    lda.w 0x1F81
+    lda.w ram.checkpoint
     and.w #0x00FF
     asl
     sta.w 0x0000

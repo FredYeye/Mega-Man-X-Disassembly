@@ -523,7 +523,7 @@ rangda_bangda_eye:
 
 .B17E:
     sta.w 0x0000
-    jsl 0x828358
+    jsl _828358
     bne .B1C5
 
     inc.w 0x0000,X

@@ -224,7 +224,7 @@ metal_wing:
 
 .DD2C:
     jsl 0x84A4AB
-    jsl 0x828387
+    jsl _828372.8387
     rts
 
 //-----

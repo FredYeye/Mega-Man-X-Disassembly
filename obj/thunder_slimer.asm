@@ -1151,7 +1151,7 @@ thunder_slimer:
 //-----
 
 .B5DB:
-    jsl 0x828358
+    jsl _828358
     bne .B5F8
 
     inc.w 0x0000,X
@@ -1226,7 +1226,7 @@ thunder_slimer:
     rep #0x10
     ldy.w #0x0003
 .B653:
-    jsl 0x828358
+    jsl _828358
     bne .B689
 
     inc.w 0x0000,X

@@ -145,7 +145,7 @@ mega_tortoise:
 
 .ECF1:
     rep #0x10
-    jsl 0x828358
+    jsl _828358
     bne .ED6E
 
     inc.w 0x0000,X

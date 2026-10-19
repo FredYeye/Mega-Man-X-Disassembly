@@ -61,7 +61,7 @@ rush_roader:
     jsl 0x82806E
     bcc .8FA5
 
-    jsl 0x828387
+    jsl _828372.8387
     rts
 
 .8FA5:
@@ -581,7 +581,7 @@ rush_roader:
     lda.b #0x00
     jsl 0x84A37F
     jsl 0x84A4AB
-    jsl 0x828387
+    jsl _828372.8387
     rts
 
 .92E3:

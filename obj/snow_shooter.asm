@@ -52,7 +52,7 @@ snow_shooter:
     bcc .DEF8
 
 .DEF4:
-    jsl 0x828387
+    jsl _828372.8387
 .DEF8:
     rtl
 
@@ -182,7 +182,7 @@ snow_shooter:
 
 .DFCD:
     rep #0x10
-    jsl 0x828358
+    jsl _828358
     bne .E034
 
     inc.w 0x0000,X

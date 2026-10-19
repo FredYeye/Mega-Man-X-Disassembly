@@ -454,7 +454,7 @@ amenhopper:
     cmp.b #0x0B
     bcs .AE0E
 
-    jsl 0x828358
+    jsl _828358
     bne .AE0E
 
     inc.w 0x0000,X

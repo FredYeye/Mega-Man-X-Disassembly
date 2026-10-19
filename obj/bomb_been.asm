@@ -134,7 +134,7 @@ bomb_been:
     dec.b 0x35
     bne .A085
 
-    jsl 0x828358
+    jsl _828358
     bne .A07D
 
     inc.w 0x0000,X

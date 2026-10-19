@@ -362,7 +362,7 @@ scrap_robo:
     stz.b 0x36
     lda.b #0x50
     sta.b 0x33
-    jsl 0x828358
+    jsl _828358
     bne .9E3D
 
     inc.w 0x0000,X

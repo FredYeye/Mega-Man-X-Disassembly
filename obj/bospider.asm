@@ -491,7 +491,7 @@ bospider:
     bpl .DF2F
 
     rep #0x10
-    jsl 0x828358
+    jsl _828358
     bne .DF2F
 
     inc.w 0x0000,X

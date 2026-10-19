@@ -410,7 +410,7 @@ launcher_octopuld:
     lda.b #0x01
     sta.b 0x39
     sta.b 0x3A
-    jsl 0x828358
+    jsl _828358
     bne .C73D
 
     inc.w 0x0000,X
@@ -557,7 +557,7 @@ launcher_octopuld:
     asl
     tay
     ldx.w #0x0040
-    jsl 0x828000
+    jsl _828000
     sep #0x30
 .C836:
     rts
@@ -583,7 +583,7 @@ launcher_octopuld:
     rep #0x10
     ldy.w #0x013E
     ldx.w #0x0040
-    jsl 0x828000
+    jsl _828000
     sep #0x10
     rts
 
@@ -890,7 +890,7 @@ launcher_octopuld:
 .CA5A:
     sta.b 0x37
 .CA5C:
-    jsl 0x828358
+    jsl _828358
     bne .CA97
 
     inc.w 0x0000,X

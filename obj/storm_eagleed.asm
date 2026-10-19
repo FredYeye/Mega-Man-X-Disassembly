@@ -647,7 +647,7 @@ storm_eagleed:
     beq .DD24
 
     rep #0x10
-    jsl 0x828358
+    jsl _828358
     bne .DD1E
 
     inc.w 0x0000,X
@@ -806,7 +806,7 @@ storm_eagleed:
     sta.w 0x1E5E
     sep #0x20
     lda.b #0x02
-    sta.w 0x1F81
+    sta.w ram.checkpoint
 .DE10:
     jml 0x828398
 

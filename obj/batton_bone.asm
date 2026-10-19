@@ -12,7 +12,7 @@ batton_bone: // also batton m-501
     bne .A0AF
 
     jsl 0x84A4AB
-    jsl 0x828387
+    jsl _828372.8387
     sep #0x10
     lda.b 0x0B
     beq .A0A7
@@ -73,7 +73,7 @@ batton_bone: // also batton m-501
     jsl 0x82806E
     bcc .A104
 
-    jsl 0x828387
+    jsl _828372.8387
 .A104:
     rtl
 

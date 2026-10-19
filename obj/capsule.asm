@@ -320,7 +320,7 @@ capsule:
     sta.w 0x0C0F
     ldx.b #0x30
     ldy.b #0x40
-    jsl 0x828000
+    jsl _828000
     rep #0x10
     ldy.w #0x0100
     jsl 0x828011
