@@ -86,7 +86,7 @@ capsule:
     rtl
 
 .CB16:
-    jsl 0x82806E
+    jsl _82806E
     bcc .CB20
 
     jml 0x828387
@@ -501,7 +501,7 @@ capsule:
     rts
 
 .CE40:
-    jsl 0x82806E
+    jsl _82806E
     bcc .CE4A
 
     lda.b #0x04

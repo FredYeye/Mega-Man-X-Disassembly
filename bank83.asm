@@ -1024,7 +1024,7 @@ _838673:
     lda.w #0x0375
 .86AC:
     sta.w 0x0C04
-    stz.w 0x0BC2
+    stz.w ram.obj.mega_man.speed_x
     lda.w #0x0553
     sta.w 0x0BC4
     lda.w #0xA555
@@ -1403,7 +1403,7 @@ _83884C:
     sep #0x20
     lda.b #0x07
     sta.w 0x0008
-    jsl 0x82806E
+    jsl _82806E
     bcs .88C3
 
     jsl 0x84A4C6
@@ -1892,7 +1892,7 @@ _838B99:
 _838BCE:
     ldy.b #0x03
 .8BD0:
-    jsl 0x8282ED
+    jsl _8282AC.82ED
     bne .8BF5
 
     inc.w 0x0000,X
@@ -3028,7 +3028,7 @@ _8398F7:
 
     lda.b #0x04
     sta.b 0x37
-    jsl 0x8282ED
+    jsl _8282AC.82ED
     bne .9921
 
     inc.w 0x0000,X
@@ -3936,7 +3936,7 @@ _839DD4:
 .9F0D:
     jsl update_pos_x
     jsl _8491AD.91BE
-    jsl 0x82806E
+    jsl _82806E
     bcs .9F25
 
     lda.b 0x2B
@@ -4466,7 +4466,7 @@ _83A1DB:
     bne .A27F
 
 .A29C:
-    jsl 0x8282ED
+    jsl _8282AC.82ED
     bne .A2B5
 
     inc.w 0x0000,X
@@ -4502,7 +4502,7 @@ _83A1DB:
     lda.b 0x24
     sta.b 0x3A
     sep #0x20
-    jsl 0x82806E
+    jsl _82806E
     bcc .A2F2
 
     dec.w 0x0BDD
@@ -4687,7 +4687,7 @@ _83A391:
     ldx.b 0x02
     jsr (.A446,X)
     jsl 0x848FCA
-    jsl 0x82806E
+    jsl _82806E
     bcs .A43C
 
     jml 0x8280B4
@@ -4858,7 +4858,7 @@ _83A55B:
     lda.b #0x06
     sta.b 0x38
 .A55F:
-    jsl 0x8282ED
+    jsl _8282AC.82ED
     bne .A598
 
     inc.w 0x0000,X
@@ -5100,7 +5100,7 @@ _83A6B4:
     jsl update_pos_xy.neg_ay
     jsl _848EEA
     jsl _82808F.80B4
-    jsl 0x82806E
+    jsl _82806E
     bcc .A73B
 
     jsl _8283A3
@@ -5253,7 +5253,7 @@ _83A73E:
     jsl _849B03
     bne .A81C
 
-    jsl 0x82806E
+    jsl _82806E
     bcs .A81C
 
     jsl _82808F.80B4
@@ -5401,7 +5401,7 @@ _83A8BD:
     lda.l 0x7F835C
     ora.b #0x30
     sta.b 0x11
-    jsl 0x82806E
+    jsl _82806E
     bcc .A934
 
     lda.b #0x04
@@ -6190,7 +6190,7 @@ _83AE3F:
     jsl _849B03
     bne .AE7D
 
-    jsl 0x82806E
+    jsl _82806E
     bcs .AE7D
 
     jml 0x8280B4
@@ -6814,7 +6814,7 @@ _83BBCF:
     jsr _83BF1E
     bne .BD54
 
-    jsl 0x82806E
+    jsl _82806E
     bcs .BD50
 
     jml 0x8280B4
@@ -10271,7 +10271,7 @@ _83EFFB:
     sta.b 0x29
 .F10D:
     sep #0x30
-    jsl 0x82806E
+    jsl _82806E
     bcc .F116
 
     rtl
@@ -10294,7 +10294,7 @@ _83F134:
     ldx.b 0x01
     jsr (.F19B,X)
     jsl _848EEA
-    jsl 0x82806E
+    jsl _82806E
     bcc .F14C
 
     inc.b 0x1F
@@ -10765,7 +10765,7 @@ _83F40C:
 .F47B:
     jsl _848EEA
     jsl update_pos_xy.neg_ay
-    jsl 0x82806E
+    jsl _82806E
     bcs .F495
 
     lda.w 0x0B9C
@@ -11535,7 +11535,7 @@ _83F942:
 .F9C9:
     sep #0x20
     inc.b 0x10
-    jsl 0x82806E
+    jsl _82806E
     bcc .F9D7
 
     jml 0x828398
@@ -12115,7 +12115,7 @@ _83FD78:
     sep #0x10
     ldx.b 0x01
     jsr (.FD8E,X)
-    jsl 0x82806E
+    jsl _82806E
     bcc .FD8C
 
     jsl _828372.8387
@@ -12416,7 +12416,7 @@ _83FF33:
 //-----
 
 _83FF61:
-    jsl 0x82806E
+    jsl _82806E
     bcc .FF6B
 
     jml 0x828387

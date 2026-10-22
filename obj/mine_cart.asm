@@ -30,7 +30,7 @@ mine_cart:
     rtl
 
 .97F7:
-    jsl 0x82806E
+    jsl _82806E
     bcc .9801
 
     jml 0x828387
@@ -338,7 +338,7 @@ mine_cart:
     rts
 
 .9A09:
-    jsl 0x82806E
+    jsl _82806E
     bcc .9A13
 
     jml 0x828387

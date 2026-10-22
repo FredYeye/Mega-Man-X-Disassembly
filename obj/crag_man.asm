@@ -33,7 +33,7 @@ crag_man:
     lda.b #0x0E
     trb.b 0x11
 .D8A1:
-    jsl 0x82806E
+    jsl _82806E
     bcs .D8AB
 
     jml 0x8280B4

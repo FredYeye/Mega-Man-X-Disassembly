@@ -3,7 +3,7 @@ lava_drop:
     jsr (.C9AC,X)
     jsl _849B03
     jsl _82808F.80B4
-    jsl 0x82806E
+    jsl _82806E
     bcc .C9AB
 
     jsl _828372.8387

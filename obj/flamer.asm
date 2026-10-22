@@ -194,7 +194,7 @@ flamer:
     lda.b #0x0E
     trb.b 0x11
 .E0D9:
-    jsl 0x82806E
+    jsl _82806E
     bcs .E0C9
 
     jsl _848EEA

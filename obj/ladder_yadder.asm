@@ -23,7 +23,7 @@ ladder_yadder:
     rtl
 
 .AA0C:
-    jsl 0x82806E
+    jsl _82806E
     bcc .AA16
 
     jml 0x828387

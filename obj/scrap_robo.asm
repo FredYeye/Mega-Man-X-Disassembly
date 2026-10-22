@@ -62,7 +62,7 @@ scrap_robo:
     jsl _849B03
 .9BD0:
     jsl _82808F.80B4
-    jsl 0x82806E
+    jsl _82806E
     bcc .9BDE
 
 .9BDA:

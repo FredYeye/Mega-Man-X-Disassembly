@@ -219,7 +219,7 @@ _888162:
 
 .818A:
     jsl _82808F.80B4
-    jsl 0x82806E
+    jsl _82806E
     bcs .8186
 
     rtl
@@ -5613,7 +5613,7 @@ _88D852:
 _88D8A2:
     ldx.b 0x01
     jsr (.D8B5,X)
-    jsl 0x82806E
+    jsl _82806E
     bcc .D8B1
 
     jml 0x828387
@@ -5759,7 +5759,7 @@ _88D93B:
     trb.b 0x11
 .D99C:
     jsl _849B03
-    jsl 0x82806E
+    jsl _82806E
     bcs .D994
 
     jml 0x8280B4
@@ -7711,7 +7711,7 @@ _88EA64:
     jmp .EA98
 
 .EA8C:
-    jsl 0x82806E
+    jsl _82806E
     bcc .EA98
 
 .EA92:

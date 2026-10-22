@@ -18,7 +18,7 @@ scrap_press:
     sta.b 0x08
     sep #0x20
     jsl _82808F.80B4
-    jsl 0x82806E
+    jsl _82806E
     bcc .E1F5
 
     jsl _828372.8387

@@ -387,7 +387,7 @@ axe_max:
     stx.b 0x05
     ldx.b 0x35
     stx.b 0x08
-    jsl 0x82806E
+    jsl _82806E
     plx
     stx.b 0x08
     plx

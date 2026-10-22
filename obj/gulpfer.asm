@@ -3,7 +3,7 @@ gulpfer:
     tsb.b 0x11
     ldx.b 0x01
     jsr (.A3A1,X)
-    jsl 0x82806E
+    jsl _82806E
     bcc .A34D
 
     jml 0x828387
@@ -512,14 +512,14 @@ gulpfer:
     asl
     tax
     rep #0x20
-    lda.w 0x0BC2
+    lda.w ram.obj.mega_man.speed_x
     sta.b 0x37
     lda.w 0x0BC4
     sta.b 0x39
     lda.w 0x00EE3A,X
     eor.w #0xFFFF
     inc
-    sta.w 0x0BC2
+    sta.w ram.obj.mega_man.speed_x
     lda.w 0x00EE3C,X
     eor.w #0xFFFF
     inc
@@ -530,7 +530,7 @@ gulpfer:
     jsl 0x82820A
     pld
     lda.b 0x37
-    sta.w 0x0BC2
+    sta.w ram.obj.mega_man.speed_x
     lda.b 0x39
     bpl .A6DF
 

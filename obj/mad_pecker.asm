@@ -78,7 +78,7 @@ mad_pecker:
     lda.b #0x12
     sta.b 0x33
 .A868:
-    jsl 0x82806E
+    jsl _82806E
     bcc .A872
 
     jsl _828372.8387
@@ -189,7 +189,7 @@ mad_pecker:
     lda.b #0x01
     jsl _848EEA.8F07
 .A92A:
-    jsl 0x82806E
+    jsl _82806E
     bcc .A934
 
     jsl _828372.8387

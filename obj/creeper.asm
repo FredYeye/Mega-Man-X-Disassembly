@@ -135,7 +135,7 @@ creeper:
 
 .AA7A:
     jsl _848EEA
-    jsl 0x82806E
+    jsl _82806E
     bcc .AA88
 
     jsl 0x828398
@@ -173,7 +173,7 @@ creeper:
     sta.b 0x2F
 .AAC1:
     jsl _848EEA
-    jsl 0x82806E
+    jsl _82806E
     bcc .AACF
 
     jsl 0x828398

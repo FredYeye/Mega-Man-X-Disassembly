@@ -34,7 +34,7 @@ sea_attacker:
 
 .A1BE:
     jsl _82808F.80B4
-    jsl 0x82806E
+    jsl _82806E
     bcc .A1CC
 
     jsl 0x828398

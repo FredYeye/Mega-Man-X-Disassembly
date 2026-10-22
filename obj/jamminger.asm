@@ -25,7 +25,7 @@ jamminger:
     lda.b #0x0E
     trb.b 0x11
 .DD95:
-    jsl 0x82806E
+    jsl _82806E
     bcs .DD8D
 
     jsr .DF5B

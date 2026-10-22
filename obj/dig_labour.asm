@@ -44,7 +44,7 @@ dig_labour:
     sta.b 0x33
 .CE53:
     jsl _82808F.80B4
-    jsl 0x82806E
+    jsl _82806E
     bcc .CE61
 
     jsl _828372.8387

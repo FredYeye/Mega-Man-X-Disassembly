@@ -3,7 +3,7 @@ bomb_been:
     jsr (.9F7A,X)
     lda.b 0x33
     tsb.b 0x11
-    jsl 0x82806E
+    jsl _82806E
     bcs .9F76
 
     jsl _849B03

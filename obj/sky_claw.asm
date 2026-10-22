@@ -35,7 +35,7 @@ sky_claw:
     rtl
 
 .C3C5:
-    jsl 0x82806E
+    jsl _82806E
     bcc .C3CF
 
     jml .C6FE

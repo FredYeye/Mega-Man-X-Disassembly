@@ -58,7 +58,7 @@ rush_roader:
     ldx.b 0x02
     jsr (.9011,X)
     jsl _82808F.80B4
-    jsl 0x82806E
+    jsl _82806E
     bcc .8FA5
 
     jsl _828372.8387

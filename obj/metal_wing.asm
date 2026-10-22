@@ -43,7 +43,7 @@ metal_wing:
     jml 0x848F07
 
 .DBEB:
-    jsl 0x82806E
+    jsl _82806E
     bcc .DBF5
 
     jml 0x828387
@@ -175,7 +175,7 @@ metal_wing:
     rts
 
 .DCD3:
-    jsl 0x82806E
+    jsl _82806E
     bcc .DCDD
 
     jml 0x828398

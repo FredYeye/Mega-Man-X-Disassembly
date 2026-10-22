@@ -20,7 +20,7 @@ amenhopper:
 
 .AAF7:
     jsl _849B03
-    jsl 0x82806E
+    jsl _82806E
     bcs .AAF3
 
     jml 0x8280B4

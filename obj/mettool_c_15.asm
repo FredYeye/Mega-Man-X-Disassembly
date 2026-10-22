@@ -26,7 +26,7 @@ mettool_c_15:
     lda.b #0x0E
     trb.b 0x11
 .C3BA:
-    jsl 0x82806E
+    jsl _82806E
     bcs .C3B2
 
     jml 0x8280B4
