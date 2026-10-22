@@ -10,7 +10,7 @@ hotarion:
     lda.b 0x27
     beq .A485
 
-    jsl 0x849B43
+    jsl _849B43
     beq .A4A3
 
     lda.b 0x27

@@ -8,7 +8,7 @@ mole_borer:
     lda.b 0x27
     sta.b 0x0B
     jsl _849B03
-    jsl 0x849B43
+    jsl _849B43
     beq .BF7A
 
     lda.b #0x0E
@@ -50,7 +50,7 @@ mole_borer:
     sta.b 0x26
     stz.b 0x28
     jsl _849B03
-    jsl 0x849B43
+    jsl _849B43
     pla
     sta.b 0x26
     lda.b 0x3E
@@ -108,7 +108,7 @@ mole_borer:
     rep #0x20
     lda.b 0x08
     sec
-    sbc.w 0x0BB0
+    sbc.w ram.obj.mega_man.pos_y+1
     bcs .C019
 
     eor.w #0xFFFF

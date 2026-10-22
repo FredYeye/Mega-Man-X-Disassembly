@@ -139,7 +139,7 @@ velguader:
     lda.b #0x0A
     sta.b 0x28
 .C923:
-    jsl 0x849B43
+    jsl _849B43
     beq .C96A
 
     lda.b 0x27
@@ -373,7 +373,7 @@ velguader:
     rep #0x20
     lda.b 0x08
     sec
-    sbc.w 0x0BB0
+    sbc.w ram.obj.mega_man.pos_y+1
     bmi .CAC9
 
     sep #0x20
@@ -652,11 +652,11 @@ velguader:
     rep #0x20
     lda.b 0x08
     sec
-    sbc.w 0x0BB0
+    sbc.w ram.obj.mega_man.pos_y+1
     cmp.w #0x0050
     bmi .CCBF
 
-    lda.w 0x0BAD
+    lda.w ram.obj.mega_man.pos_x+1
     sec
     sbc.b 0x05
     bpl .CCB4
@@ -678,7 +678,7 @@ velguader:
     jmp .CCCA
 
 .CCBF:
-    lda.w 0x0BAD
+    lda.w ram.obj.mega_man.pos_x+1
     sec
     sbc.b 0x05
     asl
@@ -900,7 +900,7 @@ velguader:
     bne .CE47
 
     rep #0x20
-    lda.w 0x0BAD
+    lda.w ram.obj.mega_man.pos_x+1
     sec
     sbc.w #0x0020
     sta.b 0x36
@@ -908,7 +908,7 @@ velguader:
 
 .CE47:
     rep #0x20
-    lda.w 0x0BAD
+    lda.w ram.obj.mega_man.pos_x+1
     clc
     adc.w #0x0020
     sta.b 0x36
@@ -987,7 +987,7 @@ velguader:
 
 .CED2:
     rep #0x20
-    lda.w 0x0BAD
+    lda.w ram.obj.mega_man.pos_x+1
     sec
     sbc.b 0x05
     bcs .CEE0
@@ -1008,7 +1008,7 @@ velguader:
     stz.b 0x39
 .CEF2:
     rep #0x20
-    lda.w 0x0BB0
+    lda.w ram.obj.mega_man.pos_y+1
     sec
     sbc.b 0x08
     bcs .CF00
@@ -1350,7 +1350,7 @@ velguader:
     stz.b 0x1C
     sep #0x20
     rep #0x20
-    lda.w 0x0BAD
+    lda.w ram.obj.mega_man.pos_x+1
     sec
     sbc.b 0x05
     bcs .D118
@@ -1435,7 +1435,7 @@ velguader:
 
 .D188:
     rep #0x20
-    lda.w 0x0BAD
+    lda.w ram.obj.mega_man.pos_x+1
     sec
     sbc.b 0x05
     bcs .D1AD

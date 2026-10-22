@@ -4,7 +4,7 @@ ray_trap:
     lda.b 0x27
     beq .BA8D
 
-    jsl 0x849B43
+    jsl _849B43
     beq .BA8D
 
     lda.b 0x27

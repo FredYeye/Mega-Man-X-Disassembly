@@ -49,7 +49,7 @@ sky_claw:
     sta.b 0x20
     lda.b #0xD2
     sta.b 0x21
-    jsl 0x849B43
+    jsl _849B43
     beq .C3F4
 
     bpl .C3F0
@@ -81,7 +81,7 @@ sky_claw:
     sta.b 0x03
     rep #0x30
     ldx.w #0x0180
-    lda.w 0x0BAD
+    lda.w ram.obj.mega_man.pos_x+1
     cmp.b 0x05
     bcs .C42A
 
@@ -95,7 +95,7 @@ sky_claw:
 
 .C435:
     rep #0x20
-    lda.w 0x0BAD
+    lda.w ram.obj.mega_man.pos_x+1
     sec
     sbc.b 0x05
     clc
@@ -375,7 +375,7 @@ sky_claw:
     rep #0x21
     lda.b 0x08
     adc.w #0x0010
-    cmp.w 0x0BB0
+    cmp.w ram.obj.mega_man.pos_y+1
     sep #0x20
     bcs .C645
 
@@ -473,7 +473,7 @@ sky_claw:
     rep #0x21
     lda.b 0x08
     adc.w #0x0010
-    sta.w 0x0BB0
+    sta.w ram.obj.mega_man.pos_y+1
     lda.w #0x0006
     bit.w 0x0BB8
     bvc .C6CD
@@ -482,7 +482,7 @@ sky_claw:
 .C6CD:
     clc
     adc.b 0x05
-    sta.w 0x0BAD
+    sta.w ram.obj.mega_man.pos_x+1
     sep #0x20
     lda.b 0x0F
     and.b #0x01

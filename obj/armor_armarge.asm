@@ -35,7 +35,7 @@ armor_armarge:
     jsl 0x82827D
     rep #0x10
     ldy.w #0x01F0
-    jsl 0x828011
+    jsl _828000.8011
     lda.l 0x7F835D
     and.b #0xFE
     sta.b 0x11
@@ -266,7 +266,7 @@ armor_armarge:
     lda.b #0x0E
     trb.b 0x11
 .B327:
-    jsl 0x849B43
+    jsl _849B43
     bvc .B357
 
     lda.b 0x3C
@@ -711,7 +711,7 @@ armor_armarge:
     rep #0x20
     lda.b 0x05
     sec
-    sbc.w 0x0BAD
+    sbc.w ram.obj.mega_man.pos_x+1
     bcs .B655
 
     eor.w #0xFFFF

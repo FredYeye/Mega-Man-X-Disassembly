@@ -36,9 +36,9 @@ boomerang_cutter:
     sta.b 0x20
     lda.w #0xAD8A
     sta.b 0x31
-    lda.w 0x0BAD
+    lda.w ram.obj.mega_man.pos_x+1
     sta.b 0x05
-    lda.w 0x0BB0
+    lda.w ram.obj.mega_man.pos_y+1
     sta.b 0x08
     lda.b 0x10
     asl

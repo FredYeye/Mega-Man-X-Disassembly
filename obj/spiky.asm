@@ -10,7 +10,7 @@ spiky:
     lda.b obj.hp
     beq .9C3A
 
-    jsl 0x849B43
+    jsl _849B43
     beq .9C22
 
     lda.b obj.hp
@@ -59,7 +59,7 @@ spiky:
     ora.b 0x11
     sta.b 0x11
 .9C28:
-    jsl 0x849ACD
+    jsl _849ACD
     sta.b 0x38
     cmp.b #0x04
     bpl .9C3A
@@ -391,7 +391,7 @@ spiky:
 .9E51:
     jsl 0x82820A
 .9E55:
-    jsl 0x849ACD
+    jsl _849ACD
     cmp.b #0x04
     bpl .9E5F
 
@@ -527,7 +527,7 @@ spiky:
 
 .9F32:
     rep #0x20
-    lda.w 0x0BAD
+    lda.w ram.obj.mega_man.pos_x+1
     sec
     sbc.b 0x05
     bcs .9F41

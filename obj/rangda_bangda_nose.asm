@@ -34,7 +34,7 @@ rangda_bangda_nose:
     bvs .B280
 
     stz.b 0x30
-    jsl 0x849B43
+    jsl _849B43
     beq .B27C
 
     bpl .B26A

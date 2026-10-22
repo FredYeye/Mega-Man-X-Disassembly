@@ -302,7 +302,7 @@ capsule:
     stz.w 0x1F49
     rep #0x20
     lda.b 0x05
-    sta.w 0x0BAD
+    sta.w ram.obj.mega_man.pos_x+1
     stz.w 0x00A7
     stz.w 0x00A9
     stz.w 0x00AB
@@ -323,7 +323,7 @@ capsule:
     jsl _828000
     rep #0x10
     ldy.w #0x0100
-    jsl 0x828011
+    jsl _828000.8011
     sep #0x10
     jsl 0x84A2A7
     lda.b #0x4B
@@ -390,12 +390,12 @@ capsule:
     sta.b 0x33
     rep #0x30
     ldy.w #0x0160
-    jsl 0x828011
+    jsl _828000.8011
     lda.w 0x0BDB
     and.w #0x00FF
     adc.w #0x0100
     tay
-    jsl 0x828011
+    jsl _828000.8011
     sep #0x30
     rts
 
@@ -647,7 +647,7 @@ capsule:
     asl
     adc.w #0x0160
     tay
-    jsl 0x828011
+    jsl _828000.8011
     sep #0x30
 .CF25:
     rts

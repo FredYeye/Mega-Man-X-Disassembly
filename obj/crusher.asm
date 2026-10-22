@@ -88,7 +88,7 @@ crusher:
     lda.l 0x7F831E
     sta.b 0x11
     jsl _82808F.80B4
-    jsl 0x849B43
+    jsl _849B43
     beq .975F
 
     lda.b #0x0E

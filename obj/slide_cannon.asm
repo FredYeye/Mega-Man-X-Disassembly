@@ -18,7 +18,7 @@ slide_cannon:
     lda.b 0x27
     beq .B254
 
-    jsl 0x849B43
+    jsl _849B43
     beq .B24E
 
     lda.b 0x27

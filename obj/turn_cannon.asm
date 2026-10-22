@@ -3,7 +3,7 @@ turn_cannon:
     jsr (.997F,X)
     lda.b 0x36
     tsb.b 0x11
-    jsl 0x849B43
+    jsl _849B43
     beq .996B
 
     bpl .9967

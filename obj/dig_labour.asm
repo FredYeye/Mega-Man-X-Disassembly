@@ -5,7 +5,7 @@ dig_labour:
     lda.b 0x27
     beq .CE53
 
-    jsl 0x849B43
+    jsl _849B43
     beq .CE33
 
     lda.b 0x27
@@ -188,9 +188,9 @@ dig_labour:
 
 .CF52:
     rep #0x20
-    lda.w 0x0BAD
+    lda.w ram.obj.mega_man.pos_x+1
     sta.w 0x0000
-    lda.w 0x0BB0
+    lda.w ram.obj.mega_man.pos_y+1
     sta.w 0x0002
     lda.w #0x0600
     sta.w 0x0008

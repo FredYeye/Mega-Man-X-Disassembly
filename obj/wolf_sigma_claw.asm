@@ -133,10 +133,10 @@ wolf_sigma_claw:
     lda.w 0x00EE3C,X
     asl
     sta.b 0x1C
-    lda.w 0x0BAD
+    lda.w ram.obj.mega_man.pos_x+1
     sta.b 0x39
     sta.w 0x0004
-    lda.w 0x0BB0
+    lda.w ram.obj.mega_man.pos_y+1
     sta.b 0x3B
     sta.w 0x0006
     lda.b 0x05

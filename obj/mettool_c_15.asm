@@ -11,7 +11,7 @@ mettool_c_15:
     sta.b 0x20
     sep #0x20
     jsl _849B03
-    jsl 0x849B43
+    jsl _849B43
     beq .C3BA
 
     bpl .C3B6
@@ -75,7 +75,7 @@ mettool_c_15:
     rep #0x20
     lda.b 0x05
     sec
-    sbc.w 0x0BAD
+    sbc.w ram.obj.mega_man.pos_x+1
     bcs .C41D
 
     eor.w #0xFFFF
@@ -86,7 +86,7 @@ mettool_c_15:
 
     lda.b 0x08
     sec
-    sbc.w 0x0BB0
+    sbc.w ram.obj.mega_man.pos_y+1
     bcs .C42E
 
     eor.w #0xFFFF
@@ -275,7 +275,7 @@ mettool_c_15:
     rep #0x20
     lda.b 0x08
     sec
-    sbc.w 0x0BB0
+    sbc.w ram.obj.mega_man.pos_y+1
     bcs .C566
 
     eor.w #0xFFFF

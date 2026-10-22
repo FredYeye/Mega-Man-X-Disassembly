@@ -37,7 +37,7 @@ d_rex_upper:
 
     rep #0x10
     ldy.w #0x019C
-    jsl 0x828011
+    jsl _828000.8011
     sep #0x10
 .B6D9:
     ldx.b 0x02
@@ -49,7 +49,7 @@ d_rex_upper:
     and.b #0x7F
     beq .B70B
 
-    jsl 0x849B43
+    jsl _849B43
     beq .B707
 
     bpl .B703
@@ -936,7 +936,7 @@ d_rex_upper:
     cmp.w #0x0020
     bcs .BD0D
 
-    lda.w 0x0BAD
+    lda.w ram.obj.mega_man.pos_x+1
     sec
     sbc.b 0x05
     bpl .BCFB

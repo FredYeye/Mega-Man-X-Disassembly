@@ -93,7 +93,7 @@ flamer:
     rep #0x20
     lda.b 0x05
     sec
-    sbc.w 0x0BAD
+    sbc.w ram.obj.mega_man.pos_x+1
     bcs .E030
 
     eor.w #0xFFFF
@@ -104,7 +104,7 @@ flamer:
 
     lda.b 0x08
     sec
-    sbc.w 0x0BB0
+    sbc.w ram.obj.mega_man.pos_y+1
     bcs .E041
 
     eor.w #0xFFFF
@@ -169,7 +169,7 @@ flamer:
     sta.b 0x33
     sep #0x30
     jsl _849B03
-    jsl 0x849B43
+    jsl _849B43
     beq .E0D9
 
     bpl .E0D5

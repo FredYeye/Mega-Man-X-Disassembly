@@ -9,7 +9,7 @@ axe_max:
 
     jsl _849B03
 .D033:
-    jsl 0x849B43
+    jsl _849B43
     beq .D057
 
     lda.b #0x0E

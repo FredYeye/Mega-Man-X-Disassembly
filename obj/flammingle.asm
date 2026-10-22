@@ -46,7 +46,7 @@ flammingle:
     sep #0x20
     jsl _849B03
     stz.b 0x30
-    jsl 0x849B43
+    jsl _849B43
     beq .C0A6
 
     lda.b #0x0E
@@ -63,7 +63,7 @@ flammingle:
     lda.w #0xC558
     sta.b 0x20
     sep #0x20
-    jsl 0x849B43
+    jsl _849B43
     beq .C0C3
 
     lda.b #0x0E
@@ -94,7 +94,7 @@ flammingle:
 .C0E1:
     rep #0x10
     lda.b #0x00
-    ldx.w 0x0BAD
+    ldx.w ram.obj.mega_man.pos_x+1
     cpx.b 0x05
     bcc .C0EE
 

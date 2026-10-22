@@ -183,7 +183,7 @@ icy_penguigo:
     adc.w #0xC43A
     sta.b 0x20
     sep #0x20
-    jsl 0x849B43
+    jsl _849B43
     beq .B6BA
 
     lda.b 0x35
@@ -621,7 +621,7 @@ icy_penguigo:
     lda.b #0xFF
     sta.b 0x2F
     rep #0x20
-    lda.w 0x0BAD
+    lda.w ram.obj.mega_man.pos_x+1
     sec
     sbc.b 0x05
     asl

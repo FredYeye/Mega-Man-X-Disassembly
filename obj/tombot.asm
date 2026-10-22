@@ -4,7 +4,7 @@ tombot:
     lda.b 0x27
     beq .E430
 
-    jsl 0x849B43
+    jsl _849B43
     beq .E42A
 
     lda.b 0x27
@@ -69,7 +69,7 @@ tombot:
     beq .E497
 
     rep #0x20
-    lda.w 0x0BAD
+    lda.w ram.obj.mega_man.pos_x+1
     sec
     sbc.b 0x05
     bcc .E48F

@@ -4,7 +4,7 @@ ray_bit:
     lda.b 0x27
     beq .D636
 
-    jsl 0x849B43
+    jsl _849B43
     beq .D630
 
     lda.b 0x27

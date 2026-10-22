@@ -7,7 +7,7 @@ scrap_robo:
     lda.b 0x27
     beq .9BD0
 
-    jsl 0x849B43
+    jsl _849B43
     beq .9BBB
 
     lda.b 0x27
@@ -172,10 +172,10 @@ scrap_robo:
     sta.w 0x0006
 .9C9B:
     rep #0x20
-    lda.w 0x0BB0
+    lda.w ram.obj.mega_man.pos_y+1
     sec
     sbc.w 0x0006
-    sta.w 0x0BB0
+    sta.w ram.obj.mega_man.pos_y+1
     sep #0x20
     lda.w 0x0BD3
     and.b #0x04

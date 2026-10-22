@@ -5,12 +5,12 @@ scrap_press:
     lda.w #0xD163
     sta.b 0x20
     sep #0x20
-    jsl 0x849B43
+    jsl _849B43
     rep #0x20
     lda.w #0xD159
     sta.b 0x20
     sep #0x20
-    jsl 0x849B43
+    jsl _849B43
     rep #0x20
     lda.b 0x08
     clc
@@ -119,7 +119,7 @@ scrap_press:
     rep #0x20
     lda.w 0x0002
     tcd
-    lda.w 0x0BAD
+    lda.w ram.obj.mega_man.pos_x+1
     sec
     sbc.w 0x0000
     bcs .E2AE
@@ -130,7 +130,7 @@ scrap_press:
     cmp.w #0x0020
     bcs .E2C2
 
-    lda.w 0x0BB0
+    lda.w ram.obj.mega_man.pos_y+1
     sec
     sbc.w 0x0004
     bcc .E2C2
@@ -193,10 +193,10 @@ scrap_press:
     sta.w 0x0006
 .E319:
     rep #0x20
-    lda.w 0x0BB0
+    lda.w ram.obj.mega_man.pos_y+1
     sec
     sbc.w 0x0006
-    sta.w 0x0BB0
+    sta.w ram.obj.mega_man.pos_y+1
     sep #0x20
     lda.w 0x0C06
     and.b #0x04

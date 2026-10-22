@@ -33,7 +33,7 @@ rush_roader:
     sta.b 0x27
     rep #0x20
     ldx.b #0x00
-    lda.w 0x0BAD
+    lda.w ram.obj.mega_man.pos_x+1
     cmp.b 0x05
     bmi .8F75
 
@@ -75,7 +75,7 @@ rush_roader:
     rep #0x10
     ldx.w #0xC8AA
     stx.b 0x20
-    jsl 0x849B43
+    jsl _849B43
     beq .8FD6
 
     lda.b 0x27
@@ -112,7 +112,7 @@ rush_roader:
     stx.b 0x20
     lda.l 0x7F8307
     sta.b 0x11
-    jsl 0x849B43
+    jsl _849B43
     beq .900C
 
     lda.b #0x0E
@@ -140,7 +140,7 @@ rush_roader:
 .9028:
     lda.b #0x02
     sta.b 0x03
-    jsl 0x849ACD
+    jsl _849ACD
     tax
     lda.w 0x00C8C4,X
     sta.b 0x1F
@@ -189,7 +189,7 @@ rush_roader:
 
 .907A:
     jsr .9383
-    jsl 0x849ACD
+    jsl _849ACD
     asl
     tax
     rep #0x20
@@ -253,7 +253,7 @@ rush_roader:
     jsr .9338
     rep #0x20
     ldx.b #0x00
-    lda.w 0x0BAD
+    lda.w ram.obj.mega_man.pos_x+1
     cmp.b 0x05
     bpl .90E1
 
@@ -651,7 +651,7 @@ rush_roader:
 //-----
 
 .9338:
-    jsl 0x849ACD
+    jsl _849ACD
     tax
     sta.b 0x34
     cpx.b 0x35
@@ -700,7 +700,7 @@ rush_roader:
 //-----
 
 .9383:
-    jsl 0x849ACD
+    jsl _849ACD
     sta.b 0x34
     cmp.b 0x35
     beq .939F

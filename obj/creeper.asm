@@ -9,7 +9,7 @@ creeper:
     rtl
 
 .A997:
-    jsl 0x849B43
+    jsl _849B43
     beq .A9B5
 
     lda.b #0x0E
@@ -113,7 +113,7 @@ creeper:
     lda.b #0x40
     trb.b 0x11
     rep #0x20
-    lda.w 0x0BAD
+    lda.w ram.obj.mega_man.pos_x+1
     sec
     sbc.b 0x05
     sep #0x20

@@ -202,7 +202,7 @@ anglerge:
     stz.b 0x2A
     jsr _82B7C1
 .AFA5:
-    jsl 0x849B43
+    jsl _849B43
     beq .AFC4
 
     bmi .AFBC
@@ -283,7 +283,7 @@ anglerge:
     tax
     lda.b 0x05
     adc.w #0xFFC0
-    cmp.w 0x0BAD
+    cmp.w ram.obj.mega_man.pos_x+1
     bcc .B027
 
     inx
@@ -1028,11 +1028,11 @@ anglerge:
     clc
     adc.w #0xFFE0
     sta.w 0x0002
-    lda.w 0x0BAD
+    lda.w ram.obj.mega_man.pos_x+1
     clc
     adc.w #0x0008
     sta.w 0x0004
-    lda.w 0x0BB0
+    lda.w ram.obj.mega_man.pos_y+1
     clc
     adc.w #0x0010
     sta.w 0x0006
@@ -1045,10 +1045,10 @@ anglerge:
 
 .B557:
     rep #0x21
-    lda.w 0x0BAD
+    lda.w ram.obj.mega_man.pos_x+1
     adc.w #0xFFF8
     sta.w 0x0004
-    lda.w 0x0BB0
+    lda.w ram.obj.mega_man.pos_y+1
     clc
     adc.w #0xFFF0
     sta.w 0x0006
@@ -1058,7 +1058,7 @@ anglerge:
     bcc .B588
 
     rep #0x20
-    lda.w 0x0BB0
+    lda.w ram.obj.mega_man.pos_y+1
     sec
     sbc.w 0x1E50
     cmp.b 0x0F
@@ -1160,7 +1160,7 @@ anglerge:
 
     lda.b 0x05
     adc.w #0xFF60
-    cmp.w 0x0BAD
+    cmp.w ram.obj.mega_man.pos_x+1
     bcs .B62B
 
     lda.b 0x05
@@ -1171,9 +1171,9 @@ anglerge:
     clc
     adc.w #0x0009
     sta.w 0x0002
-    lda.w 0x0BAD
+    lda.w ram.obj.mega_man.pos_x+1
     sta.w 0x0004
-    lda.w 0x0BB0
+    lda.w ram.obj.mega_man.pos_y+1
     sta.w 0x0006
     sep #0x20
     jsl 0x84A097

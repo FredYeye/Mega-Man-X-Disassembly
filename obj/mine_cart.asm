@@ -65,15 +65,15 @@ mine_cart:
     sec
     sbc.b 0x22
     clc
-    adc.w 0x0BAD
-    sta.w 0x0BAD
+    adc.w ram.obj.mega_man.pos_x+1
+    sta.w ram.obj.mega_man.pos_x+1
 .9843:
     lda.b 0x08
     sec
     sbc.b 0x24
     clc
-    adc.w 0x0BB0
-    sta.w 0x0BB0
+    adc.w ram.obj.mega_man.pos_y+1
+    sta.w ram.obj.mega_man.pos_y+1
     sep #0x20
     lda.w 0x1F9D
     bpl .985B
@@ -203,7 +203,7 @@ mine_cart:
     rts
 
 .9930:
-    jsl 0x849ACD
+    jsl _849ACD
     sta.b 0x35
     cmp.b 0x36
     beq .9946

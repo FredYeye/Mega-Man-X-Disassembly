@@ -36,7 +36,7 @@ rolling_gabyool:
     cmp.b #0x30
     beq .D15A
 
-    jsl 0x849B43
+    jsl _849B43
 .D15A:
     lda.b 0x0F
     and.b #0x20
@@ -68,7 +68,7 @@ rolling_gabyool:
     rep #0x20
     lda.w #0xD3DC
     sta.b 0x20
-    lda.w 0x0BAD
+    lda.w ram.obj.mega_man.pos_x+1
     sec
     sbc.b 0x05
     bcc .D1A6
@@ -297,7 +297,7 @@ rolling_gabyool:
     sta.b 0x36
 .D30A:
     rep #0x20
-    lda.w 0x0BAD
+    lda.w ram.obj.mega_man.pos_x+1
     sec
     sbc.b 0x05
     bcc .D31F
@@ -337,7 +337,7 @@ rolling_gabyool:
     lda.b #0x01
     sta.b 0x39
     rep #0x20
-    lda.w 0x0BAD
+    lda.w ram.obj.mega_man.pos_x+1
     sta.b 0x37
     sep #0x20
     jmp .D34D

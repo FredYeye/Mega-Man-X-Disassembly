@@ -58,7 +58,7 @@ utuboros_body:
     sta.b 0x20
     lda.b #0xCC
     sta.b 0x21
-    jsl 0x849B43
+    jsl _849B43
     jml 0x8280B4
 
 .C402:

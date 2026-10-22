@@ -36,7 +36,7 @@ rangda_bangda_eye:
     bvs .AE79
 
     stz.b 0x30
-    jsl 0x849B43
+    jsl _849B43
     beq .AE75
 
     bpl .AE63
@@ -127,9 +127,9 @@ rangda_bangda_eye:
     sta.w 0x0000
     lda.b 0x08
     sta.w 0x0002
-    lda.w 0x0BAD
+    lda.w ram.obj.mega_man.pos_x+1
     sta.w 0x0004
-    lda.w 0x0BB0
+    lda.w ram.obj.mega_man.pos_y+1
     sta.w 0x0006
     jsl _80CEAE
     lda.w 0x0000

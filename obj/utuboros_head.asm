@@ -65,7 +65,7 @@ utuboros_head:
     lda.w #0x0006
     sta.b 0x02
     stz.b 0x03
-    lda.w 0x0BAD
+    lda.w ram.obj.mega_man.pos_x+1
     sta.b 0x05
     lda.w #0x02E0
     sta.b 0x08
@@ -123,7 +123,7 @@ utuboros_head:
 .BE5B:
     lda.l 0x7F832E
     sta.b 0x11
-    jsl 0x849B43
+    jsl _849B43
     beq .BE87
 
     inc.b 0x3C
@@ -477,7 +477,7 @@ utuboros_head:
 
     ldx.b #0x07
     rep #0x10
-    ldy.w 0x0BB0
+    ldy.w ram.obj.mega_man.pos_y+1
     cpy.b 0x08
     bcc .C0CA
 
@@ -523,7 +523,7 @@ utuboros_head:
 
     ldx.b #0x17
     rep #0x10
-    ldy.w 0x0BB0
+    ldy.w ram.obj.mega_man.pos_y+1
     cpy.b 0x08
     bcs .C10A
 
@@ -580,7 +580,7 @@ utuboros_head:
     inc.b 0x03
     rep #0x20
     ldx.b #0x40
-    lda.w 0x0BAD
+    lda.w ram.obj.mega_man.pos_x+1
     cmp.b 0x05
     bcs .C167
 
@@ -627,7 +627,7 @@ utuboros_head:
     ldy.b #0x20
 .C1AB:
     lda.b 0x08
-    cmp.w 0x0BB0
+    cmp.w ram.obj.mega_man.pos_y+1
     bcc .C1C0
 
     cmp.w 0x0000

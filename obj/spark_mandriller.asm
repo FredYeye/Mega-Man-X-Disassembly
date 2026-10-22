@@ -234,7 +234,7 @@ spark_mandriller:
     adc.w #0xCF97
     sta.b 0x20
     sep #0x20
-    jsl 0x849B43
+    jsl _849B43
     beq .9E11
 
     bpl .9DCD
@@ -546,7 +546,7 @@ spark_mandriller:
     bne .9FEB
 
     rep #0x20
-    lda.w 0x0BAD
+    lda.w ram.obj.mega_man.pos_x+1
     sec
     sbc.b 0x05
     sep #0x20
@@ -787,7 +787,7 @@ spark_mandriller:
     jsl _848EEA.8F07
     jsl 0x84AC92
     rep #0x20
-    lda.w 0x0BAD
+    lda.w ram.obj.mega_man.pos_x+1
     sec
     sbc.b 0x05
     asl

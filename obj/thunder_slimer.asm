@@ -384,7 +384,7 @@ thunder_slimer:
     sta.w 0x00CA
     rep #0x30
     ldx.w #0x0100
-    lda.w 0x0BAD
+    lda.w ram.obj.mega_man.pos_x+1
     cmp.b 0x05
     bcs .B0F6
 
@@ -434,7 +434,7 @@ thunder_slimer:
     jsl update_pos_x
     rep #0x30
     ldx.w #0x0100
-    lda.w 0x0BAD
+    lda.w ram.obj.mega_man.pos_x+1
     cmp.b 0x05
     bcs .B140
 
@@ -450,7 +450,7 @@ thunder_slimer:
     rep #0x20
     lda.b 0x05
     sec
-    sbc.w 0x0BAD
+    sbc.w ram.obj.mega_man.pos_x+1
     clc
     adc.w #0x000C
     cmp.w #0x0018
@@ -553,7 +553,7 @@ thunder_slimer:
 
 .B1EC:
     rep #0x20
-    lda.w 0x0BAD
+    lda.w ram.obj.mega_man.pos_x+1
     cmp.w #0x0C20
     bcc .B212
 
@@ -646,7 +646,7 @@ thunder_slimer:
     inc.b 0x03
     rep #0x30
     ldx.w #0x000A
-    lda.w 0x0BAD
+    lda.w ram.obj.mega_man.pos_x+1
     sec
     sbc.b 0x05
     bpl .B297
@@ -670,7 +670,7 @@ thunder_slimer:
 .B2B2:
     stx.b 0x1C
     ldx.w #0x0100
-    lda.w 0x0BAD
+    lda.w ram.obj.mega_man.pos_x+1
     cmp.b 0x05
     bcs .B2C1
 
@@ -1100,7 +1100,7 @@ thunder_slimer:
 .B596:
     rep #0x20
     stz.w 0x0000
-    lda.w 0x0BAD
+    lda.w ram.obj.mega_man.pos_x+1
     sec
     sbc.b 0x05
     bpl .B5AA

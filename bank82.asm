@@ -714,7 +714,7 @@ _82859B:
 
     jsl _82808F.80B4
 .8601:
-    jsl 0x849B43
+    jsl _849B43
     beq .864E
 
     lda.b #0x0E
@@ -1857,7 +1857,7 @@ _828D97:
     jsl _849B03
     bne .8DB4
 
-    jsl 0x849B43
+    jsl _849B43
     beq .8DBC
 
     jsl 0x84A37F
@@ -2088,7 +2088,7 @@ _828E72:
 .8F4D:
     sta.b 0x01
 .8F4F:
-    jsl 0x849B43
+    jsl _849B43
     jmp _828FDC
 
 .8F56:
@@ -2180,7 +2180,7 @@ _828E72:
 //-----
 
 _828FDC:
-    jsl 0x849B43
+    jsl _849B43
     jsl _849B03
     bne .9020
 
@@ -2274,7 +2274,7 @@ _829028:
 
 .908A:
     jsl update_pos_xy.neg_ay_ax
-    jsl 0x849B43
+    jsl _849B43
     jsl _849B03
     beq .90A0
 
@@ -2350,7 +2350,7 @@ _82910A:
     lda.b 0x27
     beq _82913B
 
-    jsl 0x849B43
+    jsl _849B43
     beq .9131
 
     lda.b 0x27
@@ -3618,17 +3618,17 @@ _82C533:
 
 .C53B:
     rep #0x30
-    lda.w 0x0BAD
+    lda.w ram.obj.mega_man.pos_x+1
     sec
     sbc.w 0x0BCA
     sta.w 0x0008
-    lda.w 0x0BB0
+    lda.w ram.obj.mega_man.pos_y+1
     clc
     adc.w #0x0009
     cmp.b 0x08
     bcc .C5A0
 
-    lda.w 0x0BB0
+    lda.w ram.obj.mega_man.pos_y+1
     clc
     adc.w #0xFFE5
     cmp.b 0x08
@@ -3666,12 +3666,12 @@ _82C533:
     ldx.w #0x0001
 .C595:
     clc
-    adc.w 0x0BAD
-    sta.w 0x0BAD
+    adc.w ram.obj.mega_man.pos_x+1
+    sta.w ram.obj.mega_man.pos_x+1
     txa
     tsb.w 0x0BD4
 .C5A0:
-    lda.w 0x0BB0
+    lda.w ram.obj.mega_man.pos_y+1
     cmp.w 0x0BCC
     beq .C5AC
 
@@ -3690,13 +3690,13 @@ _82C533:
 .C5B5:
     lda.b 0x05
     sec
-    sbc.w 0x0BAD
+    sbc.w ram.obj.mega_man.pos_x+1
     clc
     adc.w #0x0017
     cmp.w #0x002E
     bcs .C5DE
 
-    lda.w 0x0BB0
+    lda.w ram.obj.mega_man.pos_y+1
     clc
     adc.w #0xFFEE
     cmp.b 0x08
@@ -3705,7 +3705,7 @@ _82C533:
     lda.b 0x08
     clc
     adc.w #0x0010
-    sta.w 0x0BB0
+    sta.w ram.obj.mega_man.pos_y+1
     lda.w #0x0008
     tsb.w 0x0BD4
 .C5DE:
@@ -3717,7 +3717,7 @@ _82C533:
     ldx.w #0x0000
 .C5EC:
     stx.w 0x000E
-    lda.w 0x0BAD
+    lda.w ram.obj.mega_man.pos_x+1
     sec
     sbc.b 0x05
     clc
@@ -3725,7 +3725,7 @@ _82C533:
     cmp.w #0x001E
     bcs .C645
 
-    lda.w 0x0BAD
+    lda.w ram.obj.mega_man.pos_x+1
     sec
     sbc.b 0x05
     clc
@@ -3736,7 +3736,7 @@ _82C533:
     clc
     adc.b 0x08
     sta.w 0x000A
-    lda.w 0x0BB0
+    lda.w ram.obj.mega_man.pos_y+1
     clc
     adc.w #0x0010
     clc
@@ -3754,7 +3754,7 @@ _82C533:
     lda.w 0x000A
     sec
     sbc.w #0x000F
-    sta.w 0x0BB0
+    sta.w ram.obj.mega_man.pos_y+1
     lda.w #0x0004
     tsb.w 0x0BD4
     tsb.b 0x2C
@@ -3767,13 +3767,13 @@ _82C533:
 _82C648:
     lda.b 0x05
     sec
-    sbc.w 0x0BAD
+    sbc.w ram.obj.mega_man.pos_x+1
     clc
     adc.w #0x0017
     cmp.w #0x002E
     bcs _82C533.C645
 
-    lda.w 0x0BB0
+    lda.w ram.obj.mega_man.pos_y+1
     clc
     adc.w #0x0010
     clc
@@ -3790,7 +3790,7 @@ _82C648:
     bcs _82C533.C645
 
     adc.w #0xFFF1
-    sta.w 0x0BB0
+    sta.w ram.obj.mega_man.pos_y+1
     lda.w #0x0004
     tsb.w 0x0BD4
     bra _82C533.C645
@@ -3800,7 +3800,7 @@ _82C648:
 _82C685:
     lda.w #0x000A
     clc
-    adc.w 0x0BAD
+    adc.w ram.obj.mega_man.pos_x+1
     sec
     sbc.b 0x05
     clc
@@ -3821,7 +3821,7 @@ _82C685:
 _82C69F:
     lda.w #0xFFF6
     clc
-    adc.w 0x0BAD
+    adc.w ram.obj.mega_man.pos_x+1
     sec
     sbc.b 0x05
     clc
@@ -3887,14 +3887,14 @@ _82C70E:
     sec
     sbc.b 0x22
     clc
-    adc.w 0x0BAD
-    sta.w 0x0BAD
+    adc.w ram.obj.mega_man.pos_x+1
+    sta.w ram.obj.mega_man.pos_x+1
     lda.b 0x08
     sec
     sbc.b 0x24
     clc
-    adc.w 0x0BB0
-    sta.w 0x0BB0
+    adc.w ram.obj.mega_man.pos_y+1
+    sta.w ram.obj.mega_man.pos_y+1
     sep #0x20
     plp
     rtl
@@ -3997,7 +3997,7 @@ _82D519:
     rep #0x10
     ldx.w #0xCD91
     stx.b 0x20
-    jsl 0x849B43
+    jsl _849B43
     beq .D5F0
 
     bpl .D5EB
@@ -4286,7 +4286,7 @@ _82D7D0:
 
 .D7E7:
     rep #0x20
-    lda.w 0x0BAD
+    lda.w ram.obj.mega_man.pos_x+1
     sec
     sbc.w 0x0BCA
     sta.w 0x0008
@@ -4310,8 +4310,8 @@ _82D7D0:
     inc
 .D816:
     clc
-    adc.w 0x0BAD
-    sta.w 0x0BAD
+    adc.w ram.obj.mega_man.pos_x+1
+    sta.w ram.obj.mega_man.pos_x+1
     txa
     tsb.w 0x0BD4
     bra .D873
@@ -4356,8 +4356,8 @@ _82D7D0:
     lda.w #0x0003
 .D868:
     clc
-    adc.w 0x0BB0
-    sta.w 0x0BB0
+    adc.w ram.obj.mega_man.pos_y+1
+    sta.w ram.obj.mega_man.pos_y+1
     txa
     tsb.w 0x0BD4
 .D873:
@@ -5151,8 +5151,8 @@ _82E5CF:
     beq .E65F
 
     rep #0x20
-    inc.w 0x0BB0
-    inc.w 0x0BB0
+    inc.w ram.obj.mega_man.pos_y+1
+    inc.w ram.obj.mega_man.pos_y+1
     sep #0x20
     lda.b #0x04
     tsb.w 0x0BD4
@@ -5661,7 +5661,7 @@ _82E9E6:
     lda.w 0x0002
     bpl .EA24
 
-    lda.w 0x0BAD
+    lda.w ram.obj.mega_man.pos_x+1
     sec
     sbc.b 0x05
     bcs .EA0B
@@ -5856,7 +5856,7 @@ _82EABD:
     lda.b 0x2B
     bne .EB73
 
-    jsl 0x849B43
+    jsl _849B43
     beq .EB73
 
     bmi .EB66
@@ -6115,7 +6115,7 @@ _82ED1F:
     ldx.b 0x0F
     stx.b 0x10
     ldx.b #0x02
-    lda.w 0x0BAD
+    lda.w ram.obj.mega_man.pos_x+1
     cmp.w #0x1400
     bcc .ED38
 
@@ -6448,9 +6448,9 @@ _82EF0D:
 
 .EF35:
     rep #0x21
-    lda.w 0x0BAD
+    lda.w ram.obj.mega_man.pos_x+1
     sta.b 0x05
-    lda.w 0x0BB0
+    lda.w ram.obj.mega_man.pos_y+1
     adc.w #0x0008
     and.w #0xFFF0
     sta.b 0x08
@@ -7341,109 +7341,7 @@ _82F4E0:
 
 //-----
 
-_82F54D:
-    ldx.b 0x01
-    bne .F5A2
-
-    rep #0x20
-    lda.w 0x0BAD
-    cmp.b 0x05
-    sep #0x20
-    bcc .F560
-
-    jml 0x828398
-
-.F560:
-    inc.b 0x01
-    lda.b 0x0B
-    and.b #0x07
-    tax
-    lda.w 0x86DEA1,X
-    sta.b 0x12
-    txa
-    asl
-    tax
-    rep #0x20
-    lda.w 0x86DEA9,X
-    sta.b 0x1A
-    sep #0x20
-    lda.b 0x0B
-    and.b #0x30
-    lsr
-    lsr
-    lsr
-    lsr
-    sta.w 0x0000
-    tax
-    lda.w 0x86DE9E,X
-    tax
-    lda.l 0x7F8200,X
-    sta.b 0x18
-    lda.l 0x7F8300,X
-    sta.b 0x11
-    lda.b #0x3A
-    clc
-    adc.w 0x0000
-    sta.b 0x16
-    lda.b #0x00
-    jsl _848EEA.8F07
-.F5A2:
-    lda.b 0x16
-    and.b #0x7F
-    cmp.b #0x3C
-    bne .F5AD
-
-    jsr _82F5C1
-.F5AD:
-    jsl update_pos_x
-    jsl 0x82808F
-    lda.b 0x0E
-    bne .F5BD
-
-    jml 0x828398
-
-.F5BD:
-    jml 0x848EEA
-
-//-----
-
-_82F5C1:
-    lda.w 0x0B9C
-    and.b #0x07
-    bne .F610
-
-    jsl _8282AC.82D3
-    bne .F60E
-
-    inc.w 0x0000,X
-    lda.b #0x09
-    sta.w 0x000A,X
-    lda.b #0x80
-    sta.w 0x000B,X
-    stz.w 0x000C,X
-    rep #0x20
-    jsl get_rng
-    and.w #0x000F
-    sta.w 0x0000
-    jsl get_rng
-    and.w #0x000F
-    sta.w 0x0002
-    lda.b 0x05
-    clc
-    adc.w #0x0011
-    clc
-    adc.w 0x0000
-    sta.w 0x0005,X
-    lda.b 0x08
-    clc
-    adc.w #0xFFED
-    clc
-    adc.w 0x0002
-    sta.w 0x0008,X
-.F60E:
-    sep #0x30
-.F610:
-    rts
+    incsrc "obj3/highway_cars.asm"
 
 //-----
 
@@ -8074,7 +7972,7 @@ _82F9DA:
     and.w #0x00FF
     asl
     tax
-    lda.w 0x0BAD
+    lda.w ram.obj.mega_man.pos_x+1
     cmp.w 0x86E327,X
     bcc .FA66
 
@@ -8202,7 +8100,7 @@ _82FB2F:
     bne .FB51
 
     rep #0x20
-    lda.w 0x0BAD
+    lda.w ram.obj.mega_man.pos_x+1
     cmp.w #0x1B60
     bcc .FB50
 
@@ -8374,7 +8272,7 @@ _82FC41:
     rep #0x20
     lda.b 0x05
     sec
-    sbc.w 0x0BAD
+    sbc.w ram.obj.mega_man.pos_x+1
     bcs .FC4F
 
     eor.w #0xFFFF
@@ -8388,7 +8286,7 @@ _82FC41:
 
     lda.b 0x08
     sec
-    sbc.w 0x0BB0
+    sbc.w ram.obj.mega_man.pos_y+1
     bcs .FC64
 
     eor.w #0xFFFF
@@ -8697,7 +8595,7 @@ _82FE07:
 .FE18:
     rep #0x20
     lda.b 0x05
-    cmp.w 0x0BAD
+    cmp.w ram.obj.mega_man.pos_x+1
     bcs .FE3C
 
     lda.w 0x1E4D
@@ -8883,7 +8781,7 @@ _82FF5C:
     rep #0x20
     lda.b 0x05
     sec
-    sbc.w 0x0BAD
+    sbc.w ram.obj.mega_man.pos_x+1
     sep #0x20
     bcc .FF9F
 
@@ -8896,7 +8794,7 @@ _82FF5C:
 
 .FF77:
     rep #0x20
-    lda.w 0x0BAD
+    lda.w ram.obj.mega_man.pos_x+1
     sec
     sbc.b 0x05
     bmi .FF9E

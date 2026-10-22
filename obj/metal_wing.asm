@@ -24,7 +24,7 @@ metal_wing:
     lda.b #0x03
     sta.b 0x26
     rep #0x20
-    lda.w 0x0BAD
+    lda.w ram.obj.mega_man.pos_x+1
     cmp.b 0x05
     bcc .DBD5
 
@@ -54,7 +54,7 @@ metal_wing:
     sta.b 0x11
     ldx.b 0x02
     jsr (.DC21,X)
-    jsl 0x849B43
+    jsl _849B43
     beq .DC19
 
     bpl .DC15

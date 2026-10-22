@@ -4,7 +4,7 @@ batton_bone: // also batton m-501
     lda.b 0x27
     beq .A0F6
 
-    jsl 0x849B43
+    jsl _849B43
     beq .A0B7
 
     lda.b 0x27

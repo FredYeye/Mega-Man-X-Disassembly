@@ -49,7 +49,7 @@ ride_armor_soldier:
     stz.w 0x0E4B
     rep #0x31
     lda.w #0x0020
-    ldx.w 0x0BAD
+    ldx.w ram.obj.mega_man.pos_x+1
     cpx.b 0x05
     bcc .C61A
 
@@ -107,7 +107,7 @@ ride_armor_soldier:
     lda.b 0x27
     and.b #0x7F
     sta.b 0x3B
-    jsl 0x849B43
+    jsl _849B43
     beq .C6B7
 
     bpl .C682
@@ -178,7 +178,7 @@ ride_armor_soldier:
     jsl _848EEA.8F07
 .C701:
     rep #0x20
-    lda.w 0x0BAD
+    lda.w ram.obj.mega_man.pos_x+1
     sec
     sbc.b 0x05
     clc

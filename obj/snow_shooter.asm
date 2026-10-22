@@ -4,7 +4,7 @@ snow_shooter:
     lda.b 0x27
     beq .DED2
 
-    jsl 0x849B43
+    jsl _849B43
     beq .DEC8
 
     lda.b 0x27

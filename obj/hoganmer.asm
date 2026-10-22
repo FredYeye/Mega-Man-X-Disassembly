@@ -25,7 +25,7 @@ hoganmer:
     lda.w #0xC426
     sta.b 0x20
     ldx.b #0x00
-    lda.w 0x0BAD
+    lda.w ram.obj.mega_man.pos_x+1
     cmp.b 0x05
     bcc .AEBF
 
@@ -44,7 +44,7 @@ hoganmer:
     jsr (.AEFA,X)
     lda.l 0x7F8300
     sta.b 0x11
-    jsl 0x849B43
+    jsl _849B43
     beq .AEF1
 
     lda.b #0x0E
@@ -122,7 +122,7 @@ hoganmer:
     sta.b 0x36
     rep #0x20
     ldx.b #0x00
-    lda.w 0x0BAD
+    lda.w ram.obj.mega_man.pos_x+1
     cmp.b 0x05
     bcc .AF6B
 
@@ -249,7 +249,7 @@ hoganmer:
     sta.b 0x03
     rep #0x20
     ldx.b #0x00
-    lda.w 0x0BAD
+    lda.w ram.obj.mega_man.pos_x+1
     cmp.b 0x05
     bcc .B03D
 

@@ -148,7 +148,7 @@ bospider:
 .DC76:
     dec.b 0x3F
 .DC78:
-    jsl 0x849B43
+    jsl _849B43
     beq .DCCC
 
     lda.b 0x27
@@ -762,7 +762,7 @@ bospider:
     cmp.w #0x017A
     bpl .E0EC
 
-    lda.w 0x0BB0
+    lda.w ram.obj.mega_man.pos_y+1
     sec
     sbc.b 0x08
     bcs .E0D6

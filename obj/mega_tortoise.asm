@@ -3,7 +3,7 @@ mega_tortoise:
     tsb.b 0x11
     ldx.b 0x01
     jsr (.EC32,X)
-    jsl 0x849B43
+    jsl _849B43
     beq .EC21
 
     bpl .EC1D
@@ -37,7 +37,7 @@ mega_tortoise:
     rep #0x20
     lda.b 0x05
     sec
-    sbc.w 0x0BAD
+    sbc.w ram.obj.mega_man.pos_x+1
     bcs .EC4F
 
     pla
@@ -214,7 +214,7 @@ mega_tortoise:
 
 .ED71:
     rep #0x20
-    lda.w 0x0BAD
+    lda.w ram.obj.mega_man.pos_x+1
     sec
     sbc.b 0x05
     sep #0x20

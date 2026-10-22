@@ -59,7 +59,7 @@ utuboros_tail:
     adc.w #0xCD0C
     sta.b 0x20
     sep #0x20
-    jsl 0x849B43
+    jsl _849B43
     beq .C7C2
 
     lda.b 0x27

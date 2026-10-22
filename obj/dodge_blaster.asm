@@ -4,7 +4,7 @@ dodge_blaster:
     ldx.b 0x01
     jsr (.99D0,X)
     jsl _849B03
-    jsl 0x849B43
+    jsl _849B43
     beq .99C6
 
     bpl .99C2
@@ -79,7 +79,7 @@ dodge_blaster:
     rts
 
 .9A37:
-    lda.w 0x0BAD
+    lda.w ram.obj.mega_man.pos_x+1
     sec
     sbc.b 0x05
     bcc .9A43
@@ -107,7 +107,7 @@ dodge_blaster:
     rep #0x20
     lda.b 0x08
     sec
-    sbc.w 0x0BB0
+    sbc.w ram.obj.mega_man.pos_y+1
     bcs .9A68
 
     eor.w #0xFFFF
@@ -143,7 +143,7 @@ dodge_blaster:
     rep #0x20
     lda.b 0x08
     sec
-    sbc.w 0x0BB0
+    sbc.w ram.obj.mega_man.pos_y+1
     bcs .9AA3
 
     eor.w #0xFFFF
@@ -235,7 +235,7 @@ dodge_blaster:
 
 .9B3B:
     rep #0x20
-    lda.w 0x0BB0
+    lda.w ram.obj.mega_man.pos_y+1
     sec
     sbc.b 0x08
     lda.w #0x0080

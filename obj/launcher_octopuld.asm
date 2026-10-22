@@ -162,7 +162,7 @@ launcher_octopuld:
     lda.b #0x00
 .C547:
     sta.b 0x28
-    jsl 0x849B43
+    jsl _849B43
     beq .C58E
 
     bmi .C5B8
@@ -356,7 +356,7 @@ launcher_octopuld:
     lda.b #0x01
     jsr .CA35
     rep #0x20
-    lda.w 0x0BAD
+    lda.w ram.obj.mega_man.pos_x+1
     sec
     sbc.b 0x05
     bcs .C6C0
@@ -463,7 +463,7 @@ launcher_octopuld:
     bcc .C7AA
 
     rep #0x20
-    lda.w 0x0BB0
+    lda.w ram.obj.mega_man.pos_y+1
     cmp.b 0x08
     sep #0x20
     bcc .C7AA
@@ -486,11 +486,11 @@ launcher_octopuld:
 .C7AB:
     rep #0x20
     lda.b 0x05
-    sta.w 0x0BAD
+    sta.w ram.obj.mega_man.pos_x+1
     lda.b 0x08
     clc
     adc.w #0x0020
-    sta.w 0x0BB0
+    sta.w ram.obj.mega_man.pos_y+1
     sep #0x20
     jsl _848EEA
     lda.w 0x0BE3
@@ -824,7 +824,7 @@ launcher_octopuld:
     rep #0x20
     lda.b 0x05
     sec
-    sbc.w 0x0BAD
+    sbc.w ram.obj.mega_man.pos_x+1
     bcs .CA05
 
     eor.w #0xFFFF

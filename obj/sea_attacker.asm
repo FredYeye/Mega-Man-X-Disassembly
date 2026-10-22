@@ -4,7 +4,7 @@ sea_attacker:
     lda.b 0x27
     beq .A1BE
 
-    jsl 0x849B43
+    jsl _849B43
     beq .A1B2
 
     lda.b 0x27
@@ -196,7 +196,7 @@ sea_attacker:
 
 .A2E0:
     rep #0x20
-    lda.w 0x0BAD
+    lda.w ram.obj.mega_man.pos_x+1
     sec
     sbc.b 0x05
     bcs .A2EF

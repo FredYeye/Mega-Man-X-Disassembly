@@ -272,7 +272,7 @@ boomer_kuwanger:
     bne .8C9B
 
 .8C4E:
-    jsl 0x849B43
+    jsl _849B43
     beq .8C9B
 
     lda.b 0x3D
@@ -398,7 +398,7 @@ boomer_kuwanger:
     lda.w #0xFC00
 .8D2C:
     sta.b 0x1A
-    lda.w 0x0BAD
+    lda.w ram.obj.mega_man.pos_x+1
     sec
     sbc.b 0x05
     bcs .8D3A
@@ -411,7 +411,7 @@ boomer_kuwanger:
     tax
     inx
     stx.b 0x34
-    lda.w 0x0BAD
+    lda.w ram.obj.mega_man.pos_x+1
     sec
     sbc.b 0x05
     bcs .8D4C
@@ -702,7 +702,7 @@ boomer_kuwanger:
     and.b #0x0F
     tax
     rep #0x20
-    lda.w 0x0BAD
+    lda.w ram.obj.mega_man.pos_x+1
     sec
     sbc.b 0x05
     bcs .8F2F
@@ -768,7 +768,7 @@ boomer_kuwanger:
 .8F94:
     clc
     adc.b 0x05
-    sta.w 0x0BAD
+    sta.w ram.obj.mega_man.pos_x+1
     sep #0x20
     rts
 
@@ -790,7 +790,7 @@ boomer_kuwanger:
 .8FB0:
     clc
     adc.b 0x05
-    sta.w 0x0BAD
+    sta.w ram.obj.mega_man.pos_x+1
     sep #0x20
     lda.b 0x34
     bne .8FCD
@@ -996,12 +996,12 @@ boomer_kuwanger:
     lda.w #0x0050
 .90E3:
     sta.b 0x3A
-    lda.w 0x0BAD
+    lda.w ram.obj.mega_man.pos_x+1
     sec
     sbc.w #0x0080
     sec
     sbc.w 0x1E4D
-    lda.w 0x0BAD
+    lda.w ram.obj.mega_man.pos_x+1
     bcs .90F9
 
     adc.b 0x3A
@@ -1016,7 +1016,7 @@ boomer_kuwanger:
 .90FE:
     lda.b 0x05
     sec
-    sbc.w 0x0BAD
+    sbc.w ram.obj.mega_man.pos_x+1
     lda.w #0x0020
     bcs .910C
 
@@ -1057,7 +1057,7 @@ boomer_kuwanger:
     bne .916D
 
     rep #0x20
-    lda.w 0x0BAD
+    lda.w ram.obj.mega_man.pos_x+1
     sec
     sbc.b 0x05
     bcs .915A
@@ -1121,10 +1121,10 @@ boomer_kuwanger:
 
 .9198:
     rep #0x20
-    lda.w 0x0BB0
+    lda.w ram.obj.mega_man.pos_y+1
     sec
     sbc.w #0x0008
-    sta.w 0x0BB0
+    sta.w ram.obj.mega_man.pos_y+1
     sep #0x20
 .91A6:
     rts

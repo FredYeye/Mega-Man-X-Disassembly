@@ -4,7 +4,7 @@ mega_man:
     sep #0x30
     pea 0x0BA8
     pld
-    jsl 0x849ACD
+    jsl _849ACD
     sta.b 0x65
     lda.b 0x2B
     ora.b 0x2C
@@ -3586,7 +3586,7 @@ mega_man:
     clc
     adc.w #0x0100
     tay
-    jsl 0x828011
+    jsl _828000.8011
 .9829:
     sep #0x30
     lda.b 0x82
@@ -3788,7 +3788,7 @@ mega_man:
 //-----
 
 .9960:
-    jsl 0x849ACD
+    jsl _849ACD
     asl
     tax
     rep #0x20
@@ -3963,7 +3963,7 @@ mega_man:
     and.w #0x00FF
     adc.w #0x0100
     tay
-    jsl 0x828011
+    jsl _828000.8011
     sep #0x30
 .9A65:
     rts

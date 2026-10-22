@@ -12,7 +12,7 @@ rt_55j:
     sta.b 0x20
     sep #0x20
     jsl _849B03
-    jsl 0x849B43
+    jsl _849B43
     rep #0x20
     lda.w #0xC704
     sta.b 0x20
@@ -27,7 +27,7 @@ rt_55j:
 .CC36:
     sta.b 0x28
     jsl _849B03
-    jsl 0x849B43
+    jsl _849B43
     beq .CC60
 
     bpl .CC54
@@ -94,7 +94,7 @@ rt_55j:
     rep #0x20
     lda.w #0x0618
     sta.b 0x1C
-    lda.w 0x0BAD
+    lda.w ram.obj.mega_man.pos_x+1
     sec
     sbc.b 0x05
     asl
@@ -199,7 +199,7 @@ rt_55j:
     rep #0x20
     lda.b 0x05
     sec
-    sbc.w 0x0BAD
+    sbc.w ram.obj.mega_man.pos_x+1
     bcs .CD8B
 
     eor.w #0xFFFF
@@ -210,7 +210,7 @@ rt_55j:
 
     lda.b 0x08
     sec
-    sbc.w 0x0BB0
+    sbc.w ram.obj.mega_man.pos_y+1
     bcc .CD9D
 
     cmp.w #0x0080
@@ -514,11 +514,11 @@ rt_55j:
 .CF86:
     clc
     adc.b 0x05
-    sta.w 0x0BAD
+    sta.w ram.obj.mega_man.pos_x+1
     lda.w 0xC71A,X
     clc
     adc.b 0x08
-    sta.w 0x0BB0
+    sta.w ram.obj.mega_man.pos_y+1
     sep #0x20
     rts
 

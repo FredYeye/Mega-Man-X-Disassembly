@@ -20,7 +20,7 @@ planty:
     stz.b 0x2F
     rep #0x20
     ldx.b #0x00
-    lda.w 0x0BAD
+    lda.w ram.obj.mega_man.pos_x+1
     cmp.b 0x05
     bcc .C274
 
@@ -47,7 +47,7 @@ planty:
     jsl _82808F.80B4
     lda.l 0x7F8304
     sta.b 0x11
-    jsl 0x849B43
+    jsl _849B43
     beq .C2C4
 
     lda.b #0x0E
@@ -142,7 +142,7 @@ planty:
 .C33A:
     rep #0x20
     ldx.b #0x00
-    lda.w 0x0BAD
+    lda.w ram.obj.mega_man.pos_x+1
     cmp.b 0x05
     bcc .C347
 

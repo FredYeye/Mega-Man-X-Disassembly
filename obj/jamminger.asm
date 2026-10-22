@@ -10,7 +10,7 @@ jamminger:
 
     inc.b 0x35
 .DD7B:
-    jsl 0x849B43
+    jsl _849B43
     beq .DD95
 
     bpl .DD91
@@ -63,7 +63,7 @@ jamminger:
     jsr .DF32
     jsl 0x82820A
     rep #0x20
-    lda.w 0x0BAD
+    lda.w ram.obj.mega_man.pos_x+1
     sec
     sbc.b 0x05
     bcs .DDF8
@@ -74,7 +74,7 @@ jamminger:
     cmp.w #0x0040
     bcs .DE56
 
-    lda.w 0x0BB0
+    lda.w ram.obj.mega_man.pos_y+1
     sec
     sbc.b 0x08
     bcs .DE09

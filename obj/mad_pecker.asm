@@ -9,7 +9,7 @@ mad_pecker:
     rtl
 
 .A7E2:
-    jsl 0x849B43
+    jsl _849B43
     beq .A7F6
 
     lda.b #0x0E
@@ -42,7 +42,7 @@ mad_pecker:
     rep #0x20
     lda.w #0xCB49
     sta.b 0x20
-    lda.w 0x0BAD
+    lda.w ram.obj.mega_man.pos_x+1
     sec
     sbc.b 0x05
     stz.b 0x31
@@ -215,7 +215,7 @@ mad_pecker:
 
 .A951:
     rep #0x20
-    lda.w 0x0BAD
+    lda.w ram.obj.mega_man.pos_x+1
     sec
     sbc.b 0x05
     sep #0x20
@@ -226,7 +226,7 @@ mad_pecker:
     bne .A987
 
     rep #0x20
-    lda.w 0x0BAD
+    lda.w ram.obj.mega_man.pos_x+1
     sec
     sbc.b 0x05
     bcs .A971

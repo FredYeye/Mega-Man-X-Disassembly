@@ -42,7 +42,7 @@ ladder_yadder:
 
     lda.b #0x02
     sta.b 0x12
-    jsl 0x849B43
+    jsl _849B43
     beq .AA46
 
     bpl .AA42

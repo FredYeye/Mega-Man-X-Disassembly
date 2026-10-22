@@ -189,7 +189,7 @@ storm_eagleed:
     lda.b #0x05
 .D9B5:
     sta.b 0x28
-    jsl 0x849B43
+    jsl _849B43
     beq .DA00
 
     bpl .D9F2
@@ -337,7 +337,7 @@ storm_eagleed:
     jsl _848EEA
     jsr .DE63
     rep #0x20
-    lda.w 0x0BB0
+    lda.w ram.obj.mega_man.pos_y+1
     sec
     sbc.b 0x08
     bcc .DAD3
@@ -349,7 +349,7 @@ storm_eagleed:
     lda.b 0x10
     asl
     asl
-    lda.w 0x0BAD
+    lda.w ram.obj.mega_man.pos_x+1
     bcs .DAF6
 
     cmp.b 0x05
@@ -454,7 +454,7 @@ storm_eagleed:
     cmp.w #0x0030
     bcc .DBE5
 
-    lda.w 0x0BB0
+    lda.w ram.obj.mega_man.pos_y+1
     sec
     sbc.b 0x08
     sta.w 0x0000
@@ -462,7 +462,7 @@ storm_eagleed:
     lsr
     bcc .DBB2
 
-    lda.w 0x0BAD
+    lda.w ram.obj.mega_man.pos_x+1
     sec
     sbc.w 0x0000
     sta.b 0x05
@@ -470,7 +470,7 @@ storm_eagleed:
     bra .DBBE
 
 .DBB2:
-    lda.w 0x0BAD
+    lda.w ram.obj.mega_man.pos_x+1
     clc
     adc.w 0x0000
     sta.b 0x05

@@ -7,7 +7,7 @@ bomb_been:
     bcs .9F76
 
     jsl _849B03
-    jsl 0x849B43
+    jsl _849B43
     beq .9F6E
 
     lda.b #0x0E
@@ -45,7 +45,7 @@ bomb_been:
     sta.b 0x20
     lda.b 0x05
     sec
-    sbc.w 0x0BAD
+    sbc.w ram.obj.mega_man.pos_x+1
     bcs .9FBE
 
     lda.w #0x0140
@@ -112,7 +112,7 @@ bomb_been:
     stz.b 0x02
     inc.b 0x35
     rep #0x20
-    lda.w 0x0BAD
+    lda.w ram.obj.mega_man.pos_x+1
     sec
     sbc.b 0x05
     sep #0x20

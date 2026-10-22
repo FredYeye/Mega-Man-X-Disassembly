@@ -284,7 +284,7 @@ sting_chameleao:
     and.b #0x7F
     beq .879A
 
-    jsl 0x849B43
+    jsl _849B43
     beq .879A
 
     bpl .877B
@@ -651,7 +651,7 @@ sting_chameleao:
 .89E1:
     rep #0x20
     lda.b 0x05
-    cmp.w 0x0BAD
+    cmp.w ram.obj.mega_man.pos_x+1
     lda.w #0xFE00
     bcs .89F2
 
@@ -1413,9 +1413,9 @@ sting_chameleao:
     clc
     adc.w #0x0030
     sta.w 0x0002
-    lda.w 0x0BAD
+    lda.w ram.obj.mega_man.pos_x+1
     sta.w 0x0004
-    lda.w 0x0BB0
+    lda.w ram.obj.mega_man.pos_y+1
     sta.w 0x0006
     sep #0x20
     jsl 0x84A097

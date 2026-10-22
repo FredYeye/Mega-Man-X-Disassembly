@@ -6,7 +6,7 @@ sigma:
 
 .C3CB:
     rep #0x20
-    lda.w 0x0BB0
+    lda.w ram.obj.mega_man.pos_y+1
     cmp.w #0x00C0
     sep #0x20
     bcs .C3F4
@@ -436,7 +436,7 @@ sigma:
     and.b #0x7F
     beq .C722
 
-    jsl 0x849B43
+    jsl _849B43
     beq .C722
 
     bpl .C718
@@ -451,7 +451,7 @@ sigma:
     jsl _848EEA.8F07
     rep #0x10
     ldy.w #0x01E8
-    jsl 0x828011
+    jsl _828000.8011
     sep #0x10
     stz.b 0x3D
     jml 0x8280B4
@@ -505,7 +505,7 @@ sigma:
     lda.w #0x0030
 .C776:
     clc
-    adc.w 0x0BAD
+    adc.w ram.obj.mega_man.pos_x+1
     sec
     sbc.b 0x05
     bcs .C783
@@ -741,7 +741,7 @@ sigma:
     sta.b 0x20
     sep #0x20
     stz.b 0x28
-    jsl 0x849B43
+    jsl _849B43
     bvc .C91E
 
     lda.b #0x47
@@ -816,7 +816,7 @@ sigma:
 
     sec
     sbc.w #0x0018
-    cmp.w 0x0BB0
+    cmp.w ram.obj.mega_man.pos_y+1
     sep #0x20
     bcc .C99E
 
@@ -1146,7 +1146,7 @@ sigma:
     lda.b #0x00
 .CBE2:
     sta.b 0x28
-    jsl 0x849B43
+    jsl _849B43
     beq .CC19
 
     bpl .CC0F
@@ -1553,7 +1553,7 @@ sigma:
 .CEF4:
     stz.b 0x3D
     rep #0x20
-    lda.w 0x0BAD
+    lda.w ram.obj.mega_man.pos_x+1
     cmp.w #0x0040
     bcs .CF09
 
@@ -1564,7 +1564,7 @@ sigma:
     rts
 
 .CF09:
-    lda.w 0x0BAD
+    lda.w ram.obj.mega_man.pos_x+1
     sec
     sbc.b 0x05
     bcs .CF15
@@ -1577,7 +1577,7 @@ sigma:
     rol.b 0x3D
     rep #0x20
     lda.w #0x00A8
-    cmp.w 0x0BB0
+    cmp.w ram.obj.mega_man.pos_y+1
     sep #0x20
     rol.b 0x3D
     lda.b 0x3D

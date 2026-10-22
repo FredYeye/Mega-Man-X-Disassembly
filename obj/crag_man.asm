@@ -4,7 +4,7 @@ crag_man:
     ldx.b 0x01
     jsr (.D8AF,X)
     jsl _849B03
-    jsl 0x849B43
+    jsl _849B43
     beq .D8A1
 
     bpl .D89D
@@ -65,7 +65,7 @@ crag_man:
     rep #0x20
     lda.b 0x05
     sec
-    sbc.w 0x0BAD
+    sbc.w ram.obj.mega_man.pos_x+1
     bcs .D8F1
 
     eor.w #0xFFFF

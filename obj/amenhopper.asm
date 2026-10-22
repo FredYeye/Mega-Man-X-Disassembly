@@ -3,7 +3,7 @@ amenhopper:
     tsb.b 0x11
     ldx.b 0x01
     jsr (.AB05,X)
-    jsl 0x849B43
+    jsl _849B43
     beq .AAF7
 
     lda.b #0x0E
@@ -429,7 +429,7 @@ amenhopper:
     bra .ADD9
 
 .ADD3:
-    lda.w 0x0BAD
+    lda.w ram.obj.mega_man.pos_x+1
     sec
     sbc.b 0x05
 .ADD9:

@@ -19,7 +19,7 @@ gulpfer:
     bra .A362
 
 .A35C:
-    jsl 0x849B43
+    jsl _849B43
     beq .A39D
 
 .A362:
@@ -93,7 +93,7 @@ gulpfer:
 
     inc.b 0x02
     rep #0x20
-    lda.w 0x0BAD
+    lda.w ram.obj.mega_man.pos_x+1
     cmp.b 0x05
     sep #0x20
     lda.b #0x00
@@ -164,7 +164,7 @@ gulpfer:
 
 .A45D:
     rep #0x20
-    lda.w 0x0BAD
+    lda.w ram.obj.mega_man.pos_x+1
     sec
     sbc.b 0x05
     bcc .A48E
@@ -406,9 +406,9 @@ gulpfer:
 .A5FA:
     rep #0x20
     lda.b 0x05
-    sta.w 0x0BAD
+    sta.w ram.obj.mega_man.pos_x+1
     lda.b 0x08
-    sta.w 0x0BB0
+    sta.w ram.obj.mega_man.pos_y+1
     sep #0x30
     dec.b 0x33
     bne .A619

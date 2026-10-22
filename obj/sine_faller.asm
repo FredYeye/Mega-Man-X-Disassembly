@@ -8,7 +8,7 @@ sine_faller:
 
     inc.b 0x3B
 .D2DD:
-    jsl 0x849B43
+    jsl _849B43
     beq .D2FF
 
     lda.b #0x0E
@@ -138,7 +138,7 @@ sine_faller:
     sta.b 0x1C
     lda.b 0x05
     sec
-    sbc.w 0x0BAD
+    sbc.w ram.obj.mega_man.pos_x+1
     sep #0x20
     stz.b 0x34
     ror.b 0x34
@@ -159,7 +159,7 @@ sine_faller:
     jsl update_pos_xy.pos_ay_neg_ax
 .D3EB:
     rep #0x20
-    lda.w 0x0BAD
+    lda.w ram.obj.mega_man.pos_x+1
     sec
     sbc.b 0x05
     sep #0x20
@@ -322,7 +322,7 @@ sine_faller:
     rep #0x20
     lda.b 0x37
     sec
-    sbc.w 0x0BAD
+    sbc.w ram.obj.mega_man.pos_x+1
     bcs .D507
 
     eor.w #0xFFFF
@@ -333,7 +333,7 @@ sine_faller:
 
     lda.b 0x39
     sec
-    sbc.w 0x0BB0
+    sbc.w ram.obj.mega_man.pos_y+1
     bcs .D518
 
     eor.w #0xFFFF

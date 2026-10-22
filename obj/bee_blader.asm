@@ -14,7 +14,7 @@ bee_blader:
     beq .B899
 
     rep #0x20
-    lda.w 0x0BAD
+    lda.w ram.obj.mega_man.pos_x+1
     sec
     sbc.b 0x05
     bcc .B8CB
@@ -46,7 +46,7 @@ bee_blader:
     stz.b 0x3E
     rep #0x20
     lda.b 0x05
-    cmp.w 0x0BAD
+    cmp.w ram.obj.mega_man.pos_x+1
     sep #0x20
     bcs .B8F4
 
@@ -106,7 +106,7 @@ bee_blader:
     sec
     sbc.w #0x0080
     sec
-    sbc.w 0x0BAD
+    sbc.w ram.obj.mega_man.pos_x+1
     sep #0x20
     bcs .B971
 
@@ -500,7 +500,7 @@ bee_blader:
     lda.b 0x27
     sta.b 0x3D
     jsl _849B03
-    jsl 0x849B43
+    jsl _849B43
     beq .BC83
 
     lda.b #0x80

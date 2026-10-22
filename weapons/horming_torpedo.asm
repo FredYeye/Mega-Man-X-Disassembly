@@ -42,9 +42,9 @@ horming_torpedo:
     inc
 .8EF8:
     clc
-    adc.w 0x0BAD
+    adc.w ram.obj.mega_man.pos_x+1
     sta.b 0x05
-    lda.w 0x0BB0
+    lda.w ram.obj.mega_man.pos_y+1
     clc
     adc.w 0x0002
     sta.b 0x08

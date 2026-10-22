@@ -4,7 +4,7 @@ gun_volt:
     ldx.b 0x01
     jsr (.DA25,X)
     jsl _849B03
-    jsl 0x849B43
+    jsl _849B43
     beq .DA13
 
     lda.b 0x27
@@ -59,7 +59,7 @@ gun_volt:
 
     rep #0x20
     lda.b 0x05
-    cmp.w 0x0BAD
+    cmp.w ram.obj.mega_man.pos_x+1
     bcc .DA68
 
     sep #0x20
