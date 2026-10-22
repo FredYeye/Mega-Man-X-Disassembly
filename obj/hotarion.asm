@@ -42,7 +42,7 @@ hotarion:
     jsl _849B03
     jsl .A5AE
     jsl _82808F.80B4
-    jsl 0x82806E
+    jsl _82806E
     bcc .A4CD
 
     lda.b #0x00

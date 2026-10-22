@@ -29,7 +29,7 @@ ray_bit:
 .D636:
     jsl _849B03
     jsl _82808F.80B4
-    jsl 0x82806E
+    jsl _82806E
     bcc .D648
 
 .D644:

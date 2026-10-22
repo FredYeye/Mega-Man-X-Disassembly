@@ -72,7 +72,7 @@ spiky:
 .9C3A:
     jsl _849B03
     jsl _82808F.80B4
-    jsl 0x82806E
+    jsl _82806E
     bcc .9C4C
 
     jml 0x828387

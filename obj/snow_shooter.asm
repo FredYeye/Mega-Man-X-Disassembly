@@ -48,7 +48,7 @@ snow_shooter:
     sbc.w #0x0020
     sta.b 0x08
     sep #0x20
-    jsl 0x82806E
+    jsl _82806E
     bcc .DEF8
 
 .DEF4:

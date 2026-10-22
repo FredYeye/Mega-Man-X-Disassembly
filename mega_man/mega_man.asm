@@ -1813,7 +1813,7 @@ mega_man:
 
 .8D17:
     jsl update_pos_xy.no_accel
-    jsl 0x82806E
+    jsl _82806E
     bcc .8D16
 
     lda.b #0xFF
@@ -2563,7 +2563,7 @@ mega_man:
 
 .922D:
     jsl update_pos_y
-    jsl 0x82806E
+    jsl _82806E
     bcc .922C
 
     lda.b #0xFF

@@ -19,7 +19,7 @@ dodge_blaster:
     lda.b #0x0E
     trb.b 0x11
 .99C6:
-    jsl 0x82806E
+    jsl _82806E
     bcs .99BE
 
     jml 0x8280B4

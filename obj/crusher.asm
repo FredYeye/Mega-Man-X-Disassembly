@@ -69,7 +69,7 @@ crusher:
     rts
 
 .9709:
-    jsl 0x82806E
+    jsl _82806E
     bcc .971F
 
     lda.b #0x04

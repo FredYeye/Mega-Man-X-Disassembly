@@ -1,7 +1,7 @@
 bee_blader:
     lda.b 0x33
     tsb.b 0x11
-    jsl 0x82806E
+    jsl _82806E
     bcs .B89E
 
 .B899:
@@ -529,7 +529,7 @@ bee_blader:
     lda.w ram.current_stage
     beq .BCA8
 
-    jsl 0x82806E
+    jsl _82806E
     bcc .BCA8
 
     lda.b 0x01

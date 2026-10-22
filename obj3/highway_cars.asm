@@ -22,7 +22,7 @@ highway_cars:
     tax
     rep #0x20
     lda.w 0x86DEA9,X
-    sta.b 0x1A
+    sta.b obj3.speed_x
     sep #0x20
     lda.b 0x0B
     and.b #0x30

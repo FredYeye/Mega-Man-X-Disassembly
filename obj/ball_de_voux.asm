@@ -27,7 +27,7 @@ ball_de_voux:
     lda.b 0x34
     bne .D201
 
-    jsl 0x82806E
+    jsl _82806E
     bcs .D21B
 
     jml 0x8280B4

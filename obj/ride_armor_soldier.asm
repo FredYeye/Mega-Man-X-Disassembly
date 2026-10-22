@@ -92,7 +92,7 @@ ride_armor_soldier:
     rtl
 
 .C652:
-    jsl 0x82806E
+    jsl _82806E
     bcc .C65C
 
     jml 0x828387

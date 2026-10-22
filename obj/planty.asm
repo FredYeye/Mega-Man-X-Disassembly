@@ -34,7 +34,7 @@ planty:
     rts
 
 .C283:
-    jsl 0x82806E
+    jsl _82806E
     bcc .C28E
 
     lda.b #0x04

@@ -19,7 +19,7 @@ ray_trap:
     sta.b 0x2C
     jsl 0x82D7D0
     jsl _82808F.80B4
-    jsl 0x82806E
+    jsl _82806E
     bcc .BAA3
 
 .BA9F:

@@ -23,7 +23,7 @@ gun_volt:
     lda.b 0x0B
     bmi .DA1D
 
-    jsl 0x82806E
+    jsl _82806E
     bcs .DA21
 
 .DA1D:

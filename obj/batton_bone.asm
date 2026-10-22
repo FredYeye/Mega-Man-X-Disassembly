@@ -70,7 +70,7 @@ batton_bone: // also batton m-501
     sep #0x20
 .A0F6:
     jsl _82808F.80B4
-    jsl 0x82806E
+    jsl _82806E
     bcc .A104
 
     jsl _828372.8387

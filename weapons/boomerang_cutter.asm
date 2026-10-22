@@ -66,7 +66,7 @@ boomerang_cutter:
     jsr .8538
     jsl _848EEA
     jsl _82808F.80B4
-    jsl 0x82806E
+    jsl _82806E
     bcc .8451
 
     lda.b 0x3A

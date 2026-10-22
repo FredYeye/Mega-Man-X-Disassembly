@@ -75,7 +75,7 @@ hoganmer:
     rts
 
 .AF15:
-    jsl 0x82806E
+    jsl _82806E
     bcc .AF2E
 
     rep #0x30

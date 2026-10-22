@@ -2443,7 +2443,7 @@ _87973C:
 _879794:
     ldx.b 0x01
     jsr (.97AA,X)
-    jsl 0x82806E
+    jsl _82806E
     bcc .97A6
 
     jsr _879930
@@ -3324,7 +3324,7 @@ _87ADD8:
     rtl
 
 .ADFE:
-    jsl 0x82806E
+    jsl _82806E
     bcc .AE05
 
     rtl
@@ -3923,7 +3923,7 @@ _87B443:
     jsr (.B45B,X)
     jsl _849B43
     jsl _82808F.80B4
-    jsl 0x82806E
+    jsl _82806E
     bcc .B45A
 
     jsl _828372.8387
@@ -4081,7 +4081,7 @@ _87B542:
     rtl
 
 .B560:
-    jsl 0x82806E
+    jsl _82806E
     bcc .B56A
 
     jml 0x828387
@@ -4129,7 +4129,7 @@ _87B542:
     ora.b 0x34
     beq .B5C3
 
-    jsl 0x82806E
+    jsl _82806E
     bcc .B5C3
 
     jsr _87B7F4
@@ -4475,7 +4475,7 @@ _87B808:
     ldx.b 0x01
     jsr (.B81C,X)
     jsl _82808F.80B4
-    jsl 0x82806E
+    jsl _82806E
     bcc .B81B
 
     jml 0x828387
@@ -4644,7 +4644,7 @@ _87B91C:
     lda.b 0x3A
     bne .B92F
 
-    jsl 0x82806E
+    jsl _82806E
     bcc .B92F
 
     jsl 0x828398
@@ -5112,7 +5112,7 @@ _87BD70:
     sta.b 0x08
     sep #0x20
     jsl _82808F.80B4
-    jsl 0x82806E
+    jsl _82806E
     bcc .BD9B
 
     jsl _828372.8387
@@ -5974,7 +5974,7 @@ _87C70A:
     sta.b 0x27
     lda.b #0x00
     jsl _848EEA.8F07
-    jsl 0x82806E
+    jsl _82806E
     bcs .C73F
 
     lda.b #0x23
@@ -6252,7 +6252,7 @@ _87C8EF:
 //-----
 
 _87C91F:
-    jsl 0x82806E
+    jsl _82806E
     bcs .C94B
 
     jsl _8282AC.82D3
@@ -6964,7 +6964,7 @@ _87E037:
     lda.b #0x0E
     trb.b 0x11
 .E10D:
-    jsl 0x82806E
+    jsl _82806E
     bcc .E117
 
     jml 0x828387
@@ -8696,7 +8696,7 @@ _87EE82:
     lda.w #0xDB4D
     sta.b 0x20
     sep #0x20
-    jsl 0x82806E
+    jsl _82806E
     bcc .EEA7
 
     jml 0x828387
@@ -10192,7 +10192,7 @@ _87F8A0:
     jsr _87FA9A
     bcc .F8EB
 
-    jsl 0x82806E
+    jsl _82806E
     bcc .F8EB
 
     lda.b #0x80
@@ -10551,7 +10551,7 @@ _87FB40:
     sep #0x20
     bcs .FB6F
 
-    jsl 0x82806E
+    jsl _82806E
     bcc .FB6E
 
     jml 0x828387
@@ -10829,7 +10829,7 @@ _87FCE7:
     rts
 
 .FD44:
-    jsl 0x82806E
+    jsl _82806E
     bcc .FD4E
 
     jml 0x828387

@@ -266,7 +266,7 @@ anglerge:
     rts
 
 .B006:
-    jsl 0x82806E
+    jsl _82806E
     bcc .B00D
 
     rts
