@@ -2,7 +2,7 @@ mega_man:
     php
     phd
     sep #0x30
-    pea 0x0BA8
+    pea ram.obj.mega_man
     pld
     jsl _849ACD
     sta.b 0x65

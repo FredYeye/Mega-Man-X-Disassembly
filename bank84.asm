@@ -7004,4 +7004,8 @@ _84ADE2:
 
 //-----
 
-// bank84
+// bank84 data
+
+//-----
+
+fill_bytes(0xFF, 0x1215)
