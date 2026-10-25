@@ -32,7 +32,7 @@ armor_armarge:
     rtl
 
 .B17C:
-    jsl 0x82827D
+    jsl _82827D
     rep #0x10
     ldy.w #0x01F0
     jsl _828000.8011
@@ -528,7 +528,7 @@ armor_armarge:
     lsr
     eor.b #0x40
     tsb.b 0x11
-    jsl 0x82820A
+    jsl update_pos_xy.no_accel
     jsl _848EEA
     jsl _8491AD.91BE
     lda.b 0x2B
@@ -1122,7 +1122,7 @@ armor_armarge:
     bpl .B924
 
     lda.w ram.current_stage
-    cmp.b #0x09
+    cmp.b #stage.sigma_stages
     bcc .B920
 
     lda.b #0x1C

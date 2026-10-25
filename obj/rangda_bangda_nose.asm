@@ -5,7 +5,7 @@ rangda_bangda_nose:
 .B21B: d16[.B221, .B244, .B3DA]
 
 .B221:
-    jsl 0x82827D
+    jsl _82827D
     lda.b #0x06
     sta.b 0x12
     lda.b #0x07
@@ -215,7 +215,7 @@ rangda_bangda_nose:
 .B392:
     sep #0x20
 .B394:
-    jsl 0x82820A
+    jsl update_pos_xy.no_accel
     rts
 
 .B399:

@@ -30,7 +30,7 @@ icy_penguigo:
     rtl
 
 .B541:
-    jsl 0x82827D
+    jsl _82827D
     lda.b 0x11
     and.b #0x0E
     sta.b 0x33
@@ -101,7 +101,7 @@ icy_penguigo:
 
     lda.b #0x06
     sta.b 0x02
-    jsl 0x8282B9
+    jsl _8282AC.82B9
     bne .B5E2
 
     inc.w 0x0000,X
@@ -907,7 +907,7 @@ icy_penguigo:
     bpl .BB6C
 
     lda.w ram.current_stage
-    cmp.b #0x09
+    cmp.b #stage.sigma_stages
     bcc .BB68
 
     lda.b #0x1B

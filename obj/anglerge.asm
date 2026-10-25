@@ -1311,7 +1311,7 @@ anglerge:
 //-----
 
 .B706:
-    jsl 0x8282B9
+    jsl _8282AC.82B9
     inc.w 0x0000,X
     lda.b #0x0A
     sta.w 0x000A,X

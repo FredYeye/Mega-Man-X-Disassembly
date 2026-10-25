@@ -40,7 +40,7 @@ ray_bit:
 .D649: d16[.D651, .D698, .D6F6, .D748]
 
 .D651:
-    jsl 0x82827D
+    jsl _82827D
     lda.b 0x11
     and.b #0x0E
     sta.b 0x34

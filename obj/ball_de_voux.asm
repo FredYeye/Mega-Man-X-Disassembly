@@ -42,7 +42,7 @@ ball_de_voux:
 .D223: d16[.D22B, .D28C, .D34B, .D441]
 
 .D22B:
-    jsl 0x82827D
+    jsl _82827D
     lda.b 0x11
     and.b #0x0E
     sta.b 0x33
@@ -271,7 +271,7 @@ ball_de_voux:
     sta.b 0x1D
     stz.b 0x1A
     stz.b 0x1C
-    jsl 0x82820A
+    jsl update_pos_xy.no_accel
     jsl _8491AD.91BE
     jsr .D508
 .D3C2:

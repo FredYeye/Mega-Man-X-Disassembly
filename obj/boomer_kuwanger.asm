@@ -30,7 +30,7 @@ boomer_kuwanger:
     rtl
 
 .8AB3:
-    jsl 0x82827D
+    jsl _82827D
     lda.b 0x11
     and.b #0x0E
     sta.b 0x33
@@ -932,7 +932,7 @@ boomer_kuwanger:
     bpl .909D
 
     lda.w ram.current_stage
-    cmp.b #0x09
+    cmp.b #stage.sigma_stages
     bcc .9099
 
     lda.b #0x1A

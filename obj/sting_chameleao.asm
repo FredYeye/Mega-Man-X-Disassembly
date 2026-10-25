@@ -30,7 +30,7 @@ sting_chameleao:
     stz.w 0x1E8D
     lda.w #0x0200
     ldx.w ram.current_stage
-    cpx.b #0x09
+    cpx.b #stage.sigma_stages
     bcc .8588
 
     lda.w #0x0100
@@ -50,7 +50,7 @@ sting_chameleao:
     rtl
 
 .85A1:
-    jsl 0x82827D
+    jsl _82827D
     stz.b 0x02
     lda.b #0x04
     sta.b 0x26
@@ -683,7 +683,7 @@ sting_chameleao:
     rts
 
 .8A18:
-    jsl 0x82820A
+    jsl update_pos_xy.no_accel
     jsl _848EEA
     rep #0x20
     lda.w #0xC774
@@ -744,7 +744,7 @@ sting_chameleao:
     rts
 
 .8A77:
-    jsl 0x82820A
+    jsl update_pos_xy.no_accel
     rep #0x20
     lda.w #0xC774
     sta.b 0x20
@@ -1142,7 +1142,7 @@ sting_chameleao:
     bpl .8D20
 
     lda.w ram.current_stage
-    cmp.b #0x09
+    cmp.b #stage.sigma_stages
     bcc .8D1C
 
     lda.b #0x1C

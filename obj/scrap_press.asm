@@ -37,7 +37,7 @@ scrap_press:
 .E202: d16[.E20C, .E248, .E2C8, .E2F6, .E3A5]
 
 .E20C:
-    jsl 0x82827D
+    jsl _82827D
     lda.b #0x01
     sta.b 0x27
     stz.b 0x28
@@ -304,12 +304,12 @@ scrap_press:
     sep #0x20
     lda.b #0x80
     sta.b 0x2C
-    jsl 0x82D7D0
+    jsl _82D7D0
     rep #0x20
     lda.w #0xD159
     sta.b 0x20
     sep #0x20
     lda.b #0x80
     sta.b 0x2C
-    jsl 0x82D7D0
+    jsl _82D7D0
     rts

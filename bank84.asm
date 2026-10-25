@@ -5362,7 +5362,7 @@ _84A333:
 _84A355:
     rep #0x10
     sta.w 0x0000
-    jsl 0x8282B9
+    jsl _8282AC.82B9
     bne .A37C
 
     inc.w 0x0000,X
@@ -5438,7 +5438,7 @@ _84A355:
 .A3CD:
     rep #0x10
     sta.w 0x0000
-    jsl 0x8282B9
+    jsl _8282AC.82B9
     bne .A3F4
 
     inc.w 0x0000,X
@@ -5457,7 +5457,7 @@ _84A355:
     rtl
 
 .A3F7:
-    jsl 0x8282B9
+    jsl _8282AC.82B9
     bne .A420
 
     inc.w 0x0000,X
@@ -5469,17 +5469,17 @@ _84A355:
     lda.b 0x08
     sta.w 0x0008,X
     sep #0x20
-    lda.l 0x00804E
+    lda.l 0x00804E // copy protection check
     cmp.l 0x40804E
     beq .A420
 
-    stz.w 0x1F9B
+    stz.w ram.highway_stage_completed
 .A420:
     sep #0x10
     rtl
 
 .A423:
-    jsl 0x8282B9
+    jsl _8282AC.82B9
     bne .A442
 
     inc.w 0x0000,X

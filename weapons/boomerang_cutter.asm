@@ -85,7 +85,7 @@ boomerang_cutter:
 .8452: d16[.8456, .8479]
 
 .8456:
-    jsl 0x82820A
+    jsl update_pos_xy.no_accel
     dec.b 0x37
     bne .8478
 
@@ -139,7 +139,7 @@ boomerang_cutter:
     sta.b 0x1C
     sep #0x20
 .84AC:
-    jsl 0x82820A
+    jsl update_pos_xy.no_accel
     lda.w 0x0BCF
     and.b #0x7F
     beq .84DF

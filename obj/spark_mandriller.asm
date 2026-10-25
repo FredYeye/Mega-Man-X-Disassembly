@@ -45,7 +45,7 @@ spark_mandriller:
     rtl
 
 .9C38:
-    jsl 0x82827D
+    jsl _82827D
     rep #0x20
     lda.w #0xCFBB
     sta.b 0x20
@@ -1041,7 +1041,7 @@ spark_mandriller:
     bpl .A353
 
     lda.w ram.current_stage
-    cmp.b #0x09
+    cmp.b #stage.sigma_stages
     bcc .A34F
 
     lda.b #0x1C

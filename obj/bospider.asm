@@ -30,7 +30,7 @@ bospider:
     rtl
 
 .DBAB:
-    jsl 0x82827D
+    jsl _82827D
     stz.b 0x28
     lda.b 0x11
     and.b #0x0E

@@ -5,7 +5,7 @@ rangda_bangda_eye:
 .AE10: d16[.AE16, .AE3D, .B133]
 
 .AE16:
-    jsl 0x82827D
+    jsl _82827D
     lda.b #0x06
     sta.b 0x12
     lda.b #0x07
@@ -142,7 +142,7 @@ rangda_bangda_eye:
     rts
 
 .AF21:
-    jsl 0x82820A
+    jsl update_pos_xy.no_accel
     rep #0x20
     dec.b 0x34
     sep #0x20
@@ -182,7 +182,7 @@ rangda_bangda_eye:
     rts
 
 .AF5C:
-    jsl 0x82820A
+    jsl update_pos_xy.no_accel
     rts
 
 .AF61:
@@ -343,7 +343,7 @@ rangda_bangda_eye:
     jmp .B152
 
 .B070:
-    jsl 0x82820A
+    jsl update_pos_xy.no_accel
     rts
 
 .B075:
@@ -373,7 +373,7 @@ rangda_bangda_eye:
     rts
 
 .B099:
-    jsl 0x82820A
+    jsl update_pos_xy.no_accel
     rts
 
 .B09E:

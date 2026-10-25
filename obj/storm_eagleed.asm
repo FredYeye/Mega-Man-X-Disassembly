@@ -29,7 +29,7 @@ storm_eagleed:
     rtl
 
 .D88D:
-    jsl 0x82827D
+    jsl _82827D
     lda.b 0x11
     ora.b #0x30
     sta.b 0x11
@@ -499,7 +499,7 @@ storm_eagleed:
 
 .DBEC:
     jsl _848EEA
-    jsl 0x82820A
+    jsl update_pos_xy.no_accel
     rep #0x20
     lda.b 0x08
     sec
@@ -791,7 +791,7 @@ storm_eagleed:
     bpl .DE14
 
     lda.w ram.current_stage
-    cmp.b #0x09
+    cmp.b #stage.sigma_stages
     bcc .DE10
 
     lda.b #0x1B

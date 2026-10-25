@@ -6,7 +6,7 @@ capsule:
 
 .CA86:
     ldx.w ram.current_stage
-    cpx.b #0x03
+    cpx.b #stage.gallery_stage
     bne .CAB9
 
     lda.w 0x1F7E
@@ -44,7 +44,7 @@ capsule:
     jml 0x828398
 
 .CAC8:
-    jsl 0x82827D
+    jsl _82827D
     stz.b 0x18
     stz.b 0x26
     lda.b #0x02
@@ -73,10 +73,10 @@ capsule:
     sta.b 0x31
     sep #0x20
     lda.w ram.current_stage
-    cmp.b #0x02
+    cmp.b #stage.forest_stage
     beq .CB10
 
-    cmp.b #0x05
+    cmp.b #stage.sky_stage
     bne .CB15
 
 .CB10:
@@ -99,7 +99,7 @@ capsule:
     and.w #0x000F
     adc.w #0xD319
     sta.b 0x20
-    jsl 0x82D7D0
+    jsl _82D7D0
     jsr .CFE1
     jsl 0x849A02
     lda.b 0x0F
@@ -107,7 +107,7 @@ capsule:
     clc
     adc.w #0xD31D
     sta.b 0x20
-    jsl 0x82D7D0
+    jsl _82D7D0
     jsr .CFE1
     jsl 0x849A02
     sep #0x20
@@ -130,7 +130,7 @@ capsule:
     sta.b 0x29
     sep #0x20
     lda.w ram.current_stage
-    cmp.b #0x02
+    cmp.b #stage.forest_stage
     bne .CB8B
 
     lda.b #0x20
@@ -142,7 +142,7 @@ capsule:
     jsl _848EEA.8F07
 .CB97:
     lda.w ram.current_stage
-    cmp.b #0x05
+    cmp.b #stage.sky_stage
     beq .CBA4
 
     jsr .CF5D

@@ -5,7 +5,7 @@ utuboros_head:
 .BD69: d16[.BD6F, .BE13, .C1DE]
 
 .BD6F:
-    jsl 0x82827D
+    jsl _82827D
     lda.b #0x18
     sta.b 0x0A
     jsl 0x84A23A
@@ -313,7 +313,7 @@ utuboros_head:
     sta.b 0x02
     stz.b 0x03
 .BFC4:
-    jsl 0x82820A
+    jsl update_pos_xy.no_accel
     jmp .C37E
 
 .BFCB:
@@ -422,7 +422,7 @@ utuboros_head:
     sta.b 0x1C
 .C069:
     sep #0x20
-    jsl 0x82820A
+    jsl update_pos_xy.no_accel
     lda.b 0x27
     bpl .C083
 
@@ -572,7 +572,7 @@ utuboros_head:
     rts
 
 .C14F:
-    jsl 0x82820A
+    jsl update_pos_xy.no_accel
     jsl _848EEA
     rts
 
@@ -690,7 +690,7 @@ utuboros_head:
     sta.b 0x1C
     sep #0x20
 .C213:
-    jsl 0x82820A
+    jsl update_pos_xy.no_accel
     jsr .C27D
     dec.b 0x36
     bne .C222

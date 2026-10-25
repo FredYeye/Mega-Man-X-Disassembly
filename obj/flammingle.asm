@@ -6,7 +6,7 @@ flammingle:
 .C030: d16[.C036, .C063, .C1A4]
 
 .C036:
-    jsl 0x82827D
+    jsl _82827D
     lda.b #0x08
     sta.b 0x27
     lda.b #0x03

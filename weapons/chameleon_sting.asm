@@ -112,7 +112,7 @@ chameleon_sting:
     rts
 
 .9291:
-    jsl 0x82820A
+    jsl update_pos_xy.no_accel
     rts
 
 .9296:

@@ -44,7 +44,7 @@ sea_attacker:
 .A1CD: d16[.A1D5, .A206, .A254, .A2CF]
 
 .A1D5:
-    jsl 0x82827D
+    jsl _82827D
     lda.b 0x11
     and.b #0x0E
     sta.b 0x34

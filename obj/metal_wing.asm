@@ -13,7 +13,7 @@ metal_wing:
     bit.b #0x20
     beq .DBD1
 
-    jsl 0x82827D
+    jsl _82827D
     lda.b #0x04
     sta.b 0x12
     stz.b 0x2F

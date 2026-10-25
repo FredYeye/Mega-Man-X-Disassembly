@@ -55,7 +55,7 @@ rolling_gabyool:
 .D173: d16[.D179, .D1C0, .D1D9]
 
 .D179:
-    jsl 0x82827D
+    jsl _82827D
     lda.b #0x01
     sta.b 0x27
     stz.b 0x28

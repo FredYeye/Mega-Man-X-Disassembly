@@ -34,7 +34,7 @@ mettool_c_15:
 .C3C4: d16[.C3CC, .C3EB, .C43E, .C4AE]
 
 .C3CC:
-    jsl 0x82827D
+    jsl _82827D
     lda.b 0x11
     and.b #0x0E
     sta.b 0x33

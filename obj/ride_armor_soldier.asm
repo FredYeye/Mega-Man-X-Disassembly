@@ -16,7 +16,7 @@ ride_armor_soldier:
     jml 0x828387
 
 .C5C4:
-    jsl 0x82827D
+    jsl _82827D
     lda.b #0x04
     sta.b 0x12
     stz.b 0x33

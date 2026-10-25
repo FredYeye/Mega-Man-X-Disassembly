@@ -96,7 +96,7 @@ spiky:
 
 .9C69:
     stz.b 0x3D
-    jsl 0x82827D
+    jsl _82827D
     lda.b 0x11
     and.b #0x0E
     sta.b 0x33
@@ -213,7 +213,7 @@ spiky:
 .9D3B:
     sep #0x20
 .9D3D:
-    jsl 0x82820A
+    jsl update_pos_xy.no_accel
     lda.b #0xFF
     sta.b 0x2F
     jsl _8491AD.91BE
@@ -389,7 +389,7 @@ spiky:
     bra .9E55
 
 .9E51:
-    jsl 0x82820A
+    jsl update_pos_xy.no_accel
 .9E55:
     jsl _849ACD
     cmp.b #0x04

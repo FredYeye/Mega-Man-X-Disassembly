@@ -84,7 +84,7 @@ batton_bone: // also batton m-501
     and.b #0x01
     bne .A11C
 
-    jsl 0x82827D
+    jsl _82827D
     stz.b 0x28
     jmp .A136
 
@@ -303,7 +303,7 @@ batton_bone: // also batton m-501
     sta.b 0x1C
     sep #0x20
 .A28E:
-    jsl 0x82820A
+    jsl update_pos_xy.no_accel
     jsl _848EEA
     jmp .A2AA
 

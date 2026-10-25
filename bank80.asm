@@ -3154,7 +3154,7 @@ _8094BA:
     lda.b #0x10
     sta.w ram.max_hp
     stz.w ram.upgrades
-    stz.w 0x1F9B
+    stz.w ram.highway_stage_completed
     stz.w 0x1F82
     stz.w 0x1F9C
     rep #0x20
@@ -3192,7 +3192,7 @@ _8094BA:
     jsr _80DB53
     jsr _808BB4
     jsr _808A2E
-    lda.w 0x1F9B
+    lda.w ram.highway_stage_completed
     bne .955F
 
     stz.w ram.current_stage
@@ -9256,35 +9256,35 @@ _80BFE6:
     rts
 
 .C037:
-    lda.b #0x01
+    lda.b #stage.ocean_stage
     bra .C057
 
 .C03B:
-    lda.b #0x08
+    lda.b #stage.snow_mountain_stage
     bra .C057
 
 .C03F:
-    lda.b #0x03
+    lda.b #stage.gallery_stage
     bra .C057
 
 .C043:
-    lda.b #0x04
+    lda.b #stage.factory_stage
     bra .C057
 
 .C047:
-    lda.b #0x05
+    lda.b #stage.sky_stage
     bra .C057
 
 .C04B:
-    lda.b #0x07
+    lda.b #stage.tower_stage
     bra .C057
 
 .C04F:
-    lda.b #0x06
+    lda.b #stage.power_plant_stage
     bra .C057
 
 .C053:
-    lda.b #0x02
+    lda.b #stage.forest_stage
     bra .C057
 
 .C057:
@@ -16718,7 +16718,7 @@ _80F08C:
     jsl get_rng
     and.b #0xE0
     tsb.b 0x1B
-    lda.w 0x1F9B
+    lda.w ram.highway_stage_completed
     beq .F0C3
 
     lda.b #0x10
@@ -17037,7 +17037,7 @@ _80F188:
 .F29F:
     lda.b 0x27
     and.b #0x10
-    sta.w 0x1F9B
+    sta.w ram.highway_stage_completed
     lda.b #0x02
     sta.w ram.lives
     stz.w 0x1F7B
@@ -17684,8 +17684,8 @@ _80F596: d16[
 
 _80F68B: d16[
     .thunk_x_buster, .thunk_charge_shot_s, .thunk_spiral_crush_buster, .thunk_charge_shot_l, .thunk_hadouken, .F6E0, .thunk_x_buster_dash, .thunk_horming_torpedo,
-    .thunk_chameleon_sting, .thunk_rolling_shield, .thunk_fire_wave, .thunk_storm_tornado, .thunk_electric_spark, .thunk_boomerang_cutter, .F70D, .F712,
-    .F717, .F71C, .F721, .F726, .F72B, .F730, .F735, .F73A,
+    .thunk_chameleon_sting, .thunk_rolling_shield, .thunk_fire_wave, .thunk_storm_tornado, .thunk_electric_spark, .thunk_boomerang_cutter, .thunk_shotgun_ice, .F712,
+    .thunk_horming_torpedo_charge, .F71C, .F721, .F726, .F72B, .F730, .F735, .F73A,
     .F73F, .F744, .F749, .F74E, .F753, .F758,
 ]
 
@@ -17734,7 +17734,7 @@ _80F68B: d16[
     rts
 
 .thunk_storm_tornado:
-    jsl _839550
+    jsl storm_tornado
     rts
 
 .thunk_electric_spark:
@@ -17745,16 +17745,16 @@ _80F68B: d16[
     jsl boomerang_cutter
     rts
 
-.F70D:
-    jsl _839807
+.thunk_shotgun_ice:
+    jsl shotgun_ice
     rts
 
 .F712:
-    jsl _839550
+    jsl storm_tornado
     rts
 
-.F717:
-    jsl _83995D
+.thunk_horming_torpedo_charge:
+    jsl horming_torpedo_charge
     rts
 
 .F71C:
@@ -17786,7 +17786,7 @@ _80F68B: d16[
     rts
 
 .F73F:
-    jsl _839550
+    jsl storm_tornado
     rts
 
 .F744:

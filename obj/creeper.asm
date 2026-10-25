@@ -40,7 +40,7 @@ creeper:
     lda.b 0x11
     and.b #0x40
     pha
-    jsl 0x82827D
+    jsl _82827D
     pla
     tsb.b 0x11
     lda.b 0x11

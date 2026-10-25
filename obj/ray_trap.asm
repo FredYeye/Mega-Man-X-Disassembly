@@ -17,7 +17,7 @@ ray_trap:
 .BA8D:
     lda.b #0x80
     sta.b 0x2C
-    jsl 0x82D7D0
+    jsl _82D7D0
     jsl _82808F.80B4
     jsl _82806E
     bcc .BAA3
@@ -30,7 +30,7 @@ ray_trap:
 .BAA4: d16[.BAAC, .BACE, .BAE8, .BB6F]
 
 .BAAC:
-    jsl 0x82827D
+    jsl _82827D
     lda.b #0x01
     sta.b 0x27
     sta.b 0x26

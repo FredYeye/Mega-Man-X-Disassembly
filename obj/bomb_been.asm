@@ -27,7 +27,7 @@ bomb_been:
 .9F7A: d16[.9F86, .9FDD, .A007, .A039, .A08A, .A0AC]
 
 .9F86:
-    jsl 0x82827D
+    jsl _82827D
     lda.b #0x02
     sta.b 0x12
     lda.b #0x02

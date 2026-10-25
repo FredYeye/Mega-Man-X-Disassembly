@@ -55,7 +55,7 @@ rt_55j:
 .CC67: d16[.CC73, .CCA9, .CD01, .CD5C, .CDB4, .CEC3]
 
 .CC73:
-    jsl 0x82827D
+    jsl _82827D
     lda.b 0x11
     and.b #0x0E
     sta.b 0x33

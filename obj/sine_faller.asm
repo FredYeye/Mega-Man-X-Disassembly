@@ -47,7 +47,7 @@ sine_faller:
     rts
 
 .D325:
-    jsl 0x82827D
+    jsl _82827D
     lda.b 0x11
     and.b #0x0E
     sta.b 0x36

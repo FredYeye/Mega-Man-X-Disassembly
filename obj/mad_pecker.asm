@@ -27,7 +27,7 @@ mad_pecker:
 .A7FE: d16[.A808, .A84F, .A873, .A8FD, .A935]
 
 .A808:
-    jsl 0x82827D
+    jsl _82827D
     lda.b 0x11
     and.b #0x0E
     sta.b 0x35

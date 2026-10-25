@@ -153,7 +153,7 @@ wolf_sigma_claw:
     jmp .E807
 
 .E663:
-    jsl 0x82820A
+    jsl update_pos_xy.no_accel
     dec.b 0x38
     bne .E673
 
@@ -190,7 +190,7 @@ wolf_sigma_claw:
     sta.b 0x1A
     lda.w 0x00EE3C,X
     sta.b 0x1C
-    jsl 0x82820A
+    jsl update_pos_xy.no_accel
     lda.b 0x08
     sec
     sbc.w 0x0006

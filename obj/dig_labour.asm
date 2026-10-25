@@ -54,7 +54,7 @@ dig_labour:
 .CE62: d16[.CE6A, .CE9A, .CEB4, .CECB]
 
 .CE6A:
-    jsl 0x82827D
+    jsl _82827D
     lda.b 0x11
     and.b #0x0E
     sta.b 0x34

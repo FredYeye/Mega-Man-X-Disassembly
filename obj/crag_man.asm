@@ -44,7 +44,7 @@ crag_man:
 .D8AF: d16[.D8BF, .D8E3, .D90B, .D94C, .D987, .D9AC, .DA0A, .DA2B]
 
 .D8BF:
-    jsl 0x82827D
+    jsl _82827D
     stz.b 0x28
     lda.b 0x11
     and.b #0x0E

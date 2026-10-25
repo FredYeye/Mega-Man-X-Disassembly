@@ -61,7 +61,7 @@ hotarion:
 .A4CE: d16[.A4D2, .A597]
 
 .A4D2:
-    jsl 0x82827D
+    jsl _82827D
     stz.b 0x1C
     jsl 0x84A1D0
     cpy.b #0x04

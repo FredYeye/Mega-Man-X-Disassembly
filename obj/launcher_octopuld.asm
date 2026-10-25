@@ -30,7 +30,7 @@ launcher_octopuld:
     rtl
 
 .C45E:
-    jsl 0x82827D
+    jsl _82827D
     lda.b 0x11
     and.b #0x0E
     sta.b 0x33
@@ -794,7 +794,7 @@ launcher_octopuld:
     bpl .C9E3
 
     lda.w ram.current_stage
-    cmp.b #0x09
+    cmp.b #stage.sigma_stages
     bcc .C9DF
 
     lda.b #0x1C

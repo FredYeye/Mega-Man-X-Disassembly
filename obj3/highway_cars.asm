@@ -53,7 +53,7 @@ highway_cars:
     jsr .F5C1
 .F5AD:
     jsl update_pos_x
-    jsl 0x82808F
+    jsl _82808F
     lda.b 0x0E
     bne .F5BD
 

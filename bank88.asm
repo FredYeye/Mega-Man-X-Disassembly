@@ -24,7 +24,7 @@ _888000:
     jsl _848EEA.8F07
 .8024:
     jsl _848EEA
-    jsl 0x82820A
+    jsl update_pos_xy.no_accel
     jsl _82808F.80B4
     lda.b 0x0E
     bne .8038
@@ -537,7 +537,7 @@ _88833C:
     jml 0x8280B4
 
 .83A7:
-    jsl 0x82820A
+    jsl update_pos_xy.no_accel
     jsl _849B03
     bne .83B9
 
@@ -599,7 +599,7 @@ _8883BE:
     rts
 
 .8413:
-    jsl 0x82820A
+    jsl update_pos_xy.no_accel
     stz.b 0x29
     stz.b 0x2A
     jsl _8490A0
@@ -755,7 +755,7 @@ _8884B0:
     rts
 
 .8539:
-    jsl 0x82820A
+    jsl update_pos_xy.no_accel
     rts
 
 //-----
@@ -1373,7 +1373,7 @@ _88A382:
 .A394: d16[.A39C, .A3ED, .A73A, .A73F]
 
 .A39C:
-    jsl 0x82827D
+    jsl _82827D
     lda.b #0x51
     sta.b 0x10
     stz.b 0x18
@@ -1873,7 +1873,7 @@ _88A382:
     lda.b #0x04
     sta.b 0x01
     sta.w 0x1F23
-    sta.w 0x1F9B
+    sta.w ram.highway_stage_completed
 .A703:
     jsl update_pos_y
     rts
@@ -1975,7 +1975,7 @@ _88A793:
 .A798: d16[.A79E, .A7F8, .A94F]
 
 .A79E:
-    jsl 0x82827D
+    jsl _82827D
     lda.b #0x92
     sta.b 0x10
     lda.w ram.current_stage
@@ -2919,7 +2919,7 @@ _88B452:
 .B457: d16[.B45D, .B487, .B5A0]
 
 .B45D:
-    jsl 0x82827D
+    jsl _82827D
     lda.b #0x2F
     ldx.b 0x0B
     beq .B469
@@ -3702,7 +3702,7 @@ d_rex_lower:
 
     jsl _849B43
 .C002:
-    jsl 0x82D7D0
+    jsl _82D7D0
     jsr _88C38E
     jsr _88C333
     jsr _88C2FB
@@ -4558,7 +4558,7 @@ _88D0B3:
     jml 0x8280B4
 
 .D123:
-    jsl 0x82820A
+    jsl update_pos_xy.no_accel
     jsl _848EEA
     jsl _82808F.80B4
     lda.b 0x0E
@@ -4623,7 +4623,7 @@ _88D13B:
     jml 0x8280B4
 
 .D195:
-    jsl 0x82820A
+    jsl update_pos_xy.no_accel
     jsl _848EEA
     lda.b 0x0F
     bmi .D1AD
@@ -4652,7 +4652,7 @@ _88D1B1:
 .D1C3: d16[.D1C9, .D214, .D803]
 
 .D1C9:
-    jsl 0x82827D
+    jsl _82827D
     lda.b #0x51
     sta.b 0x10
     stz.b 0x18
@@ -5624,7 +5624,7 @@ _88D8A2:
 .D8B5: d16[.D8B9, .D8DC]
 
 .D8B9:
-    jsl 0x82827D
+    jsl _82827D
     lda.b #0x01
     sta.b 0x27
     sta.b 0x30
@@ -5938,7 +5938,7 @@ _88DAD3:
 .DAD8: d16[.DAE0, .DB30, .DC8E, .E0F3]
 
 .DAE0:
-    jsl 0x82827D
+    jsl _82827D
     lda.b 0x11
     and.b #0x0E
     sta.b 0x34
@@ -7268,7 +7268,7 @@ _88E3DE:
 
     lda.b #0x69
     sta.b 0x0A
-    jsl 0x82827D
+    jsl _82827D
     lda.b #0x41
     sta.b 0x0A
     lda.b #0x02
@@ -7867,7 +7867,7 @@ _88EB44:
     sta.b 0x1C
     sep #0x20
 .EBA3:
-    jsl 0x82820A
+    jsl update_pos_xy.no_accel
     lda.w 0x0B9C
     lsr
     bcc .EBB9

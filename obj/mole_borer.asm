@@ -81,7 +81,7 @@ mole_borer:
     lda.b 0x02
     bne .C00B
 
-    jsl 0x82827D
+    jsl _82827D
     lda.b #0x40
     tsb.b 0x11
     stz.b 0x3E
@@ -122,12 +122,12 @@ mole_borer:
     sta.b 0x01
     stz.b 0x02
 .C026:
-    jsl 0x82808F
+    jsl _82808F
     rts
 
 .C02B:
     jsl _848EEA
-    jsl 0x82808F
+    jsl _82808F
     lda.b 0x17
     bpl .C04A
 
@@ -159,7 +159,7 @@ mole_borer:
 .C067:
     jsl update_pos_xy.neg_ay
     jsl _8491AD.91BE
-    jsl 0x82808F
+    jsl _82808F
     lda.b 0x2B
     beq .C086
 
@@ -196,7 +196,7 @@ mole_borer:
     lsr
     bcc .C0AE
 
-    jsl 0x82808F
+    jsl _82808F
 .C0AE:
     rep #0x20
     lda.w #0xFFE0

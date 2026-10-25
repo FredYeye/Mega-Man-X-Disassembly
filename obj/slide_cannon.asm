@@ -64,7 +64,7 @@ slide_cannon:
 .B279: d16[.B283, .B2FD, .B31F, .B35B, .B3B0]
 
 .B283:
-    jsl 0x82827D
+    jsl _82827D
     lda.b 0x11
     and.b #0x0E
     sta.b 0x3B
@@ -271,7 +271,7 @@ slide_cannon:
     lda.b 0x38
     beq .B3D6
 
-    jsl 0x82D7D0
+    jsl _82D7D0
 .B3D6:
     rts
 

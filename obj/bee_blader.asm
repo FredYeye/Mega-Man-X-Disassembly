@@ -42,7 +42,7 @@ bee_blader:
     rtl
 
 .B8DF:
-    jsl 0x82827D
+    jsl _82827D
     stz.b 0x3E
     rep #0x20
     lda.b 0x05
@@ -322,7 +322,7 @@ bee_blader:
     sta.b 0x1E
     lda.b #0x0A
     jsl _848EEA.8F07
-    jsl 0x8282B9
+    jsl _8282AC.82B9
     bne .BB20
 
     inc.w 0x0000,X
@@ -402,7 +402,7 @@ bee_blader:
     jml 0x828398
 
 .BBB4:
-    jsl 0x82808F
+    jsl _82808F
     jml 0x84AB6E
 
 //-----
@@ -525,7 +525,7 @@ bee_blader:
     sta.b 0x01
     stz.b 0x02
 .BC83:
-    jsl 0x82808F
+    jsl _82808F
     lda.w ram.current_stage
     beq .BCA8
 

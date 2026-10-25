@@ -11,7 +11,7 @@ rush_roader:
 .8F3C: d16[.8F42, .8F91, .92D4]
 
 .8F42:
-    jsl 0x82827D
+    jsl _82827D
     lda.b #0x07
     sta.b 0x10
     lda.b #0x00

@@ -12,7 +12,7 @@ sky_claw:
     jml .C6FE
 
 .C39E:
-    jsl 0x82827D
+    jsl _82827D
     lda.b #0x02
     sta.b 0x12
     lda.b #0x02

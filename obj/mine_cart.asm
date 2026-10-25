@@ -5,7 +5,7 @@ mine_cart:
 .97BF: d16[.97C5, .97F7, .9A09]
 
 .97C5:
-    jsl 0x82827D
+    jsl _82827D
     lda.b #0x04
     sta.b 0x12
     lda.b #0x40
@@ -45,7 +45,7 @@ mine_cart:
     ora.b 0x33
     sta.b 0x11
     jsr .9A97
-    jsl 0x82D7D0
+    jsl _82D7D0
     ldx.b 0x02
     jsr (.988B,X)
     jsl _8491AD.91BE

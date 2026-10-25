@@ -10,7 +10,7 @@ planty:
 .C24F: d16[.C255, .C283, .C390]
 
 .C255:
-    jsl 0x82827D
+    jsl _82827D
     lda.b #0x02
     sta.b 0x27
     lda.b #0x03

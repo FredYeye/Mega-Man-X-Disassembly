@@ -13,7 +13,7 @@ lava_drop:
 .C9AC: d16[.C9B4, .C9DA, .C9F4, .CA2F]
 
 .C9B4:
-    jsl 0x82827D
+    jsl _82827D
     lda.b #0x01
     sta.b 0x27
     lda.b #0x02

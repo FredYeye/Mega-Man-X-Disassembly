@@ -28,7 +28,7 @@ amenhopper:
 .AB05: d16[.AB0F, .AB3F, .AC10, .AD0E, .AD2C]
 
 .AB0F:
-    jsl 0x82827D
+    jsl _82827D
     lda.b 0x11
     and.b #0x0E
     sta.b 0x33

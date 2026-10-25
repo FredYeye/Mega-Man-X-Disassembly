@@ -27,7 +27,7 @@ dodge_blaster:
 .99D0: d16[.99D8, .9A37, .9A48, .9AED]
 
 .99D8:
-    jsl 0x82827D
+    jsl _82827D
     rep #0x20
     lda.w #0xC93E
     sta.b 0x20

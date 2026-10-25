@@ -18,7 +18,7 @@ mega_tortoise:
     trb.b 0x11
 .EC21:
     jsl _849B03
-    jsl 0x82808F
+    jsl _82808F
     lda.b 0x0E
     beq .EC2E
 
@@ -45,7 +45,7 @@ mega_tortoise:
 
 .EC4F:
     sep #0x20
-    jsl 0x82827D
+    jsl _82827D
     lda.b 0x0B
     tsb.b 0x11
     lda.b 0x11

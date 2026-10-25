@@ -10,7 +10,7 @@ hoganmer:
 .AE8F: d16[.AE95, .AED0, .B0A9]
 
 .AE95:
-    jsl 0x82827D
+    jsl _82827D
     lda.b #0x08
     sta.b 0x27
     lda.b #0x03
@@ -370,7 +370,7 @@ hoganmer:
 .B0D9:
     stz.b 0x34
     stz.b 0x35
-    jsl 0x8282B9
+    jsl _8282AC.82B9
     bne .B104
 
     inc.w 0x0000,X

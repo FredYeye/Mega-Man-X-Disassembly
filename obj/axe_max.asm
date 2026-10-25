@@ -41,7 +41,7 @@ axe_max:
 .D065: d16[.D06D, .D103, .D165, .D1E7]
 
 .D06D:
-    jsl 0x82827D
+    jsl _82827D
     lda.b 0x11
     and.b #0x0E
     sta.b 0x3C

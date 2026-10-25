@@ -61,7 +61,7 @@ gulpfer:
 .A3A1: d16[.A3AD, .A3E3, .A422, .A538, .A5C4, .A68B]
 
 .A3AD:
-    jsl 0x82827D
+    jsl _82827D
     lda.b #0x02
     sta.b 0x12
     stz.b 0x03
@@ -357,7 +357,7 @@ gulpfer:
     bra .A5AD
 
 .A5A9:
-    jsl 0x82820A
+    jsl update_pos_xy.no_accel
 .A5AD:
     jsl _8491AD.91BE
     lda.b 0x2B
@@ -527,7 +527,7 @@ gulpfer:
     phd
     pea 0x0BA8
     pld
-    jsl 0x82820A
+    jsl update_pos_xy.no_accel
     pld
     lda.b 0x37
     sta.w ram.obj.mega_man.speed_x

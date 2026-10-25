@@ -5,7 +5,7 @@ d_rex_upper:
 .B68E: d16[.B694, .B6C7, .BBBB]
 
 .B694:
-    jsl 0x82827D
+    jsl _82827D
     lda.b #0x02
     sta.b 0x12
     lda.b #0x06
@@ -44,7 +44,7 @@ d_rex_upper:
     jsr (.B71A,X)
     lda.b #0x80
     sta.b 0x2C
-    jsl 0x82D7D0
+    jsl _82D7D0
     lda.w 0x0BCF
     and.b #0x7F
     beq .B70B
@@ -470,7 +470,7 @@ d_rex_upper:
     sta.b 0x1C
 .B9A3:
     sep #0x20
-    jsl 0x82820A
+    jsl update_pos_xy.no_accel
     jsl _848EEA
     rts
 

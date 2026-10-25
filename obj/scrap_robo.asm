@@ -81,7 +81,7 @@ scrap_robo:
     jmp .9BFB
 
 .9BF7:
-    jsl 0x82827D
+    jsl _82827D
 .9BFB:
     lda.b #0x2A
     sta.b 0x0A
@@ -154,7 +154,7 @@ scrap_robo:
 .9C73:
     lda.b #0x80
     sta.b 0x2C
-    jsl 0x82D7D0
+    jsl _82D7D0
     rep #0x20
     lda.w 0x0006
     cmp.w #0x0008
@@ -242,7 +242,7 @@ scrap_robo:
 .9D16:
     lda.b #0x80
     sta.b 0x2C
-    jsl 0x82D7D0
+    jsl _82D7D0
 .9D1E:
     jsr _879F49
     bne .9D26
@@ -311,7 +311,7 @@ scrap_robo:
 .9D81:
     lda.b #0x80
     sta.b 0x2C
-    jsl 0x82D7D0
+    jsl _82D7D0
 .9D89:
     jsr _879F49
     bne .9D91
@@ -486,7 +486,7 @@ scrap_robo:
 .9EB6:
     lda.b #0x80
     sta.b 0x2C
-    jsl 0x82D7D0
+    jsl _82D7D0
     jsl update_pos_xy.neg_ay
     lda.b 0x2C
     and.b #0x7F

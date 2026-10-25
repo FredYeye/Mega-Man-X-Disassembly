@@ -35,7 +35,7 @@ gun_volt:
 .DA25: d16[.DA2D, .DA6D, .DAA6, .DAD8]
 
 .DA2D:
-    jsl 0x82827D
+    jsl _82827D
     stz.b 0x37
     lda.b 0x11
     and.b #0x0E

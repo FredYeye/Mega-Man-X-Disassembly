@@ -2867,7 +2867,7 @@ _81B187:
 .B1D1:
     lda.b #0x0B
     sta.b 0x0A
-    jsl 0x82827D
+    jsl _82827D
     lda.b #0x01
     sta.b 0x3D
     lda.b #0x08
@@ -4039,7 +4039,7 @@ _81CAF6:
 .CB07: d16[.CB13, .CB5D, .CBD0, .CBD6, .CBDC, .CBE2]
 
 .CB13:
-    jsl 0x82827D
+    jsl _82827D
     lda.b #0x01
     sta.b 0x27
     lda.b #0x02
@@ -4335,7 +4335,7 @@ _81D53E:
 
 .D61E:
     sta.b 0x12
-    jsl 0x82827D
+    jsl _82827D
     lda.b 0x0B
     bpl .D62E
 
@@ -5387,7 +5387,7 @@ _81DCBD:
 .DD0A: d16[.DD1A, .DD38, .DD8D, .DDA5, .DDBD, .DD37, .DDCC, .DDC8]
 
 .DD1A:
-    jsl 0x82827D
+    jsl _82827D
     stz.b 0x3B
     lda.b #0x03
     jsl _848EEA.8F07
@@ -9769,7 +9769,7 @@ _81F973:
     ldy.w #0x0009
     sep #0x30
 .FAD8:
-    jsl 0x8282B9
+    jsl _8282AC.82B9
     bne .FAF3
 
     inc.w 0x0000,X
@@ -9813,7 +9813,7 @@ _81F973:
     ldy.w #0x000B
     sep #0x30
 .FB1A:
-    jsl 0x8282B9
+    jsl _8282AC.82B9
     bne .FB2F
 
     inc.w 0x0000,X
@@ -9876,7 +9876,7 @@ _81F973:
     ldy.w #0x0006
     sep #0x30
 .FB7D:
-    jsl 0x8282B9
+    jsl _8282AC.82B9
     bne .FB94
 
     inc.w 0x0000,X
@@ -9939,7 +9939,7 @@ _81F973:
     ldy.w #0x0002
     sep #0x30
 .FBE2:
-    jsl 0x8282B9
+    jsl _8282AC.82B9
     bne .FBF9
 
     inc.w 0x0000,X

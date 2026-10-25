@@ -7,7 +7,7 @@ flamer:
 .DF85: d16[.DF91, .E015, .E073, .E0E7, .E131, .E168]
 
 .DF91:
-    jsl 0x82827D
+    jsl _82827D
     lda.b 0x11
     and.b #0x0E
     sta.b 0x3E

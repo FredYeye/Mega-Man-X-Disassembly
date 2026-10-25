@@ -40,7 +40,7 @@ tombot:
 .E441: d16[.E44D, .E4ED, .E511, .E5FE, .E62E, .E660]
 
 .E44D:
-    jsl 0x82827D
+    jsl _82827D
     lda.b 0x0B
     cmp.b #0x80
     bne .E459
@@ -320,7 +320,7 @@ tombot:
 .E61F:
     jsr .E7C6
 .E622:
-    jsl 0x82820A
+    jsl update_pos_xy.no_accel
     jsr .E7A1
     jsl _848EEA
 .E62D:
@@ -353,7 +353,7 @@ tombot:
     lda.b #0x01
     sta.b 0x34
 .E65B:
-    jsl 0x82820A
+    jsl update_pos_xy.no_accel
     rts
 
 .E660:

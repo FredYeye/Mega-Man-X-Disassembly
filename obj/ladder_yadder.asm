@@ -5,7 +5,7 @@ ladder_yadder:
 .A9E4: d16[.A9EA, .AA0C, .AB6A]
 
 .A9EA:
-    jsl 0x82827D
+    jsl _82827D
     lda.b #0x03
     sta.b 0x27
     lda.b #0x03

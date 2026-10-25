@@ -23,7 +23,7 @@ x_buster_dash:
     lda.w 0x1F9D
     bpl .A4F7
 
-    stz.w 0x1F9B
+    stz.w ram.highway_stage_completed
 .A4F7:
     stz.b 0x1F
     stz.b 0x1E

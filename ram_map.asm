@@ -1,33 +1,34 @@
 struct ram {
-    unk1:          d08[0x000->0x0300],
+    unk1:                    d08[0x000->0x0300],
 
-    palette:       d16[0x100],   // 0300
-    dma_queue:     dma_data[32], // 0500
-    dma_queue2:    dma_data2,    // 0600
-    oam:           oam,          // 0700
+    palette:                 d16[0x100],   // 0300
+    dma_queue:               dma_data[32], // 0500
+    dma_queue2:              dma_data2,    // 0600
+    oam:                     oam,          // 0700
 
-    unk2:          d08[0x0920->0x0BA6],
+    unk2:                    d08[0x0920->0x0BA6],
 
-    rng_state:     d16,          // 0BA6
-    obj:           object_list,  // 0BA8
+    rng_state:               d16,          // 0BA6
+    obj:                     object_list,  // 0BA8
 
-    unk3:          d08[0x1E08->0x1F7A],
+    unk3:                    d08[0x1E08->0x1F7A],
 
-    current_stage: d08,          // 1F7A
+    current_stage:           d08,          // 1F7A
 
-    unk4:          d08[0x1F7B->0x1F80],
+    unk4:                    d08[0x1F7B->0x1F80],
 
-    lives:         d08,          // 1F80
-    checkpoint:    d08,          // 1F81
+    lives:                   d08,          // 1F80
+    checkpoint:              d08,          // 1F81
 
-    unk5:          d08[0x1F82->0x1F87],
+    unk5:                    d08[0x1F82->0x1F87],
 
-    weapons:       d16[8],       // 1F87
+    weapons:                 d16[8],       // 1F87
 
-    unk6:          d08[0x1F97->0x1F99],
+    unk6:                    d08[0x1F97->0x1F99],
 
-    upgrades:      d08,          // 1F99
-    max_hp:        d08,          // 1F9A
+    upgrades:                d08,          // 1F99
+    max_hp:                  d08,          // 1F9A
+    highway_stage_completed: d08,          // 1F9B
 }
 
 //-----

@@ -34,7 +34,7 @@ jamminger:
 .DDA2: d16[.DDB0, .DDDC, .DE59, .DEA3, .DED3, .DEF0, .DF14]
 
 .DDB0:
-    jsl 0x82827D
+    jsl _82827D
     lda.b 0x11
     and.b #0x0E
     sta.b 0x33
@@ -61,7 +61,7 @@ jamminger:
     asl
     tax
     jsr .DF32
-    jsl 0x82820A
+    jsl update_pos_xy.no_accel
     rep #0x20
     lda.w ram.obj.mega_man.pos_x+1
     sec
@@ -209,7 +209,7 @@ jamminger:
     rts
 
 .DED3:
-    jsl 0x82820A
+    jsl update_pos_xy.no_accel
     lda.b 0x35
     beq .DEEF
 

@@ -93,7 +93,7 @@ sigma:
     lda.w #0x00D0
     sta.b 0x05
     sep #0x30
-    jsl 0x82827D
+    jsl _82827D
     lda.b #0x04
     sta.b 0x12
     lda.b #0x00
@@ -612,7 +612,7 @@ sigma:
     rts
 
 .C828:
-    jsl 0x82820A
+    jsl update_pos_xy.no_accel
     rep #0x20
     lda.w #0xD780
     sta.b 0x20
@@ -799,7 +799,7 @@ sigma:
     rts
 
 .C970:
-    jsl 0x82820A
+    jsl update_pos_xy.no_accel
     rep #0x20
     lda.w #0xD780
     sta.b 0x20
@@ -873,7 +873,7 @@ sigma:
     rts
 
 .C9F1:
-    jsl 0x82820A
+    jsl update_pos_xy.no_accel
     rep #0x20
     lda.w #0xD780
     sta.b 0x20

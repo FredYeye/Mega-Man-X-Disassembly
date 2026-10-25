@@ -138,7 +138,7 @@ electric_spark:
     rts
 
 .973F:
-    jsl 0x82820A
+    jsl update_pos_xy.no_accel
     jsl _848EEA
     rts
 

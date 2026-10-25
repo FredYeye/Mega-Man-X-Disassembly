@@ -59,7 +59,7 @@ snow_shooter:
 .DEF9: d16[.DEFF, .DF31, .DFB0]
 
 .DEFF:
-    jsl 0x82827D
+    jsl _82827D
     lda.b 0x11
     and.b #0x0E
     sta.b 0x34

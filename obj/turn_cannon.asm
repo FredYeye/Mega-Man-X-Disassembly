@@ -34,7 +34,7 @@ turn_cannon:
 .997F: d16[.9987, .998B, .99C8, .99F9]
 
 .9987:
-    jsl 0x82827D
+    jsl _82827D
 .998B:
     lda.b 0x11
     and.b #0x0E
