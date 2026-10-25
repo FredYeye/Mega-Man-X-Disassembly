@@ -49,7 +49,7 @@ boomer_kuwanger:
 .8AD2:
     ldx.b 0x02
     jsr (.8ADB,X)
-    jml 0x8280B4
+    jml _82808F.80B4
 
 .8ADB: d16[.8AE7, .8B1A, .8B59, .8B94, .8BCB, .8BF8]
 
@@ -340,7 +340,7 @@ boomer_kuwanger:
     sta.w 0x0BD8
     lda.b #0x04
     jsr .90B1
-    jml 0x8280B4
+    jml _82808F.80B4
 
 .8CC9:
     lda.b 0x38
@@ -369,7 +369,7 @@ boomer_kuwanger:
     rtl
 
 .8CEE:
-    jml 0x8280B4
+    jml _82808F.80B4
 
 .8CF2: d16[.8CFC, .8DE6, .8E5A, .8F46, .8FF4]
 
@@ -953,7 +953,7 @@ boomer_kuwanger:
     cmp.b #0x14
     bcs .90B0
 
-    jml 0x8280B4
+    jml _82808F.80B4
 
 .90B0:
     rtl

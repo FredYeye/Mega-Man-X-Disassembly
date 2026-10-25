@@ -599,7 +599,7 @@ capsule:
 
 .CECD:
     sta.w 0x0000
-    jsl 0x828321
+    jsl _8282AC.8321
     bne .CEF0
 
     inc.w 0x0000,X
@@ -786,7 +786,7 @@ capsule:
 //-----
 
 .CFEA:
-    jsl 0x828321
+    jsl _8282AC.8321
     bne .D00F
 
     inc.w 0x0000,X

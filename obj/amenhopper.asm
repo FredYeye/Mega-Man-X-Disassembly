@@ -23,7 +23,7 @@ amenhopper:
     jsl _82806E
     bcs .AAF3
 
-    jml 0x8280B4
+    jml _82808F.80B4
 
 .AB05: d16[.AB0F, .AB3F, .AC10, .AD0E, .AD2C]
 

@@ -113,7 +113,7 @@ flamer:
     cmp.w #0x0020
     bcs .E06F
 
-    jsl 0x828321
+    jsl _8282AC.8321
     bne .E06F
 
     inc.w 0x0000,X
@@ -198,7 +198,7 @@ flamer:
     bcs .E0C9
 
     jsl _848EEA
-    jml 0x8280B4
+    jml _82808F.80B4
 
 .E0E7:
     inc.b 0x3C
@@ -210,7 +210,7 @@ flamer:
     cmp.b #0x04
     beq .E119
 
-    jsl 0x828321
+    jsl _8282AC.8321
     bne .E119
 
     inc.w 0x0000,X
@@ -273,7 +273,7 @@ flamer:
 .E15C:
     jsl _849B03
     jsl _848EEA
-    jml 0x8280B4
+    jml _82808F.80B4
 
 .E168:
     jsl _848EEA
@@ -283,7 +283,7 @@ flamer:
     jml 0x828398
 
 .E174:
-    jml 0x8280B4
+    jml _82808F.80B4
 
 //-----
 

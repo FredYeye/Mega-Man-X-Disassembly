@@ -58,7 +58,7 @@ ladder_yadder:
 .AA46:
     jsl _849B03
 .AA4A:
-    jml 0x8280B4
+    jml _82808F.80B4
 
 .AA4E: d16[.AA56, .AAA8, .AADB, .AB35]
 

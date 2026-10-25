@@ -79,7 +79,7 @@ utuboros_tail:
     sep #0x10
 .C7C2:
     jsl _849B03
-    jml 0x8280B4
+    jml _82808F.80B4
 
 .C7CA: d16[.C7CE, .C7CF]
 

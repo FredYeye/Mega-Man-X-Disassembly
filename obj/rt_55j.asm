@@ -50,7 +50,7 @@ rt_55j:
     sta.b 0x3A
 .CC60:
     jsr .CF98
-    jml 0x8280B4
+    jml _82808F.80B4
 
 .CC67: d16[.CC73, .CCA9, .CD01, .CD5C, .CDB4, .CEC3]
 

@@ -89,7 +89,7 @@ armor_armarge:
 .B1F9:
     ldx.b 0x02
     jsr (.B202,X)
-    jml 0x8280B4
+    jml _82808F.80B4
 
 .B202: d16[.B20C, .B23A, .B274, .B291, .B2C3]
 
@@ -361,7 +361,7 @@ armor_armarge:
     and.b #0xF1
     ora.b #0x08
     sta.b 0x11
-    jml 0x8280B4
+    jml _82808F.80B4
 
 .B3C4:
     jsl _849B03
@@ -372,7 +372,7 @@ armor_armarge:
     lda.b #0x01
     sta.b 0x30
 .B3D3:
-    jml 0x8280B4
+    jml _82808F.80B4
 
 .B3D7: d16[.B3E1, .B69A, .B5F2, .B781, .B823]
 
@@ -1143,7 +1143,7 @@ armor_armarge:
     cmp.b #0x14
     bcs .B937
 
-    jml 0x8280B4
+    jml _82808F.80B4
 
 .B937:
     rtl

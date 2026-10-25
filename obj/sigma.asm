@@ -117,7 +117,7 @@ sigma:
 .C490: d16[.C498, .C4CF, .C53B, .C555]
 
 .C498:
-    jsl 0x828321
+    jsl _8282AC.8321
     bne .C4CE
 
     inc.w 0x0000,X
@@ -169,7 +169,7 @@ sigma:
     adc.w #0x0011
     sta.w 0x0008,X
     sep #0x30
-    jml 0x8280B4
+    jml _82808F.80B4
 
 .C4FD:
     lda.b #0x04
@@ -185,7 +185,7 @@ sigma:
     lda.b #0x12
     sta.w 0x0008
     jsl _83F747
-    jml 0x8280B4
+    jml _82808F.80B4
 
 .C522:
     dec.b 0x38
@@ -197,7 +197,7 @@ sigma:
     adc.w #0x0011
     sta.w 0x0008,X
     sep #0x30
-    jml 0x8280B4
+    jml _82808F.80B4
 
 .C53B:
     lda.w 0x1F2C
@@ -212,7 +212,7 @@ sigma:
     lda.b #0x06
     sta.b 0x02
 .C551:
-    jml 0x8280B4
+    jml _82808F.80B4
 
 .C555:
     jsl update_pos_y
@@ -226,7 +226,7 @@ sigma:
     sta.w 0x1F3F
     jsl 0x849FFE
 .C56C:
-    jml 0x8280B4
+    jml _82808F.80B4
 
 .C570:
     lda.w 0x1F3F
@@ -306,7 +306,7 @@ sigma:
     adc.b 0x08
     sta.b 0x08
     sep #0x20
-    jml 0x8280B4
+    jml _82808F.80B4
 
 .C5FD:
     lda.b #0x80
@@ -322,12 +322,12 @@ sigma:
     jsl _83F747
     lda.b #0x06
     sta.b 0x02
-    jml 0x8280B4
+    jml _82808F.80B4
 
 .C622:
     dec.b 0x38
     jsl update_pos_y
-    jml 0x8280B4
+    jml _82808F.80B4
 
 .C62C:
     lda.w 0x1F2C
@@ -345,7 +345,7 @@ sigma:
     lda.b #0x08
     sta.b 0x02
 .C649:
-    jml 0x8280B4
+    jml _82808F.80B4
 
 .C64D:
     jsl _848EEA
@@ -362,7 +362,7 @@ sigma:
     lda.b #0x0A
     sta.b 0x02
 .C663:
-    jml 0x8280B4
+    jml _82808F.80B4
 
 .C667:
     lda.w 0x0B9C
@@ -385,7 +385,7 @@ sigma:
 .C686:
     lda.b #0x80
     tsb.b 0x27
-    jml 0x8280B4
+    jml _82808F.80B4
 
 .C68E:
     dec.b 0x33
@@ -410,7 +410,7 @@ sigma:
     sta.b 0x26
     jsl 0x849FFE
 .C6BC:
-    jml 0x8280B4
+    jml _82808F.80B4
 
 .C6C0:
     lda.b 0x34
@@ -454,7 +454,7 @@ sigma:
     jsl _828000.8011
     sep #0x10
     stz.b 0x3D
-    jml 0x8280B4
+    jml _82808F.80B4
 
 .C718:
     lda.b #0x3C
@@ -476,7 +476,7 @@ sigma:
     jsl _849B03
     lda.b #0x01
     sta.b 0x30
-    jml 0x8280B4
+    jml _82808F.80B4
 
 .C73D: d16[.C74D, .C7E0, .C84F, .C89F, .C8EA, .C91F, .C9AE, .CA14]
 
@@ -923,14 +923,14 @@ sigma:
     sta.b 0x01
     stz.b 0x02
     stz.b 0x03
-    jml 0x8280B4
+    jml _82808F.80B4
 
 .CA48:
     lda.b 0x03
     cmp.b #0x14
     bcs .CA52
 
-    jml 0x8280B4
+    jml _82808F.80B4
 
 .CA52:
     lda.b 0x3D
@@ -974,14 +974,14 @@ sigma:
     stz.w 0x1F3F
     stz.w 0x1F41
     stz.w 0x1F43
-    jsl 0x828321
+    jsl _8282AC.8321
     bne .CACC
 
     inc.w 0x0000,X
     lda.b #0x6B
     sta.w 0x000A,X
     stz.w 0x000B,X
-    jsl 0x828321
+    jsl _8282AC.8321
     bne .CACC
 
     inc.w 0x0000,X
@@ -993,12 +993,12 @@ sigma:
     rtl
 
 .CACD:
-    jml 0x8280B4
+    jml _82808F.80B4
 
 .CAD1:
     ldx.b 0x02
     jsr (.CADA,X)
-    jml 0x8280B4
+    jml _82808F.80B4
 
 .CADA: d16[.CAE6, .CAFD, .CB2E, .CB5A, .CB64, .CB88]
 
@@ -1163,7 +1163,7 @@ sigma:
     stz.w 0x1F43
     inc.w 0x0BD8
     inc.w 0x1F0C
-    jml 0x8280B4
+    jml _82808F.80B4
 
 .CC0F:
     lda.b #0x3C
@@ -1187,7 +1187,7 @@ sigma:
     sta.b 0x20
     sep #0x20
     jsl _849B03
-    jml 0x8280B4
+    jml _82808F.80B4
 
 .CC39: d16[.CC41, .CC8C, .CCA3, .CCE9]
 
@@ -1353,7 +1353,7 @@ sigma:
     lda.b #0xF6
     ldy.b #0x03
     jsl _808850.8868
-    jml 0x8280B4
+    jml _82808F.80B4
 
 .CD7E:
     dec.b 0x33
@@ -1376,7 +1376,7 @@ sigma:
     sta.b 0x39
     jsl 0x84A311
 .CDAF:
-    jml 0x8280B4
+    jml _82808F.80B4
 
 .CDB3:
     dec.b 0x33
@@ -1397,7 +1397,7 @@ sigma:
 .CDD0:
     jsr .CEB4
     jsr .CEC1
-    jml 0x8280B4
+    jml _82808F.80B4
 
 .CDDA:
     jsl update_pos_xy.neg_ay
@@ -1415,7 +1415,7 @@ sigma:
 .CDF5:
     jsr .CEB4
     jsr .CEC1
-    jml 0x8280B4
+    jml _82808F.80B4
 
 .CDFF:
     jsl update_pos_xy.neg_ay
@@ -1431,7 +1431,7 @@ sigma:
 .CE15:
     jsr .CEB4
     jsr .CEC1
-    jml 0x8280B4
+    jml _82808F.80B4
 
 .CE1F:
     dec.b 0x33
@@ -1444,7 +1444,7 @@ sigma:
 .CE2D:
     jsr .CEB4
     jsr .CEC1
-    jml 0x8280B4
+    jml _82808F.80B4
 
 .CE37:
     lda.b #0x0E
@@ -1462,7 +1462,7 @@ sigma:
     jsl _83F747
     jsr .CEC1
     jsr .CEB4
-    jml 0x8280B4
+    jml _82808F.80B4
 
 .CE62:
     lda.w 0x1F2C
@@ -1481,7 +1481,7 @@ sigma:
 .CE81:
     jsr .CEB4
     jsr .CEC1
-    jml 0x8280B4
+    jml _82808F.80B4
 
 .CE8B:
     lda.w 0x0B9C
@@ -1503,7 +1503,7 @@ sigma:
 .CEAA:
     jsr .CEC1
     jsr .CEB4
-    jml 0x8280B4
+    jml _82808F.80B4
 
 //-----
 

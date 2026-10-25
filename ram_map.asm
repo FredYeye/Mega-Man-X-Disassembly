@@ -13,6 +13,8 @@ struct ram {
 
     unk3:                    d08[0x1E08->0x1F7A],
 
+    // 1E48 bg layer struct?
+
     current_stage:           d08,          // 1F7A
 
     unk4:                    d08[0x1F7B->0x1F80],
@@ -63,7 +65,7 @@ struct object_list {
     weapons:    obj[8],     // 1228
     obj3:       obj[8],     // 1428
     obj4:       obj2[16],   // 1628
-    obj5:       obj3[15],   // 1928
+    obj5:       obj3[31],   // 1928
     obj6:       obj4[16],   // 1D08
 }
 
@@ -74,7 +76,7 @@ struct mega_man {
     unk2:    d08[0x0A->0x1A],
     speed_x: d16, // 1A
     speed_y: d16, // 1C
-    unk3:    d08[0x0A->0x90],
+    unk3:    d08[0x1E->0x90],
 }
 
 struct ride_armor {

@@ -32,7 +32,7 @@ creeper:
     bcs .A9AD
 
     jsl _849B03
-    jml 0x8280B4
+    jml _82808F.80B4
 
 .A9C9: d16[.A9D1, .AA22, .AA23, .AA89]
 

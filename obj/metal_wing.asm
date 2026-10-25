@@ -70,7 +70,7 @@ metal_wing:
     trb.b 0x11
 .DC19:
     jsl _849B03
-    jml 0x8280B4
+    jml _82808F.80B4
 
 .DC21: d16[.DC27, .DC56, .DC9E]
 

@@ -66,7 +66,7 @@ sky_claw:
     lda.b #0xD2
     sta.b 0x21
     jsl _849B03
-    jml 0x8280B4
+    jml _82808F.80B4
 
 .C404: d16[.C40C, .C462, .C4D1, .C5B0]
 

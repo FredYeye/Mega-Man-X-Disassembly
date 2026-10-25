@@ -210,7 +210,7 @@ velguader:
     dec.b 0x38
     jsl _849B03
 .C9A1:
-    jml 0x8280B4
+    jml _82808F.80B4
 
     rtl
 

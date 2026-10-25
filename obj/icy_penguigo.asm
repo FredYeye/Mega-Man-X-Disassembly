@@ -59,7 +59,7 @@ icy_penguigo:
 .B577:
     ldx.b 0x02
     jsr (.B580,X)
-    jml 0x8280B4
+    jml _82808F.80B4
 
 .B580: d16[.B58A, .B5A3, .B5C0, .B5E5, .B614]
 
@@ -235,7 +235,7 @@ icy_penguigo:
     sta.w 0x1F0C
     lda.b #0x04
     jsl _848EEA.8F07
-    jml 0x8280B4
+    jml _82808F.80B4
 
 .B6BA:
     lda.b 0x35
@@ -267,7 +267,7 @@ icy_penguigo:
     lda.b #0x01
     sta.b 0x30
 .B6E5:
-    jml 0x8280B4
+    jml _82808F.80B4
 
 .B6E9: d16[.B6F5, .B78C, .B884, .B931, .B9F2, .BAB5]
 
@@ -923,7 +923,7 @@ icy_penguigo:
     cmp.b #0x14
     bcs .BB76
 
-    jml 0x8280B4
+    jml _82808F.80B4
 
 .BB76:
     rtl

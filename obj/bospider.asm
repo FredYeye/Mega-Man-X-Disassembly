@@ -195,7 +195,7 @@ bospider:
 .DCD0:
     jsl _849B03
 .DCD4:
-    jml 0x8280B4
+    jml _82808F.80B4
 
 .DCD8: d16[.DCEA, .DD31, .DDB8, .DDFE, .DE1D, .DE8D, .DF32, .DDAA, .DF4F]
 
@@ -622,7 +622,7 @@ bospider:
     lda.b #0xFF
     sta.b 0x35
 .DFC0:
-    jml 0x8280B4
+    jml _82808F.80B4
 
 .DFC4:
     lda.w 0x0B9C
@@ -675,7 +675,7 @@ bospider:
     jsr .E212
     lda.b #0xC0
     sta.b 0x35
-    jml 0x8280B4
+    jml _82808F.80B4
 
 .E038:
     lda.w 0x0B9C
@@ -713,11 +713,11 @@ bospider:
     bcc .E077
 
     jsr .E212
-    jml 0x8280B4
+    jml _82808F.80B4
 
 .E077:
     jsr .E239
-    jml 0x8280B4
+    jml _82808F.80B4
 
 .E07E:
     lda.w 0x0B9C

@@ -56,7 +56,7 @@ storm_eagleed:
 .D8BE:
     ldx.b 0x02
     jsr (.D8C7,X)
-    jml 0x8280B4
+    jml _82808F.80B4
 
 .D8C7: d16[.D8D1, .D902, .D93D, .D94A, .D992]
 
@@ -213,7 +213,7 @@ storm_eagleed:
     tsb.w 0x1F42
     lda.b #0x13
     jsl _80888B
-    jml 0x8280B4
+    jml _82808F.80B4
 
 .D9F2:
     lda.b 0x37
@@ -243,7 +243,7 @@ storm_eagleed:
     lda.b #0x01
     sta.b 0x30
 .DA1E:
-    jml 0x8280B4
+    jml _82808F.80B4
 
 .DA22: d16[.DA2A, .DB33, .DC7C, .DD31]
 
@@ -747,7 +747,7 @@ storm_eagleed:
     rts
 
 .DD9D:
-    jsl 0x828321
+    jsl _8282AC.8321
     bne .DDCD
 
     inc.w 0x0000,X
@@ -815,7 +815,7 @@ storm_eagleed:
     cmp.b #0x14
     bcs .DE1E
 
-    jml 0x8280B4
+    jml _82808F.80B4
 
 .DE1E:
     rtl

@@ -57,7 +57,7 @@ launcher_octopuld:
 .C48E:
     ldx.b 0x02
     jsr (.C497,X)
-    jml 0x8280B4
+    jml _82808F.80B4
 
 .C497: d16[.C49F, .C4BE, .C4EB, .C510]
 
@@ -225,7 +225,7 @@ launcher_octopuld:
     lda.b #0x01
     sta.b 0x30
 .C5B4:
-    jml 0x8280B4
+    jml _82808F.80B4
 
 .C5B8:
     lda.b #0x06
@@ -239,7 +239,7 @@ launcher_octopuld:
     jsr .CA35
     lda.b #0x13
     jsl _80888B
-    jml 0x8280B4
+    jml _82808F.80B4
 
 .C5D7: d16[.C5E3, .C694, .C8B6, .C92E, .C976, .C997]
 
@@ -652,7 +652,7 @@ launcher_octopuld:
     lda.b #0x1E
     jsl _80888B
 .C8E6:
-    jsl 0x828321
+    jsl _8282AC.8321
     bne .C91F
 
     inc.w 0x0000,X
@@ -815,7 +815,7 @@ launcher_octopuld:
     cmp.b #0x14
     bcs .C9F6
 
-    jml 0x8280B4
+    jml _82808F.80B4
 
 .C9F6:
     rtl

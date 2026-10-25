@@ -22,7 +22,7 @@ dodge_blaster:
     jsl _82806E
     bcs .99BE
 
-    jml 0x8280B4
+    jml _82808F.80B4
 
 .99D0: d16[.99D8, .9A37, .9A48, .9AED]
 

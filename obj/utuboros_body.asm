@@ -59,7 +59,7 @@ utuboros_body:
     lda.b #0xCC
     sta.b 0x21
     jsl _849B43
-    jml 0x8280B4
+    jml _82808F.80B4
 
 .C402:
     ldx.b 0x02
@@ -71,7 +71,7 @@ utuboros_body:
     lda.b 0x00
     beq .C415
 
-    jml 0x8280B4
+    jml _82808F.80B4
 
 .C415:
     dec.b 0x37

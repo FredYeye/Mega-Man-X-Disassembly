@@ -56,7 +56,7 @@ gulpfer:
     lda.b #0x0E
     trb.b 0x11
 .A39D:
-    jml 0x8280B4
+    jml _82808F.80B4
 
 .A3A1: d16[.A3AD, .A3E3, .A422, .A538, .A5C4, .A68B]
 

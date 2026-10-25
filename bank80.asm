@@ -5928,7 +5928,7 @@ _80A95F:
     lda.b 0x02
     beq .A980
 
-    jml 0x8280B4
+    jml _82808F.80B4
 
 .A98E: d16[.A998, .A9BE, .AA2A, .AA96, .AB02]
 

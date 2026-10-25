@@ -63,7 +63,7 @@ shotgun_ice:
     sep #0x20
     lda.b #0x00
     jsl _848EEA.8F07
-    jml 0x8280B4
+    jml _82808F.80B4
 
 .9890:
     sep #0x30
@@ -86,7 +86,7 @@ shotgun_ice:
     lda.b #0x03
     jsl _848EEA.8F07
     inc.b 0x02
-    jml 0x8280B4
+    jml _82808F.80B4
 
 .98BA:
     lda.b 0x02

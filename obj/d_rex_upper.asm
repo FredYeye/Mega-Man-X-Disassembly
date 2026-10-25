@@ -73,7 +73,7 @@ d_rex_upper:
 
     jsl _8491AD.91BE
 .B716:
-    jml 0x8280B4
+    jml _82808F.80B4
 
 .B71A: d16[.B7BA, .B7E2, .B86C, .B8BB, .B8F5, .B957, .BA9E, .B9CC, .B72C]
 
@@ -800,7 +800,7 @@ d_rex_upper:
     sta.b 0x11
     lda.b #0x0A
     jsl _848EEA.8F07
-    jml 0x8280B4
+    jml _82808F.80B4
 
 .BBF2:
     lda.w 0x0B9C
@@ -855,7 +855,7 @@ d_rex_upper:
     jsr _88AD92
     lda.b #0xC0
     sta.b 0x33
-    jml 0x8280B4
+    jml _82808F.80B4
 
 .BC6C:
     lda.w 0x0B9C
@@ -894,11 +894,11 @@ d_rex_upper:
     bcc .BCAE
 
     jsr _88AD92
-    jml 0x8280B4
+    jml _82808F.80B4
 
 .BCAE:
     jsr _88ADB9
-    jml 0x8280B4
+    jml _82808F.80B4
 
 .BCB5:
     lda.w 0x0B9C

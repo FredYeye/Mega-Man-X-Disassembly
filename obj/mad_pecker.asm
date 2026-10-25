@@ -22,7 +22,7 @@ mad_pecker:
     sta.b 0x01
 .A7F6:
     jsl _849B03
-    jml 0x8280B4
+    jml _82808F.80B4
 
 .A7FE: d16[.A808, .A84F, .A873, .A8FD, .A935]
 
@@ -94,7 +94,7 @@ mad_pecker:
     bne .A8FC
 
     inc.b 0x02
-    jsl 0x828321
+    jsl _8282AC.8321
     beq .A894
 
     sep #0x10

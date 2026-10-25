@@ -84,13 +84,13 @@ sting_chameleao:
     sta.w 0x00C9
     lda.b #0x1E
     sta.b 0x34
-    jml 0x8280B4
+    jml _82808F.80B4
 
 .85F0:
     jsr .8D2F
     ldx.b 0x02
     jsr (.85FC,X)
-    jml 0x8280B4
+    jml _82808F.80B4
 
 .85FC: d16[.860C, .8622, .863D, .8669, .8694, .86A7, .86B4, .86D5]
 
@@ -306,7 +306,7 @@ sting_chameleao:
     lda.b #0x13
     jsl _80888B
     jsl 0x84AC92
-    jml 0x8280B4
+    jml _82808F.80B4
 
 .877B:
     lda.b 0x33
@@ -349,7 +349,7 @@ sting_chameleao:
 .87B5:
     lda.b 0x37
     sta.b 0x30
-    jml 0x8280B4
+    jml _82808F.80B4
 
 .87BD: d16[.87CB, .88FF, .8959, .8AE7, .8B5F, .8BCF, .8C8F]
 
@@ -1164,7 +1164,7 @@ sting_chameleao:
     bcs .8D2E
 
     jsl _848EEA
-    jml 0x8280B4
+    jml _82808F.80B4
 
 .8D2E:
     rtl

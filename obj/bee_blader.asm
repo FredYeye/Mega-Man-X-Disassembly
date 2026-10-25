@@ -473,7 +473,7 @@ bee_blader:
 //-----
 
 .BC22:
-    jsl 0x828321
+    jsl _8282AC.8321
     bne .BC47
 
     inc.w 0x0000,X

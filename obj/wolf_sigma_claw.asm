@@ -39,7 +39,7 @@ wolf_sigma_claw:
     sta.b 0x27
     sta.b 0x26
     sta.b 0x30
-    jml 0x8280B4
+    jml _82808F.80B4
 
 .E598:
     lda.w 0x0B9C
@@ -325,7 +325,7 @@ wolf_sigma_claw:
     sta.b 0x1E
     lda.b #0xFF
     sta.b 0x2F
-    jml 0x8280B4
+    jml _82808F.80B4
 
 .E79E:
     jsl update_pos_xy.neg_ay
@@ -345,7 +345,7 @@ wolf_sigma_claw:
     sta.b 0x1C
     sep #0x20
 .E7BE:
-    jml 0x8280B4
+    jml _82808F.80B4
 
 .E7C2:
     jsl update_pos_xy.neg_ay
@@ -359,7 +359,7 @@ wolf_sigma_claw:
     lda.b #0x78
     sta.b 0x38
 .E7D8:
-    jml 0x8280B4
+    jml _82808F.80B4
 
 .E7DC:
     dec.b 0x38
@@ -376,7 +376,7 @@ wolf_sigma_claw:
     lda.b #0x07
     sta.w 0x0008
     jsl 0x84A4C6
-    jml 0x8280B4
+    jml _82808F.80B4
 
 .E803:
     jml 0x828398
@@ -396,7 +396,7 @@ wolf_sigma_claw:
     bmi .E82F
 
     jsl _849B03
-    jml 0x8280B4
+    jml _82808F.80B4
 
 .E82F:
     lda.b #0x0A
@@ -405,7 +405,7 @@ wolf_sigma_claw:
     stz.b 0x03
     lda.b #0x04
     jsl _848EEA.8F07
-    jml 0x8280B4
+    jml _82808F.80B4
 
 //-----
 

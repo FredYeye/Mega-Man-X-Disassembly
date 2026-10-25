@@ -29,7 +29,7 @@ jamminger:
     bcs .DD8D
 
     jsr .DF5B
-    jml 0x8280B4
+    jml _82808F.80B4
 
 .DDA2: d16[.DDB0, .DDDC, .DE59, .DEA3, .DED3, .DEF0, .DF14]
 

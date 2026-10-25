@@ -30,7 +30,7 @@ ball_de_voux:
     jsl _82806E
     bcs .D21B
 
-    jml 0x8280B4
+    jml _82808F.80B4
 
 .D21B:
     lda.b 0x0B

@@ -53,7 +53,7 @@ boomerang_cutter:
     sep #0x20
     lda.b #0x01
     jsl _848EEA.8F07
-    jml 0x8280B4
+    jml _82808F.80B4
 
 .8421:
     stz.b 0x30

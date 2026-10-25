@@ -36,7 +36,7 @@ crag_man:
     jsl _82806E
     bcs .D8AB
 
-    jml 0x8280B4
+    jml _82808F.80B4
 
 .D8AB:
     jml 0x828387

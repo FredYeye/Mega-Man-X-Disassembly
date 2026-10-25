@@ -17,7 +17,7 @@ bomb_been:
     beq .9F72
 
 .9F6E:
-    jml 0x8280B4
+    jml _82808F.80B4
 
 .9F72:
     jsl 0x84A4AB

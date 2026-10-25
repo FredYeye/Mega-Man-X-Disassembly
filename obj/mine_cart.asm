@@ -101,7 +101,7 @@ mine_cart:
     sta.b 0x20
     lda.b #0xCE
     sta.b 0x21
-    jml 0x8280B4
+    jml _82808F.80B4
 
 .988B: d16[.9895, .98B6, .99A8, .99BC, .9A08]
 

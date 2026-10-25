@@ -65,7 +65,7 @@ rangda_bangda_nose:
     sta.b 0x28
 .B28C:
     jsl _8491AD.91BE
-    jml 0x8280B4
+    jml _82808F.80B4
 
 .B294: d16[.B29C, .B2B4, .B302, .B399]
 

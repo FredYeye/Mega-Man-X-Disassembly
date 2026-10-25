@@ -66,7 +66,7 @@ rangda_bangda_eye:
     lda.b #0x07
     sta.b 0x28
 .AE85:
-    jml 0x8280B4
+    jml _82808F.80B4
 
 .AE89: d16[.AE93, .AF6E, .AEAD, .AFDD, .B0AB]
 

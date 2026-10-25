@@ -21,7 +21,7 @@ turn_cannon:
     trb.b 0x11
 .996B:
     jsl _849B03
-    jml 0x8280B4
+    jml _82808F.80B4
 
 .9973:
     rep #0x10

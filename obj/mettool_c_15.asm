@@ -29,7 +29,7 @@ mettool_c_15:
     jsl _82806E
     bcs .C3B2
 
-    jml 0x8280B4
+    jml _82808F.80B4
 
 .C3C4: d16[.C3CC, .C3EB, .C43E, .C4AE]
 

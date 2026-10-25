@@ -156,7 +156,7 @@ utuboros_head:
     and.b #0x3F
     ora.b 0x33
     sta.b 0x11
-    jml 0x8280B4
+    jml _82808F.80B4
 
 .BE9F: d16[.BFCB, .C004, .C125, .BEA9, .BF1F]
 
@@ -797,7 +797,7 @@ utuboros_head:
     rep #0x10
     ldy.w #0x0000
 .C2BB:
-    jsl 0x828321
+    jsl _8282AC.8321
     inc.w 0x0000,X
     lda.b #0x24
     sta.w 0x000A,X
@@ -816,7 +816,7 @@ utuboros_head:
     cpy.w #0x0006
     bne .C2BB
 
-    jsl 0x828321
+    jsl _8282AC.8321
     inc.w 0x0000,X
     lda.b #0x25
     sta.w 0x000A,X
@@ -884,7 +884,7 @@ utuboros_head:
 //-----
 
 .C35C:
-    jsl 0x828307
+    jsl _8282AC.8307
     bne .C37B
 
     inc.w 0x0000,X

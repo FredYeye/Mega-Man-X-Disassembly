@@ -27,7 +27,7 @@ gun_volt:
     bcs .DA21
 
 .DA1D:
-    jml 0x8280B4
+    jml _82808F.80B4
 
 .DA21:
     jml 0x828387
