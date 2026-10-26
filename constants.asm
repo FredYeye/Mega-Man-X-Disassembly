@@ -34,3 +34,5 @@ enum stage {
 
     sigma_stages = 9,
 }
+
+have_weapon = 0b01000000

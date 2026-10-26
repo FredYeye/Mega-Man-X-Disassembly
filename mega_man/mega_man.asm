@@ -3894,16 +3894,16 @@ mega_man:
     beq .9A13
 
 .99EF:
-    lda.b 0x33
+    lda.b mega_man.current_weapon
     beq .9A04
 
     cmp.b #0x02
     beq .9A0A
 
-    dec.b 0x33
-    dec.b 0x33
+    dec.b mega_man.current_weapon
+    dec.b mega_man.current_weapon
 .99FB:
-    ldx.b 0x33
+    ldx.b mega_man.current_weapon
     bit.w 0x1F86,X
     bvs .9A28
 
@@ -3911,11 +3911,11 @@ mega_man:
 
 .9A04:
     lda.b #0x10
-    sta.b 0x33
+    sta.b mega_man.current_weapon
     bra .99FB
 
 .9A0A:
-    stz.b 0x33
+    stz.b mega_man.current_weapon
     lda.b #0x04
     sta.w 0x1F12
     bra .9A3F
@@ -3925,13 +3925,13 @@ mega_man:
     beq .9A65
 
 .9A17:
-    lda.b 0x33
+    lda.b mega_man.current_weapon
     cmp.b #0x10
     beq .9A0A
 
-    inc.b 0x33
-    inc.b 0x33
-    ldx.b 0x33
+    inc.b mega_man.current_weapon
+    inc.b mega_man.current_weapon
+    ldx.b mega_man.current_weapon
     bit.w 0x1F86,X
     bvc .9A17
 
@@ -3941,25 +3941,25 @@ mega_man:
     ora.w 0x86BAC5,X
     sta.b 0x11
     stz.w 0x1F12
-    lda.b 0x33
+    lda.b mega_man.current_weapon
     clc
     adc.b #0x3E
     tay
     jsl _808A64
 .9A3F:
-    lda.b 0x33
+    lda.b mega_man.current_weapon
     lsr
     tax
     lda.w 0x86BABB,X
     sta.b 0x67
     ldx.b #0x30
-    lda.b 0x33
+    lda.b mega_man.current_weapon
     clc
     adc.b #0x40
     tay
     jsl _828000
     rep #0x31
-    lda.b 0x33
+    lda.b mega_man.current_weapon
     and.w #0x00FF
     adc.w #0x0100
     tay

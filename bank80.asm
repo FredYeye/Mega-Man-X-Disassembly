@@ -17685,7 +17685,7 @@ _80F596: d16[
 _80F68B: d16[
     .thunk_x_buster, .thunk_charge_shot_s, .thunk_spiral_crush_buster, .thunk_charge_shot_l, .thunk_hadouken, .F6E0, .thunk_x_buster_dash, .thunk_horming_torpedo,
     .thunk_chameleon_sting, .thunk_rolling_shield, .thunk_fire_wave, .thunk_storm_tornado, .thunk_electric_spark, .thunk_boomerang_cutter, .thunk_shotgun_ice, .F712,
-    .thunk_horming_torpedo_charge, .F71C, .F721, .F726, .F72B, .F730, .F735, .F73A,
+    .thunk_horming_torpedo_charge, .thunk_chameleon_sting_charge, .thunk_rolling_shield_charge, .thunk_fire_wave_charge, .thunk_storm_tornado_charge, .thunk_electric_spark_charge, .thunk_boomerang_cutter_charge, .thunk_shotgun_ice_charge,
     .F73F, .F744, .F749, .F74E, .F753, .F758,
 ]
 
@@ -17757,32 +17757,32 @@ _80F68B: d16[
     jsl horming_torpedo_charge
     rts
 
-.F71C:
-    jsl _839B7D
+.thunk_chameleon_sting_charge:
+    jsl chameleon_sting_charge
     rts
 
-.F721:
-    jsl _839C53
+.thunk_rolling_shield_charge:
+    jsl rolling_shield_charge
     rts
 
-.F726:
-    jsl _839DD4
+.thunk_fire_wave_charge:
+    jsl fire_wave_charge
     rts
 
-.F72B:
-    jsl _839FAA
+.thunk_storm_tornado_charge:
+    jsl storm_tornado_charge
     rts
 
-.F730:
-    jsl _83A0DA
+.thunk_electric_spark_charge:
+    jsl electric_spark_charge
     rts
 
-.F735:
-    jsl _83A1DB
+.thunk_boomerang_cutter_charge:
+    jsl boomerang_cutter_charge
     rts
 
-.F73A:
-    jsl _83A391
+.thunk_shotgun_ice_charge:
+    jsl shotgun_ice_charge
     rts
 
 .F73F:

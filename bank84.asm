@@ -6287,9 +6287,9 @@ _84A66D:
     dec
     asl
     tax
-    lda.b #0x40
-    ora.w 0x1F88,X
-    sta.w 0x1F88,X
+    lda.b #have_weapon
+    ora.w ram.weapons+1,X
+    sta.w ram.weapons+1,X
     lda.w 0x0BCF
     and.b #0x7F
     beq .AA32
