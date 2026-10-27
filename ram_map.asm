@@ -103,9 +103,9 @@ struct obj {
     speed_y:    d16,    // 1C
     accel_y:    d08,    // 1E
     accel_x:    d08,    // 1F
-    unk3:       d08[0x20->0x27],
+    unk4:       d08[0x20->0x27],
     hp:         d08,    // 27
-    unk4:       d08[0x28->0x40],
+    unk5:       d08[0x28->0x40],
 }
 
 // todo: better names for other obj sizes
