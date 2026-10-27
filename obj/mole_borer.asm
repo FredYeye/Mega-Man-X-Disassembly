@@ -212,7 +212,7 @@ mole_borer:
     rts
 
 .C0CF:
-    jsl 0x828398
+    jsl _828372.8398
     rts
 
 //-----

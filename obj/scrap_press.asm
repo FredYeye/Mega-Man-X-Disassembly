@@ -222,7 +222,7 @@ scrap_press:
     and.b #0x7F
     beq .E354
 
-    jsl 0x82C70E
+    jsl _82C70E
 .E354:
     jsl _8491AD.91BE
     lda.b 0x2E

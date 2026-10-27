@@ -1322,7 +1322,7 @@ velguader:
     jsl 0x849FFE
     lda.b #0x00
     sta.w 0x1F3F
-    jsl 0x828398
+    jsl _828372.8398
 .D0E6:
     rts
 

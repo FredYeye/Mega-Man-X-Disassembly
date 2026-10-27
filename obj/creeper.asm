@@ -138,7 +138,7 @@ creeper:
     jsl _82806E
     bcc .AA88
 
-    jsl 0x828398
+    jsl _828372.8398
 .AA88:
     rts
 
@@ -176,6 +176,6 @@ creeper:
     jsl _82806E
     bcc .AACF
 
-    jsl 0x828398
+    jsl _828372.8398
 .AACF:
     rts

@@ -52,7 +52,7 @@ utuboros_body:
     lda.b 0x2C
     beq .C3F2
 
-    jsl 0x82C70E
+    jsl _82C70E
 .C3F2:
     lda.b #0xC5
     sta.b 0x20
@@ -147,7 +147,7 @@ utuboros_body:
 
     jsr .C4E5
 .C495:
-    jsl 0x828398
+    jsl _828372.8398
 .C499:
     jmp _82C6B9
 
@@ -191,7 +191,7 @@ utuboros_body:
 
     jsr .C4E5
 .C4E0:
-    jsl 0x828398
+    jsl _828372.8398
 .C4E4:
     rts
 

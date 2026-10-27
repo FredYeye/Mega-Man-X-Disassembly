@@ -404,7 +404,7 @@ rt_55j:
     dec.b 0x34
     bne .CEF5
 
-    jsl 0x828398
+    jsl _828372.8398
 .CEF5:
     rts
 

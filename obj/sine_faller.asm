@@ -43,7 +43,7 @@ sine_faller:
     cpy.b #0x03
     bcc .D325
 
-    jsl 0x828398
+    jsl _828372.8398
     rts
 
 .D325:

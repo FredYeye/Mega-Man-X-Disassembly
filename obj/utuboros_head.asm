@@ -718,7 +718,7 @@ utuboros_head:
     sta.w 0x1E68
     lda.l 0x7FD706
     sta.w 0x1E6E
-    jsl 0x828398
+    jsl _828372.8398
 .C254:
     rtl
 

@@ -83,7 +83,7 @@ armor_armarge:
     lda.b #0x06
     sta.b 0x26
     lda.b #0x00
-    jsl 0x848000
+    jsl _848000
     rtl
 
 .B1F9:

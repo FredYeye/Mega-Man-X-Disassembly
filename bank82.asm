@@ -3986,7 +3986,7 @@ _82D519:
     lda.b 0x2C
     beq .D5CA
 
-    jsl 0x82C70E
+    jsl _82C70E
 .D5CA:
     lda.b 0x17
     beq .D5D3
@@ -4043,7 +4043,7 @@ _82D519:
     lda.b 0x2C
     beq .D63E
 
-    jsl 0x82C70E
+    jsl _82C70E
 .D63E:
     rtl
 
@@ -4094,7 +4094,7 @@ _82D519:
     bne .D6A5
 
     lda.b #0x06
-    jsl 0x848000
+    jsl _848000
 .D6A5:
     jsr _82D8A2
     jsl update_pos_xy.neg_ay_ax
@@ -4130,7 +4130,7 @@ _82D519:
     rts
 
 .D6E6:
-    jsl 0x848000
+    jsl _848000
     inc.b 0x33
     lda.b #0x25
     jsl _80888B
@@ -4597,7 +4597,7 @@ _82E28B:
     bne .E2A1
 
     sep #0x10
-    jsl 0x828398
+    jsl _828372.8398
 .E2A1:
     sep #0x10
     rtl
@@ -4680,7 +4680,7 @@ _82E28B:
     jmp .E33A
 
 .E336:
-    jsl 0x828398
+    jsl _828372.8398
 .E33A:
     rts
 
@@ -5082,7 +5082,7 @@ _82E33B:
     rts
 
 .E5CA:
-    jsl 0x828398
+    jsl _828372.8398
     rts
 
 //-----
@@ -6680,7 +6680,7 @@ _82F033:
     phx
     pld
     sep #0x10
-    jsl 0x82FCA9
+    jsl _82FCA9
     pld
 .F0CE:
     jml 0x828398
@@ -8135,7 +8135,7 @@ _82FB6D:
     jsr (.FB7D,X)
     ldx.b #0x00
     ldy.b #0x00
-    jsl 0x82FC41
+    jsl _82FC41
     jmp _82FC73
 
 .FB7D: d16[.FB85, .FBA0, .FBED, .FBF6]
@@ -8163,7 +8163,7 @@ _82FB6D:
 .FBA0:
     ldx.b #0x00
     ldy.b #0x00
-    jsl 0x82FC41
+    jsl _82FC41
     beq .FBAD
 
     jmp .FBEC

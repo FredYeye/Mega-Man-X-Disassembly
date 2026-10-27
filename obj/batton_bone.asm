@@ -147,7 +147,7 @@ batton_bone: // also batton m-501
 .A189:
     ldx.b #0x02
     ldy.b #0x00
-    jsl 0x82FC41
+    jsl _82FC41
     bne .A1A8
 
     lda.b #0x04

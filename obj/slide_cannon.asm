@@ -56,7 +56,7 @@ slide_cannon:
 
 .B270:
     sep #0x10
-    jsl 0x828398
+    jsl _828372.8398
 .B276:
     sep #0x10
     rtl
@@ -167,7 +167,7 @@ slide_cannon:
     and.b #0x7F
     beq .B334
 
-    jsl 0x82C70E
+    jsl _82C70E
 .B334:
     jmp .B35A
 

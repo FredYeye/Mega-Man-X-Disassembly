@@ -72,7 +72,7 @@ struct object_list {
 }
 
 struct mega_man {
-    unk1:    d08[0x00->0x04],
+    unk1:          d08[0x00->0x04],
 
     pos_x:         d24, // 04
     pos_y:         d24, // 07

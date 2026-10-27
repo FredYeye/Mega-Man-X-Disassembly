@@ -4330,7 +4330,7 @@ _81D53E:
     rts
 
 .D619:
-    jsl 0x828398
+    jsl _828372.8398
     rts
 
 .D61E:
@@ -4368,7 +4368,7 @@ _81D53E:
     rts
 
 .D65D:
-    jsl 0x828398
+    jsl _828372.8398
     rts
 
 .D662:
@@ -4387,7 +4387,7 @@ _81D53E:
     plb
     plx
     stz.w 0x0001,X
-    jsl 0x828398
+    jsl _828372.8398
     sep #0x30
     rts
 
@@ -4416,7 +4416,7 @@ _81D53E:
     rep #0x20
     stz.w 0x0000,X
     stz.w 0x0002,X
-    jsl 0x828398
+    jsl _828372.8398
     sep #0x30
     rts
 
@@ -4977,7 +4977,7 @@ _81D53E:
     rts
 
 .DA71:
-    jsl 0x828398
+    jsl _828372.8398
     lda.b 0x32
     beq .DA80
 
@@ -5997,7 +5997,7 @@ _81DEA4:
     rts
 
 .E0F1:
-    jsl 0x828398
+    jsl _828372.8398
     rts
 
 //-----
@@ -6329,7 +6329,7 @@ _81E158:
 
 .E320:
     sep #0x10
-    jsl 0x828398
+    jsl _828372.8398
     rts
 
 //-----
@@ -6552,7 +6552,7 @@ _81E327:
     rts
 
 .E487:
-    jsl 0x828398
+    jsl _828372.8398
     rts
 
 .E48C:
@@ -6588,7 +6588,7 @@ _81E4A8:
     and.b 0x0B
     beq .E4C0
 
-    jsl 0x828398
+    jsl _828372.8398
     rts
 
 .E4C0:
@@ -6875,7 +6875,7 @@ _81E4A8:
 
 .E6AA:
     stz.w 0x1F3B
-    jsl 0x828398
+    jsl _828372.8398
     rts
 
 //-----
@@ -7610,7 +7610,7 @@ _81EBA5:
 
 .EC33:
     jsr _81E829
-    jsl 0x828398
+    jsl _828372.8398
     pla
     pla
     rtl
@@ -7656,7 +7656,7 @@ _81EC3D:
     lda.w 0x1F41
     beq .EC91
 
-    jsl 0x828398
+    jsl _828372.8398
     pla
     pla
     rtl
@@ -7803,7 +7803,7 @@ _81EC3D:
     lda.b 0x1C
     sta.w ram.obj.mega_man.speed_x
     sep #0x20
-    jsl 0x828398
+    jsl _828372.8398
     pla
     pla
     rtl
@@ -7913,7 +7913,7 @@ _81EE18:
     rts
 
 .EE7F:
-    jsl 0x828398
+    jsl _828372.8398
     rts
 
 //-----
@@ -8053,7 +8053,7 @@ _81EF07:
     rts
 
 .EF63:
-    jsl 0x828398
+    jsl _828372.8398
     rts
 
 //-----
@@ -8132,7 +8132,7 @@ _81EF68:
     rts
 
 .EFE9:
-    jsl 0x828398
+    jsl _828372.8398
     rts
 
 //-----
@@ -8663,7 +8663,7 @@ _81F2C3:
     dec.b 0x0D
     bne .F35A
 
-    jsl 0x828398
+    jsl _828372.8398
 .F35A:
     rts
 
@@ -9153,7 +9153,7 @@ _81F688:
     txa
     phx
     phy
-    jsl 0x848000
+    jsl _848000
     ply
     plx
     inx

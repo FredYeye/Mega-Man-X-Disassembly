@@ -1778,7 +1778,7 @@ _8791A7:
     bcs .933B
 
     lda.b #0x04
-    jsl 0x848000
+    jsl _848000
 .933B:
     lda.b #0x14
     jsl _848EEA.8F07
@@ -2166,7 +2166,7 @@ _8791A7:
     lda.b 0x38
     eor.b #0x01
     sta.b 0x38
-    jsl 0x848000
+    jsl _848000
     lda.b #0x00
     jsl _848EEA.8F07
     lda.b #0x06
@@ -3337,7 +3337,7 @@ _87ADD8:
     lda.b 0x2C
     beq .AE17
 
-    jsl 0x82C70E
+    jsl _82C70E
 .AE17:
     jml 0x82808F
 
@@ -3350,7 +3350,7 @@ _87ADD8:
     lda.b #0x02
     sta.b 0x02
     lda.b #0x00
-    jsl 0x848000
+    jsl _848000
     lda.b #0x5E
     jsl _80888B
     lda.b #0x3C
@@ -3542,7 +3542,7 @@ _87AF5D:
     jsl 0x84A4AB
     jsr _87B16F
     jsr _87B134
-    jsl 0x828398
+    jsl _828372.8398
     sep #0x10
     bra .AFA4
 
@@ -3562,7 +3562,7 @@ _87AF5D:
     jsl _82808F.80B4
     jmp .AFA4
 
-    jsl 0x828398
+    jsl _828372.8398
 .AFA4:
     rtl
 
@@ -4647,7 +4647,7 @@ _87B91C:
     jsl _82806E
     bcc .B92F
 
-    jsl 0x828398
+    jsl _828372.8398
 .B92F:
     rtl
 
@@ -4764,7 +4764,7 @@ _87B91C:
 .B9F9:
     lda.b #0x01
     sta.b 0x3A
-    jsl 0x828398
+    jsl _828372.8398
 .BA01:
     rts
 
@@ -4887,7 +4887,7 @@ _87BBBE:
 
 .BC04:
     sep #0x20
-    jsl 0x828398
+    jsl _828372.8398
 .BC0A:
     sep #0x20
     rtl
@@ -5126,7 +5126,7 @@ _87BD70:
     jmp .BDAA
 
 .BDA6:
-    jsl 0x828398
+    jsl _828372.8398
 .BDAA:
     rtl
 
@@ -5559,7 +5559,7 @@ _87C07A:
     lda.b 0x2C
     beq .C0C1
 
-    jsl 0x82C70E
+    jsl _82C70E
 .C0C1:
     rep #0x20
     lda.b 0x08
@@ -5698,7 +5698,7 @@ _87C07A:
     jsr _87C2AA
     jsr _87C269
     lda.b 0x34
-    jsl 0x848000
+    jsl _848000
     inc.b 0x34
     lda.b 0x34
     cmp.b #0x15
@@ -6539,7 +6539,7 @@ _87D3AF:
     jmp .D3FE
 
 .D3FA:
-    jsl 0x828398
+    jsl _828372.8398
 .D3FE:
     rtl
 
@@ -7328,7 +7328,7 @@ _87E354:
     jmp .E38C
 
 .E388:
-    jsl 0x828398
+    jsl _828372.8398
 .E38C:
     rtl
 
@@ -7608,7 +7608,7 @@ _87E547:
     lda.b #0x01
     sta.w 0x003B,X
     sep #0x10
-    jsl 0x828398
+    jsl _828372.8398
 .E58A:
     rtl
 
@@ -8102,7 +8102,7 @@ _87E7D4:
     and.b #0x7F
     beq .E90C
 
-    jsl 0x82C70E
+    jsl _82C70E
 .E90C:
     rts
 
@@ -8168,7 +8168,7 @@ _87E7D4:
     and.b #0x7F
     beq .E90C
 
-    jsl 0x82C70E
+    jsl _82C70E
     rts
 
 .E975:
@@ -8264,7 +8264,7 @@ _87E7D4:
     and.b #0x7F
     beq .EA12
 
-    jsl 0x82C70E
+    jsl _82C70E
 .EA12:
     sep #0x20
     rts
@@ -8514,7 +8514,7 @@ _87EB09:
     and.b #0x7F
     beq .EBC5
 
-    jsl 0x82C70E
+    jsl _82C70E
 .EBC5:
     rts
 
@@ -8567,7 +8567,7 @@ _87ED8D:
 
     lda.b #0x02
     sta.b 0x0B
-    jsl 0x848000
+    jsl _848000
     jml 0x828398
 
 .EDAD:
@@ -8679,7 +8679,7 @@ _87ED8D:
     sep #0x10
     lda.b #0x02
     sta.b 0x0B
-    jsl 0x848000
+    jsl _848000
     jml 0x828398
 
 //-----
@@ -9172,7 +9172,7 @@ _87F110:
 
 .F1FA:
     jsr _87F38D
-    jsl 0x828398
+    jsl _828372.8398
     rts
 
 //-----
@@ -9555,7 +9555,7 @@ _87F42A:
     jmp .F476
 
 .F472:
-    jsl 0x828398
+    jsl _828372.8398
 
 .F476:
     rtl
@@ -10704,7 +10704,7 @@ _87FB40:
     bne .FC91
 
     lda.b 0x04
-    jsl 0x848000
+    jsl _848000
     jsl 0x84A4AB
     jsr .FC92
     rep #0x20

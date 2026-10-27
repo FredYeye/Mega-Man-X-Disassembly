@@ -66,7 +66,7 @@ scrap_robo:
     bcc .9BDE
 
 .9BDA:
-    jsl 0x828398
+    jsl _828372.8398
 .9BDE:
     rtl
 
@@ -190,7 +190,7 @@ scrap_robo:
     and.b #0x7F
     beq .9CC4
 
-    jsl 0x82C70E
+    jsl _82C70E
 .9CC4:
     jsl _8491AD.91BE
     lda.b 0x2E
@@ -295,7 +295,7 @@ scrap_robo:
     and.b #0x7F
     beq .9D74
 
-    jsl 0x82C70E
+    jsl _82C70E
 .9D74:
     rts
 
@@ -416,7 +416,7 @@ scrap_robo:
     and.b #0x7F
     beq .9E4D
 
-    jsl 0x82C70E
+    jsl _82C70E
 .9E4D:
     rts
 
@@ -492,7 +492,7 @@ scrap_robo:
     and.b #0x7F
     beq .9ED3
 
-    jsl 0x82C70E
+    jsl _82C70E
     jmp .9ED3
 
 .9ECF:

@@ -51,7 +51,7 @@ sigma:
     bne .C42B
 
     lda.b #0x00
-    jsl 0x848000
+    jsl _848000
     lda.b #0x10
     sta.b 0x33
     lda.b #0x04
@@ -64,7 +64,7 @@ sigma:
     bne .C446
 
     lda.b #0x01
-    jsl 0x848000
+    jsl _848000
     lda.b #0x3C
     sta.b 0x33
     lda.b #0x06

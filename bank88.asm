@@ -1913,11 +1913,11 @@ _88A382:
     rts
 
 .A73A:
-    jsl 0x828398
+    jsl _828372.8398
     rts
 
 .A73F:
-    jsl 0x828398
+    jsl _828372.8398
     rts
 
 .A744:
@@ -3074,7 +3074,7 @@ _88B452:
     lda.b #0x04
     sta.b 0x01
     lda.b #0x03
-    jsl 0x848000
+    jsl _848000
     rts
 
 .B55D:
@@ -3244,7 +3244,7 @@ _88B668:
     bne .B688
 
     lda.b 0x35
-    jsl 0x848000
+    jsl _848000
     lda.b 0x35
     cmp.b #0x07
     bne .B686
@@ -3709,7 +3709,7 @@ d_rex_lower:
     lda.b 0x2C
     beq .C017
 
-    jsl 0x82C70E
+    jsl _82C70E
 .C017:
     bit.b 0x34
     bvs .BFE6
@@ -5513,7 +5513,7 @@ _88D1B1:
     rts
 
 .D803:
-    jsl 0x828398
+    jsl _828372.8398
     rts
 
 //-----
@@ -7716,7 +7716,7 @@ _88EA64:
 
 .EA92:
     sep #0x20
-    jsl 0x828398
+    jsl _828372.8398
 .EA98:
     rtl
 

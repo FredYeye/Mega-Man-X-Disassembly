@@ -37,7 +37,7 @@ sea_attacker:
     jsl _82806E
     bcc .A1CC
 
-    jsl 0x828398
+    jsl _828372.8398
 .A1CC:
     rtl
 
@@ -186,7 +186,7 @@ sea_attacker:
 
 .A2CF:
     jsl 0x84A4AB
-    jsl 0x828398
+    jsl _828372.8398
     sep #0x10
     lda.b #0x01
     jsl 0x84A37F

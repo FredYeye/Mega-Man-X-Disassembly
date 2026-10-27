@@ -327,7 +327,7 @@ hoganmer:
     lda.b #0x00
     jsl 0x84A37F
     jsl 0x84A4AB
-    jsl 0x828398
+    jsl _828372.8398
     rts
 
 .B0B8:

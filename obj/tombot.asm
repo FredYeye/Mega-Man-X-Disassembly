@@ -33,7 +33,7 @@ tombot:
     bne .E440
 
 .E43C:
-    jsl 0x828398
+    jsl _828372.8398
 .E440:
     rtl
 
