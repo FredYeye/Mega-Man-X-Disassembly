@@ -445,8 +445,8 @@ _82827D:
     lda.b #0x02
     sta.b 0x01
     lda.b #0x03
-    sta.b 0x28
-    lda.b 0x0A
+    sta.b obj.damage_table_id
+    lda.b obj.type
     dec
     asl
     tax

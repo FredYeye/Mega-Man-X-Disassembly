@@ -45,7 +45,7 @@ gun_volt:
     lda.b #0x03
     sta.b 0x26
     lda.b #0x10
-    sta.b 0x27
+    sta.b obj.hp
     lda.b #0x00
     jsl _848EEA.8F07
     lda.b #0x3C

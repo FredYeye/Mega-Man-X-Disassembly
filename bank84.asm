@@ -4500,11 +4500,11 @@ _849E10:
     lda.w 0x000A,X
     and.w #0x00FF
     sta.w 0x0000
-    lda.b 0x28
+    lda.b obj.damage_table_id
     and.w #0x00FF
     asl
     tay
-    lda 0x86EF3A,Y
+    lda damage_tables.base,Y
     clc
     adc.w 0x0000
     tay
@@ -4516,7 +4516,7 @@ _849E10:
     sta.w 0x0004
     lda.b #0x00
     xba
-    lda 0x86EF3A,Y
+    lda damage_tables,Y
     bpl .9E53
 
     stx.w 0x0000
@@ -4542,15 +4542,15 @@ _849E10:
     lda.b #0x3C
     jsl _80888B
 .9E69:
-    lda.b 0x27
+    lda.b obj.hp
     and.b #0x7F
     sec
-    sbc 0x86EF3A,Y
+    sbc damage_tables,Y
     bmi .9E94
 
     beq .9E94
 
-    sta.b 0x27
+    sta.b obj.hp
     lda.b #0x11
     jsl _80888B
     lda.b #0x08
@@ -4565,14 +4565,14 @@ _849E10:
     bra .9EA0
 
 .9E94:
-    stz.b 0x27
+    stz.b obj.hp
     lda.b #0xFF
     sta.w 0x0004
     lda.b #0x06
     sta.w 0x0001,X
 .9EA0:
     lda.b #0x80
-    tsb.b 0x27
+    tsb.b obj.hp
 .9EA4:
     lda.b #0x00
     sta.w 0x1F1B

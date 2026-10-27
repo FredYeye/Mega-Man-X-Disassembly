@@ -91,20 +91,21 @@ struct ride_armor {
 }
 
 struct obj {
-    unk1:       d08,
-    state:      d08[3], // 01
-    pos_x:      d24,    // 04
-    pos_y:      d24,    // 07
-    type:       d08,    // 0A
-    unk2:       d08[0x0B->0x13],
-    anim_timer: d08,    // 13
-    unk3:       d08[0x14->0x1A],
-    speed_x:    d16,    // 1A
-    speed_y:    d16,    // 1C
-    accel_y:    d08,    // 1E
-    accel_x:    d08,    // 1F
-    unk4:       d08[0x20->0x27],
-    hp:         d08,    // 27
+    unk1:            d08,
+    state:           d08[3], // 01
+    pos_x:           d24,    // 04
+    pos_y:           d24,    // 07
+    type:            d08,    // 0A
+    unk2:            d08[0x0B->0x13],
+    anim_timer:      d08,    // 13
+    unk3:            d08[0x14->0x1A],
+    speed_x:         d16,    // 1A
+    speed_y:         d16,    // 1C
+    accel_y:         d08,    // 1E
+    accel_x:         d08,    // 1F
+    unk4:            d08[0x20->0x27],
+    hp:              d08,    // 27
+    damage_table_id: d08,    // 28
     unk5:       d08[0x28->0x40],
 }
 
